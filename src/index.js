@@ -1,5 +1,10 @@
 import Phaser from "phaser";
 import logoImg from "./assets/logo.png";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App.jsx";
+
+console.log(App);
 
 const config = {
   type: Phaser.AUTO,
@@ -30,3 +35,5 @@ function create() {
     loop: -1
   });
 }
+
+ReactDOM.render(<App />, document.getElementById("root"));
