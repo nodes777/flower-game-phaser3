@@ -1,8 +1,11 @@
 import logoImg from "../assets/logo.png";
 import blankFlower from "../assets/blank-flower.png";
+import bee from "../assets/bee.png";
+
 export function preload() {
 	this.load.image("logo", logoImg);
 	this.load.image("blankFlower", blankFlower);
+	this.load.image("bee", bee);
 
 	// display progress bar
 	const progressBar = this.add.graphics();

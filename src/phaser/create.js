@@ -1,12 +1,11 @@
 export function create() {
-	const firstFlower = this.add.image(400, 150, "blankFlower");
+	this.firstFlower = this.physics.add.sprite(400, 150, "blankFlower");
+	this.bee = this.physics.add.sprite(200, 150, "bee");
 
-	// this.tweens.add({
-	// 	targets: logo,
-	// 	y: 450,
-	// 	duration: 2000,
-	// 	ease: "Power2",
-	// 	yoyo: true,
-	// 	loop: -1
-	// });
+	// Set image/sprite properties
+	//background.setOrigin(0.5, 0.5).setDisplaySize(1600, 1200);
+	this.bee
+		.setOrigin(0.5, 0.5)
+		.setCollideWorldBounds(true)
+		.setDrag(500, 500);
 }
