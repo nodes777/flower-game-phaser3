@@ -1,3 +1,5 @@
+import { checkStore } from "../utils/checkStore";
+
 export function create() {
 	this.firstFlower = this.physics.add.sprite(400, 150, "blankFlower");
 	this.bee = this.physics.add.sprite(200, 150, "bee");
@@ -30,4 +32,12 @@ export function create() {
 		null,
 		this
 	);
+
+	// Check the store every 2 secs
+	this.time.addEvent({
+		delay: 500,
+		callback: checkStore,
+		callbackScope: this,
+		loop: true
+	});
 }

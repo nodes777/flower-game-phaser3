@@ -13,7 +13,7 @@ import { Provider } from "react-redux";
 import rootReducer from "./reducers/indexReducer";
 import indexMiddleware from "./middleware/indexMiddleware";
 
-const store = createStore(rootReducer, indexMiddleware);
+export const store = createStore(rootReducer, indexMiddleware);
 
 const config = {
   type: Phaser.AUTO,
