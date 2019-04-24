@@ -34,10 +34,12 @@ export function create() {
 	);
 
 	// Check the store every 2 secs
-	this.time.addEvent({
+	let x = this.time.addEvent({
 		delay: 500,
-		callback: checkStore,
+		callback: checkStore.call(this),
 		callbackScope: this,
 		loop: true
 	});
+
+	console.log(x);
 }
