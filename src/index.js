@@ -14,12 +14,16 @@ import rootReducer from "./reducers/indexReducer";
 import indexMiddleware from "./middleware/indexMiddleware";
 
 export const store = createStore(rootReducer, indexMiddleware);
-
+export const screenSize = {
+  width: window.innerWidth,
+  height: window.innerHeight
+};
+console.log(screenSize.width, screenSize.height);
 const config = {
   type: Phaser.AUTO,
   parent: "phaser-example",
-  width: 800,
-  height: 600,
+  width: screenSize.width,
+  height: screenSize.height,
   backgroundColor: "#488214",
   pixelArt: true,
   physics: {

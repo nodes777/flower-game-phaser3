@@ -47,7 +47,7 @@ export function flowers(state = exampleState, action) {
 							parent1.genotype,
 							parent2.genotype
 						),
-						position: { x: determineYPos(), y: determineYPos() }
+						position: { x: determineXPos(), y: determineYPos() }
 					}
 				},
 				allIds: [...state.allIds.concat([newId])]
