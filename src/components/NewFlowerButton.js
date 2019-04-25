@@ -16,14 +16,20 @@ class NewFlowerButton extends React.Component {
 					color: ["Bisque", "Azure"],
 					shape: ["square", "round"]
 				},
-				position: { x: 0, y: 0 }
+				position: {
+					x: Math.floor(Math.random() * 800 + 1),
+					y: Math.floor(Math.random() * 400 + 1)
+				}
 			},
 			parent2: {
 				genotype: {
 					color: ["AliceBlue", "DarkGreen"],
 					shape: ["triangle", "pentagon"]
 				},
-				position: { x: 0, y: 0 }
+				position: {
+					x: Math.floor(Math.random() * 800 + 1),
+					y: Math.floor(Math.random() * 400 + 1)
+				}
 			}
 		};
 		dispatch(addFlower(info));

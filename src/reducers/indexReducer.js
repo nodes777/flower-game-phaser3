@@ -2,6 +2,7 @@ import { CHANGE_PARENT_ALLELE, ADD_FLOWER } from "../actions/parents";
 import { combineReducers } from "redux";
 import exampleState from "../exampleState";
 import { determineGenotype } from "../utils/determineGenotype";
+import { determineXPos, determineYPos } from "../utils/determinePosition";
 
 export function flowers(state = exampleState, action) {
 	switch (action.type) {
@@ -46,7 +47,7 @@ export function flowers(state = exampleState, action) {
 							parent1.genotype,
 							parent2.genotype
 						),
-						position: { x: 0, y: 0 }
+						position: { x: determineYPos(), y: determineYPos() }
 					}
 				},
 				allIds: [...state.allIds.concat([newId])]
