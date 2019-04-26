@@ -16,6 +16,7 @@ class NewFlowerButton extends React.Component {
 		const { dispatch, flowers } = this.props;
 		const flower1 = flowers.byId.flower1;
 		const flower2 = flowers.byId.flower2;
+		//TODO REFACTOR THIS
 		if (flower2.genotype.color[0] === undefined)
 			alert("table isnt complete");
 		console.log(flowers);
