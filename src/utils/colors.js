@@ -148,3 +148,8 @@ export const colors = {
 	Yellow: "ffff00",
 	YellowGreen: "9acd32"
 };
+const colorsKeys = Object.keys(colors);
+const colorsLength = colorsKeys.length;
+export function getRandomColor() {
+	return colorsKeys[Math.floor(Math.random() * colorsLength)];
+}

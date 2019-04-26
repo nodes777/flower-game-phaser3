@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addFlower } from "../actions/indexActions";
+import { getRandomColor } from "../utils/colors";
+
 function mapStateToProps({ flowers }) {
 	return {
 		flowers
@@ -13,14 +15,14 @@ class NewFlowerButton extends React.Component {
 		const info = {
 			parent1: {
 				genotype: {
-					color: ["Bisque", "Azure"],
+					color: [getRandomColor(), getRandomColor()],
 					shape: ["square", "round"]
 				},
 				position: { x: 0, y: 0 }
 			},
 			parent2: {
 				genotype: {
-					color: ["AliceBlue", "DarkGreen"],
+					color: [getRandomColor(), getRandomColor()],
 					shape: ["triangle", "pentagon"]
 				},
 				position: { x: 0, y: 0 }
@@ -29,7 +31,7 @@ class NewFlowerButton extends React.Component {
 		dispatch(addFlower(info));
 	};
 	render() {
-		return <button onClick={this.handleSubmit}>New Flower</button>;
+		return <button onClick={this.handleSubmit}>New Random Flower</button>;
 	}
 }
 
