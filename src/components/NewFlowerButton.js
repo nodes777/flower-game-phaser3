@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addFlower } from "../actions/parents";
+import { addFlower } from "../actions/indexActions";
 function mapStateToProps({ flowers }) {
 	return {
 		flowers

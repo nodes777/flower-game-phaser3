@@ -1,4 +1,4 @@
-import { CHANGE_PARENT_ALLELE, ADD_FLOWER } from "../actions/parents";
+import { CHANGE_PARENT_ALLELE, ADD_FLOWER } from "../actions/indexActions";
 import { combineReducers } from "redux";
 import exampleState from "../exampleState";
 import { determineGenotype } from "../utils/determineGenotype";

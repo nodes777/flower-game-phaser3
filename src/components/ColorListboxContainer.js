@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import ColorListboxSelect from "./ColorListboxSelect";
 import ColorListboxOptions from "./ColorListboxOptions";
 
-import { changeParentAllele } from "../actions/parents";
+import { changeParentAllele } from "../actions/indexActions";
 
 import "../css/listbox.css";
 
