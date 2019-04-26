@@ -7,8 +7,6 @@ export const determineGenotype = (parent1Geno, parent2Geno) => {
 		// return one of the alleles for the particular gene
 	});
 
-	console.log(newGenotype);
-
 	return newGenotype;
 };
 

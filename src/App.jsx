@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import "./css/App.css";
 import PunnettTable from "./components/PunnettTable";
 import NewFlowerButton from "./components/NewFlowerButton";
+import NewRandomFlowerButton from "./components/NewRandomFlowerButton";
+
 import ColorListboxContainer from "./components/ColorListboxContainer";
 class App extends Component {
 	render() {
@@ -10,6 +12,7 @@ class App extends Component {
 			<div className="App">
 				<PunnettTable />
 				<NewFlowerButton />
+				<NewRandomFlowerButton />
 			</div>
 		);
 	}

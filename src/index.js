@@ -18,7 +18,7 @@ export const screenSize = {
   width: window.innerWidth,
   height: window.innerHeight
 };
-console.log(screenSize.width, screenSize.height);
+
 const config = {
   type: Phaser.AUTO,
   parent: "phaser-example",
