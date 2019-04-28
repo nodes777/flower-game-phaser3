@@ -22,6 +22,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.4",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.7.1",
@@ -52,19 +53,12 @@
     "style-loader": "^0.23.1"
   },
   "jest": {
-    "modulePaths": [
-      "node_modules"
-    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
     "moduleFileExtensions": [
       "js",
       "jsx"
-    ],
-    "moduleDirectories": [
-      "node_modules"
-    ],
-    "moduleNameMapper": {
-      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
-      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
-    }
+    ]
   }
 }

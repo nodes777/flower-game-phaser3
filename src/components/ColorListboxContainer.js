@@ -6,6 +6,12 @@ import ColorListboxOptions from "./ColorListboxOptions";
 
 import { changeParentAllele } from "../actions/indexActions";
 
+import {
+	_handleOptionsEvents,
+	_handleSubmit,
+	handleOpenOptions
+} from "./handlers/colorListboxHandlers";
+
 import "../css/listbox.css";
 
 class ColorListboxContainer extends Component {
@@ -14,7 +20,11 @@ class ColorListboxContainer extends Component {
 		// create a ref to store the DOM element
 		this.selectRef = React.createRef();
 		this.arrayOfOptionsRefs = [];
+		this.handleOptionsEvents = _handleOptionsEvents.bind(this);
+		this.handleSubmit = _handleSubmit.bind(this);
+		this.handleOpenOptions = handleOpenOptions.bind(this);
 	}
+
 	state = {
 		currentAllele: undefined,
 		openOptions: false,
@@ -23,103 +33,6 @@ class ColorListboxContainer extends Component {
 
 	clearOptionsRefs = () => {
 		this.arrayOfOptionsRefs = [];
-	};
-
-	handleSubmit = () => {
-		const { dispatch, flowerId, alleleType, allelePosition } = this.props;
-		const info = {
-			flowerId: flowerId,
-			alleleType: alleleType,
-			allelePosition: allelePosition,
-			allele: this.state.currentAllele
-		};
-
-		dispatch(changeParentAllele(info));
-	};
-
-	handleOpenOptions = event => {
-		switch (event.type) {
-			case "click":
-				this._handleOpenOptions(event);
-				break;
-			case "keydown":
-				if (event.key === "Enter" || event.key === " ") {
-					this._handleOpenOptions(event);
-				}
-				break;
-			default:
-		}
-	};
-
-	_handleOpenOptions = event => {
-		this.setState(
-			() => {
-				return {
-					openOptions: !this.state.openOptions,
-					focusedOption: document.activeElement.id
-				};
-			},
-			() => {
-				this.arrayOfOptionsRefs[0].focus();
-			}
-		);
-	};
-
-	handleOptionsEvents = (color, index, event) => {
-		switch (event.type) {
-			case "click":
-				this.setState(
-					() => ({
-						currentAllele: color,
-						openOptions: !this.state.openOptions
-					}),
-					() => {
-						this.handleSubmit();
-					}
-				);
-				this.selectRef.current.focus();
-				break;
-			case "keydown":
-				if (event.key === "Enter" || event.key === " ") {
-					this.setState(
-						() => ({
-							currentAllele: color,
-							openOptions: !this.state.openOptions
-						}),
-						() => {
-							this.handleSubmit();
-						}
-					);
-					this.selectRef.current.focus();
-				}
-				if (event.key === "ArrowUp") {
-					event.preventDefault();
-					this.arrayOfOptionsRefs[index - 1].focus();
-					this.setState(() => ({
-						focusedOption: document.activeElement.id
-					}));
-				}
-				if (event.key === "ArrowDown") {
-					event.preventDefault();
-					this.arrayOfOptionsRefs[index + 1].focus();
-					this.setState(() => ({
-						focusedOption: document.activeElement.id
-					}));
-					console.log(this.state.focusedOption);
-				}
-				if (event.key === "Escape") {
-					this.setState(
-						() => {
-							return { openOptions: !this.state.openOptions };
-						},
-						() => {
-							this.selectRef.current.focus();
-						}
-					);
-				}
-				break;
-			default:
-		}
 	};
 
 	setOptionRef = element => {

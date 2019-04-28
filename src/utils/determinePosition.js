@@ -5,3 +5,7 @@ export const determineXPos = () => {
 export const determineYPos = () => {
 	return Math.floor(Math.random() * screenSize.height + 1);
 };
+
+export const add2 = () => {
+	return 2 + 2;
+};
