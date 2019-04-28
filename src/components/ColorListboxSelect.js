@@ -1,5 +1,5 @@
 import React from "react";
-
+import ColorSquare from "./ColorSquare";
 const ColorListboxSelect = props => {
 	const { handleOpenOptions, openOptions, currentAllele, selectRef } = props;
 	return (
@@ -19,10 +19,8 @@ const ColorListboxSelect = props => {
 				"Select an Allele"
 			) : (
 				<span>
-					<span>{currentAllele}</span>
-					<span aria-hidden="true" style={{ color: currentAllele }}>
-						&#9632;
-					</span>
+					<span>{currentAllele} </span>
+					<ColorSquare color={currentAllele} />
 				</span>
 			)}
 		</div>

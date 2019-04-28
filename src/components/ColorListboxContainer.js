@@ -45,7 +45,6 @@ class ColorListboxContainer extends Component {
 
 	render() {
 		let { currentAllele, openOptions, focusedOption } = this.state;
-		const { parent } = this.props;
 		return (
 			<div>
 				<ColorListboxSelect
@@ -55,7 +54,6 @@ class ColorListboxContainer extends Component {
 					// element in an instance field
 					selectRef={this.selectRef}
 					currentAllele={currentAllele}
-					parent={parent}
 				/>
 				<div>
 					{openOptions === true ? (

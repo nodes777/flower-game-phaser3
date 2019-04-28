@@ -58,9 +58,9 @@ export const _handleOptionsEvents = function(color, index, event) {
 };
 
 export const _handleSubmit = function() {
-	const { dispatch, flowerId, alleleType, allelePosition } = this.props;
+	const { dispatch, parentId, alleleType, allelePosition } = this.props;
 	const info = {
-		flowerId: flowerId,
+		parentId: parentId,
 		alleleType: alleleType,
 		allelePosition: allelePosition,
 		allele: this.state.currentAllele

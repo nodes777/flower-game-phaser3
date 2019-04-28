@@ -14,23 +14,21 @@ class NewFlowerButton extends React.Component {
 
 	handleSubmit = () => {
 		const { dispatch, flowers } = this.props;
-		const flower1 = flowers.byId.flower1;
-		const flower2 = flowers.byId.flower2;
-		//TODO REFACTOR THIS
-		if (flower2.genotype.color[0] === undefined)
-			alert("table isnt complete");
+		const parent1 = flowers.punnett.parent1;
+		const parent2 = flowers.punnett.parent2;
+
 		console.log(flowers);
 		const info = {
 			parent1: {
 				genotype: {
-					color: flower1.genotype.color,
+					color: parent1.genotype.color,
 					shape: ["square", "round"]
 				},
 				position: { x: 0, y: 0 }
 			},
 			parent2: {
 				genotype: {
-					color: flower2.genotype.color,
+					color: parent2.genotype.color,
 					shape: ["triangle", "pentagon"]
 				},
 				position: { x: 0, y: 0 }
@@ -39,8 +37,21 @@ class NewFlowerButton extends React.Component {
 		dispatch(addFlower(info));
 	};
 	render() {
+		const { flowers } = this.props;
+		const parent1 = flowers.punnett.parent1;
+		const parent2 = flowers.punnett.parent2;
 		return (
-			<button onClick={this.handleSubmit}>New Flower From Table</button>
+			<button
+				onClick={this.handleSubmit}
+				disabled={
+					parent1.genotype.color[0] === undefined ||
+					parent1.genotype.color[1] === undefined ||
+					parent2.genotype.color[0] === undefined ||
+					parent2.genotype.color[1] === undefined
+				}
+			>
+				New Flower From Table
+			</button>
 		);
 	}
 }

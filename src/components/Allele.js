@@ -10,8 +10,8 @@ export class Allele extends React.Component {
 	};
 
 	render() {
-		const { flowers, parentId, allelePosition } = this.props;
-		const colorName = flowers.byId[parentId].genotype.color[allelePosition];
+		const { punnett, parentId, allelePosition } = this.props;
+		const colorName = punnett[parentId].genotype.color[allelePosition];
 		return (
 			<Fragment>
 				<span>{colorName} </span>
@@ -23,7 +23,7 @@ export class Allele extends React.Component {
 
 function mapStateToProps({ flowers }) {
 	return {
-		flowers: flowers
+		punnett: flowers.punnett
 	};
 }
 

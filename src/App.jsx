@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import "./css/App.css";
 import PunnettTable from "./components/PunnettTable";
-import NewFlowerButton from "./components/NewFlowerButton";
+import NewFlowerFromTableButton from "./components/NewFlowerFromTableButton";
 import NewRandomFlowerButton from "./components/NewRandomFlowerButton";
 
 import ColorListboxContainer from "./components/ColorListboxContainer";
@@ -11,7 +11,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<PunnettTable />
-				<NewFlowerButton />
+				<NewFlowerFromTableButton />
 				<NewRandomFlowerButton />
 			</div>
 		);

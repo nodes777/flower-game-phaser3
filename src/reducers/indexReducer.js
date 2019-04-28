@@ -8,20 +8,20 @@ export function flowers(state = exampleState, action) {
 	switch (action.type) {
 		case CHANGE_PARENT_ALLELE:
 			const {
-				flowerId,
+				parentId,
 				alleleType,
 				allelePosition,
 				allele
 			} = action.data;
 			return {
 				...state,
-				byId: {
-					...state.byId,
-					[flowerId]: {
-						...state.byId[flowerId],
+				punnett: {
+					...state.punnett,
+					[parentId]: {
+						...state.punnett[parentId],
 						genotype: {
-							...state.byId[flowerId].genotype,
-							[alleleType]: state.byId[flowerId].genotype[
+							...state.punnett[parentId].genotype,
+							[alleleType]: state.punnett[parentId].genotype[
 								alleleType
 							].map((item, index) => {
 								if (index === allelePosition) {
