@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+
 const SPEED = 100;
 const ROTATION_SPEED = (2 * Math.PI) / 4; // 90 deg/s
 const ROTATION_SPEED_DEGREES = Phaser.Math.RadToDeg(ROTATION_SPEED);
@@ -6,6 +7,7 @@ const TOLERANCE = 0.01 * ROTATION_SPEED;
 const sin = Math.sin;
 const cos = Math.cos;
 const atan2 = Math.atan2;
+// to do velocity based movement
 const velocityFromRotation =
 	Phaser.Physics.Arcade.ArcadePhysics.prototype.velocityFromRotation;
 
@@ -24,5 +26,5 @@ export function beeRotate(target) {
 		);
 	}
 
-	velocityFromRotation(this.bee.rotation, SPEED, this.bee.body.velocity);
+	//velocityFromRotation(this.bee.rotation, SPEED, this.bee.body.velocity);
 }
