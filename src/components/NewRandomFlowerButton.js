@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { addFlower } from "../actions/indexActions";
 import { getRandomColor } from "../utils/colors";
 
+import "../css/btn.css";
+
 function mapStateToProps({ flowers }) {
 	return {
 		flowers
@@ -31,7 +33,11 @@ class NewFlowerButton extends React.Component {
 		dispatch(addFlower(info));
 	};
 	render() {
-		return <button onClick={this.handleSubmit}>New Random Flower</button>;
+		return (
+			<button class="btn btn-primary" onClick={this.handleSubmit}>
+				New Random Flower
+			</button>
+		);
 	}
 }
 
