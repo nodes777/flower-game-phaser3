@@ -19,7 +19,6 @@ export function create() {
 
 	// set the flower to go to
 	this.flowerToFlyTo = this.firstFlower;
-	console.log(this.flowerToFlyTo);
 
 	// collider for collision with bee and flower
 	let collider = this.physics.add.overlap(
@@ -29,15 +28,14 @@ export function create() {
 			console.log("collision");
 			this.bee.setAcceleration(0, 0);
 
-			// sets target debug graphics
-
-			// set the new target randomly
 			this.time.addEvent({
 				delay: 1000,
 				callback: function() {
+					// set the new target randomly
 					this.flowerToFlyTo = this.flowersOnScreen[
 						Math.floor(Math.random() * this.flowersOnScreen.length)
 					];
+					// sets target debug graphics
 					targetFlowerGraphics.clear();
 					this.circle = new Phaser.Geom.Circle(
 						this.flowerToFlyTo.x,

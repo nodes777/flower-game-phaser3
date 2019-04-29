@@ -1,10 +1,21 @@
-import { store } from "../index.js";
-import { checkStore } from "../utils/checkStore";
-
+import { beeRotate } from "./utils/rotation";
 export function update() {
 	//  Reset the acceleration
-	this.bee.body.angularAcceleration = 0;
-	this.physics.accelerateToObject(this.bee, this.flowerToFlyTo, 60, 100, 100);
+	//this.bee.setAcceleration(0, 0);
+	// this.physics.accelerateToObject(
+	// 	this.bee,
+	// 	this.flowerToFlyTo,
+	// 	100,
+	// 	100,
+	// 	100
+	// );
 
-	//this.flowerToFlyTo
+	beeRotate.call(this, this.flowerToFlyTo);
+
+	// this.bee.angle = this.physics.moveToObject(
+	// 	this.bee,
+	// 	this.flowerToFlyTo,
+	// 	100,
+	// 	2000
+	// );
 }
