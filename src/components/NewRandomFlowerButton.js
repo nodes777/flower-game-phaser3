@@ -34,7 +34,7 @@ class NewFlowerButton extends React.Component {
 	};
 	render() {
 		return (
-			<button class="btn btn-primary" onClick={this.handleSubmit}>
+			<button className="btn btn-primary" onClick={this.handleSubmit}>
 				New Random Flower
 			</button>
 		);
