@@ -10,8 +10,6 @@ function mapStateToProps({ flowers }) {
 }
 
 class NewFlowerButton extends React.Component {
-	// include in punnett Table and disable if table isn't complete
-
 	handleSubmit = () => {
 		const { dispatch, flowers } = this.props;
 		const parent1 = flowers.punnett.parent1;
