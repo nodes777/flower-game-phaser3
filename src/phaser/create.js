@@ -2,23 +2,23 @@ import { checkStore } from "../utils/checkStore";
 
 export function create() {
 	this.firstFlower = this.physics.add.sprite(400, 150, "blankFlower");
+	this.firstFlower.debugShowBody = false;
+
 	this.bee = this.physics.add.sprite(200, 150, "bee");
+	this.bee.setOrigin(0.5, 0.5).setDrag(50, 50);
+	// turn off debug info
+	this.bee.debugShowBody = false;
+	//this.bee.debugShowVelocity = false;
+
 	this.secondFlower = this.physics.add.sprite(
 		Phaser.Math.RND.integerInRange(25, 600),
 		Phaser.Math.RND.integerInRange(25, 600),
 		"blankFlower"
 	);
+	this.secondFlower.debugShowBody = false;
 
+	//Create array of flowers on screen to fly to
 	this.flowersOnScreen = [this.firstFlower, this.secondFlower];
-
-	// Set image/sprite properties
-	this.bee
-		.setOrigin(0.5, 0.5)
-		//.setCollideWorldBounds(true)
-		.setDrag(50, 50);
-	// turn off debug info
-	this.bee.debugShowBody = false;
-	//this.bee.debugShowVelocity = false;
 
 	// set the flower to go to
 	this.flowerToFlyTo = this.firstFlower;
@@ -45,10 +45,8 @@ export function create() {
 						10
 					);
 					targetFlowerGraphics.strokeCircleShape(this.circle);
-					// remove this collider
-					//this.physics.world.removeCollider(collider);
-					// create a new one
-					// set new object
+
+					// set new object as collider for bee
 					collider.object2 = this.flowerToFlyTo;
 				},
 				callbackScope: this
