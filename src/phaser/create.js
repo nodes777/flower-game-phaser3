@@ -70,4 +70,14 @@ export function create() {
 		callbackScope: this,
 		loop: true
 	});
+
+	// hack to reset bee's accelleration every 1/10 sec so that orbits appear less frequently
+	this.time.addEvent({
+		delay: 100,
+		callback: function() {
+			this.bee.setAcceleration(0, 0);
+		},
+		callbackScope: this,
+		loop: true
+	});
 }
