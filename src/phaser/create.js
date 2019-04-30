@@ -16,6 +16,9 @@ export function create() {
 		.setOrigin(0.5, 0.5)
 		//.setCollideWorldBounds(true)
 		.setDrag(50, 50);
+	// turn off debug info
+	this.bee.debugShowBody = false;
+	//this.bee.debugShowVelocity = false;
 
 	// set the flower to go to
 	this.flowerToFlyTo = this.firstFlower;
@@ -25,7 +28,6 @@ export function create() {
 		this.bee,
 		this.flowerToFlyTo,
 		function(beeOnFlower) {
-			console.log("collision");
 			this.bee.setAcceleration(0, 0);
 
 			this.time.addEvent({

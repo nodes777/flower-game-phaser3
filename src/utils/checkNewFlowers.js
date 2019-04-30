@@ -25,6 +25,8 @@ export function checkNewFlowers(
 				"0x" +
 					colors[currFlower.genotype.color[Math.round(Math.random())]]
 			);
+			// hide debug info
+			newFlowerSprite.debugShowBody = false;
 			// add the flower to the array of onscreen flowers for bee to fly to
 			game.flowersOnScreen.push(newFlowerSprite);
 		}

@@ -8,8 +8,8 @@ const sin = Math.sin;
 const cos = Math.cos;
 const atan2 = Math.atan2;
 // to do velocity based movement
-const velocityFromRotation =
-	Phaser.Physics.Arcade.ArcadePhysics.prototype.velocityFromRotation;
+// const velocityFromRotation =
+// 	Phaser.Physics.Arcade.ArcadePhysics.prototype.velocityFromRotation;
 
 export function beeRotate(target) {
 	var angleToTarget = Phaser.Math.Angle.BetweenPoints(this.bee, target);
