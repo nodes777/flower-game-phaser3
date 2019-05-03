@@ -19,6 +19,12 @@ const exampleState = {
             position: { x: 0, y: 0 }
         }
     },
-    allIds: ["flower1", "flower2"]
+    allIds: ["flower1", "flower2"],
+    beesById: {
+        bee1: {
+            pollen: null
+        }
+    },
+    allBeeIds: ["bee1"]
 };
 export default exampleState;

@@ -8,6 +8,8 @@
 ## Phaser
 
 -   Provide pollination
+    -   bee(s) in redux
+    -   add action, add reducer
 -   Multiple bees
 
 ## Redux
