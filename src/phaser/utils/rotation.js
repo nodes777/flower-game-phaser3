@@ -7,7 +7,7 @@ const TOLERANCE = 0.01 * ROTATION_SPEED;
 const sin = Math.sin;
 const cos = Math.cos;
 const atan2 = Math.atan2;
-// to do velocity based movement
+// for velocity based movement
 // const velocityFromRotation =
 // 	Phaser.Physics.Arcade.ArcadePhysics.prototype.velocityFromRotation;
 

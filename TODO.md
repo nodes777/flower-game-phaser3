@@ -7,7 +7,8 @@
 
 ## Phaser
 
--   Get bee to fly to other flowers
+-   Provide pollination
+-   Multiple bees
 
 ## Redux
 
@@ -15,4 +16,7 @@
 
 ## React
 
--   Style New Flower Buttons
+## Bugs
+
+-   Bee flys under flowers - need layer management
+-   Flowers can appear on top of each other
