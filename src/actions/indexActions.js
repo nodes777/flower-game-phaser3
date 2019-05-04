@@ -19,18 +19,19 @@ export const addFlower = data => {
 	};
 };
 
-export const pickupPollen = data => {
+export const pickupPollen = (beeId, flowerId) => {
 	console.log("pickupPollen action");
+	console.log(beeId, flowerId);
 	return {
 		type: PICKUP_POLLEN,
-		data
+		data: { beeId, flowerId }
 	};
 };
 
-export const dropPollen = data => {
+export const dropPollen = beeId => {
 	console.log("dropPollen action");
 	return {
 		type: DROP_POLLEN,
-		data
+		data: { beeId }
 	};
 };

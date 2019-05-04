@@ -1,3 +1,6 @@
+import { store } from "../../index";
+
+import { pickupPollen, dropPollen } from "../../actions/indexActions";
 export function beeOnFlowerCollision(beeOnFlower, collider) {
 	console.log("collision");
 	console.log(beeOnFlower);
@@ -32,4 +35,15 @@ export function beeOnFlowerCollision(beeOnFlower, collider) {
 		},
 		callbackScope: this
 	});
+}
+
+export function checkForPollen(beeId, flowerId) {
+	console.log(flowerId);
+	if (store.getState().flowers.beesById[beeId].pollen === null) {
+		store.dispatch(pickupPollen(beeId, flowerId));
+	}
+
+	if (store.getState().flowers.beesById[beeId].pollen !== null) {
+		store.dispatch(dropPollen(beeId));
+	}
 }

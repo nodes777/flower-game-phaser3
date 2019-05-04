@@ -1,11 +1,13 @@
 import { checkStore } from "../utils/checkStore";
-
+import { checkForPollen } from "./utils/beeOnFlowerCollision";
 export function create() {
 	this.firstFlower = this.physics.add.sprite(400, 150, "blankFlower");
 	this.firstFlower.debugShowBody = false;
+	this.firstFlower.id = "flower1";
 
 	this.bee = this.physics.add.sprite(200, 150, "bee");
 	this.bee.setOrigin(0.5, 0.5).setDrag(50, 50);
+	this.bee.id = "bee1";
 	// turn off debug info
 	this.bee.debugShowBody = false;
 	//this.bee.debugShowVelocity = false;
@@ -16,6 +18,7 @@ export function create() {
 		"blankFlower"
 	);
 	this.secondFlower.debugShowBody = false;
+	this.secondFlower.id = "flower2";
 
 	//Create array of flowers on screen to fly to
 	this.flowersOnScreen = [this.firstFlower, this.secondFlower];
@@ -33,6 +36,9 @@ export function create() {
 			this.time.addEvent({
 				delay: 1000,
 				callback: function() {
+					// check if bee has pollen
+					checkForPollen(this.bee.id, this.flowerToFlyTo.id);
+
 					// set the new target randomly
 					this.flowerToFlyTo = this.flowersOnScreen[
 						Math.floor(Math.random() * this.flowersOnScreen.length)

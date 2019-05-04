@@ -1,4 +1,9 @@
-import { CHANGE_PARENT_ALLELE, ADD_FLOWER } from "../actions/indexActions";
+import {
+	CHANGE_PARENT_ALLELE,
+	ADD_FLOWER,
+	PICKUP_POLLEN,
+	DROP_POLLEN
+} from "../actions/indexActions";
 import { combineReducers } from "redux";
 import exampleState from "../exampleState";
 import { determineGenotype } from "../utils/determineGenotype";
@@ -52,6 +57,32 @@ export function flowers(state = exampleState, action) {
 				},
 				allIds: [...state.allIds.concat([newId])]
 			};
+		case PICKUP_POLLEN: {
+			const { beeId, flowerId } = action.data;
+			console.log(action.data);
+			return {
+				...state,
+				beesById: {
+					...state.beesById,
+					[beeId]: {
+						pollen: state.byId[flowerId].genotype
+					}
+				}
+			};
+		}
+		case DROP_POLLEN: {
+			const { beeId, pollen } = action.data;
+			console.log(beeId);
+			return {
+				...state,
+				beesById: {
+					...state.beesById,
+					[beeId]: {
+						pollen: null
+					}
+				}
+			};
+		}
 		default:
 			return state;
 	}
