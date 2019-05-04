@@ -3,12 +3,14 @@ import { store } from "../../index";
 import { pickupPollen, dropPollen } from "../../actions/indexActions";
 
 export function checkForPollen(beeId, flowerId) {
-	if (store.getState().bees.byId[beeId].pollen === null) {
+	const beeHasPollen = store.getState().bees.byId[beeId].pollen !== null;
+	//console.log("beeHasPollen: " + beeHasPollen);
+	if (!beeHasPollen) {
 		const pollen = store.getState().flowers.byId[flowerId].genotype;
 		store.dispatch(pickupPollen(beeId, pollen));
 	}
 
-	if (store.getState().bees.byId[beeId].pollen !== null) {
+	if (beeHasPollen) {
 		store.dispatch(dropPollen(beeId));
 	}
 }
