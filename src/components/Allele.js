@@ -21,9 +21,9 @@ export class Allele extends React.Component {
 	}
 }
 
-function mapStateToProps({ flowers }) {
+function mapStateToProps({ punnett }) {
 	return {
-		punnett: flowers.punnett
+		punnett
 	};
 }
 

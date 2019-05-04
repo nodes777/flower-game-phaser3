@@ -3,19 +3,19 @@ import { connect } from "react-redux";
 import { addFlower } from "../actions/indexActions";
 import { getRandomColor } from "../utils/colors";
 
-function mapStateToProps({ flowers }) {
+function mapStateToProps({ punnett }) {
 	return {
-		flowers
+		punnett
 	};
 }
 
-class NewFlowerButton extends React.Component {
+class NewFlowerFromTableButton extends React.Component {
 	handleSubmit = () => {
-		const { dispatch, flowers } = this.props;
-		const parent1 = flowers.punnett.parent1;
-		const parent2 = flowers.punnett.parent2;
+		const { dispatch, punnett } = this.props;
+		const parent1 = punnett.parent1;
+		const parent2 = punnett.parent2;
 
-		console.log(flowers);
+		console.log(punnett);
 		const info = {
 			parent1: {
 				genotype: {
@@ -35,9 +35,9 @@ class NewFlowerButton extends React.Component {
 		dispatch(addFlower(info));
 	};
 	render() {
-		const { flowers } = this.props;
-		const parent1 = flowers.punnett.parent1;
-		const parent2 = flowers.punnett.parent2;
+		const { punnett } = this.props;
+		const parent1 = punnett.parent1;
+		const parent2 = punnett.parent2;
 		return (
 			<button
 				onClick={this.handleSubmit}
@@ -54,4 +54,4 @@ class NewFlowerButton extends React.Component {
 	}
 }
 
-export default connect(mapStateToProps)(NewFlowerButton);
+export default connect(mapStateToProps)(NewFlowerFromTableButton);

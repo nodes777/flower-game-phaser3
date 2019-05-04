@@ -27,6 +27,7 @@ export function checkNewFlowers(
 			);
 			// hide debug info
 			newFlowerSprite.debugShowBody = false;
+			newFlowerSprite.id = currFlowerId;
 			// add the flower to the array of onscreen flowers for bee to fly to
 			game.flowersOnScreen.push(newFlowerSprite);
 		}

@@ -9,22 +9,26 @@ const exampleState = {
             position: { x: 0, y: 0 }
         }
     },
-    byId: {
-        flower1: {
-            genotype: { color: [undefined, undefined] },
-            position: { x: 0, y: 0 }
+    flowers: {
+        byId: {
+            flower1: {
+                genotype: { color: [undefined, undefined] },
+                position: { x: 0, y: 0 }
+            },
+            flower2: {
+                genotype: { color: [undefined, undefined] },
+                position: { x: 0, y: 0 }
+            }
         },
-        flower2: {
-            genotype: { color: [undefined, undefined] },
-            position: { x: 0, y: 0 }
-        }
+        allIds: ["flower1", "flower2"]
     },
-    allIds: ["flower1", "flower2"],
-    beesById: {
-        bee1: {
-            pollen: null
-        }
-    },
-    allBeeIds: ["bee1"]
+    bees: {
+        byId: {
+            bee1: {
+                pollen: null
+            }
+        },
+        allBeeIds: ["bee1"]
+    }
 };
 export default exampleState;

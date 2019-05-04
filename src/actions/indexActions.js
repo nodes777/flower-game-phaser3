@@ -1,9 +1,9 @@
-export const CHANGE_PARENT_ALLELE = "CHANGE_PARENT_ALLELE";
-export const ADD_FLOWER = "ADD_FLOWER";
-export const ADD_BEE = "ADD_BEE";
-
-export const PICKUP_POLLEN = "PICKUP_POLLEN";
-export const DROP_POLLEN = "DROP_POLLEN";
+import {
+	CHANGE_PARENT_ALLELE,
+	ADD_FLOWER,
+	PICKUP_POLLEN,
+	DROP_POLLEN
+} from "../types/types";
 
 export const changeParentAllele = data => {
 	return {
@@ -19,17 +19,14 @@ export const addFlower = data => {
 	};
 };
 
-export const pickupPollen = (beeId, flowerId) => {
-	console.log("pickupPollen action");
-	console.log(beeId, flowerId);
+export const pickupPollen = (beeId, pollen) => {
 	return {
 		type: PICKUP_POLLEN,
-		data: { beeId, flowerId }
+		data: { beeId, pollen }
 	};
 };
 
 export const dropPollen = beeId => {
-	console.log("dropPollen action");
 	return {
 		type: DROP_POLLEN,
 		data: { beeId }
