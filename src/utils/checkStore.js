@@ -9,8 +9,6 @@ export function checkStore() {
 	if (currState != prevState) {
 		// check if the state has been initialized
 		if (prevState !== undefined) {
-			//console.log("Store has changed");
-			//console.log(store.getState());
 			//check for new flower by looking at length of flower.allIds
 			let numFlowersPrev = prevState.flowers.allIds.length;
 			let numFlowersCurr = currState.flowers.allIds.length;

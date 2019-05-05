@@ -1,30 +1,8 @@
 import { checkStore } from "../utils/checkStore";
 import { checkForPollen } from "./utils/beeOnFlowerCollision";
+import { init } from "./init";
 export function create() {
-	this.firstFlower = this.physics.add.sprite(400, 150, "blankFlower");
-	this.firstFlower.debugShowBody = false;
-	this.firstFlower.id = "flower1";
-
-	this.bee = this.physics.add.sprite(200, 150, "bee");
-	this.bee.setOrigin(0.5, 0.5).setDrag(50, 50);
-	this.bee.id = "bee1";
-	// turn off debug info
-	this.bee.debugShowBody = false;
-	//this.bee.debugShowVelocity = false;
-
-	this.secondFlower = this.physics.add.sprite(
-		Phaser.Math.RND.integerInRange(25, 600),
-		Phaser.Math.RND.integerInRange(25, 600),
-		"blankFlower"
-	);
-	this.secondFlower.debugShowBody = false;
-	this.secondFlower.id = "flower2";
-
-	//Create array of flowers on screen to fly to
-	this.flowersOnScreen = [this.firstFlower, this.secondFlower];
-
-	// set the flower to go to
-	this.flowerToFlyTo = this.firstFlower;
+	init(this);
 
 	// collider flag for avoiding running the collision function over and over while the bee is colliding
 	let collided = false;
@@ -34,7 +12,6 @@ export function create() {
 		this.flowerToFlyTo,
 		function(beeOnFlower) {
 			this.bee.setAcceleration(0, 0);
-			//console.log("collided: " + collided);
 			// if you havent registered as collided with this flower yet then
 			if (!collided) {
 				this.time.addEvent({

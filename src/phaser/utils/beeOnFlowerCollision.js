@@ -8,6 +8,7 @@ import {
 
 export function checkForPollen(beeId, flowerId) {
 	const beeHasPollen = store.getState().bees.byId[beeId].pollen !== null;
+	// if no pollen, pick it up
 	if (!beeHasPollen) {
 		const pollen = store.getState().flowers.byId[flowerId].genotype;
 		store.dispatch(pickupPollen(beeId, pollen));
@@ -16,7 +17,6 @@ export function checkForPollen(beeId, flowerId) {
 	if (beeHasPollen) {
 		// pollinate, from bee pollen
 		const pollen = store.getState().bees.byId[beeId].pollen;
-		console.log(pollen);
 		// get currently collided flower
 		const flower2 = store.getState().flowers.byId[flowerId];
 		// create object with parental info
