@@ -7,16 +7,14 @@
 
 ## Phaser
 
--   Provide pollination
-    -   bee(s) in redux
-    -   add action, add reducer
 -   Multiple bees
 
 ## Redux
 
--   Clear up example state
-
 ## React
+
+-   Genericize punnett table to any given allele
+-   refactor colorlistboxcontainer
 
 ## Bugs
 

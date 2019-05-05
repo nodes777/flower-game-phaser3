@@ -7,6 +7,7 @@
 	padding: 5px;
 	width: auto;
 	min-width: 300px;
+	cursor: pointer;
 }
 .options-alleles {
 	background-color: #282c34;
@@ -17,6 +18,7 @@
 	height: 400px;
 	border: 2px solid black;
 	border-radius: 2px;
+	cursor: pointer;
 }
 
 .option-allele {
