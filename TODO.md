@@ -8,6 +8,11 @@
 ## Phaser
 
 -   Multiple bees
+-   position determination from second flower
+
+### Art
+
+-   Flowers with stems
 
 ## Redux
 
@@ -15,6 +20,7 @@
 
 -   Genericize punnett table to any given allele
 -   refactor colorlistboxcontainer
+-   Display table with rows for each flower and its genes
 
 ## Bugs
 

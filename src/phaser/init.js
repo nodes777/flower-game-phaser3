@@ -3,6 +3,7 @@ import { determineXPos, determineYPos } from "../utils/determinePosition";
 import { colors } from "../utils/colors";
 
 export function init(game) {
+	/* First Flower */
 	game.firstFlower = game.physics.add.sprite(400, 150, "blankFlower");
 	game.firstFlower.debugShowBody = false;
 	game.firstFlower.id = "flower1";
@@ -17,14 +18,19 @@ export function init(game) {
 				]
 			]
 	);
-
+	game.firstFlower.depth = 1;
+	// add stem
+	game.add.image(game.firstFlower.x, game.firstFlower.y + 12, "straightStem");
+	/* Bee */
 	game.bee = game.physics.add.sprite(200, 150, "bee");
 	game.bee.setOrigin(0.5, 0.5).setDrag(50, 50);
 	game.bee.id = "bee1";
+	game.bee.depth = 999;
 	// turn off debug info
 	game.bee.debugShowBody = false;
 	//game.bee.debugShowVelocity = false;
 
+	/* Second Flower */
 	game.secondFlower = game.physics.add.sprite(
 		determineXPos(),
 		determineYPos(),
@@ -40,7 +46,13 @@ export function init(game) {
 				]
 			]
 	);
-
+	game.secondFlower.depth = 1;
+	// add stem
+	game.add.image(
+		game.secondFlower.x,
+		game.secondFlower.y + 12,
+		"straightStem"
+	);
 	//Create array of flowers on screen to fly to
 	game.flowersOnScreen = [game.firstFlower, game.secondFlower];
 

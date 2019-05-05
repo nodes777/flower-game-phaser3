@@ -1,11 +1,12 @@
 import logoImg from "../assets/logo.png";
 import blankFlower from "../assets/blank-flower.png";
 import bee from "../assets/bee.png";
-
+import straightStem from "../assets/straight-stem.png";
 export function preload() {
 	this.load.image("logo", logoImg);
 	this.load.image("blankFlower", blankFlower);
 	this.load.image("bee", bee);
+	this.load.image("straightStem", straightStem);
 
 	// display progress bar
 	const progressBar = this.add.graphics();
