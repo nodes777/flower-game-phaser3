@@ -26,7 +26,9 @@ class ColorListboxContainer extends Component {
 	}
 
 	state = {
-		currentAllele: undefined,
+		currentAllele: this.props.punnett[this.props.parentId].genotype.color[
+			this.props.allelePosition
+		],
 		openOptions: false,
 		focusedOption: undefined
 	};
@@ -73,9 +75,10 @@ class ColorListboxContainer extends Component {
 	}
 }
 
-function mapStateToProps({ flowers }) {
+function mapStateToProps({ flowers, punnett }) {
 	return {
-		flowers
+		flowers,
+		punnett
 	};
 }
 

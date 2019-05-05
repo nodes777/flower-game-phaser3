@@ -2,6 +2,7 @@ import { checkStore } from "../utils/checkStore";
 import { checkForPollen } from "./utils/beeOnFlowerCollision";
 import { init } from "./init";
 export function create() {
+	// creates initial flowers
 	init(this);
 
 	// collider flag for avoiding running the collision function over and over while the bee is colliding
@@ -55,7 +56,7 @@ export function create() {
 		fillStyle: { color: 0xff00ff }
 	});
 
-	// Check the store every 2 secs
+	// Check the store every .5 secs
 	this.time.addEvent({
 		delay: 500,
 		callback: checkStore,

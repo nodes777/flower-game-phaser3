@@ -26,8 +26,8 @@ export function init(game) {
 	//game.bee.debugShowVelocity = false;
 
 	game.secondFlower = game.physics.add.sprite(
-		Phaser.Math.RND.integerInRange(25, 600),
-		Phaser.Math.RND.integerInRange(25, 600),
+		determineXPos(),
+		determineYPos(),
 		"blankFlower"
 	);
 	game.secondFlower.debugShowBody = false;
