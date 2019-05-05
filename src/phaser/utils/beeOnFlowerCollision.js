@@ -1,16 +1,36 @@
 import { store } from "../../index";
 
-import { pickupPollen, dropPollen } from "../../actions/indexActions";
+import {
+	pickupPollen,
+	dropPollen,
+	addFlower
+} from "../../actions/indexActions";
 
 export function checkForPollen(beeId, flowerId) {
 	const beeHasPollen = store.getState().bees.byId[beeId].pollen !== null;
-	//console.log("beeHasPollen: " + beeHasPollen);
 	if (!beeHasPollen) {
 		const pollen = store.getState().flowers.byId[flowerId].genotype;
 		store.dispatch(pickupPollen(beeId, pollen));
 	}
 
 	if (beeHasPollen) {
+		// pollinate, from bee pollen
+		const pollen = store.getState().bees.byId[beeId].pollen;
+		console.log(pollen);
+		// get currently collided flower
+		const flower2 = store.getState().flowers.byId[flowerId];
+		// create object with parental info
+		const info = {
+			parent1: {
+				genotype: pollen,
+				position: { x: 0, y: 0 }
+			},
+			parent2: {
+				genotype: flower2.genotype,
+				position: flower2.position
+			}
+		};
+		store.dispatch(addFlower(info));
 		store.dispatch(dropPollen(beeId));
 	}
 }
