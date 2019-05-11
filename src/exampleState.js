@@ -14,22 +14,22 @@ const exampleState = {
     punnett: {
         parent1: {
             genotype: { color: [color1, color2], shape: [shape1, shape2] },
-            position: { x: 0, y: 0 }
+            position: { x: 400, y: 150 }
         },
         parent2: {
             genotype: { color: [color3, color4], shape: [shape3, shape4] },
-            position: { x: 0, y: 0 }
+            position: { x: 200, y: 200 }
         }
     },
     flowers: {
         byId: {
             flower1: {
                 genotype: { color: [color1, color2], shape: [shape1, shape2] },
-                position: { x: 0, y: 0 }
+                position: { x: 400, y: 150 }
             },
             flower2: {
                 genotype: { color: [color3, color4], shape: [shape3, shape4] },
-                position: { x: 0, y: 0 }
+                position: { x: 200, y: 200 }
             }
         },
         allIds: ["flower1", "flower2"]

@@ -11,8 +11,5 @@ const shapesKeys = Object.keys(flowerShapes);
 const shapesLength = shapesKeys.length;
 
 export const getRandomShape = () => {
-	console.log(
-		flowerShapes[shapesKeys[Math.floor(Math.random() * shapesLength)]]
-	);
 	return flowerShapes[shapesKeys[Math.floor(Math.random() * shapesLength)]];
 };
