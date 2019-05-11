@@ -18,14 +18,14 @@ class NewFlowerButton extends React.Component {
 			parent1: {
 				genotype: {
 					color: [getRandomColor(), getRandomColor()],
-					shape: ["square", "round"]
+					shape: ["squareFlower", "roundFlower"]
 				},
 				position: { x: 0, y: 0 }
 			},
 			parent2: {
 				genotype: {
 					color: [getRandomColor(), getRandomColor()],
-					shape: ["triangle", "pentagon"]
+					shape: ["diamondFlower", "diamondFlower"]
 				},
 				position: { x: 0, y: 0 }
 			}

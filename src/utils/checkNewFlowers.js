@@ -1,4 +1,5 @@
 import { colors } from "./colors";
+import { determineFlowerShape } from "./determineFlowerShape";
 export function checkNewFlowers(
 	numFlowersPrev,
 	numFlowersCurr,
@@ -16,7 +17,7 @@ export function checkNewFlowers(
 			let newFlowerSprite = game.physics.add.sprite(
 				currFlower.position.x,
 				currFlower.position.y,
-				"blankFlower"
+				determineFlowerShape(currFlower.genotype)
 			);
 
 			// set the color by picking a random color in the flowers genotype array

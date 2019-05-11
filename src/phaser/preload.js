@@ -1,13 +1,21 @@
 import logoImg from "../assets/logo.png";
 import blankFlower from "../assets/blank-flower.png";
+import diamondFlower from "../assets/diamond-flower.png";
+import roundFlower from "../assets/round-flower.png";
+import squareFlower from "../assets/square-flower.png";
 import bee from "../assets/bee.png";
 import straightStem from "../assets/straight-stem.png";
+import { flowerShapes } from "../utils/flowerShapes";
+
 export function preload() {
 	this.load.image("logo", logoImg);
-	this.load.image("blankFlower", blankFlower);
+	this.load.image(flowerShapes.DEFAULT, blankFlower);
 	this.load.image("bee", bee);
-	this.load.image("straightStem", straightStem);
+	this.load.image(flowerShapes.DIAMOND, diamondFlower);
+	this.load.image(flowerShapes.ROUND, roundFlower);
+	this.load.image(flowerShapes.SQUARE, squareFlower);
 
+	this.load.image("straightStem", straightStem);
 	// display progress bar
 	const progressBar = this.add.graphics();
 	const progressBox = this.add.graphics();
