@@ -1,6 +1,5 @@
 import { store } from "../index.js";
-import { determineXPos, determineYPos } from "../utils/determinePosition";
-import { colors } from "../types/colors";
+
 import { addFlower } from "../utils/addFlower";
 export function init(game) {
 	/*Create array of flowers on screen to fly to*/
@@ -20,7 +19,6 @@ export function init(game) {
 	/* Second Flower */
 	addFlower(store.getState().flowers.byId.flower2, "flower2", game);
 
-	console.log(game.flowersOnScreen);
 	// set the flower to go to
 	game.flowerToFlyTo = game.flowersOnScreen[0];
 }

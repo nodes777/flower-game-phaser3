@@ -1,6 +1,5 @@
 import { flowerShapes } from "../types/flowerShapes";
 export const determineFlowerShape = genotype => {
-	console.log(genotype.shape);
 	if (genotype.shape === undefined) {
 		return flowerShapes.DEFAULT;
 	}
