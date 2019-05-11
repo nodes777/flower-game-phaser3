@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addFlower } from "../actions/indexActions";
-import { getRandomColor } from "../utils/colors";
+import { getRandomColor } from "../utils/determineColor";
 
 import "../css/btn.css";
 

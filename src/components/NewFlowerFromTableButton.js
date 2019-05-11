@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addFlower } from "../actions/indexActions";
-import { getRandomColor } from "../utils/colors";
+import { getRandomColor } from "../utils/determineColor";
 
 function mapStateToProps({ punnett }) {
 	return {
@@ -20,14 +20,14 @@ class NewFlowerFromTableButton extends React.Component {
 			parent1: {
 				genotype: {
 					color: parent1.genotype.color,
-					shape: ["square", "round"]
+					shape: ["squareFlower", "roundFlower"]
 				},
 				position: { x: 0, y: 0 }
 			},
 			parent2: {
 				genotype: {
 					color: parent2.genotype.color,
-					shape: ["triangle", "pentagon"]
+					shape: ["squareFlower", "diamondFlower"]
 				},
 				position: { x: 0, y: 0 }
 			}

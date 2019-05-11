@@ -1,6 +1,6 @@
 import { store } from "../index.js";
 import { determineXPos, determineYPos } from "../utils/determinePosition";
-import { colors } from "../utils/colors";
+import { colors } from "../types/colors";
 
 export function init(game) {
 	/* First Flower */

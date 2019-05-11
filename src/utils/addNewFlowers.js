@@ -1,4 +1,4 @@
-import { colors, determineColor } from "./colors";
+import { determineColor } from "./determineColor";
 import { determineFlowerShape } from "./determineFlowerShape";
 import { determineStem } from "./determineStem.js";
 export function addNewFlowers(numFlowersPrev, currState, game) {

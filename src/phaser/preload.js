@@ -5,7 +5,7 @@ import roundFlower from "../assets/round-flower.png";
 import squareFlower from "../assets/square-flower.png";
 import bee from "../assets/bee.png";
 import straightStem from "../assets/straight-stem.png";
-import { flowerShapes } from "../utils/flowerShapes";
+import { flowerShapes } from "../types/flowerShapes";
 
 export function preload() {
 	this.load.image("logo", logoImg);
