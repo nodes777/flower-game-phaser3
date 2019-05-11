@@ -1,5 +1,5 @@
 import { store } from "../index.js";
-import { checkNewFlowers } from "../utils/checkNewFlowers";
+import { addNewFlowers } from "../utils/addNewFlowers";
 let currState;
 
 export function checkStore() {
@@ -12,7 +12,11 @@ export function checkStore() {
 			//check for new flower by looking at length of flower.allIds
 			let numFlowersPrev = prevState.flowers.allIds.length;
 			let numFlowersCurr = currState.flowers.allIds.length;
-			checkNewFlowers(numFlowersPrev, numFlowersCurr, currState, this);
+			if (numFlowersCurr !== numFlowersPrev) {
+				const diff = numFlowersCurr - numFlowersPrev;
+				console.log(diff + " new flower(s)");
+				addNewFlowers(numFlowersPrev, currState, this);
+			}
 		}
 	}
 }
