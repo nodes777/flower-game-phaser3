@@ -1,5 +1,5 @@
 import exampleState from "../exampleState";
-import { PICKUP_POLLEN, DROP_POLLEN } from "../types/types";
+import { PICKUP_POLLEN, DROP_POLLEN } from "../types/actions";
 
 export function beesReducer(state = exampleState, action) {
 	switch (action.type) {

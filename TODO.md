@@ -3,12 +3,12 @@
 ## Tests
 
 -   Figure out Jest
--   Provide Proptypes in all classes
 
 ## Phaser
 
 -   Multiple bees
 -   position determination from second flower
+-   The bee's movement is a hack that slows down performance
 
 ### Art
 

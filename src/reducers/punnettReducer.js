@@ -1,5 +1,5 @@
 import exampleState from "../exampleState";
-import { CHANGE_PARENT_ALLELE } from "../types/types";
+import { CHANGE_PARENT_ALLELE } from "../types/actions";
 
 export function punnettReducer(state = exampleState.punnett, action) {
 	switch (action.type) {

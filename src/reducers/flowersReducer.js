@@ -1,7 +1,7 @@
 import exampleState from "../exampleState";
 import { determineGenotype } from "../utils/determineGenotype";
 import { determineXPos, determineYPos } from "../utils/determinePosition";
-import { CHANGE_PARENT_ALLELE, ADD_FLOWER } from "../types/types";
+import { CHANGE_PARENT_ALLELE, ADD_FLOWER } from "../types/actions";
 
 export function flowersReducer(state = exampleState.flowers, action) {
 	switch (action.type) {

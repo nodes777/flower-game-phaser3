@@ -3,7 +3,7 @@ import {
 	ADD_FLOWER,
 	PICKUP_POLLEN,
 	DROP_POLLEN
-} from "../types/types";
+} from "../types/actions";
 
 export const changeParentAllele = data => {
 	return {
