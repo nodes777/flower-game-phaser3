@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { colors } from "../types/colors";
 
 const ColorListboxOptions = props => {
@@ -38,3 +39,9 @@ const ColorListboxOptions = props => {
 };
 
 export default ColorListboxOptions;
+
+ColorListboxOptions.propTypes = {
+	handleOptionsEvents: PropTypes.func,
+	setOptionRef: PropTypes.func,
+	focusedOption: PropTypes.string
+};

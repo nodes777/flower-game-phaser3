@@ -19,10 +19,8 @@
 ## React
 
 -   Genericize punnett table to any given allele
--   refactor colorlistboxcontainer
 -   Display table with rows for each flower and its genes
 
 ## Bugs
 
--   Bee flys under flowers - need layer management
 -   Flowers can appear on top of each other

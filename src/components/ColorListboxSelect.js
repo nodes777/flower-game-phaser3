@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import ColorSquare from "./ColorSquare";
 const ColorListboxSelect = props => {
 	const { handleOpenOptions, openOptions, currentAllele, selectRef } = props;
@@ -28,3 +30,10 @@ const ColorListboxSelect = props => {
 };
 
 export default ColorListboxSelect;
+
+ColorListboxSelect.propTypes = {
+	handleOpenOptions: PropTypes.func,
+	openOptions: PropTypes.bool,
+	currentAllele: PropTypes.string,
+	selectRef: PropTypes.object
+};

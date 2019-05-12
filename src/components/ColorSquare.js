@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 
 const ColorSquare = props => {
 	const { color } = props;
@@ -19,3 +20,7 @@ const ColorSquare = props => {
 };
 
 export default ColorSquare;
+
+ColorSquare.propTypes = {
+	color: PropTypes.string
+};

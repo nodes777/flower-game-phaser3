@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { addFlower } from "../actions/indexActions";
 import { getRandomColor } from "../utils/determineColor";
+import PropTypes from "prop-types";
 
 function mapStateToProps({ punnett }) {
 	return {
@@ -10,6 +11,9 @@ function mapStateToProps({ punnett }) {
 }
 
 class NewFlowerFromTableButton extends React.Component {
+	static propTypes = {
+		punnett: PropTypes.object
+	};
 	handleSubmit = () => {
 		const { dispatch, punnett } = this.props;
 		const parent1 = punnett.parent1;

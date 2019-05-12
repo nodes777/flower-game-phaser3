@@ -1,10 +1,9 @@
 import { connect } from "react-redux";
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import ColorListboxSelect from "./ColorListboxSelect";
 import ColorListboxOptions from "./ColorListboxOptions";
-
-import { changeParentAllele } from "../actions/indexActions";
 
 import {
 	_handleOptionsEvents,
@@ -24,7 +23,6 @@ class ColorListboxContainer extends Component {
 		this.handleSubmit = _handleSubmit.bind(this);
 		this.handleOpenOptions = handleOpenOptions.bind(this);
 	}
-
 	state = {
 		currentAllele: this.props.punnett[this.props.parentId].genotype.color[
 			this.props.allelePosition
@@ -83,3 +81,9 @@ function mapStateToProps({ flowers, punnett }) {
 }
 
 export default connect(mapStateToProps)(ColorListboxContainer);
+
+ColorListboxContainer.propTypes = {
+	parentId: PropTypes.string,
+	punnett: PropTypes.object,
+	allelePosition: PropTypes.number
+};
