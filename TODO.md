@@ -21,7 +21,7 @@
 ## React
 
 -   Genericize punnett table to any given allele - add shape
--   Display table with rows for each flower and its genes - Factor out!
+-   Display table with rows for each flower and its genes - Factor out - enable display bool - provide keys
 -   Put tables below phaser game
 
 ## Bugs

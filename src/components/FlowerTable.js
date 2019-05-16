@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 import ColorSquare from "./ColorSquare";
 
@@ -11,9 +12,14 @@ function mapStateToProps({ flowers }) {
 	};
 }
 class FlowerTable extends Component {
+	static propTypes = {
+		display: PropTypes.bool
+	};
+
 	render() {
-		const { flowers } = this.props;
+		const { flowers, display } = this.props;
 		const genes = Object.keys(flowers.byId.flower1.genotype);
+		console.log(display);
 		return (
 			<table>
 				<tbody>
