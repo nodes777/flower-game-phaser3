@@ -22,7 +22,10 @@ class FlowerTable extends Component {
 						{genes.map(gene => {
 							return (
 								<th rowSpan="1" colSpan="1">
-									{gene}
+									{gene.replace(
+										gene[0],
+										gene[0].toUpperCase()
+									)}
 								</th>
 							);
 						})}
@@ -38,10 +41,24 @@ class FlowerTable extends Component {
 										flowers.byId[id].genotype[gene][1];
 									return (
 										<td>
-											{gene1Name}{" "}
-											<ColorSquare color={gene1Name} />
-											{gene2Name}{" "}
-											<ColorSquare color={gene2Name} />
+											{gene1Name.replace(
+												gene1Name[0],
+												gene1Name[0].toUpperCase()
+											)}
+											{gene === "color" ? (
+												<ColorSquare
+													color={gene1Name}
+												/>
+											) : null}
+											{gene2Name.replace(
+												gene2Name[0],
+												gene2Name[0].toUpperCase()
+											)}
+											{gene === "color" ? (
+												<ColorSquare
+													color={gene2Name}
+												/>
+											) : null}
 										</td>
 									);
 								})}

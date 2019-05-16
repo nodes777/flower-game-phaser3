@@ -1,6 +1,6 @@
 export const flowerShapes = {
 	SQUARE: "square",
 	DIAMOND: "diamond",
-	DEFAULT: "blank",
+	DEFAULT: "default",
 	ROUND: "round"
 };

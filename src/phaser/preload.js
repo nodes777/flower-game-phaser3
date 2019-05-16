@@ -1,5 +1,5 @@
 import logoImg from "../assets/logo.png";
-import blankFlower from "../assets/blank-flower.png";
+import defaultFlower from "../assets/default-flower.png";
 import diamondFlower from "../assets/diamond-flower.png";
 import roundFlower from "../assets/round-flower.png";
 import squareFlower from "../assets/square-flower.png";
@@ -9,7 +9,7 @@ import { flowerShapes } from "../types/flowerShapes";
 
 export function preload() {
 	this.load.image("logo", logoImg);
-	this.load.image(flowerShapes.DEFAULT, blankFlower);
+	this.load.image(flowerShapes.DEFAULT, defaultFlower);
 	this.load.image("bee", bee);
 	this.load.image(flowerShapes.DIAMOND, diamondFlower);
 	this.load.image(flowerShapes.ROUND, roundFlower);
