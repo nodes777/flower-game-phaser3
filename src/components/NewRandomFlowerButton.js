@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { addFlower } from "../actions/indexActions";
 import { getRandomColor } from "../utils/determineColor";
+import { getRandomShape } from "../utils/determineFlowerShape";
 
 import "../css/btn.css";
 
@@ -18,14 +19,14 @@ class NewFlowerButton extends React.Component {
 			parent1: {
 				genotype: {
 					color: [getRandomColor(), getRandomColor()],
-					shape: ["squareFlower", "roundFlower"]
+					shape: [getRandomShape(), getRandomShape()]
 				},
 				position: { x: 0, y: 0 }
 			},
 			parent2: {
 				genotype: {
 					color: [getRandomColor(), getRandomColor()],
-					shape: ["diamondFlower", "diamondFlower"]
+					shape: [getRandomShape(), getRandomShape()]
 				},
 				position: { x: 0, y: 0 }
 			}
