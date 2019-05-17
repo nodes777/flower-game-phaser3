@@ -7,7 +7,7 @@ import NewRandomFlowerButton from "./components/NewRandomFlowerButton";
 
 import ColorListboxContainer from "./components/ColorListboxContainer";
 
-import FlowerTable from "./components/FlowerTable";
+import FlowerTable from "./components/FlowerTable/FlowerTable";
 
 class App extends Component {
 	render() {
@@ -16,7 +16,7 @@ class App extends Component {
 				<PunnettTable />
 				<NewFlowerFromTableButton />
 				<NewRandomFlowerButton />
-				<FlowerTable display={false} />
+				<FlowerTable display={true} />
 			</div>
 		);
 	}
