@@ -10,7 +10,7 @@ function mapStateToProps({ punnett }) {
 	};
 }
 
-class NewFlowerFromTableButton extends React.Component {
+class NewFlowerFromPunnettButton extends React.Component {
 	static propTypes = {
 		punnett: PropTypes.object
 	};
@@ -52,10 +52,10 @@ class NewFlowerFromTableButton extends React.Component {
 					parent2.genotype.color[1] === undefined
 				}
 			>
-				New Flower From Table
+				New Flower From Punnett
 			</button>
 		);
 	}
 }
 
-export default connect(mapStateToProps)(NewFlowerFromTableButton);
+export default connect(mapStateToProps)(NewFlowerFromPunnettButton);
