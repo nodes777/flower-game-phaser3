@@ -22,7 +22,6 @@
 ## React
 
 -   Genericize punnett table to any given allele - add shape
--   Put tables below phaser game
 
 ## Bugs
 

@@ -21,7 +21,7 @@ export const screenSize = {
 
 const config = {
   type: Phaser.AUTO,
-  parent: "phaser-example",
+  parent: "phaser",
   width: screenSize.width,
   height: screenSize.height,
   backgroundColor: "#488214",

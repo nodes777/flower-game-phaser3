@@ -16,7 +16,7 @@ class App extends Component {
 				<PunnettTable />
 				<NewFlowerFromTableButton />
 				<NewRandomFlowerButton />
-				<FlowerTable display={true} />
+				<FlowerTable display={false} />
 			</div>
 		);
 	}
