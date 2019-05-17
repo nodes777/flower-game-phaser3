@@ -46,7 +46,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^2.1.1",
-    "phaser": "^3.16.2",
+    "phaser": "^3.17.0",
     "react-redux": "^7.0.2",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
