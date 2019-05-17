@@ -24,14 +24,14 @@ class NewFlowerFromTableButton extends React.Component {
 			parent1: {
 				genotype: {
 					color: parent1.genotype.color,
-					shape: ["squareFlower", "roundFlower"]
+					shape: ["square", "round"]
 				},
 				position: { x: 0, y: 0 }
 			},
 			parent2: {
 				genotype: {
 					color: parent2.genotype.color,
-					shape: ["squareFlower", "diamondFlower"]
+					shape: ["square", "diamond"]
 				},
 				position: { x: 0, y: 0 }
 			}
