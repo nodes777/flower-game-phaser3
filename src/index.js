@@ -14,7 +14,8 @@ import rootReducer from "./reducers/indexReducer";
 import indexMiddleware from "./middleware/indexMiddleware";
 
 export const store = createStore(rootReducer, indexMiddleware);
-export const screenSize = {
+
+const screenSize = {
   width: window.innerWidth,
   height: window.innerHeight
 };

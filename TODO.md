@@ -23,6 +23,12 @@
 
 -   Genericize punnett table to any given allele - add shape
 
+## Features
+
+-   Add wiggles/ animation
+-   Save to localStorage,
+-   Save to share somehow?
+
 ## Bugs
 
 -   Flowers can appear on top of each other

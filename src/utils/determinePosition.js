@@ -1,4 +1,4 @@
-import { screenSize } from "../index";
+import { screenSize } from "../exampleState";
 export const determineXPos = () => {
 	return Math.floor(Math.random() * screenSize.width + 1);
 };

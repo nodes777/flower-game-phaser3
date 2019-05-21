@@ -15,6 +15,8 @@ export function init(game) {
 	// turn off debug info
 	game.bee.debugShowBody = false;
 	//game.bee.debugShowVelocity = false;
+	//game.bee.depth = 999;
+	console.log(game.bee);
 
 	/* Second Flower */
 	addFlower(store.getState().flowers.byId.flower2, "flower2", game);
