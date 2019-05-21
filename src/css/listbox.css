@@ -11,7 +11,7 @@
 }
 .options-alleles {
 	background-color: #282c34;
-	position: fixed;
+	position: absolute;
 	z-index: 2;
 	overflow-y: auto;
 	width: 320px;

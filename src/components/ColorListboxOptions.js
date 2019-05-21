@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { colors } from "../types/colors";
+import ColorSquare from "./ColorSquare";
 
 const ColorListboxOptions = props => {
 	const { handleOptionsEvents, setOptionRef, focusedOption } = props;
@@ -27,9 +28,7 @@ const ColorListboxOptions = props => {
 					>
 						<span>
 							<span className="option-allele">{color}</span>
-							<span aria-hidden="true" style={boxStyle}>
-								&#9632;
-							</span>
+							<ColorSquare color={color} />
 						</span>
 					</div>
 				);

@@ -7,7 +7,6 @@
 ## Phaser
 
 -   Multiple bees
--   Bee always angled to first flower no matter the spawn of the first flower
 -   new flower position determination from second flower
 -   The bee's movement is a hack that slows down performance
 -   Weather/light via masks
@@ -32,3 +31,4 @@
 ## Bugs
 
 -   Flowers can appear on top of each other
+-   Crashes if you click twice on colorlistbox select
