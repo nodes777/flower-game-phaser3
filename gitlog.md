@@ -1,4 +1,12 @@
-# Generic Out Punnett Table - 5/23/2019 - master - [tbd](https://github.com/nodes777/flower-game-phaser3/commit/2689aca632f6a71c9a6c433915d20128a3fa57b3)
+# Puts AlleleListbox components into their own folder - 5/23/2019 - master - [d](https://github.com/nodes777/flower-game-phaser3/commit/d)
+
+-   Puts AlleleListbox components into their own folder
+-   /handlers folder goes into /AlleleListbox as well
+-   Deletes unneccessary `<PunnettTable>` as it became `<PunnettTableGene>`
+
+---
+
+# Generic Out Punnett Table - 5/23/2019 - master - [8b306ab52d12e87cb179c04491125c9a6f59371b](https://github.com/nodes777/flower-game-phaser3/commit/8b306ab52d12e87cb179c04491125c9a6f59371b)
 
 ## Generics out ColorListboxContainer to `AlleleListboxContainer`
 

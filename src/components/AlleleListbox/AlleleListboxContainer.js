@@ -9,9 +9,9 @@ import {
 	_handleOptionsEvents,
 	_handleSubmit,
 	handleOpenOptions
-} from "./handlers/colorListboxHandlers";
+} from "./handlers/listboxHandlers";
 
-import "../css/listbox.css";
+import "../../css/listbox.css";
 
 class AlleleListboxContainer extends Component {
 	static propTypes = {

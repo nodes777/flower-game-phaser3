@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { allTypes } from "../types/allTypes";
-import ColorSquare from "./ColorSquare";
+import { allTypes } from "../../types/allTypes";
+import ColorSquare from "../ColorSquare";
 
 const AlleleListboxOptions = props => {
 	const {

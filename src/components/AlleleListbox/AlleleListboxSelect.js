@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import ColorSquare from "./ColorSquare";
+import ColorSquare from "../ColorSquare";
 const AlleleListboxSelect = props => {
 	const {
 		handleOpenOptions,

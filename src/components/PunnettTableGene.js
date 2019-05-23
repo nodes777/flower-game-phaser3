@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Diploid from "./Diploid";
 import PropTypes from "prop-types";
 
-import AlleleListboxContainer from "./AlleleListboxContainer";
+import AlleleListboxContainer from "./AlleleListbox/AlleleListboxContainer";
 import "../css/table.css";
 
 class PunnettTableGene extends Component {

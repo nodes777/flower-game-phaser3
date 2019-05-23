@@ -1,4 +1,4 @@
-import { changeParentAllele } from "../../actions/indexActions";
+import { changeParentAllele } from "../../../actions/indexActions";
 
 export const _handleOptionsEvents = function(color, index, event) {
 	switch (event.type) {
