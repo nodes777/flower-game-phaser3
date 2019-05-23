@@ -2,8 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import ColorSquare from "./ColorSquare";
-const ColorListboxSelect = props => {
-	const { handleOpenOptions, openOptions, currentAllele, selectRef } = props;
+const AlleleListboxSelect = props => {
+	const {
+		handleOpenOptions,
+		openOptions,
+		currentAllele,
+		selectRef,
+		alleleType
+	} = props;
 	return (
 		<div
 			tabIndex="0"
@@ -22,16 +28,19 @@ const ColorListboxSelect = props => {
 			) : (
 				<span>
 					<span>{currentAllele} </span>
-					<ColorSquare color={currentAllele} />
+					{alleleType === "colors" ? (
+						<ColorSquare color={currentAllele} />
+					) : null}
 				</span>
 			)}
 		</div>
 	);
 };
 
-export default ColorListboxSelect;
+export default AlleleListboxSelect;
 
-ColorListboxSelect.propTypes = {
+AlleleListboxSelect.propTypes = {
+	alleleType: PropTypes.string,
 	handleOpenOptions: PropTypes.func,
 	openOptions: PropTypes.bool,
 	currentAllele: PropTypes.string,

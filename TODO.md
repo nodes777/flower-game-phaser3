@@ -20,7 +20,10 @@
 
 ## React
 
--   Genericize punnett table to any given allele - add shape
+-   Clean up capitalization in alleles
+-   Proptypes require gene in app to be one of the types in allTypes
+-   Factor AlleleListbox components into own folder
+-   Add Shape Icon like Color Square
 
 ## Features
 

@@ -5,15 +5,15 @@ import roundFlower from "../assets/round-flower.png";
 import squareFlower from "../assets/square-flower.png";
 import bee from "../assets/bee.png";
 import straightStem from "../assets/straight-stem.png";
-import { flowerShapes } from "../types/flowerShapes";
+import { shapes } from "../types/flowerShapes";
 
 export function preload() {
 	this.load.image("logo", logoImg);
-	this.load.image(flowerShapes.DEFAULT, defaultFlower);
+	this.load.image(shapes.DEFAULT, defaultFlower);
 	this.load.image("bee", bee);
-	this.load.image(flowerShapes.DIAMOND, diamondFlower);
-	this.load.image(flowerShapes.ROUND, roundFlower);
-	this.load.image(flowerShapes.SQUARE, squareFlower);
+	this.load.image(shapes.DIAMOND, diamondFlower);
+	this.load.image(shapes.ROUND, roundFlower);
+	this.load.image(shapes.SQUARE, squareFlower);
 
 	this.load.image("straightStem", straightStem);
 	// display progress bar

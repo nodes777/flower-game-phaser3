@@ -10,10 +10,10 @@ export default class FlowerTableHeader extends React.PureComponent {
 		const { genes } = this.props;
 		return (
 			<Fragment>
-				<th>Flower ID</th>
+				<th scope="col">Flower ID</th>
 				{genes.map(gene => {
 					return (
-						<th key={gene} rowSpan="1" colSpan="1">
+						<th key={gene} scope="col" rowSpan="1" colSpan="1">
 							{gene.replace(gene[0], gene[0].toUpperCase())}
 						</th>
 					);

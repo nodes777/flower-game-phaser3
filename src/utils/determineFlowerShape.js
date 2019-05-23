@@ -1,14 +1,14 @@
-import { flowerShapes } from "../types/flowerShapes";
+import { shapes } from "../types/flowerShapes";
 export const determineFlowerShape = genotype => {
 	if (genotype.shape === undefined) {
-		return flowerShapes.DEFAULT;
+		return shapes.DEFAULT;
 	}
 	return genotype.shape[Math.round(Math.random())];
 };
 
-const shapesKeys = Object.keys(flowerShapes);
+const shapesKeys = Object.keys(shapes);
 const shapesLength = shapesKeys.length;
 
 export const getRandomShape = () => {
-	return flowerShapes[shapesKeys[Math.floor(Math.random() * shapesLength)]];
+	return shapes[shapesKeys[Math.floor(Math.random() * shapesLength)]];
 };

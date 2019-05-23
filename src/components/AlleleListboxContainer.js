@@ -2,8 +2,8 @@ import { connect } from "react-redux";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import ColorListboxSelect from "./ColorListboxSelect";
-import ColorListboxOptions from "./ColorListboxOptions";
+import AlleleListboxSelect from "./AlleleListboxSelect";
+import AlleleListboxOptions from "./AlleleListboxOptions";
 
 import {
 	_handleOptionsEvents,
@@ -13,7 +13,14 @@ import {
 
 import "../css/listbox.css";
 
-class ColorListboxContainer extends Component {
+class AlleleListboxContainer extends Component {
+	static propTypes = {
+		alleleType: PropTypes.string,
+		parentId: PropTypes.string,
+		punnett: PropTypes.object,
+		allelePosition: PropTypes.number
+	};
+
 	constructor(props) {
 		super(props);
 		// create a ref to store the DOM element
@@ -24,9 +31,9 @@ class ColorListboxContainer extends Component {
 		this.handleOpenOptions = handleOpenOptions.bind(this);
 	}
 	state = {
-		currentAllele: this.props.punnett[this.props.parentId].genotype.color[
-			this.props.allelePosition
-		],
+		currentAllele: this.props.punnett[this.props.parentId].genotype[
+			this.props.alleleType
+		][this.props.allelePosition],
 		openOptions: false,
 		focusedOption: undefined
 	};
@@ -36,7 +43,7 @@ class ColorListboxContainer extends Component {
 	};
 
 	setOptionRef = element => {
-		// because refs are called when ColorListboxOptions is unmounted
+		// because refs are called when AlleleListboxOptions is unmounted
 		// don't add it if it's null
 		if (element !== null) {
 			this.arrayOfOptionsRefs.push(element);
@@ -44,10 +51,12 @@ class ColorListboxContainer extends Component {
 	};
 
 	render() {
+		const { alleleType } = this.props;
 		let { currentAllele, openOptions, focusedOption } = this.state;
 		return (
 			<div>
-				<ColorListboxSelect
+				<AlleleListboxSelect
+					alleleType={alleleType}
 					handleOpenOptions={this.handleOpenOptions}
 					openOptions={this.state.openOptions}
 					// Use the `ref` callback to store a reference to the text input DOM
@@ -57,7 +66,8 @@ class ColorListboxContainer extends Component {
 				/>
 				<div>
 					{openOptions === true ? (
-						<ColorListboxOptions
+						<AlleleListboxOptions
+							alleleType={alleleType}
 							handleOptionsEvents={this.handleOptionsEvents}
 							setOptionRef={this.setOptionRef}
 							currentAllele={currentAllele}
@@ -80,10 +90,4 @@ function mapStateToProps({ flowers, punnett }) {
 	};
 }
 
-export default connect(mapStateToProps)(ColorListboxContainer);
-
-ColorListboxContainer.propTypes = {
-	parentId: PropTypes.string,
-	punnett: PropTypes.object,
-	allelePosition: PropTypes.number
-};
+export default connect(mapStateToProps)(AlleleListboxContainer);

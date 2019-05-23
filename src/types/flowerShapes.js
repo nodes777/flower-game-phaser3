@@ -1,4 +1,4 @@
-export const flowerShapes = {
+export const shapes = {
 	SQUARE: "square",
 	DIAMOND: "diamond",
 	DEFAULT: "default",

@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 
 import "./css/App.css";
-import PunnettTable from "./components/PunnettTable";
+import PunnettTableGene from "./components/PunnettTableGene";
+
 import NewFlowerFromPunnettButton from "./components/NewFlowerFromPunnettButton";
 import NewRandomFlowerButton from "./components/NewRandomFlowerButton";
-
-import ColorListboxContainer from "./components/ColorListboxContainer";
 
 import FlowerTable from "./components/FlowerTable/FlowerTable";
 
@@ -13,7 +12,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<PunnettTable />
+				<PunnettTableGene gene={"color"} />
+				<PunnettTableGene gene={"shape"} />
 				<NewFlowerFromPunnettButton />
 				<NewRandomFlowerButton />
 				<FlowerTable display={true} />
