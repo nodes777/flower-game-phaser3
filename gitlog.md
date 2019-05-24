@@ -5,6 +5,7 @@
 -   `<Allele>` can now be used everywhere, with functions to prettify allele names and conditionally add spacing, capitalization, and icons if needed
 -   `<Allele>` replaces redundant code in `<AlleleListboxSelect>` and `<AlleleListboxOptions>`
 -   Minor bug with color squares not appearing in listbox select _fixed_, was adding an unneccessary "s"
+-   Kerfuffle making this commit - 2 commits made
 
 ---
 
