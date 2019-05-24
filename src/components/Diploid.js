@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import Allele from "./Allele";
+import TableAllele from "./TableAllele";
 
 export class Diploid extends React.Component {
 	static propTypes = {
@@ -16,12 +16,12 @@ export class Diploid extends React.Component {
 		const { p1Id, p2Id, alleleType, a1Pos, a2Pos } = this.props;
 		return (
 			<span>
-				<Allele
+				<TableAllele
 					parentId={p1Id}
 					alleleType={alleleType}
 					allelePosition={a1Pos}
 				/>
-				<Allele
+				<TableAllele
 					parentId={p2Id}
 					alleleType={alleleType}
 					allelePosition={a2Pos}

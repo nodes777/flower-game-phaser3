@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import ColorSquare from "../ColorSquare";
+import Allele from "../Allele";
 const AlleleListboxSelect = props => {
 	const {
 		handleOpenOptions,
@@ -26,12 +26,7 @@ const AlleleListboxSelect = props => {
 			{currentAllele === undefined ? (
 				"Select an Allele"
 			) : (
-				<span>
-					<span>{currentAllele} </span>
-					{alleleType === "colors" ? (
-						<ColorSquare color={currentAllele} />
-					) : null}
-				</span>
+				<Allele alleleName={currentAllele} alleleType={alleleType} />
 			)}
 		</div>
 	);

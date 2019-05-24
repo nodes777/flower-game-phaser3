@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { allTypes } from "../../types/allTypes";
-import ColorSquare from "../ColorSquare";
+import Allele from "../Allele";
 
 const AlleleListboxOptions = props => {
 	const {
@@ -28,12 +28,7 @@ const AlleleListboxOptions = props => {
 						aria-posinset={index}
 						aria-setsize={setsize}
 					>
-						<span>
-							<span className="option-allele">{allele}</span>
-							{alleleType === "color" ? (
-								<ColorSquare color={allele} />
-							) : null}
-						</span>
+						<Allele alleleName={allele} alleleType={alleleType} />
 					</div>
 				);
 			})}

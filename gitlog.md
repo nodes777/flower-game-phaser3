@@ -1,4 +1,14 @@
-# Puts AlleleListbox components into their own folder - 5/23/2019 - master - [d](https://github.com/nodes777/flower-game-phaser3/commit/d)
+# Seperates Allele into TableAllele - 5/23/2019 - master - [d](https://github.com/nodes777/flower-game-phaser3/commit/d)
+
+-   `<Allele>` becomes pure component
+-   `<TableAllele>` fills previous `<Allele>` purpose, updating as the Punnett Table Headers change
+-   `<Allele>` can now be used everywhere, with functions to prettify allele names and conditionally add spacing, capitalization, and icons if needed
+-   `<Allele>` replaces redundant code in `<AlleleListboxSelect>` and `<AlleleListboxOptions>`
+-   Minor bug with color squares not appearing in listbox select _fixed_, was adding an unneccessary "s"
+
+---
+
+# Puts AlleleListbox components into their own folder - 5/23/2019 - master - [c4396a206683f4d63fb9f591e616304e0baec958](https://github.com/nodes777/flower-game-phaser3/commit/c4396a206683f4d63fb9f591e616304e0baec958)
 
 -   Puts AlleleListbox components into their own folder
 -   /handlers folder goes into /AlleleListbox as well
