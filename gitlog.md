@@ -1,4 +1,4 @@
-# Seperates Allele into TableAllele - 5/23/2019 - master - [d](https://github.com/nodes777/flower-game-phaser3/commit/d)
+# Seperates Allele into TableAllele - 5/23/2019 - master - [e9105625eb6e88aa85dc426751cdc2eb0323055e](https://github.com/nodes777/flower-game-phaser3/commit/e9105625eb6e88aa85dc426751cdc2eb0323055e)
 
 -   `<Allele>` becomes pure component
 -   `<TableAllele>` fills previous `<Allele>` purpose, updating as the Punnett Table Headers change
