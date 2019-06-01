@@ -1,12 +1,18 @@
 import { beeRotate } from "./utils/rotation";
+import { beeFrameRotate } from "./utils/rotation";
 export function update() {
 	//  Acceleration Based Movement
 	// Reset the acceleration
 	this.bee.setAcceleration(0, 0);
 	this.physics.accelerateToObject(this.bee, this.flowerToFlyTo, 90, 140, 140);
-	//accelerateToObject(this.bee, this.flowerToFlyTo);
-	// rotate bee towards flower
-	beeRotate.call(this, this.flowerToFlyTo);
+
+	if (this.spritestack) {
+		// change frames for sprite stack rotation
+		beeFrameRotate.call(this, this.flowerToFlyTo);
+	} else {
+		// rotate bee towards flower
+		beeRotate.call(this, this.flowerToFlyTo);
+	}
 
 	// Too Stiff
 	// this.bee.angle = this.physics.moveToObject(

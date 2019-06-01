@@ -28,3 +28,38 @@ export function beeRotate(target) {
 
 	//velocityFromRotation(this.bee.rotation, SPEED, this.bee.body.velocity);
 }
+export function beeFrameRotate(target) {
+	var angleToTarget = Phaser.Math.Angle.BetweenPoints(this.bee, target);
+	var angleDelta = angleToTarget - this.bee.angleForFrame;
+
+	angleDelta = atan2(sin(angleDelta), cos(angleDelta));
+
+	console.log(`angleToTarget: ${angleToTarget}`);
+	console.log(`angleDelta: ${angleDelta}`);
+	if (Phaser.Math.Within(angleDelta, 0, TOLERANCE)) {
+		this.bee.rotation = angleToTarget;
+		this.bee.setAngularVelocity(0);
+	} else {
+		this.bee.setAngularVelocity(
+			Math.sign(angleDelta) * ROTATION_SPEED_DEGREES
+		);
+	}
+
+	this.bee.angleForFrame += angleDelta;
+	console.log(`this.bee.angle: ${this.bee.angle}`);
+	console.log(`this.bee.angleForFrame: ${this.bee.angleForFrame}`);
+
+	if (this.bee.angleForFrame >= 0) {
+		this.bee.setFrame(4);
+	} else if (this.bee.angleForFrame >= 22.5) {
+		this.bee.setFrame(5);
+	} else if (this.bee.angleForFrame >= 45) {
+		this.bee.setFrame(6);
+	} else if (this.bee.angleForFrame >= 67.5) {
+		this.bee.setFrame(7);
+	} else if (this.bee.angleForFrame >= 90) {
+		this.bee.setFrame(8);
+	} else if (this.bee.angleForFrame >= 110.5) {
+		this.bee.setFrame(9);
+	}
+}

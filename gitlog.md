@@ -1,10 +1,19 @@
-# Tests spritestack assets - 6/1/2019 - master - [e9105625eb6e88aa85dc426751cdc2eb0323055e](https://github.com/nodes777/flower-game-phaser3/commit/e9105625eb6e88aa85dc426751cdc2eb0323055e)
+# adds mode for 3d spritetesting - 6/1/2019 - master - [eabc0bc67227d03270db78b4c5ee4d44ee61ea34](https://github.com/nodes777/flower-game-phaser3/commit/eabc0bc67227d03270db78b4c5ee4d44ee61ea34)
 
 -   Adds a `this.spritestack = true` bool in preload.js to test different modes
+-   Adds assets/spritestack folder
+-   Fixes jsPrettier
 
 ---
 
-# Adds spritestack assets - 5/31/2019 - master - [e9105625eb6e88aa85dc426751cdc2eb0323055e](https://github.com/nodes777/flower-game-phaser3/commit/e9105625eb6e88aa85dc426751cdc2eb0323055e)
+# prep for 3d spritestacking - 6/1/2019 - master - [eabc0bc67227d03270db78b4c5ee4d44ee61ea34](https://github.com/nodes777/flower-game-phaser3/commit/eabc0bc67227d03270db78b4c5ee4d44ee61ea34)
+
+-   Adds a `this.spritestack = true` bool in preload.js to test different modes
+-   JsPrettier broke - pausing to fix
+
+---
+
+# Adds spritestack assets - 5/31/2019 - master - [16b0336c01dd27006c8be29c617107f551c130ba](https://github.com/nodes777/flower-game-phaser3/commit/16b0336c01dd27006c8be29c617107f551c130ba)
 
 -   Adds spritestack assets
 

@@ -13,7 +13,6 @@ import straightStem from "../assets/straight-stem.png";
 import { shapes } from "../types/flowerShapes";
 
 export function preload() {
-
 	this.load.image(shapes.DEFAULT, defaultFlower);
 	this.load.image("bee", bee);
 	this.load.image(shapes.DIAMOND, diamondFlower);
@@ -85,35 +84,32 @@ export function preload() {
 	});
 
 	// load 3d assets
-	this.spritestack = true;
-	if(this.spritestack){this.load.spritesheet(
-		"flower3d",
-		"src/assets/spritestack/default-flower.png",
-		{
-			frameWidth: 10, // from json
-			frameHeight: 20, // from properties
-			startFrame: 4, // 4 is the forward facing sprite
-			endFrame: 9 // 9 is the last angle with semi forward
-		}
-	);
-	this.load.spritesheet(
-		"straightStem3d",
-		"src/assets/spritestack/straight-stem.png",
-		{
-			frameWidth: 4,
-			frameHeight: 35,
-			startFrame: 4,
-			endFrame: 9
-		}
-	);
-	this.load.spritesheet(
-		"bee3d",
-		"src/assets/spritestack/bee-3d.png",
-		{
-			frameWidth: 38,
-			frameHeight: 38,
-			startFrame: 4,
-		}
-	);}
-	
+	this.spritestack = false;
+	if (this.spritestack) {
+		this.load.spritesheet(
+			"flower3d",
+			"src/assets/spritestack/default-flower.png",
+			{
+				frameWidth: 10, // from json
+				frameHeight: 20, // from properties
+				startFrame: 4, // 4 is the forward facing sprite
+				endFrame: 9 // 9 is the last angle with semi forward
+			}
+		);
+		this.load.spritesheet(
+			"straightStem3d",
+			"src/assets/spritestack/straight-stem.png",
+			{
+				frameWidth: 4,
+				frameHeight: 35,
+				startFrame: 4,
+				endFrame: 9
+			}
+		);
+		this.load.spritesheet("bee3d", "src/assets/spritestack/bee-3d.png", {
+			frameWidth: 54, // length divided by 16 frames
+			frameHeight: 62,
+			startFrame: 0 // 9 is facing right
+		});
+	}
 }

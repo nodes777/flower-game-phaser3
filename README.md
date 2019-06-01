@@ -2,6 +2,8 @@
 
 A [Phaser 3](https://phaser.io/) and [React](https://reactjs.org/) with [Redux](https://redux.js.org/) project based on the [Phaser 3 Webpack Project Template](https://github.com/photonstorm/phaser3-project-template). ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/). The game explores manipulating different genes (colors) for flowers and seeing what grows.
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 ## Requirements
 
 [Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
