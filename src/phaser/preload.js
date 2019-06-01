@@ -1,14 +1,19 @@
-import logoImg from "../assets/logo.png";
+import bee from "../assets/bee.png";
 import defaultFlower from "../assets/default-flower.png";
 import diamondFlower from "../assets/diamond-flower.png";
 import roundFlower from "../assets/round-flower.png";
 import squareFlower from "../assets/square-flower.png";
-import bee from "../assets/bee.png";
+
 import straightStem from "../assets/straight-stem.png";
+
+// import bee3d from "../assets/spritestack/bee.png";
+// import flower3d from "../assets/spritestack/default-flower.png";
+// import straightStem3d from "../assets/spritestack/straight-stem.png";
+
 import { shapes } from "../types/flowerShapes";
 
 export function preload() {
-	this.load.image("logo", logoImg);
+
 	this.load.image(shapes.DEFAULT, defaultFlower);
 	this.load.image("bee", bee);
 	this.load.image(shapes.DIAMOND, diamondFlower);
@@ -79,5 +84,36 @@ export function preload() {
 		assetText.destroy();
 	});
 
-	// load assets needed in our game
+	// load 3d assets
+	this.spritestack = true;
+	if(this.spritestack){this.load.spritesheet(
+		"flower3d",
+		"src/assets/spritestack/default-flower.png",
+		{
+			frameWidth: 10, // from json
+			frameHeight: 20, // from properties
+			startFrame: 4, // 4 is the forward facing sprite
+			endFrame: 9 // 9 is the last angle with semi forward
+		}
+	);
+	this.load.spritesheet(
+		"straightStem3d",
+		"src/assets/spritestack/straight-stem.png",
+		{
+			frameWidth: 4,
+			frameHeight: 35,
+			startFrame: 4,
+			endFrame: 9
+		}
+	);
+	this.load.spritesheet(
+		"bee3d",
+		"src/assets/spritestack/bee-3d.png",
+		{
+			frameWidth: 38,
+			frameHeight: 38,
+			startFrame: 4,
+		}
+	);}
+	
 }

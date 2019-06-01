@@ -1,3 +1,15 @@
+# Tests spritestack assets - 6/1/2019 - master - [e9105625eb6e88aa85dc426751cdc2eb0323055e](https://github.com/nodes777/flower-game-phaser3/commit/e9105625eb6e88aa85dc426751cdc2eb0323055e)
+
+-   Adds a `this.spritestack = true` bool in preload.js to test different modes
+
+---
+
+# Adds spritestack assets - 5/31/2019 - master - [e9105625eb6e88aa85dc426751cdc2eb0323055e](https://github.com/nodes777/flower-game-phaser3/commit/e9105625eb6e88aa85dc426751cdc2eb0323055e)
+
+-   Adds spritestack assets
+
+---
+
 # Seperates Allele into TableAllele - 5/23/2019 - master - [e9105625eb6e88aa85dc426751cdc2eb0323055e](https://github.com/nodes777/flower-game-phaser3/commit/e9105625eb6e88aa85dc426751cdc2eb0323055e)
 
 -   `<Allele>` becomes pure component

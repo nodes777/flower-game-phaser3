@@ -17,7 +17,28 @@ A [Phaser 3](https://phaser.io/) and [React](https://reactjs.org/) with [Redux](
 
 ## About
 
-This is a lazy garden game. You can generate new flowers randomly, or via the Punnett Square. State is handled by Redux, which allows an extendable genetics system. Currently only color is supported.
+This is a lazy garden game. You can generate new flowers randomly, or via the Punnett Square. State is handled by Redux, which allows an extendable genetics system.
+
+### Naming Conventions
+
+-   Loading images:
+
+    -   `import straightStem from "../assets/straight-stem.png";`
+    -   `this.load.image("straightStem", straightStem);`
+
+    ```
+
+    this.load.spritesheet(
+    	"threeDFlower",
+    	"src/assets/spritestack/blank-flower-head.png",
+    	{
+    		frameWidth: 10, // from json
+    		frameHeight: 20, // from properties
+    		startFrame: 4, // 4 is the forward facing sprite
+    		endFrame: 9 // 9 is the last angle with semi forward
+    	}
+    );
+    ```
 
 ## To Do
 
