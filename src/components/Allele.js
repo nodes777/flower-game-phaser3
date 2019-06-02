@@ -1,12 +1,13 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import ColorSquare from "./ColorSquare";
+import { capitalizeFirstLetter } from "../utils/visualFormatting";
 
 const Allele = props => {
 	const { alleleName, alleleType } = props;
 	return (
 		<span>
-			{alleleName}
+			{capitalizeFirstLetter(alleleName)}
 			{alleleType === "color" ? <ColorSquare color={alleleName} /> : null}
 		</span>
 	);

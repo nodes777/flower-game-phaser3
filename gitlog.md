@@ -1,4 +1,14 @@
-# adds mode for 3d spritetesting - 6/1/2019 - master - [eabc0bc67227d03270db78b4c5ee4d44ee61ea34](https://github.com/nodes777/flower-game-phaser3/commit/eabc0bc67227d03270db78b4c5ee4d44ee61ea34)
+# adds mode for 3d spritetesting - 6/2/2019 - master - [eabc0bc67227d03270db78b4c5ee4d44ee61ea34](https://github.com/nodes777/flower-game-phaser3/commit/eabc0bc67227d03270db78b4c5ee4d44ee61ea34)
+
+-   Adds a H1 to the beginning of each Punnett Table
+-   Adds utils/visualFormatting.js to capitalize first letters
+-   Adds a `<span> </span>` in Diploid and FlowerTableRows to provide space between words
+-   Refactors FlowerTableRows to use Allele
+-   Changes `shapes` to be camelCase, ie: `shapes.Diamond` to match style
+
+---
+
+# adds mode for 3d spritetesting - 6/1/2019 - master - [d4d010aad9ff709897ed65638f79e243d9c3ef76](https://github.com/nodes777/flower-game-phaser3/commit/d4d010aad9ff709897ed65638f79e243d9c3ef76)
 
 -   Adds a `this.spritestack = true` bool in preload.js to test different modes
 -   Adds assets/spritestack folder

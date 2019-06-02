@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import ColorSquare from "../ColorSquare";
+import Allele from "../Allele";
 
 export default class FlowerTableRows extends React.PureComponent {
 	static propTypes = {
@@ -20,20 +20,9 @@ export default class FlowerTableRows extends React.PureComponent {
 					const gene2Name = flowers.byId[id].genotype[gene][1];
 					return (
 						<td key={gene}>
-							{gene1Name.replace(
-								gene1Name[0],
-								gene1Name[0].toUpperCase()
-							)}
-							{gene === "color" ? (
-								<ColorSquare color={gene1Name} />
-							) : null}
-							{gene2Name.replace(
-								gene2Name[0],
-								gene2Name[0].toUpperCase()
-							)}
-							{gene === "color" ? (
-								<ColorSquare color={gene2Name} />
-							) : null}
+							<Allele alleleName={gene1Name} alleleType={gene} />
+							<span> </span>
+							<Allele alleleName={gene2Name} alleleType={gene} />
 						</td>
 					);
 				})}

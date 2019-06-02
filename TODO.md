@@ -13,7 +13,6 @@
 
 ### Art
 
--   Flowers with stems
 -   SpriteStack?
 
 ## Redux

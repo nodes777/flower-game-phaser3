@@ -13,11 +13,11 @@ import straightStem from "../assets/straight-stem.png";
 import { shapes } from "../types/flowerShapes";
 
 export function preload() {
-	this.load.image(shapes.DEFAULT, defaultFlower);
+	this.load.image(shapes.Default, defaultFlower);
 	this.load.image("bee", bee);
-	this.load.image(shapes.DIAMOND, diamondFlower);
-	this.load.image(shapes.ROUND, roundFlower);
-	this.load.image(shapes.SQUARE, squareFlower);
+	this.load.image(shapes.Diamond, diamondFlower);
+	this.load.image(shapes.Round, roundFlower);
+	this.load.image(shapes.Square, squareFlower);
 
 	this.load.image("straightStem", straightStem);
 	// display progress bar
