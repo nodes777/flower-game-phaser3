@@ -33,4 +33,3 @@
 ## Bugs
 
 -   Flowers can appear on top of each other
--   Crashes if you click twice on colorlistbox select

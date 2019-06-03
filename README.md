@@ -44,12 +44,12 @@ This is a lazy garden game. You can generate new flowers randomly, or via the Pu
 
 ## To Do
 
--   Add tests via jest - (SO Question)[[https://stackoverflow.com/questions/55874105/jest-unexpected-identifier-require](https://stackoverflow.com/questions/55874105/jest-unexpected-identifier-require)]
+-   Add tests via jest - [SO Question](https://stackoverflow.com/questions/55874105/jest-unexpected-identifier-require)
 
 ## Writing
 
 -   [Creating an Accessible Custom Select Component… In React](https://medium.com/@Tnodes/integrating-react-and-phaser-3-tutorial-eb96717d4a9d?source=friends_link&sk=0f1d5f2e456584b0cc6fc5c785394b56)
--   [Integrating Phaser 3 and React](<[https://medium.com/@Tnodes/integrating-react-and-phaser-3-tutorial-eb96717d4a9d](https://medium.com/@Tnodes/integrating-react-and-phaser-3-tutorial-eb96717d4a9d)>)
+-   [Integrating Phaser 3 and React](https://medium.com/@Tnodes/integrating-react-and-phaser-3-tutorial-eb96717d4a9d)
 
 ## Writing Code
 

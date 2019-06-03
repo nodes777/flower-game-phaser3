@@ -6,10 +6,6 @@ import squareFlower from "../assets/square-flower.png";
 
 import straightStem from "../assets/straight-stem.png";
 
-// import bee3d from "../assets/spritestack/bee.png";
-// import flower3d from "../assets/spritestack/default-flower.png";
-// import straightStem3d from "../assets/spritestack/straight-stem.png";
-
 import { shapes } from "../types/flowerShapes";
 
 export function preload() {

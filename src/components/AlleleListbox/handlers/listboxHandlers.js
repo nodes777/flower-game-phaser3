@@ -69,17 +69,25 @@ export const _handleSubmit = function() {
 	dispatch(changeParentAllele(info));
 };
 const _handleOpenOptions = function(event) {
-	this.setState(
-		() => {
+	if (!this.state.openOptions) {
+		this.setState(
+			() => {
+				return {
+					openOptions: !this.state.openOptions,
+					focusedOption: document.activeElement.id
+				};
+			},
+			() => {
+				this.arrayOfOptionsRefs[0].focus();
+			}
+		);
+	} else {
+		this.setState(() => {
 			return {
-				openOptions: !this.state.openOptions,
-				focusedOption: document.activeElement.id
+				openOptions: !this.state.openOptions
 			};
-		},
-		() => {
-			this.arrayOfOptionsRefs[0].focus();
-		}
-	);
+		});
+	}
 };
 export const handleOpenOptions = function(event) {
 	switch (event.type) {
