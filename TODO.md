@@ -19,7 +19,6 @@
 
 ## React
 
--   Clean up capitalization in alleles
 -   Proptypes require gene in app to be one of the types in allTypes
 -   Add Shape Icon like Color Square
 
@@ -29,7 +28,11 @@
 -   Add wiggles/ animation
 -   Save to localStorage,
 -   Save to url to share somehow
+-   Name Flowers and update their ids via redux
+-   Changing the Punnett Table changes the game
 
 ## Bugs
 
 -   Flowers can appear on top of each other
+-   Random positions can be off the map - clamp this
+-   Orbits are back

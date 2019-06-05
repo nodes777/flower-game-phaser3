@@ -1,6 +1,9 @@
 import { getRandomColor } from "./utils/determineColor";
 import { getRandomShape } from "./utils/determineFlowerShape";
-import { determineXPos, determineYPos } from "./utils/determinePosition";
+import {
+    determineRandomXPos,
+    determineRandomYPos
+} from "./utils/determinePosition";
 
 export const screenSize = {
     width: window.innerWidth,
@@ -17,10 +20,10 @@ const shape2 = getRandomShape();
 const shape3 = getRandomShape();
 const shape4 = getRandomShape();
 
-const parent1XPos = determineXPos();
-const parent1YPos = determineYPos();
-const parent2XPos = determineXPos();
-const parent2YPos = determineYPos();
+const parent1XPos = determineRandomXPos();
+const parent1YPos = determineRandomYPos();
+const parent2XPos = determineRandomXPos();
+const parent2YPos = determineRandomYPos();
 
 const exampleState = {
     punnett: {
@@ -44,7 +47,11 @@ const exampleState = {
                 position: { x: parent2XPos, y: parent2YPos }
             }
         },
-        allIds: ["flower1", "flower2"]
+        allIds: ["flower1", "flower2"],
+        allPositions: [
+            { x: parent1XPos, y: parent1YPos },
+            { x: parent2XPos, y: parent2YPos }
+        ]
     },
     bees: {
         byId: {

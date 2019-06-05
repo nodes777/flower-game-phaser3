@@ -1,4 +1,15 @@
-# Fixes colorlistbox select double click bug - 6/3/2019 - master - [eabc0bc67227d03270db78b4c5ee4d44ee61ea34](https://github.com/nodes777/flower-game-phaser3/commit/eabc0bc67227d03270db78b4c5ee4d44ee61ea34)
+# Adds Position determination - 6/4/2019 - master - [eabc0bc67227d03270db78b4c5ee4d44ee61ea34](https://github.com/nodes777/flower-game-phaser3/commit/eabc0bc67227d03270db78b4c5ee4d44ee61ea34)
+
+-   Adds position determination. Position is diagonal from the second parent +/- 20 pixels
+    -   Adds `allPositions` to `flowers` in the store
+    -   flowersReducer.js handles position
+-   Increases Bee Speed from 90 to 400, to moveToObject, and turns off hack to reset bee accelleration, in order to speed testing,
+-   Moves checkStore.js to phaser/utils instead of generic utils
+-   BUG: There is no method for checking whether a flower is "full" and there are no more available positions
+
+---
+
+# Fixes colorlistbox select double click bug - 6/3/2019 - master - [ced66997b4d2f2c0e4a34c1395dc9f6a9801fa39](https://github.com/nodes777/flower-game-phaser3/commit/ced66997b4d2f2c0e4a34c1395dc9f6a9801fa39)
 
 -   Fixes bug where clicking on the custom select after the options are open causes a crash
 -   Fixes README broken links

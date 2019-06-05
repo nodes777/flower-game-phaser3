@@ -1,4 +1,4 @@
-import { checkStore } from "../utils/checkStore";
+import { checkStore } from "./utils/checkStore";
 import { checkForPollen } from "./utils/beeOnFlowerCollision";
 import { init } from "./init";
 export function create() {
@@ -65,12 +65,12 @@ export function create() {
 	});
 
 	// hack to reset bee's accelleration every 1/10 sec so that orbits appear less frequently
-	this.time.addEvent({
-		delay: 100,
-		callback: function() {
-			this.bee.setAcceleration(0, 0);
-		},
-		callbackScope: this,
-		loop: true
-	});
+	// this.time.addEvent({
+	// 	delay: 100,
+	// 	callback: function() {
+	// 		this.bee.setAcceleration(0, 0);
+	// 	},
+	// 	callbackScope: this,
+	// 	loop: true
+	// });
 }
