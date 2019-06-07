@@ -19,10 +19,10 @@ export const addFlower = data => {
 	};
 };
 
-export const pickupPollen = (beeId, pollen) => {
+export const pickupPollen = (beeId, pollen, flowerId) => {
 	return {
 		type: PICKUP_POLLEN,
-		data: { beeId, pollen }
+		data: { beeId, pollen, flowerId }
 	};
 };
 

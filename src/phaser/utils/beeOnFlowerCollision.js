@@ -1,5 +1,5 @@
 import { store } from "../../index";
-
+import { determinePosition } from "../../utils/determinePosition";
 import {
 	pickupPollen,
 	dropPollen,
@@ -11,27 +11,43 @@ export function checkForPollen(beeId, flowerId) {
 	// if no pollen, pick it up
 	if (!beeHasPollen) {
 		const pollen = store.getState().flowers.byId[flowerId].genotype;
-		store.dispatch(pickupPollen(beeId, pollen));
+		// pollen.id = flowerId;
+		store.dispatch(pickupPollen(beeId, pollen, flowerId));
 	}
 
 	if (beeHasPollen) {
 		// pollinate, from bee pollen
-		const pollen = store.getState().bees.byId[beeId].pollen;
+		const bee = store.getState().bees.byId[beeId];
+		const pollen = bee.pollen;
+		const pollenId = bee.pollenId;
 		// get currently collided flower
 		const flower2 = store.getState().flowers.byId[flowerId];
-		// create object with parental info
-		const info = {
-			parent1: {
-				genotype: pollen,
-				position: { x: 0, y: 0 }
-			},
-			parent2: {
-				genotype: flower2.genotype,
-				position: flower2.position
-			}
-		};
-		store.dispatch(addFlower(info));
-		store.dispatch(dropPollen(beeId));
+		const allPositions = store.getState().flowers.allPositions;
+
+		const posInfo = determinePosition(flower2.position, allPositions);
+		// if there's room
+
+		if (posInfo.hasRoom) {
+			// create object with parental info
+			const info = {
+				parent1: {
+					id: pollenId,
+					genotype: pollen,
+					position: { x: 0, y: 0 }
+				},
+				parent2: {
+					id: flowerId,
+					genotype: flower2.genotype,
+					position: flower2.position
+				},
+				posInfo: posInfo
+			};
+			store.dispatch(addFlower(info));
+			store.dispatch(dropPollen(beeId));
+		} else {
+			// flower is full
+			store.dispatch(dropPollen(beeId));
+		}
 	}
 }
 

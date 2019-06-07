@@ -21,19 +21,10 @@ export function flowersReducer(state = exampleState.flowers, action) {
 				...state
 			};
 		case ADD_FLOWER:
-			const { parent1, parent2 } = action.data;
+			const { parent1, parent2, posInfo } = action.data;
 			// Better way to generate ids?
 			const newId = `flower${state.allIds.length + 1}`;
-			// detemine individual positions based on parent 2
-			let xPos = determineXPos(parent2.position);
-			let yPos = determineYPos(parent2.position);
-			// verify that those positions are open
-			let positionObj = verifyPositions(
-				xPos,
-				yPos,
-				state.allPositions,
-				parent2.position
-			);
+
 			return {
 				...state,
 				byId: {
@@ -44,13 +35,13 @@ export function flowersReducer(state = exampleState.flowers, action) {
 							parent2.genotype
 						),
 						position: {
-							x: positionObj.x,
-							y: positionObj.y
+							x: posInfo.newPos.x,
+							y: posInfo.newPos.y
 						}
 					}
 				},
 				allIds: [...state.allIds.concat([newId])],
-				allPositions: [...state.allPositions.concat(positionObj)]
+				allPositions: [...state.allPositions.concat(posInfo.newPos)]
 			};
 
 		default:

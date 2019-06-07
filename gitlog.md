@@ -1,4 +1,20 @@
-# Adds Position determination - 6/4/2019 - master - [eabc0bc67227d03270db78b4c5ee4d44ee61ea34](https://github.com/nodes777/flower-game-phaser3/commit/eabc0bc67227d03270db78b4c5ee4d44ee61ea34)
+# Redo on flower position determination - 6/7/2019 - master - [ba88924ea6ce7ee6304d432703b25274edf8312d](https://github.com/nodes777/flower-game-phaser3/commit/ba88924ea6ce7ee6304d432703b25274edf8312d)
+
+-   `determineRandomXPos` and `determineRandomYPos` now take screenSize as an arguement. This fixes a bug where screenSize wasn't definied in game initialization
+-   `determinePosition(parent2Position, allPositions)` in utils/determinePosition:
+    -   Creates the 4 potential position objects from the second parent +/- 20 pixels
+    -   Creates a `posInfo` object to hold `availableNewPositions`, `hasRoom`, and the new position to be given `newPos`
+    -   Compares those 4 objects to allPositions - any that pass (AKA are not in that group) are pushed to `posInfo`
+    -   From `availableNewPositions` pick a random one to be `newPos`
+    -   If `availableNewPositions.length > 0` then there is room
+        -   Call `store.dispatch(addFlower(info));` with info containing `posInfo.newPos`
+        -   flowersReducer handles new object posInfo for positioning
+    -   If there's no room, don't dispatch
+-   Bee is still fast with `moveToObject` movement
+
+---
+
+# Adds Position determination - 6/4/2019 - master - [ba88924ea6ce7ee6304d432703b25274edf8312d](https://github.com/nodes777/flower-game-phaser3/commit/ba88924ea6ce7ee6304d432703b25274edf8312d)
 
 -   Adds position determination. Position is diagonal from the second parent +/- 20 pixels
     -   Adds `allPositions` to `flowers` in the store

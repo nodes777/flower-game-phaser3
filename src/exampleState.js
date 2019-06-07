@@ -20,10 +20,10 @@ const shape2 = getRandomShape();
 const shape3 = getRandomShape();
 const shape4 = getRandomShape();
 
-const parent1XPos = determineRandomXPos();
-const parent1YPos = determineRandomYPos();
-const parent2XPos = determineRandomXPos();
-const parent2YPos = determineRandomYPos();
+const parent1XPos = determineRandomXPos(screenSize);
+const parent1YPos = determineRandomYPos(screenSize);
+const parent2XPos = determineRandomXPos(screenSize);
+const parent2YPos = determineRandomYPos(screenSize);
 
 const exampleState = {
     punnett: {

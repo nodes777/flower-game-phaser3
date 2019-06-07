@@ -1,48 +1,52 @@
-import { screenSize } from "../exampleState";
 import { store } from "../index.js";
 
-export const determineRandomXPos = () => {
+export const determineRandomXPos = screenSize => {
 	return Math.floor(Math.random() * screenSize.width + 1);
 };
-export const determineRandomYPos = () => {
+export const determineRandomYPos = screenSize => {
 	return Math.floor(Math.random() * screenSize.height + 1);
 };
 
-export const determineXPos = parent2Position => {
-	const plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-	let newXPosition = parent2Position.x + plusOrMinus * 20;
-	console.log(`newXPosition ${newXPosition}`);
-	return newXPosition;
-};
-export const determineYPos = parent2Position => {
-	const plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-	let newYPosition = parent2Position.y + plusOrMinus * 20;
-	console.log(`newYPosition ${newYPosition}`);
-	return newYPosition;
-};
+export const determinePosition = (parent2Position, allPositions) => {
+	let possibleNewPositions = [
+		{ x: parent2Position.x + 20, y: parent2Position.y + 20 },
+		{ x: parent2Position.x + 20, y: parent2Position.y - 20 },
+		{ x: parent2Position.x - 20, y: parent2Position.y + 20 },
+		{ x: parent2Position.x - 20, y: parent2Position.y - 20 }
+	];
 
-export const verifyPositions = (xPos, yPos, allPositions, parent2Position) => {
-	let newPositions = { x: xPos, y: yPos };
-	console.log(`newPositions:`);
-	console.log(newPositions);
-	let isTaken = false;
-	console.log(allPositions);
+	let posInfo = { availableNewPositions: [] };
 
-	isTaken = allPositions.some(oldPositions => {
-		return JSON.stringify(oldPositions) === JSON.stringify(newPositions);
-	});
-	console.log(isTaken);
+	for (let i = 0; i <= possibleNewPositions.length - 1; i++) {
+		let isTaken = allPositions.some(oldPosition => {
+			return (
+				JSON.stringify(oldPosition) ===
+				JSON.stringify(possibleNewPositions[i])
+			);
+		});
 
-	if (isTaken) {
-		// retry
-		console.log("Both are taken!");
-		return verifyPositions(
-			determineXPos(parent2Position),
-			determineYPos(parent2Position),
-			allPositions,
-			parent2Position
-		);
-	} else {
-		return newPositions;
+		if (!isTaken) {
+			posInfo.availableNewPositions.push(possibleNewPositions[i]);
+		}
 	}
+	var randPos =
+		posInfo.availableNewPositions[
+			Math.floor(Math.random() * posInfo.availableNewPositions.length)
+		];
+	posInfo.hasRoom = posInfo.availableNewPositions.length > 0;
+	posInfo.newPos = randPos;
+	return posInfo;
 };
+
+// export const determineXPos = parent2Position => {
+// 	const plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+// 	let newXPosition = parent2Position.x + plusOrMinus * 20;
+// 	console.log(`newXPosition ${newXPosition}`);
+// 	return newXPosition;
+// };
+// export const determineYPos = parent2Position => {
+// 	const plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+// 	let newYPosition = parent2Position.y + plusOrMinus * 20;
+// 	console.log(`newYPosition ${newYPosition}`);
+// 	return newYPosition;
+// };

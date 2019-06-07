@@ -4,22 +4,20 @@ import { PICKUP_POLLEN, DROP_POLLEN } from "../types/actions";
 export function beesReducer(state = exampleState, action) {
 	switch (action.type) {
 		case PICKUP_POLLEN: {
-			const { beeId, pollen } = action.data;
-			console.log(action.data);
-			console.log(state);
+			const { beeId, pollen, flowerId } = action.data;
 			return {
 				...state,
 				byId: {
 					...state.byId,
 					[beeId]: {
-						pollen: pollen
+						pollen: pollen,
+						pollenId: flowerId
 					}
 				}
 			};
 		}
 		case DROP_POLLEN: {
 			const { beeId, pollen } = action.data;
-			console.log(beeId);
 			return {
 				...state,
 				byId: {
