@@ -6,8 +6,8 @@ import {
 } from "./utils/determinePosition";
 
 export const screenSize = {
-    width: window.innerWidth,
-    height: window.innerHeight
+    width: window.innerWidth - 40,
+    height: window.innerHeight - 20
 };
 
 const color1 = getRandomColor();

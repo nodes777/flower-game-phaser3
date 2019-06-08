@@ -7,7 +7,11 @@ export const determineRandomYPos = screenSize => {
 	return Math.floor(Math.random() * screenSize.height + 1);
 };
 
-export const determinePosition = (parent2Position, allPositions) => {
+export const determinePosition = (
+	parent2Position,
+	allPositions,
+	screenSize
+) => {
 	let possibleNewPositions = [
 		{ x: parent2Position.x + 20, y: parent2Position.y + 20 },
 		{ x: parent2Position.x + 20, y: parent2Position.y - 20 },
@@ -25,7 +29,13 @@ export const determinePosition = (parent2Position, allPositions) => {
 			);
 		});
 
-		if (!isTaken) {
+		let isWithinBounds =
+			possibleNewPositions[i].x > 0 &&
+			possibleNewPositions[i].y > 0 &&
+			possibleNewPositions[i].x < screenSize.width &&
+			possibleNewPositions[i].y < screenSize.height;
+
+		if (!isTaken && isWithinBounds) {
 			posInfo.availableNewPositions.push(possibleNewPositions[i]);
 		}
 	}

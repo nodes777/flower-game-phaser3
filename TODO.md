@@ -30,6 +30,7 @@
 -   Save to url to share somehow
 -   Name Flowers and update their ids via redux
 -   Changing the Punnett Table changes the game
+-   Add growth stages
 
 ## Bugs
 

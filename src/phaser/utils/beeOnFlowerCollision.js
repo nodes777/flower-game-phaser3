@@ -6,6 +6,8 @@ import {
 	addFlower
 } from "../../actions/indexActions";
 
+import { screenSize } from "../../index";
+
 export function checkForPollen(beeId, flowerId) {
 	const beeHasPollen = store.getState().bees.byId[beeId].pollen !== null;
 	// if no pollen, pick it up
@@ -24,7 +26,11 @@ export function checkForPollen(beeId, flowerId) {
 		const flower2 = store.getState().flowers.byId[flowerId];
 		const allPositions = store.getState().flowers.allPositions;
 
-		const posInfo = determinePosition(flower2.position, allPositions);
+		const posInfo = determinePosition(
+			flower2.position,
+			allPositions,
+			screenSize
+		);
 		// if there's room
 
 		if (posInfo.hasRoom) {

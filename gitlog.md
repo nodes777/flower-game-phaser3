@@ -1,4 +1,16 @@
-# Redo on flower position determination - 6/7/2019 - master - [ba88924ea6ce7ee6304d432703b25274edf8312d](https://github.com/nodes777/flower-game-phaser3/commit/ba88924ea6ce7ee6304d432703b25274edf8312d)
+# Clamp flowers to canvas - 6/8/2019 - master
+
+## [ba88924ea6ce7ee6304d432703b25274edf8312d](https://github.com/nodes777/flower-game-phaser3/commit/ba88924ea6ce7ee6304d432703b25274edf8312d)
+
+-   In index.js and exampleState.js, `screenSize` has it's width and height - 20px to prevent scrollbar on bottom
+-   Adds `isWithinBounds` to determinePosition.js to ensure flowers stay on canvas
+-   Gitlog commits are heading 2 now
+
+---
+
+# Redo on flower position determination - 6/7/2019 - master
+
+## [01a4a847e5a96688562258917a7025c845564759](https://github.com/nodes777/flower-game-phaser3/commit/01a4a847e5a96688562258917a7025c845564759)
 
 -   `determineRandomXPos` and `determineRandomYPos` now take screenSize as an arguement. This fixes a bug where screenSize wasn't definied in game initialization
 -   `determinePosition(parent2Position, allPositions)` in utils/determinePosition:
@@ -14,7 +26,9 @@
 
 ---
 
-# Adds Position determination - 6/4/2019 - master - [ba88924ea6ce7ee6304d432703b25274edf8312d](https://github.com/nodes777/flower-game-phaser3/commit/ba88924ea6ce7ee6304d432703b25274edf8312d)
+# Adds Position determination - 6/4/2019 - master
+
+## [ba88924ea6ce7ee6304d432703b25274edf8312d](https://github.com/nodes777/flower-game-phaser3/commit/ba88924ea6ce7ee6304d432703b25274edf8312d)
 
 -   Adds position determination. Position is diagonal from the second parent +/- 20 pixels
     -   Adds `allPositions` to `flowers` in the store
@@ -25,14 +39,18 @@
 
 ---
 
-# Fixes colorlistbox select double click bug - 6/3/2019 - master - [ced66997b4d2f2c0e4a34c1395dc9f6a9801fa39](https://github.com/nodes777/flower-game-phaser3/commit/ced66997b4d2f2c0e4a34c1395dc9f6a9801fa39)
+# Fixes colorlistbox select double click bug - 6/3/2019 - master
+
+## [ced66997b4d2f2c0e4a34c1395dc9f6a9801fa39](https://github.com/nodes777/flower-game-phaser3/commit/ced66997b4d2f2c0e4a34c1395dc9f6a9801fa39)
 
 -   Fixes bug where clicking on the custom select after the options are open causes a crash
 -   Fixes README broken links
 
 ---
 
-# improves visual formatting of tables - 6/2/2019 - master - [170361bf521ea3e6492b3a66877d541ad16044e5](https://github.com/nodes777/flower-game-phaser3/commit/170361bf521ea3e6492b3a66877d541ad16044e5)
+# improves visual formatting of tables - 6/2/2019 - master
+
+## [170361bf521ea3e6492b3a66877d541ad16044e5](https://github.com/nodes777/flower-game-phaser3/commit/170361bf521ea3e6492b3a66877d541ad16044e5)
 
 -   Adds a H1 to the beginning of each Punnett Table
 -   Adds utils/visualFormatting.js to capitalize first letters
@@ -42,7 +60,9 @@
 
 ---
 
-# adds mode for 3d spritetesting - 6/1/2019 - master - [d4d010aad9ff709897ed65638f79e243d9c3ef76](https://github.com/nodes777/flower-game-phaser3/commit/d4d010aad9ff709897ed65638f79e243d9c3ef76)
+# adds mode for 3d spritetesting - 6/1/2019 - master
+
+## [d4d010aad9ff709897ed65638f79e243d9c3ef76](https://github.com/nodes777/flower-game-phaser3/commit/d4d010aad9ff709897ed65638f79e243d9c3ef76)
 
 -   Adds a `this.spritestack = true` bool in preload.js to test different modes
 -   Adds assets/spritestack folder
@@ -50,20 +70,26 @@
 
 ---
 
-# prep for 3d spritestacking - 6/1/2019 - master - [eabc0bc67227d03270db78b4c5ee4d44ee61ea34](https://github.com/nodes777/flower-game-phaser3/commit/eabc0bc67227d03270db78b4c5ee4d44ee61ea34)
+# prep for 3d spritestacking - 6/1/2019 - master
+
+## [eabc0bc67227d03270db78b4c5ee4d44ee61ea34](https://github.com/nodes777/flower-game-phaser3/commit/eabc0bc67227d03270db78b4c5ee4d44ee61ea34)
 
 -   Adds a `this.spritestack = true` bool in preload.js to test different modes
 -   JsPrettier broke - pausing to fix
 
 ---
 
-# Adds spritestack assets - 5/31/2019 - master - [16b0336c01dd27006c8be29c617107f551c130ba](https://github.com/nodes777/flower-game-phaser3/commit/16b0336c01dd27006c8be29c617107f551c130ba)
+# Adds spritestack assets - 5/31/2019 - master
+
+## [16b0336c01dd27006c8be29c617107f551c130ba](https://github.com/nodes777/flower-game-phaser3/commit/16b0336c01dd27006c8be29c617107f551c130ba)
 
 -   Adds spritestack assets
 
 ---
 
-# Seperates Allele into TableAllele - 5/23/2019 - master - [e9105625eb6e88aa85dc426751cdc2eb0323055e](https://github.com/nodes777/flower-game-phaser3/commit/e9105625eb6e88aa85dc426751cdc2eb0323055e)
+# Seperates Allele into TableAllele - 5/23/2019 - master
+
+## [e9105625eb6e88aa85dc426751cdc2eb0323055e](https://github.com/nodes777/flower-game-phaser3/commit/e9105625eb6e88aa85dc426751cdc2eb0323055e)
 
 -   `<Allele>` becomes pure component
 -   `<TableAllele>` fills previous `<Allele>` purpose, updating as the Punnett Table Headers change
@@ -74,7 +100,9 @@
 
 ---
 
-# Puts AlleleListbox components into their own folder - 5/23/2019 - master - [c4396a206683f4d63fb9f591e616304e0baec958](https://github.com/nodes777/flower-game-phaser3/commit/c4396a206683f4d63fb9f591e616304e0baec958)
+# Puts AlleleListbox components into their own folder - 5/23/2019 - master
+
+## [c4396a206683f4d63fb9f591e616304e0baec958](https://github.com/nodes777/flower-game-phaser3/commit/c4396a206683f4d63fb9f591e616304e0baec958)
 
 -   Puts AlleleListbox components into their own folder
 -   /handlers folder goes into /AlleleListbox as well
@@ -82,7 +110,9 @@
 
 ---
 
-# Generic Out Punnett Table - 5/23/2019 - master - [8b306ab52d12e87cb179c04491125c9a6f59371b](https://github.com/nodes777/flower-game-phaser3/commit/8b306ab52d12e87cb179c04491125c9a6f59371b)
+# Generic Out Punnett Table - 5/23/2019 - master
+
+## [8b306ab52d12e87cb179c04491125c9a6f59371b](https://github.com/nodes777/flower-game-phaser3/commit/8b306ab52d12e87cb179c04491125c9a6f59371b)
 
 ## Generics out ColorListboxContainer to `AlleleListboxContainer`
 
@@ -115,21 +145,27 @@
 
 ---
 
-# Resolves hidden colorlistboxoptions bug - 5/21/2019 - master - [2689aca632f6a71c9a6c433915d20128a3fa57b3](https://github.com/nodes777/flower-game-phaser3/commit/2689aca632f6a71c9a6c433915d20128a3fa57b3)
+# Resolves hidden colorlistboxoptions bug - 5/21/2019 - master
+
+## [2689aca632f6a71c9a6c433915d20128a3fa57b3](https://github.com/nodes777/flower-game-phaser3/commit/2689aca632f6a71c9a6c433915d20128a3fa57b3)
 
 -   Resolves bug where colorlistboxoptions do not appear visually, by setting `position:absolute` instead of `fixed` in listbox.css.
 -   Issue remains for clicking on the listbox select after openOptions is already open.
 
 ---
 
-# Sets up gitlog.md - 5/21/2019 - master - [3816e54606c567c9749cf2abbc101b1fa9cbda59](https://github.com/nodes777/flower-game-phaser3/commit/3816e54606c567c9749cf2abbc101b1fa9cbda59)
+# Sets up gitlog.md - 5/21/2019 - master
+
+## [3816e54606c567c9749cf2abbc101b1fa9cbda59](https://github.com/nodes777/flower-game-phaser3/commit/3816e54606c567c9749cf2abbc101b1fa9cbda59)
 
 -   Creates this gitlog
 -   Discovered bug in dropdown selects
 
 ---
 
-# Sets random initial starting pos for first flowers - 5/21/2019 - master - [f6e68e4ab915f2346b17e30f3cf20a707ed642e5](https://github.com/nodes777/flower-game-phaser3/commit/f6e68e4ab915f2346b17e30f3cf20a707ed642e5)
+# Sets random initial starting pos for first flowers - 5/21/2019 - master
+
+## [f6e68e4ab915f2346b17e30f3cf20a707ed642e5](https://github.com/nodes777/flower-game-phaser3/commit/f6e68e4ab915f2346b17e30f3cf20a707ed642e5)
 
 -   Changes exampleState.js positions to be determined by deteminePosition.js
     `const parent1XPos = determineXPos();`
