@@ -17,6 +17,9 @@ export function checkStore() {
 				console.log(diff + " new flower(s)");
 				addNewFlowers(numFlowersPrev, currState, this);
 			}
+
+			// check if bee should be flying
+			this.beeCanFly = currState.config.beeCanFly;
 		}
 	}
 }

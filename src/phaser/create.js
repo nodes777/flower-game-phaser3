@@ -64,6 +64,8 @@ export function create() {
 		loop: true
 	});
 
+	this.beeCanFly = false;
+
 	// hack to reset bee's accelleration every 1/10 sec so that orbits appear less frequently
 	// this.time.addEvent({
 	// 	delay: 100,

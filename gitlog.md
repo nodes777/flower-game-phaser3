@@ -1,6 +1,18 @@
+# Adds bee pause button - 6/9/2019 - master
+
+## [eda27b1c48784e19a16f8cd29542a470ff0853c6](https://github.com/nodes777/flower-game-phaser3/commit/eda27b1c48784e19a16f8cd29542a470ff0853c6)
+
+-   Adds a `<BeeCanFlyButton>` to App.js
+-   Adds a `config` property to the store with `config.beeCanFly`
+-   checkStore.js now handles checking the store's config
+-   Renamed `CHANGE_PARENT_ALLELE` to `CHANGE_FLOWER` in actions/types/reducers
+-   Removed `connect` and `mapStateToProps` from `<Diploid>` as it was unneccessary
+
+---
+
 # Clamp flowers to canvas - 6/8/2019 - master
 
-## [ba88924ea6ce7ee6304d432703b25274edf8312d](https://github.com/nodes777/flower-game-phaser3/commit/ba88924ea6ce7ee6304d432703b25274edf8312d)
+## [eda27b1c48784e19a16f8cd29542a470ff0853c6](https://github.com/nodes777/flower-game-phaser3/commit/eda27b1c48784e19a16f8cd29542a470ff0853c6)
 
 -   In index.js and exampleState.js, `screenSize` has it's width and height - 20px to prevent scrollbar on bottom
 -   Adds `isWithinBounds` to determinePosition.js to ensure flowers stay on canvas

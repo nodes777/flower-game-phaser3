@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import TableAllele from "./TableAllele";
 
@@ -36,9 +35,4 @@ export class Diploid extends React.Component {
 	}
 }
 
-function mapStateToProps({ flowers }) {
-	return {
-		flowers: flowers
-	};
-}
-export default connect(mapStateToProps)(Diploid);
+export default Diploid;

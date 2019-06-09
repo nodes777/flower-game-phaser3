@@ -60,6 +60,9 @@ const exampleState = {
             }
         },
         allBeeIds: ["bee1"]
+    },
+    config: {
+        beeCanFly: false
     }
 };
 export default exampleState;

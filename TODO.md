@@ -7,7 +7,6 @@
 ## Phaser
 
 -   Multiple bees
--   new flower position determination from second flower
 -   The bee's movement is a hack that slows down performance
 -   Weather/light via masks
 

@@ -5,18 +5,13 @@ import {
 	determineYPos,
 	verifyPositions
 } from "../utils/determinePosition";
-import { CHANGE_PARENT_ALLELE, ADD_FLOWER } from "../types/actions";
+import { CHANGE_FLOWER, ADD_FLOWER } from "../types/actions";
 
 export function flowersReducer(state = exampleState.flowers, action) {
 	switch (action.type) {
-		case CHANGE_PARENT_ALLELE:
-			const {
-				parentId,
-				alleleType,
-				allelePosition,
-				allele
-			} = action.data;
-			console.log("CHANGE_PARENT_ALLELE in flowersReducer");
+		case CHANGE_FLOWER:
+			const { flowerId } = action.data;
+			console.log("CHANGE_FLOWER in flowersReducer");
 			return {
 				...state
 			};

@@ -1,17 +1,16 @@
 import exampleState from "../exampleState";
-import { CHANGE_PARENT_ALLELE } from "../types/actions";
+import { CHANGE_FLOWER } from "../types/actions";
 
 export function punnettReducer(state = exampleState.punnett, action) {
 	switch (action.type) {
-		case CHANGE_PARENT_ALLELE:
+		case CHANGE_FLOWER:
 			const {
 				parentId,
 				alleleType,
 				allelePosition,
 				allele
 			} = action.data;
-			console.log(action.data);
-			console.log(state);
+
 			return {
 				...state,
 				[parentId]: {
