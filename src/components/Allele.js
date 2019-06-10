@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import ColorSquare from "./ColorSquare";
 import FlowerShapeIcon from "./FlowerShapeIcon";
 import { capitalizeFirstLetter } from "../utils/visualFormatting";
+import { allTypes } from "../types/allTypes";
 
 const Allele = props => {
 	const { alleleName, alleleType } = props;
@@ -26,6 +27,11 @@ const Allele = props => {
 export default Allele;
 
 Allele.propTypes = {
-	alleleName: PropTypes.string,
-	alleleType: PropTypes.string
+	alleleName: PropTypes.oneOf([
+		...Object.keys(allTypes.shapes).map(shape => shape.toLowerCase()),
+		...Object.keys(allTypes.colors)
+	]),
+	alleleType: PropTypes.oneOf([
+		...Object.keys(allTypes).map(word => word.substring(0, word.length - 1))
+	])
 };

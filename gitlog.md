@@ -1,6 +1,14 @@
-# Adds FlowerShapeIcon - 6/9/2019 - master
+# Adds PropType check for genes - 6/10/2019 - master
 
-## [eda27b1c48784e19a16f8cd29542a470ff0853c6](https://github.com/nodes777/flower-game-phaser3/commit/eda27b1c48784e19a16f8cd29542a470ff0853c6)
+## [cd521f6203ec9056ec1926d75f7f60ec361fedfd](https://github.com/nodes777/flower-game-phaser3/commit/cd521f6203ec9056ec1926d75f7f60ec361fedfd)
+
+-   `<Allele>` now proptype checks to be one of the /allTypes.js
+
+---
+
+# Adds FlowerShapeIcon - 6/10/2019 - master
+
+## [cd521f6203ec9056ec1926d75f7f60ec361fedfd](https://github.com/nodes777/flower-game-phaser3/commit/cd521f6203ec9056ec1926d75f7f60ec361fedfd)
 
 -   Adds `<FlowerShapeIcon>` to `<Allele>` with switch case to determine `<ColorSquare>` or `<FlowerShapeIcon>`
 

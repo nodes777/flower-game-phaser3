@@ -6,7 +6,7 @@ import roundShape from "../assets/round-flower.png";
 import squareShape from "../assets/square-flower.png";
 const FlowerShapeIcon = props => {
 	const { shape } = props;
-	const iconStyle = { "vertical-align": "bottom" };
+	const iconStyle = { verticalAlign: "bottom" };
 
 	return (
 		<Fragment>

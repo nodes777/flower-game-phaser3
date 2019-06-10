@@ -18,8 +18,6 @@
 
 ## React
 
--   Proptypes require gene in app to be one of the types in allTypes - React.PropTypes.oneOf(['info', 'warning', 'error'])
--   Add Shape Icon like Color Square
 -   Make config panel
 
 ## Features
