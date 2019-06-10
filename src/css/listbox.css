@@ -8,6 +8,7 @@
 	width: auto;
 	min-width: 300px;
 	cursor: pointer;
+	font-size: calc(10px + 1.7vmin);
 }
 .options-alleles {
 	background-color: #282c34;
@@ -23,4 +24,8 @@
 
 .option-allele {
 	font-size: 20px;
+}
+
+.punnett-allele {
+	font-size: calc(10px + 1.7vmin);
 }

@@ -3,6 +3,12 @@ import { connect } from "react-redux";
 import { addFlower } from "../actions/indexActions";
 import { getRandomColor } from "../utils/determineColor";
 import { getRandomShape } from "../utils/determineFlowerShape";
+import {
+	determineRandomXPos,
+	determineRandomYPos
+} from "../utils/determinePosition";
+
+import { screenSize } from "../index";
 
 import "../css/btn.css";
 
@@ -12,23 +18,28 @@ function mapStateToProps({ flowers }) {
 	};
 }
 
-class NewFlowerButton extends React.Component {
+class NewRandomFlowerButton extends React.Component {
 	handleSubmit = () => {
 		const { dispatch } = this.props;
+
 		const info = {
 			parent1: {
 				genotype: {
 					color: [getRandomColor(), getRandomColor()],
 					shape: [getRandomShape(), getRandomShape()]
-				},
-				position: { x: 0, y: 0 }
+				}
 			},
 			parent2: {
 				genotype: {
 					color: [getRandomColor(), getRandomColor()],
 					shape: [getRandomShape(), getRandomShape()]
-				},
-				position: { x: 0, y: 0 }
+				}
+			},
+			posInfo: {
+				newPos: {
+					x: determineRandomXPos(screenSize),
+					y: determineRandomYPos(screenSize)
+				}
 			}
 		};
 		dispatch(addFlower(info));
@@ -42,4 +53,4 @@ class NewFlowerButton extends React.Component {
 	}
 }
 
-export default connect(mapStateToProps)(NewFlowerButton);
+export default connect(mapStateToProps)(NewRandomFlowerButton);

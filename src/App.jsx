@@ -1,25 +1,22 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import "./css/App.css";
-import PunnettTableGene from "./components/PunnettTableGene";
-
-import NewFlowerFromPunnettButton from "./components/NewFlowerFromPunnettButton";
-import NewRandomFlowerButton from "./components/NewRandomFlowerButton";
-
+import Punnett from "./components/Punnett";
 import FlowerTable from "./components/FlowerTable/FlowerTable";
-import BeeCanFlyButton from "./components/BeeCanFlyButton";
+import Dashboard from "./components/Dashboard";
 
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-				<BeeCanFlyButton />
-				<PunnettTableGene gene={"color"} />
-				<PunnettTableGene gene={"shape"} />
-				<NewFlowerFromPunnettButton />
-				<NewRandomFlowerButton />
-				<FlowerTable display={true} />
-			</div>
+			<Fragment>
+				<div className="App">
+					<Punnett />
+					<Dashboard />
+				</div>
+				<div className="App">
+					<FlowerTable display={true} />
+				</div>
+			</Fragment>
 		);
 	}
 }

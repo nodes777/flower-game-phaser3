@@ -1,6 +1,16 @@
-# Adds PropType check for genes - 6/10/2019 - master
+# Starts Panel - 6/10/2019 - master
 
 ## [cd521f6203ec9056ec1926d75f7f60ec361fedfd](https://github.com/nodes777/flower-game-phaser3/commit/cd521f6203ec9056ec1926d75f7f60ec361fedfd)
+
+-   Starts a panel for options config on the right side of the screen
+    -   Mostly css and html restructuring
+-   Resolves a bug for buttons for creating new flowers - they were missing posInfo property
+
+---
+
+# Adds PropType check for genes - 6/10/2019 - master
+
+## [a2998a7d85d077375da3f42ba2c7a62294fc816a](https://github.com/nodes777/flower-game-phaser3/commit/a2998a7d85d077375da3f42ba2c7a62294fc816a)
 
 -   `<Allele>` now proptype checks to be one of the /allTypes.js
 

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import TableAllele from "./TableAllele";
-
+import "../css/listbox.css";
 export class Diploid extends React.Component {
 	static propTypes = {
 		p1Id: PropTypes.string,
@@ -15,7 +15,7 @@ export class Diploid extends React.Component {
 		const { p1Id, p2Id, alleleType, a1Pos, a2Pos } = this.props;
 		return (
 			<Fragment>
-				<span>
+				<span className="punnett-allele">
 					<TableAllele
 						parentId={p1Id}
 						alleleType={alleleType}
@@ -23,7 +23,7 @@ export class Diploid extends React.Component {
 					/>
 				</span>
 				<span> </span>
-				<span>
+				<span className="punnett-allele">
 					<TableAllele
 						parentId={p2Id}
 						alleleType={alleleType}

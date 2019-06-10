@@ -2,10 +2,22 @@
 	background-color: #181a1c;
 	min-height: 40vh;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-direction: row;
+	/*	align-items: center;*/
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
 	text-align: center;
+}
+
+.punnett {
+	justify-content: center;
+	margin: 15px;
+	flex-grow: 1;
+}
+
+.dashboard {
+	margin: 15px;
+	flex-grow: 3;
+	outline: solid 2px;
 }

@@ -2,6 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 import { addFlower } from "../actions/indexActions";
 import { getRandomColor } from "../utils/determineColor";
+import {
+	determineRandomXPos,
+	determineRandomYPos
+} from "../utils/determinePosition";
+
+import { screenSize } from "../index";
+
 import PropTypes from "prop-types";
 
 function mapStateToProps({ punnett }) {
@@ -34,6 +41,12 @@ class NewFlowerFromPunnettButton extends React.Component {
 					shape: ["square", "diamond"]
 				},
 				position: { x: 0, y: 0 }
+			},
+			posInfo: {
+				newPos: {
+					x: determineRandomXPos(screenSize),
+					y: determineRandomYPos(screenSize)
+				}
 			}
 		};
 		dispatch(addFlower(info));
@@ -44,6 +57,7 @@ class NewFlowerFromPunnettButton extends React.Component {
 		const parent2 = punnett.parent2;
 		return (
 			<button
+				className="btn btn-primary"
 				onClick={this.handleSubmit}
 				disabled={
 					parent1.genotype.color[0] === undefined ||
