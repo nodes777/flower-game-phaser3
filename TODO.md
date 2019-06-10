@@ -18,8 +18,9 @@
 
 ## React
 
--   Proptypes require gene in app to be one of the types in allTypes
+-   Proptypes require gene in app to be one of the types in allTypes - React.PropTypes.oneOf(['info', 'warning', 'error'])
 -   Add Shape Icon like Color Square
+-   Make config panel
 
 ## Features
 
@@ -34,5 +35,4 @@
 ## Bugs
 
 -   Flowers can appear on top of each other
--   Random positions can be off the map - clamp this
 -   Orbits are back

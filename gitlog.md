@@ -1,6 +1,14 @@
-# Adds bee pause button - 6/9/2019 - master
+# Adds FlowerShapeIcon - 6/9/2019 - master
 
 ## [eda27b1c48784e19a16f8cd29542a470ff0853c6](https://github.com/nodes777/flower-game-phaser3/commit/eda27b1c48784e19a16f8cd29542a470ff0853c6)
+
+-   Adds `<FlowerShapeIcon>` to `<Allele>` with switch case to determine `<ColorSquare>` or `<FlowerShapeIcon>`
+
+---
+
+# Adds bee pause button - 6/9/2019 - master
+
+## [5663d2f6854767d3a061f00685bcef669b7ef617](https://github.com/nodes777/flower-game-phaser3/commit/5663d2f6854767d3a061f00685bcef669b7ef617)
 
 -   Adds a `<BeeCanFlyButton>` to App.js
 -   Adds a `config` property to the store with `config.beeCanFly`

@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import ColorSquare from "./ColorSquare";
+import FlowerShapeIcon from "./FlowerShapeIcon";
 import { capitalizeFirstLetter } from "../utils/visualFormatting";
 
 const Allele = props => {
@@ -8,7 +9,16 @@ const Allele = props => {
 	return (
 		<span>
 			{capitalizeFirstLetter(alleleName)}
-			{alleleType === "color" ? <ColorSquare color={alleleName} /> : null}
+			{(() => {
+				switch (alleleType) {
+					case "color":
+						return <ColorSquare color={alleleName} />;
+					case "shape":
+						return <FlowerShapeIcon shape={alleleName} />;
+					default:
+						return null;
+				}
+			})()}
 		</span>
 	);
 };
