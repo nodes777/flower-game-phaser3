@@ -1,6 +1,15 @@
+# Set up gene dominance branch - 6/20/2019 - master
+
+## [5fb2ac427554f48d078b968a4b0faad555c2cd62](https://github.com/nodes777/flower-game-phaser3/commit/5fb2ac427554f48d078b968a4b0faad555c2cd62)
+
+-   Sets up branch geneDominance
+-   Just updated the below commit
+
+---
+
 # Starts Panel - 6/10/2019 - master
 
-## [cd521f6203ec9056ec1926d75f7f60ec361fedfd](https://github.com/nodes777/flower-game-phaser3/commit/cd521f6203ec9056ec1926d75f7f60ec361fedfd)
+## [5fb2ac427554f48d078b968a4b0faad555c2cd62](https://github.com/nodes777/flower-game-phaser3/commit/5fb2ac427554f48d078b968a4b0faad555c2cd62)
 
 -   Starts a panel for options config on the right side of the screen
     -   Mostly css and html restructuring
