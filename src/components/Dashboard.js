@@ -2,7 +2,8 @@ import React from "react";
 import NewFlowerFromPunnettButton from "./NewFlowerFromPunnettButton";
 import NewRandomFlowerButton from "./NewRandomFlowerButton";
 import BeeCanFlyButton from "./BeeCanFlyButton";
-import AddRecessiveColor from "./AddRecessiveColor";
+import RemoveRecessiveTrait from "./RemoveRecessiveTrait";
+import AddRecessiveTrait from "./AddRecessiveTrait";
 import "../css/App.css";
 const Dashboard = props => {
 	return (
@@ -18,7 +19,10 @@ const Dashboard = props => {
 				<NewRandomFlowerButton />
 			</div>
 			<div>
-				<AddRecessiveColor />
+				<AddRecessiveTrait traitType="color" />
+			</div>
+			<div>
+				<RemoveRecessiveTrait traitType="color" />
 			</div>
 		</div>
 	);

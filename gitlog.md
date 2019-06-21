@@ -1,6 +1,21 @@
+# Refactors adding and removinig recessive traits - 6/21/2019 - geneDominance
+
+## [be64dd2864724b9d73b7d645850dfcf19b5bc301](https://github.com/nodes777/flower-game-phaser3/commit/be64dd2864724b9d73b7d645850dfcf19b5bc301)
+
+-   Refactored to `<RemoveRecessiveTrait>` and `<AddRecessiveTrait>` to make adding and removing recessive genes resuable
+    -   requires a proptype of string
+    -   updates actions and reducers to handle this
+-   Only traits (colors) to mark as recessive are those that appear in punnett
+
+### To Do
+
+-   Create a table to display what's recessive
+
+---
+
 # Creates add recessive color - 6/21/2019 - geneDominance
 
-## [5fb2ac427554f48d078b968a4b0faad555c2cd62](https://github.com/nodes777/flower-game-phaser3/commit/5fb2ac427554f48d078b968a4b0faad555c2cd62)
+## [be64dd2864724b9d73b7d645850dfcf19b5bc301](https://github.com/nodes777/flower-game-phaser3/commit/be64dd2864724b9d73b7d645850dfcf19b5bc301)
 
 -   Fixed bug in configReducer - entire state was going into config substate
 -   Added `recessive` object in `config`, contains each gene with an array of recessive traits

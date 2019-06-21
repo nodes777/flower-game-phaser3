@@ -4,8 +4,8 @@ import {
 	PICKUP_POLLEN,
 	DROP_POLLEN,
 	BEE_CAN_FLY,
-	ADD_RECESSIVE_COLOR,
-	REMOVE_RECESSIVE_COLOR
+	ADD_RECESSIVE_TRAIT,
+	REMOVE_RECESSIVE_TRAIT
 } from "../types/actions";
 
 export const changeParentAllele = data => {
@@ -43,16 +43,16 @@ export const beeCanFly = bool => {
 	};
 };
 
-export const addRecessiveColor = color => {
+export const addRecessiveTrait = data => {
 	return {
-		type: ADD_RECESSIVE_COLOR,
-		color
+		type: ADD_RECESSIVE_TRAIT,
+		data
 	};
 };
 
-export const removeRecessiveColor = color => {
+export const removeRecessiveTrait = data => {
 	return {
-		type: REMOVE_RECESSIVE_COLOR,
-		color
+		type: REMOVE_RECESSIVE_TRAIT,
+		data
 	};
 };
