@@ -1,10 +1,10 @@
 export const determineGenotype = (parent1Geno, parent2Geno) => {
 	let newGenotype = {};
 	Object.keys(parent1Geno).forEach(gene => {
+		// return one of the alleles randomly for the particular gene
 		newGenotype[gene] = [
 			parent1Geno[gene][getRandomAllele(parent1Geno[gene])]
 		].concat([parent2Geno[gene][getRandomAllele(parent2Geno[gene])]]);
-		// return one of the alleles for the particular gene
 	});
 
 	return newGenotype;

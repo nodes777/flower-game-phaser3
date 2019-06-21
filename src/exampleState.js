@@ -62,7 +62,8 @@ const exampleState = {
         allBeeIds: ["bee1"]
     },
     config: {
-        beeCanFly: false
+        beeCanFly: false,
+        recessive: { colors: ["White"], shapes: [] }
     }
 };
 export default exampleState;

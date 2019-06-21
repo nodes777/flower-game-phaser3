@@ -1,6 +1,26 @@
-# Set up gene dominance branch - 6/20/2019 - master
+# Creates add recessive color - 6/21/2019 - geneDominance
 
 ## [5fb2ac427554f48d078b968a4b0faad555c2cd62](https://github.com/nodes777/flower-game-phaser3/commit/5fb2ac427554f48d078b968a4b0faad555c2cd62)
+
+-   Fixed bug in configReducer - entire state was going into config substate
+-   Added `recessive` object in `config`, contains each gene with an array of recessive traits
+    -   determineColor handles comparision between recessive colors array and which color will appear(phenotype)
+    -   "White" is a default recessivec color
+-   Added actions `ADD_RECESSIVE_COLOR` and `REMOVE_RECESSIVE_COLOR` and corresponding action creators
+-   Creates a simple select component to add recessive colors
+
+### To Do
+
+-   Add a client side method to remove recessive colors
+-   Only use the colors that appear in the punnett as possible to make recessive?
+-   refactor addRecessiveColor to be for any trait
+-   Create a table to display what's recessive
+
+---
+
+# Set up gene dominance branch - 6/20/2019 - master
+
+## [41249b6ee5ad908a64e376c27d66205826601826](https://github.com/nodes777/flower-game-phaser3/commit/41249b6ee5ad908a64e376c27d66205826601826)
 
 -   Sets up branch geneDominance
 -   Just updated the below commit

@@ -16,6 +16,8 @@
 
 ## Redux
 
+-   Split the actions
+
 ## React
 
 -   Make config panel
@@ -29,6 +31,12 @@
 -   Name Flowers and update their ids via redux
 -   Changing the Punnett Table changes the game
 -   Add growth stages
+
+## Minor
+
+-   Determinants folder as Phenotype folder
+-   Rename addFlower.js to addFlowerToGame and addFlower action creator to addFlowerToStore
+-   Update README
 
 ## Bugs
 
