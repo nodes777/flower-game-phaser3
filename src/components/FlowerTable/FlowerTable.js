@@ -7,9 +7,10 @@ import FlowerTableRows from "./FlowerTableRows";
 
 import "../../css/table.css";
 
-function mapStateToProps({ flowers }) {
+function mapStateToProps({ flowers, config }) {
 	return {
-		flowers
+		flowers,
+		config
 	};
 }
 class FlowerTable extends Component {
@@ -18,7 +19,7 @@ class FlowerTable extends Component {
 	};
 
 	render() {
-		const { flowers, display } = this.props;
+		const { flowers, display, config } = this.props;
 		const genes = Object.keys(flowers.byId.flower1.genotype);
 		return (
 			<div>
@@ -35,6 +36,7 @@ class FlowerTable extends Component {
 										id={id}
 										genes={genes}
 										flowers={flowers}
+										recessive={config.recessive}
 									/>
 								);
 							})}

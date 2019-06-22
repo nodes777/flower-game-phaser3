@@ -24,6 +24,12 @@ const Dashboard = props => {
 			<div>
 				<RemoveRecessiveTrait traitType="color" />
 			</div>
+			<div>
+				<AddRecessiveTrait traitType="shape" />
+			</div>
+			<div>
+				<RemoveRecessiveTrait traitType="shape" />
+			</div>
 		</div>
 	);
 };

@@ -42,7 +42,6 @@ class AddRecessiveTrait extends React.Component {
 			value => !recessiveTraits.includes(value)
 		);
 		const firstOption = `Select a ${traitType}`;
-
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<select
@@ -51,8 +50,8 @@ class AddRecessiveTrait extends React.Component {
 					onChange={this.handleChange}
 				>
 					<option>{firstOption}</option>
-					{availableTraits.map(trait => {
-						return <option key={trait}>{trait}</option>;
+					{availableTraits.map((trait, i) => {
+						return <option key={trait + i}>{trait}</option>;
 					})}
 				</select>
 
@@ -62,7 +61,7 @@ class AddRecessiveTrait extends React.Component {
 						this.state.value === "" ||
 						this.state.value === firstOption
 					}
-					value={`Add to recessive ${traitType}`}
+					value={`Add to recessive ${traitType}s`}
 				/>
 			</form>
 		);

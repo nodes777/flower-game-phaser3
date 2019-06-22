@@ -44,10 +44,15 @@ class RemoveRecessiveTrait extends React.Component {
 					aria-label={`${traitType} to make recessive`}
 					value={this.state.value}
 					onChange={this.handleChange}
+					disabled={recessiveTraits.length < 1}
 				>
-					<option>{firstOption}</option>
-					{recessiveTraits.map(trait => {
-						return <option key={trait}>{trait}</option>;
+					<option>
+						{recessiveTraits.length > 0
+							? firstOption
+							: `There are no recessive ${traitType}s`}
+					</option>
+					{recessiveTraits.map((trait, i) => {
+						return <option key={trait + i}>{trait}</option>;
 					})}
 				</select>
 

@@ -11,16 +11,33 @@ export class TableAllele extends React.Component {
 	};
 
 	render() {
-		const { punnett, parentId, allelePosition, alleleType } = this.props;
+		const {
+			punnett,
+			parentId,
+			allelePosition,
+			alleleType,
+			config
+		} = this.props;
+		const recessiveTraits = config.recessive[alleleType + "s"];
+
 		const alleleName =
 			punnett[parentId].genotype[alleleType][allelePosition];
-		return <Allele alleleType={alleleType} alleleName={alleleName} />;
+
+		const isRecessive = recessiveTraits.includes(alleleName);
+		return (
+			<Allele
+				alleleType={alleleType}
+				alleleName={alleleName}
+				isRecessive={isRecessive}
+			/>
+		);
 	}
 }
 
-function mapStateToProps({ punnett }) {
+function mapStateToProps({ punnett, config }) {
 	return {
-		punnett
+		punnett,
+		config
 	};
 }
 

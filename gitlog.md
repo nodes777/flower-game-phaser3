@@ -1,6 +1,22 @@
-# Refactors adding and removinig recessive traits - 6/21/2019 - geneDominance
+# Refactors - 6/22/2019 - geneDominance
 
-## [be64dd2864724b9d73b7d645850dfcf19b5bc301](https://github.com/nodes777/flower-game-phaser3/commit/be64dd2864724b9d73b7d645850dfcf19b5bc301)
+## [9816e88c211edd0d10dc636e2868d7c095e36c65](https://github.com/nodes777/flower-game-phaser3/commit/9816e88c211edd0d10dc636e2868d7c095e36c65)
+
+-   Adds keys to option drop downs in `<Add/RemoveRecessiveTrait>`
+-   Adds a method to show that a trait is recessive in `<Allele>`
+    -   Recessive genes are shown in italics
+-   Capitalizes Flower IDs in `<FlowerTableRows>`
+
+### To Do
+
+-   Create a table to display what's recessive
+-   Reuse drop down custom select structure?
+
+---
+
+# Refactors adding and removing recessive traits - 6/21/2019 - geneDominance
+
+## [9816e88c211edd0d10dc636e2868d7c095e36c65](https://github.com/nodes777/flower-game-phaser3/commit/9816e88c211edd0d10dc636e2868d7c095e36c65)
 
 -   Refactored to `<RemoveRecessiveTrait>` and `<AddRecessiveTrait>` to make adding and removing recessive genes resuable
     -   requires a proptype of string

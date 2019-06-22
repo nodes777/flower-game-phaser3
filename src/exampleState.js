@@ -63,7 +63,7 @@ const exampleState = {
     },
     config: {
         beeCanFly: false,
-        recessive: { colors: ["White"], shapes: [] }
+        recessive: { colors: [], shapes: [] }
     }
 };
 export default exampleState;

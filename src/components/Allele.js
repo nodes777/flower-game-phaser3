@@ -6,10 +6,13 @@ import { capitalizeFirstLetter } from "../utils/visualFormatting";
 import { allTypes } from "../types/allTypes";
 
 const Allele = props => {
-	const { alleleName, alleleType } = props;
+	const { alleleName, alleleType, isRecessive } = props;
+	const fontStyle = {
+		fontStyle: isRecessive ? "italic" : null
+	};
 	return (
 		<span>
-			{capitalizeFirstLetter(alleleName)}
+			<span style={fontStyle}>{capitalizeFirstLetter(alleleName)}</span>
 			{(() => {
 				switch (alleleType) {
 					case "color":
@@ -33,5 +36,6 @@ Allele.propTypes = {
 	]),
 	alleleType: PropTypes.oneOf([
 		...Object.keys(allTypes).map(word => word.substring(0, word.length - 1))
-	])
+	]),
+	isRecessive: PropTypes.bool
 };
