@@ -20,7 +20,9 @@
 
 ## React
 
--   Make config panel
+-   Make config panel pretty
+-   Create a table to display what's recessive
+-   Reuse drop down custom select structure for add recessive trait select?
 
 ## Features
 

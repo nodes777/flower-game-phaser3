@@ -3,10 +3,9 @@ import { connect } from "react-redux";
 import { removeRecessiveTrait } from "../actions/indexActions";
 import PropTypes from "prop-types";
 
-function mapStateToProps({ config, punnett }) {
+function mapStateToProps({ config }) {
 	return {
-		config,
-		punnett
+		config
 	};
 }
 
@@ -33,10 +32,11 @@ class RemoveRecessiveTrait extends React.Component {
 	};
 
 	render() {
-		const { config, punnett, traitType } = this.props;
+		const { config, traitType } = this.props;
 		const recessiveTraits = config.recessive[traitType + "s"];
 
 		const firstOption = `Select a ${traitType}`;
+		const hasNoRecessiveTraits = recessiveTraits.length < 1;
 
 		return (
 			<form onSubmit={this.handleSubmit}>
@@ -44,12 +44,12 @@ class RemoveRecessiveTrait extends React.Component {
 					aria-label={`${traitType} to make recessive`}
 					value={this.state.value}
 					onChange={this.handleChange}
-					disabled={recessiveTraits.length < 1}
+					disabled={hasNoRecessiveTraits}
 				>
 					<option>
-						{recessiveTraits.length > 0
-							? firstOption
-							: `There are no recessive ${traitType}s`}
+						{hasNoRecessiveTraits
+							? `There are no recessive ${traitType}s`
+							: firstOption}
 					</option>
 					{recessiveTraits.map((trait, i) => {
 						return <option key={trait + i}>{trait}</option>;
@@ -58,10 +58,7 @@ class RemoveRecessiveTrait extends React.Component {
 
 				<input
 					type="submit"
-					disabled={
-						this.state.value === "" ||
-						this.state.value === firstOption
-					}
+					disabled={hasNoRecessiveTraits}
 					value={`Remove recessive ${traitType}`}
 				/>
 			</form>

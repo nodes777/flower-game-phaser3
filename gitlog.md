@@ -1,6 +1,15 @@
-# Refactors - 6/22/2019 - geneDominance
+# Prep to merge to master - 6/23/2019 - geneDominance
 
 ## [9816e88c211edd0d10dc636e2868d7c095e36c65](https://github.com/nodes777/flower-game-phaser3/commit/9816e88c211edd0d10dc636e2868d7c095e36c65)
+
+-   Minor refactor of `<RemoveRecessiveTrait>`
+-   Prep to merge to master
+
+---
+
+# Recessive Genes Shown In Italics - 6/22/2019 - geneDominance
+
+## [0361afa02ffc9e47b1a8879df7e9d2decf83bdc0](https://github.com/nodes777/flower-game-phaser3/commit/0361afa02ffc9e47b1a8879df7e9d2decf83bdc0)
 
 -   Adds keys to option drop downs in `<Add/RemoveRecessiveTrait>`
 -   Adds a method to show that a trait is recessive in `<Allele>`
