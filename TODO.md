@@ -39,6 +39,7 @@
 -   Determinants folder as Phenotype folder
 -   Rename addFlower.js to addFlowerToGame and addFlower action creator to addFlowerToStore
 -   Update README
+-   Add Favico
 
 ## Bugs
 

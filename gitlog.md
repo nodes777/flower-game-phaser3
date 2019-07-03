@@ -1,6 +1,17 @@
+# First steps in Jest setup - 7/3/2019 - master
+
+## [3df4cf98ae4ad28672d9e8cf5d6d233337db95a0](https://github.com/nodes777/flower-game-phaser3/commit/3df4cf98ae4ad28672d9e8cf5d6d233337db95a0)
+
+-   Worked with Phil to
+    -   Npm installed [jest-canvas-mock](https://www.npmjs.com/package/jest-canvas-mock) to mock a canvas for jest
+    -   Added mock files under test/mocks/fileMock.js and test/mocks/styleMock.js
+        -   These return a `string` and empty `object` respectively
+
+---
+
 # Prep to merge to master - 6/23/2019 - geneDominance
 
-## [9816e88c211edd0d10dc636e2868d7c095e36c65](https://github.com/nodes777/flower-game-phaser3/commit/9816e88c211edd0d10dc636e2868d7c095e36c65)
+## [3df4cf98ae4ad28672d9e8cf5d6d233337db95a0](https://github.com/nodes777/flower-game-phaser3/commit/3df4cf98ae4ad28672d9e8cf5d6d233337db95a0)
 
 -   Minor refactor of `<RemoveRecessiveTrait>`
 -   Prep to merge to master
