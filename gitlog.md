@@ -1,6 +1,17 @@
-# First steps in Jest setup - 7/3/2019 - master
+# Jest Works! - 7/4/2019 - master
 
 ## [3df4cf98ae4ad28672d9e8cf5d6d233337db95a0](https://github.com/nodes777/flower-game-phaser3/commit/3df4cf98ae4ad28672d9e8cf5d6d233337db95a0)
+
+-   Removed the circular import `import { store } from "../index.js"` from determinePosition.js
+-   Pulled out `screenSize` into it's own file utils/screenSize.js
+    -   Used in index.js and exampleState.js
+-   Started writing tests for determinePosition.js
+
+---
+
+# First steps in Jest setup - 7/3/2019 - master
+
+## [65a06ce86d174ec177dabdc0713d185f56082b50](https://github.com/nodes777/flower-game-phaser3/commit/65a06ce86d174ec177dabdc0713d185f56082b50)
 
 -   Worked with Phil to
     -   Npm installed [jest-canvas-mock](https://www.npmjs.com/package/jest-canvas-mock) to mock a canvas for jest

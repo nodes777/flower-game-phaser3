@@ -5,10 +5,7 @@ import {
     determineRandomYPos
 } from "./utils/determinePosition";
 
-export const screenSize = {
-    width: window.innerWidth - 40,
-    height: window.innerHeight - 20
-};
+import { screenSize } from "./utils/screenSize";
 
 const color1 = getRandomColor();
 const color2 = getRandomColor();

@@ -10,15 +10,11 @@ import "./css/index.css";
 
 import { createStore } from "redux";
 import { Provider } from "react-redux";
+import { screenSize } from "./utils/screenSize";
 import rootReducer from "./reducers/indexReducer";
 import indexMiddleware from "./middleware/indexMiddleware";
 
 export const store = createStore(rootReducer, indexMiddleware);
-
-export const screenSize = {
-  width: window.innerWidth - 20,
-  height: window.innerHeight - 20
-};
 
 const config = {
   type: Phaser.AUTO,

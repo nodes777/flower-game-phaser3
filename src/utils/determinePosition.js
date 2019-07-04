@@ -1,5 +1,3 @@
-import { store } from "../index.js";
-
 export const determineRandomXPos = screenSize => {
 	return Math.floor(Math.random() * screenSize.width + 1);
 };

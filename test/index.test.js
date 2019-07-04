@@ -1,11 +1,9 @@
-const get4 = require("../src/utils/determinePosition").get4;
-//const screenSize = require("../src/index.js").screenSize;
+//const store = require("../src/index").store;
 //import toBeType from "jest-tobetype";
 
-test("add Test", () => {
-	expect(get4()).toBe(4);
-});
-
-// test("screenSize is an object", () => {
-//   expect(typeof screenSize).toBe("object");
+// test("store is an object", () => {
+// 	expect(typeof store).toBe("object");
 // });
+test("string is a string", () => {
+	expect(typeof "string").toBe("string");
+});
