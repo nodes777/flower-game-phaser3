@@ -15,7 +15,7 @@ A [Phaser 3](https://phaser.io/) and [React](https://reactjs.org/) with [Redux](
 | `npm install`   | Install project dependencies                                                    |
 | `npm start`     | Build project and open web server running project                               |
 | `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
-| `npm run test`  | Runs the Jest tests (Currently in progress, Jest fires syntax errors)           |
+| `npm run test`  | Runs the Jest tests (Currently WIP)                                             |
 
 ## About
 
@@ -31,14 +31,14 @@ This is a lazy garden game. You can generate new flowers randomly, or via the Pu
     ```
 
     this.load.spritesheet(
-    	"threeDFlower",
-    	"src/assets/spritestack/blank-flower-head.png",
-    	{
-    		frameWidth: 10, // from json
-    		frameHeight: 20, // from properties
-    		startFrame: 4, // 4 is the forward facing sprite
-    		endFrame: 9 // 9 is the last angle with semi forward
-    	}
+        "threeDFlower",
+        "src/assets/spritestack/blank-flower-head.png",
+        {
+            frameWidth: 10, // from json
+            frameHeight: 20, // from properties
+            startFrame: 4, // 4 is the forward facing sprite
+            endFrame: 9 // 9 is the last angle with semi forward
+        }
     );
     ```
 

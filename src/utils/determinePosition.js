@@ -58,5 +58,3 @@ export const determinePosition = (
 // 	console.log(`newYPosition ${newYPosition}`);
 // 	return newYPosition;
 // };
-
-export const get4 = () => 4;

@@ -1,6 +1,16 @@
+# Minor Jest Updates - 7/8/2019 - master
+
+## [fde57906018c0cb27fefe4756e16a535c096d69a](https://github.com/nodes777/flower-game-phaser3/commit/fde57906018c0cb27fefe4756e16a535c096d69a)
+
+-   Fixes screenSize bug that occured in checkForPollen in beeOnFlowerCollision.js
+-   Adds a few tests for determinePosition
+-   Updates package.json to this repo and `npm run test` now runs `jest --watchAll`
+
+---
+
 # Jest Works! - 7/4/2019 - master
 
-## [3df4cf98ae4ad28672d9e8cf5d6d233337db95a0](https://github.com/nodes777/flower-game-phaser3/commit/3df4cf98ae4ad28672d9e8cf5d6d233337db95a0)
+## [fde57906018c0cb27fefe4756e16a535c096d69a](https://github.com/nodes777/flower-game-phaser3/commit/fde57906018c0cb27fefe4756e16a535c096d69a)
 
 -   Removed the circular import `import { store } from "../index.js"` from determinePosition.js
 -   Pulled out `screenSize` into it's own file utils/screenSize.js

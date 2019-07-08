@@ -6,7 +6,7 @@ import {
 	addFlower
 } from "../../actions/indexActions";
 
-import { screenSize } from "../../index";
+import { screenSize } from "../../utils/screenSize";
 
 export function checkForPollen(beeId, flowerId) {
 	const beeHasPollen = store.getState().bees.byId[beeId].pollen !== null;
