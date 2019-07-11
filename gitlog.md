@@ -1,3 +1,11 @@
+# Adds More Jest tests - 7/10/2019 - master
+
+## [fde57906018c0cb27fefe4756e16a535c096d69a](https://github.com/nodes777/flower-game-phaser3/commit/fde57906018c0cb27fefe4756e16a535c096d69a)
+
+-   index.js has an or operator to create a div, this is a work around to get tests to run without Target Invariant error
+
+---
+
 # Minor Jest Updates - 7/8/2019 - master
 
 ## [fde57906018c0cb27fefe4756e16a535c096d69a](https://github.com/nodes777/flower-game-phaser3/commit/fde57906018c0cb27fefe4756e16a535c096d69a)
