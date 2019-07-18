@@ -6,6 +6,7 @@ import {
 } from "./determinants/determinePosition";
 
 import { screenSize } from "./utils/screenSize";
+import { loadState } from "./utils/localStorage";
 
 const color1 = getRandomColor();
 const color2 = getRandomColor();
@@ -63,4 +64,5 @@ const exampleState = {
         recessive: { colors: [], shapes: [] }
     }
 };
+
 export default exampleState;

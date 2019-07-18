@@ -11,10 +11,20 @@ import "./css/index.css";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { screenSize } from "./utils/screenSize";
+import { loadState } from "./utils/localStorage";
 import rootReducer from "./reducers/indexReducer";
 import indexMiddleware from "./middleware/indexMiddleware";
+import exampleState from "./exampleState";
 
-export const store = createStore(rootReducer, indexMiddleware);
+const testState = {
+  config: {
+    beeCanFly: true,
+    recessive: { colors: [], shapes: [] }
+  }
+};
+
+export const store = createStore(rootReducer, loadState(), indexMiddleware);
+console.log(store.getState());
 
 const config = {
   type: Phaser.AUTO,
@@ -22,7 +32,7 @@ const config = {
   width: screenSize.width,
   height: screenSize.height,
   backgroundColor: "#488214",
-  pixelArt: true,
+  pixelArt: true, // art still looks funky
   physics: {
     default: "arcade",
     arcade: {

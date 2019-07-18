@@ -1,7 +1,7 @@
 import exampleState from "../exampleState";
 import { PICKUP_POLLEN, DROP_POLLEN } from "../types/actions";
 
-export function beesReducer(state = exampleState, action) {
+export function beesReducer(state = exampleState.bees, action) {
 	switch (action.type) {
 		case PICKUP_POLLEN: {
 			const { beeId, pollen, flowerId } = action.data;
@@ -29,6 +29,6 @@ export function beesReducer(state = exampleState, action) {
 			};
 		}
 		default:
-			return exampleState.bees;
+			return state;
 	}
 }

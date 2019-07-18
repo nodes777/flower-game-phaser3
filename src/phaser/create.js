@@ -1,4 +1,4 @@
-import { checkStore } from "./utils/checkStore";
+import { checkStore, getStoreState } from "./utils/checkStore";
 import { checkForPollen } from "./utils/beeOnFlowerCollision";
 import { init } from "./init";
 export function create() {
@@ -64,7 +64,7 @@ export function create() {
 		loop: true
 	});
 
-	this.beeCanFly = false;
+	this.beeCanFly = getStoreState().config.beeCanFly;
 
 	// hack to reset bee's accelleration every 1/10 sec so that orbits appear less frequently
 	// this.time.addEvent({

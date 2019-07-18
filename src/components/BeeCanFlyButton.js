@@ -24,7 +24,7 @@ class BeeCanFlyButton extends React.Component {
 		);
 	};
 	state = {
-		checked: false
+		checked: this.props.config.beeCanFly
 	};
 	render() {
 		return (

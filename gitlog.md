@@ -1,6 +1,17 @@
+# Start saving capability - 7/18/2019 - master
+
+## [7666e2f2e8a9fb006c17666056cad23609a39bca](https://github.com/nodes777/flower-game-phaser3/commit/7666e2f2e8a9fb006c17666056cad23609a39bca)
+
+-   index.js `createStore(rootReducer, initialState, indexMiddleware);` accpets a middle arg for initial state, will be used to fill with data from localStorage
+    -   This overwrites the default states in the reducers
+-   New utils/localStorage.js has funcs `loadState` and `saveState`
+-   phaser/checkStore now has a `getStoreState()` function, used to set initial beeCanFly boolean
+
+---
+
 # Refactor to use determinants folder - 7/18/2019 - master
 
-## [083ff004d16bb07586fba36733be3cfa66795e86](https://github.com/nodes777/flower-game-phaser3/commit/083ff004d16bb07586fba36733be3cfa66795e86)
+## [7666e2f2e8a9fb006c17666056cad23609a39bca](https://github.com/nodes777/flower-game-phaser3/commit/7666e2f2e8a9fb006c17666056cad23609a39bca)
 
 -   Moves all determinePosition/color/shape etc into a determinants folder
 -   Jest runs slower in `--watchAll`, removed that run `npm run test` and included `--runInBand` to run tests sequentially. [More info on Jest's Slowness](https://itnext.io/how-to-make-your-sluggish-jest-v23-tests-go-faster-1d4f3388bcdd)

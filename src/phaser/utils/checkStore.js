@@ -23,3 +23,7 @@ export function checkStore() {
 		}
 	}
 }
+
+export function getStoreState() {
+	return store.getState();
+}
