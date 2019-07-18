@@ -1,6 +1,23 @@
+# Refactor to use determinants folder - 7/18/2019 - master
+
+## [083ff004d16bb07586fba36733be3cfa66795e86](https://github.com/nodes777/flower-game-phaser3/commit/083ff004d16bb07586fba36733be3cfa66795e86)
+
+-   Moves all determinePosition/color/shape etc into a determinants folder
+-   Jest runs slower in `--watchAll`, removed that run `npm run test` and included `--runInBand` to run tests sequentially. [More info on Jest's Slowness](https://itnext.io/how-to-make-your-sluggish-jest-v23-tests-go-faster-1d4f3388bcdd)
+
+---
+
+# Adds More Jest tests - 7/10/2019 - master
+
+## [083ff004d16bb07586fba36733be3cfa66795e86](https://github.com/nodes777/flower-game-phaser3/commit/083ff004d16bb07586fba36733be3cfa66795e86)
+
+-   index.js has an or operator to create a div, this is a work around to get tests to run without Target Invariant error
+
+---
+
 # Minor Jest Updates - 7/8/2019 - master
 
-## [fde57906018c0cb27fefe4756e16a535c096d69a](https://github.com/nodes777/flower-game-phaser3/commit/fde57906018c0cb27fefe4756e16a535c096d69a)
+## [ae93ed6a59379e55611d51cffd6e285d888843f6](https://github.com/nodes777/flower-game-phaser3/commit/ae93ed6a59379e55611d51cffd6e285d888843f6)
 
 -   Fixes screenSize bug that occured in checkForPollen in beeOnFlowerCollision.js
 -   Adds a few tests for determinePosition

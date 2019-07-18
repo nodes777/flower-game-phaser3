@@ -5,6 +5,7 @@ const colorsLength = colorsKeys.length;
 import { store } from "../index";
 
 export function getRandomColor() {
+	console.log(colors);
 	return colorsKeys[Math.floor(Math.random() * colorsLength)];
 }
 

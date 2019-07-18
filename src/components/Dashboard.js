@@ -5,6 +5,7 @@ import BeeCanFlyButton from "./BeeCanFlyButton";
 import RemoveRecessiveTrait from "./RemoveRecessiveTrait";
 import AddRecessiveTrait from "./AddRecessiveTrait";
 import "../css/App.css";
+
 const Dashboard = props => {
 	return (
 		<div className="dashboard">

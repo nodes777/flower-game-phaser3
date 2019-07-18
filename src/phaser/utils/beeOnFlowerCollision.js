@@ -1,5 +1,5 @@
 import { store } from "../../index";
-import { determinePosition } from "../../utils/determinePosition";
+import { determinePosition } from "../../determinants/determinePosition";
 import {
 	pickupPollen,
 	dropPollen,

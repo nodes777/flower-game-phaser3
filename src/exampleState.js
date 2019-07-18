@@ -1,9 +1,9 @@
-import { getRandomColor } from "./utils/determineColor";
-import { getRandomShape } from "./utils/determineFlowerShape";
+import { getRandomColor } from "./determinants/determineColor";
+import { getRandomShape } from "./determinants/determineFlowerShape";
 import {
     determineRandomXPos,
     determineRandomYPos
-} from "./utils/determinePosition";
+} from "./determinants/determinePosition";
 
 import { screenSize } from "./utils/screenSize";
 
