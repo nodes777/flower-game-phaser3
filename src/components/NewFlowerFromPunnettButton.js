@@ -1,13 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addFlower } from "../actions/indexActions";
-import { getRandomColor } from "../utils/determineColor";
 import {
 	determineRandomXPos,
 	determineRandomYPos
-} from "../utils/determinePosition";
+} from "../determinants/determinePosition";
 
-import { screenSize } from "../index";
+import { screenSize } from "../utils/screenSize";
 
 import PropTypes from "prop-types";
 
@@ -26,7 +25,6 @@ class NewFlowerFromPunnettButton extends React.Component {
 		const parent1 = punnett.parent1;
 		const parent2 = punnett.parent2;
 
-		console.log(punnett);
 		const info = {
 			parent1: {
 				genotype: {

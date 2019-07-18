@@ -1,10 +1,10 @@
 import exampleState from "../exampleState";
-import { determineGenotype } from "../utils/determineGenotype";
+import { determineGenotype } from "../determinants/determineGenotype";
 import {
 	determineXPos,
 	determineYPos,
 	verifyPositions
-} from "../utils/determinePosition";
+} from "../determinants/determinePosition";
 import { CHANGE_FLOWER, ADD_FLOWER } from "../types/actions";
 
 export function flowersReducer(state = exampleState.flowers, action) {

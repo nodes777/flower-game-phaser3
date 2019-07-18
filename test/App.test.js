@@ -4,7 +4,7 @@ import { shallow, mount, render } from "enzyme";
 import App from "../src/App";
 
 describe("<App />", () => {
-	const app = render(<App />);
+	const app = renders(<App />);
 	it("Should render ", () => {
 		expect(app).toMatchSnapShot();
 	});
