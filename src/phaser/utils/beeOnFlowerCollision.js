@@ -48,6 +48,7 @@ export function checkForPollen(beeId, flowerId) {
 				},
 				posInfo: posInfo
 			};
+			console.log(info);
 			store.dispatch(addFlower(info));
 			store.dispatch(dropPollen(beeId));
 		} else {

@@ -1,6 +1,28 @@
-# Adds SaveToLocalStorageButton - 7/19/2019 - master
+# Adds Phenotype - 7/19/2019 - addPhenotype
 
 ## [95ac7b0595a95d324857f245f789f07b20ed6764](https://github.com/nodes777/flower-game-phaser3/commit/95ac7b0595a95d324857f245f789f07b20ed6764)
+
+### Big refactor of flowers reducer and all components that touches
+
+-   Adds phenotype property in store state
+    -   This persists and therefore can be used by Phaser to always render the same color/shape/stem etc
+-   Adds middleware "recessivizer" which adds recessive traits to ADD_FLOWER action
+    -   This was the solution to the problem of having seperated state for flower reducer and config.recessive
+-   Flower reducer refactor
+    -   determinePhenotype requires determineGenotype
+    -   determineGenotype requires all determineColor/Shape/Stem
+    -   moves all determineColor/Shape/Stem from Phaser to redux
+    -   exampleState.js updated to reflect these changes
+-   stems must now be included everywhere the other traits are
+    -   added them to types/allTypes
+
+TODO: revist naming conventions for types
+
+---
+
+# Adds SaveToLocalStorageButton - 7/19/2019 - master
+
+## [c52bb473c844d32646a8052bc4d41de0a1c1b23b](https://github.com/nodes777/flower-game-phaser3/commit/c52bb473c844d32646a8052bc4d41de0a1c1b23b)
 
 -   Adds `<SaveToLocalStorageButton>` to `<Dashboard>`
     -   Works but because phenotype is chosen randomly on render, you can't reproduce the same colors/shapes

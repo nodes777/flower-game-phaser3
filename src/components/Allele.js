@@ -32,7 +32,8 @@ export default Allele;
 Allele.propTypes = {
 	alleleName: PropTypes.oneOf([
 		...Object.keys(allTypes.shapes).map(shape => shape.toLowerCase()),
-		...Object.keys(allTypes.colors)
+		...Object.keys(allTypes.colors),
+		...Object.keys(allTypes.stems)
 	]),
 	alleleType: PropTypes.oneOf([
 		...Object.keys(allTypes).map(word => word.substring(0, word.length - 1))

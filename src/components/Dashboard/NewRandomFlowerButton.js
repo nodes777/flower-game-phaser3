@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { addFlower } from "../../actions/indexActions";
 import { getRandomColor } from "../../determinants/determineColor";
 import { getRandomShape } from "../../determinants/determineFlowerShape";
+import { getRandomStem } from "../../determinants/determineStem";
 import {
 	determineRandomXPos,
 	determineRandomYPos
@@ -26,13 +27,15 @@ class NewRandomFlowerButton extends React.Component {
 			parent1: {
 				genotype: {
 					color: [getRandomColor(), getRandomColor()],
-					shape: [getRandomShape(), getRandomShape()]
+					shape: [getRandomShape(), getRandomShape()],
+					stem: [getRandomStem(), getRandomStem()]
 				}
 			},
 			parent2: {
 				genotype: {
 					color: [getRandomColor(), getRandomColor()],
-					shape: [getRandomShape(), getRandomShape()]
+					shape: [getRandomShape(), getRandomShape()],
+					stem: [getRandomStem(), getRandomStem()]
 				}
 			},
 			posInfo: {

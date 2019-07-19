@@ -1,5 +1,8 @@
 import exampleState from "../exampleState";
-import { determineGenotype } from "../determinants/determineGenotype";
+import {
+	determineGenotype,
+	determinePhenotype
+} from "../determinants/determineGenotypePhenotype";
 import {
 	determineXPos,
 	determineYPos,
@@ -11,7 +14,9 @@ export function flowersReducer(state = exampleState.flowers, action) {
 	switch (action.type) {
 		case CHANGE_FLOWER:
 			const { flowerId } = action.data;
-			console.log("CHANGE_FLOWER in flowersReducer");
+			console.log(
+				"CHANGE_FLOWER in flowersReducer, NOTHING HAPPENS HERE"
+			);
 			return {
 				...state
 			};
@@ -19,20 +24,25 @@ export function flowersReducer(state = exampleState.flowers, action) {
 			const { parent1, parent2, posInfo } = action.data;
 			// Better way to generate ids?
 			const newId = `flower${state.allIds.length + 1}`;
+			const newGenotype = determineGenotype(
+				parent1.genotype,
+				parent2.genotype
+			);
 
 			return {
 				...state,
 				byId: {
 					...state.byId,
 					[newId]: {
-						genotype: determineGenotype(
-							parent1.genotype,
-							parent2.genotype
-						),
+						genotype: newGenotype,
 						position: {
 							x: posInfo.newPos.x,
 							y: posInfo.newPos.y
-						}
+						},
+						phenotype: determinePhenotype(
+							newGenotype,
+							action.recessive
+						)
 					}
 				},
 				allIds: [...state.allIds.concat([newId])],

@@ -1,4 +1,4 @@
 import { colors } from "../types/colors";
 import { shapes } from "../types/flowerShapes";
-
-export const allTypes = { colors, shapes };
+import { stems } from "../types/flowerStems";
+export const allTypes = { colors, shapes, stems };

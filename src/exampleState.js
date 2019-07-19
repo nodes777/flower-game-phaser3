@@ -4,6 +4,7 @@ import {
     determineRandomXPos,
     determineRandomYPos
 } from "./determinants/determinePosition";
+import { determinePhenotype } from "./determinants/determineGenotypePhenotype";
 
 import { screenSize } from "./utils/screenSize";
 import { loadState } from "./utils/localStorage";
@@ -23,26 +24,48 @@ const parent1YPos = determineRandomYPos(screenSize);
 const parent2XPos = determineRandomXPos(screenSize);
 const parent2YPos = determineRandomYPos(screenSize);
 
+const parent1Geno = {
+    color: [color1, color2],
+    shape: [shape1, shape2],
+    stem: ["straightStem", "straightStem"]
+};
+
+const parent2Geno = {
+    color: [color3, color4],
+    shape: [shape3, shape4],
+    stem: ["straightStem", "straightStem"]
+};
+
+const defaultRecessive = { colors: [], shapes: [], stems: [] };
+
+const parent1Pheno = determinePhenotype(parent1Geno, defaultRecessive);
+
+const parent2Pheno = determinePhenotype(parent2Geno, defaultRecessive);
+
 const exampleState = {
     punnett: {
         parent1: {
-            genotype: { color: [color1, color2], shape: [shape1, shape2] },
-            position: { x: parent1XPos, y: parent1YPos }
+            genotype: parent1Geno,
+            position: { x: parent1XPos, y: parent1YPos },
+            phenotype: parent1Pheno
         },
         parent2: {
-            genotype: { color: [color3, color4], shape: [shape3, shape4] },
-            position: { x: parent2XPos, y: parent2YPos }
+            genotype: parent2Geno,
+            position: { x: parent2XPos, y: parent2YPos },
+            phenotype: parent2Pheno
         }
     },
     flowers: {
         byId: {
             flower1: {
-                genotype: { color: [color1, color2], shape: [shape1, shape2] },
-                position: { x: parent1XPos, y: parent1YPos }
+                genotype: parent1Geno,
+                position: { x: parent1XPos, y: parent1YPos },
+                phenotype: parent1Pheno
             },
             flower2: {
-                genotype: { color: [color3, color4], shape: [shape3, shape4] },
-                position: { x: parent2XPos, y: parent2YPos }
+                genotype: parent2Geno,
+                position: { x: parent2XPos, y: parent2YPos },
+                phenotype: parent2Pheno
             }
         },
         allIds: ["flower1", "flower2"],
@@ -61,7 +84,7 @@ const exampleState = {
     },
     config: {
         beeCanFly: false,
-        recessive: { colors: [], shapes: [] }
+        recessive: defaultRecessive
     }
 };
 

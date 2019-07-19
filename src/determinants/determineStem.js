@@ -3,3 +3,9 @@ export const determineStem = genotype => {
 
 	return stem;
 };
+
+export const getRandomStem = genotype => {
+	let stem = "straightStem";
+
+	return stem;
+};

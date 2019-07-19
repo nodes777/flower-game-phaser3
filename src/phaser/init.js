@@ -8,10 +8,12 @@ import { addBeeFrameRotation } from "./utils/addBeeFrameRotation";
 export function init(game) {
 	// 2d spites
 	if (!game.spritestack) {
-		/*Create array of flowers on screen to fly to*/
+		/* Create array of flowers on screen to fly to*/
 		game.flowersOnScreen = [];
+		/* Get flowers from store */
+		const storeFlowers = store.getState().flowers;
 		/* First Flower */
-		addFlower(store.getState().flowers.byId.flower1, "flower1", game);
+		addFlower(storeFlowers.byId.flower1, "flower1", game);
 
 		/* Bee */
 		game.bee = game.physics.add.sprite(200, 150, "bee");
@@ -23,7 +25,7 @@ export function init(game) {
 		//game.bee.debugShowVelocity = false;
 
 		/* Second Flower */
-		addFlower(store.getState().flowers.byId.flower2, "flower2", game);
+		addFlower(storeFlowers.byId.flower2, "flower2", game);
 
 		// set the flower to go to
 		game.flowerToFlyTo = game.flowersOnScreen[0];
