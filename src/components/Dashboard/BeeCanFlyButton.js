@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { beeCanFly } from "../actions/indexActions";
+import { beeCanFly } from "../../actions/indexActions";
 
-import "../css/btn.css";
+import "../../css/btn.css";
 
 function mapStateToProps({ config }) {
 	return {

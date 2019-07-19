@@ -4,7 +4,8 @@ import NewRandomFlowerButton from "./NewRandomFlowerButton";
 import BeeCanFlyButton from "./BeeCanFlyButton";
 import RemoveRecessiveTrait from "./RemoveRecessiveTrait";
 import AddRecessiveTrait from "./AddRecessiveTrait";
-import "../css/App.css";
+import SaveToLocalStorageButton from "./SaveToLocalStorageButton";
+import "../../css/App.css";
 
 const Dashboard = props => {
 	return (
@@ -30,6 +31,9 @@ const Dashboard = props => {
 			</div>
 			<div>
 				<RemoveRecessiveTrait traitType="shape" />
+			</div>
+			<div>
+				<SaveToLocalStorageButton />
 			</div>
 		</div>
 	);

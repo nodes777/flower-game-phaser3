@@ -1,16 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addFlower } from "../actions/indexActions";
-import { getRandomColor } from "../determinants/determineColor";
-import { getRandomShape } from "../determinants/determineFlowerShape";
+import { addFlower } from "../../actions/indexActions";
+import { getRandomColor } from "../../determinants/determineColor";
+import { getRandomShape } from "../../determinants/determineFlowerShape";
 import {
 	determineRandomXPos,
 	determineRandomYPos
-} from "../determinants/determinePosition";
+} from "../../determinants/determinePosition";
 
-import { screenSize } from "../utils/screenSize";
+import { screenSize } from "../../utils/screenSize";
 
-import "../css/btn.css";
+import "../../css/btn.css";
 
 function mapStateToProps({ flowers }) {
 	return {

@@ -1,16 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addRecessiveTrait } from "../actions/indexActions";
+import { removeRecessiveTrait } from "../../actions/indexActions";
 import PropTypes from "prop-types";
 
-function mapStateToProps({ config, punnett }) {
+function mapStateToProps({ config }) {
 	return {
-		config,
-		punnett
+		config
 	};
 }
 
-class AddRecessiveTrait extends React.Component {
+class RemoveRecessiveTrait extends React.Component {
 	static propTypes = {
 		traitType: PropTypes.string
 	};
@@ -21,7 +20,7 @@ class AddRecessiveTrait extends React.Component {
 		const { dispatch } = this.props;
 		this.setState({ value: "" });
 		dispatch(
-			addRecessiveTrait({
+			removeRecessiveTrait({
 				traitType: this.props.traitType + "s",
 				trait: this.state.value
 			})
@@ -33,39 +32,38 @@ class AddRecessiveTrait extends React.Component {
 	};
 
 	render() {
-		const { config, punnett, traitType } = this.props;
+		const { config, traitType } = this.props;
 		const recessiveTraits = config.recessive[traitType + "s"];
-		const bothParentsTraits = punnett.parent1.genotype[traitType].concat(
-			punnett.parent2.genotype[traitType]
-		);
-		const availableTraits = bothParentsTraits.filter(
-			value => !recessiveTraits.includes(value)
-		);
+
 		const firstOption = `Select a ${traitType}`;
+		const hasNoRecessiveTraits = recessiveTraits.length < 1;
+
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<select
 					aria-label={`${traitType} to make recessive`}
 					value={this.state.value}
 					onChange={this.handleChange}
+					disabled={hasNoRecessiveTraits}
 				>
-					<option>{firstOption}</option>
-					{availableTraits.map((trait, i) => {
+					<option>
+						{hasNoRecessiveTraits
+							? `There are no recessive ${traitType}s`
+							: firstOption}
+					</option>
+					{recessiveTraits.map((trait, i) => {
 						return <option key={trait + i}>{trait}</option>;
 					})}
 				</select>
 
 				<input
 					type="submit"
-					disabled={
-						this.state.value === "" ||
-						this.state.value === firstOption
-					}
-					value={`Add to recessive ${traitType}s`}
+					disabled={hasNoRecessiveTraits}
+					value={`Remove recessive ${traitType}`}
 				/>
 			</form>
 		);
 	}
 }
 
-export default connect(mapStateToProps)(AddRecessiveTrait);
+export default connect(mapStateToProps)(RemoveRecessiveTrait);

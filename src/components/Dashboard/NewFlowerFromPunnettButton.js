@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addFlower } from "../actions/indexActions";
+import { addFlower } from "../../actions/indexActions";
 import {
 	determineRandomXPos,
 	determineRandomYPos
-} from "../determinants/determinePosition";
+} from "../../determinants/determinePosition";
 
-import { screenSize } from "../utils/screenSize";
+import { screenSize } from "../../utils/screenSize";
 
 import PropTypes from "prop-types";
 

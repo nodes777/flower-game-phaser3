@@ -1,6 +1,17 @@
+# Adds SaveToLocalStorageButton - 7/19/2019 - master
+
+## [95ac7b0595a95d324857f245f789f07b20ed6764](https://github.com/nodes777/flower-game-phaser3/commit/95ac7b0595a95d324857f245f789f07b20ed6764)
+
+-   Adds `<SaveToLocalStorageButton>` to `<Dashboard>`
+    -   Works but because phenotype is chosen randomly on render, you can't reproduce the same colors/shapes
+    -   TODO: create phenotype property in state
+-   Creates a components/Dashboard folder to house all components in the Dashboard
+
+---
+
 # Start saving capability - 7/18/2019 - master
 
-## [7666e2f2e8a9fb006c17666056cad23609a39bca](https://github.com/nodes777/flower-game-phaser3/commit/7666e2f2e8a9fb006c17666056cad23609a39bca)
+## [95ac7b0595a95d324857f245f789f07b20ed6764](https://github.com/nodes777/flower-game-phaser3/commit/95ac7b0595a95d324857f245f789f07b20ed6764)
 
 -   index.js `createStore(rootReducer, initialState, indexMiddleware);` accpets a middle arg for initial state, will be used to fill with data from localStorage
     -   This overwrites the default states in the reducers

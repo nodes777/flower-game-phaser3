@@ -16,13 +16,6 @@ import rootReducer from "./reducers/indexReducer";
 import indexMiddleware from "./middleware/indexMiddleware";
 import exampleState from "./exampleState";
 
-const testState = {
-  config: {
-    beeCanFly: true,
-    recessive: { colors: [], shapes: [] }
-  }
-};
-
 export const store = createStore(rootReducer, loadState(), indexMiddleware);
 console.log(store.getState());
 
