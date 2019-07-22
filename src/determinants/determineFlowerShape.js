@@ -1,7 +1,7 @@
 import { shapes } from "../types/flowerShapes";
 export const determineFlowerShape = genotype => {
 	if (genotype.shape === undefined) {
-		return shapes.DEFAULT;
+		return shapes.Default;
 	}
 	return genotype.shape[Math.round(Math.random())];
 };

@@ -1,6 +1,6 @@
 # Adds Phenotype - 7/19/2019 - addPhenotype
 
-## [95ac7b0595a95d324857f245f789f07b20ed6764](https://github.com/nodes777/flower-game-phaser3/commit/95ac7b0595a95d324857f245f789f07b20ed6764)
+## [24073c192e4e2a235cbd82675483d5fa151dccb6](https://github.com/nodes777/flower-game-phaser3/commit/24073c192e4e2a235cbd82675483d5fa151dccb6)
 
 ### Big refactor of flowers reducer and all components that touches
 
@@ -16,7 +16,11 @@
 -   stems must now be included everywhere the other traits are
     -   added them to types/allTypes
 
-TODO: revist naming conventions for types
+TODO:
+
+-   revist naming conventions for types
+-   Refactor the addFlower vs addFlower in Phaser
+-   Add confirmation of save to localStorage and method to clear localStorage
 
 ---
 

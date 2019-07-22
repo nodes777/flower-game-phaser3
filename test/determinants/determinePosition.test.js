@@ -2,7 +2,7 @@ const {
 	determineRandomXPos,
 	determineRandomYPos,
 	determinePosition
-} = require("../../src/utils/determinePosition");
+} = require("../../src/determinants/determinePosition");
 
 const screenSize = { width: 400, height: 600 };
 

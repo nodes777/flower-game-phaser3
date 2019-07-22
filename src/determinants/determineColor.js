@@ -11,11 +11,9 @@ export function determineColor(genotypeColors, recessive) {
 	// Loop through the recessiveColors array
 	for (let i = 0; i < recessiveColors.length; i++) {
 		if (genotypeColors[0] === recessiveColors[i]) {
-			console.log("1 is recessive");
 			allele1IsRecessive = true;
 		}
 		if (genotypeColors[1] === recessiveColors[i]) {
-			console.log("2 is recessive");
 			allele2IsRecessive = true;
 		}
 	}
