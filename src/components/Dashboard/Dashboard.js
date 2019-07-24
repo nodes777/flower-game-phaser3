@@ -2,8 +2,8 @@ import React from "react";
 import NewFlowerFromPunnettButton from "./NewFlowerFromPunnettButton";
 import NewRandomFlowerButton from "./NewRandomFlowerButton";
 import BeeCanFlyButton from "./BeeCanFlyButton";
-import RemoveRecessiveTrait from "./RemoveRecessiveTrait";
-import AddRecessiveTrait from "./AddRecessiveTrait";
+import RemoveRecessiveAllele from "./RemoveRecessiveAllele";
+import AddRecessiveAllele from "./AddRecessiveAllele";
 import SaveToLocalStorageButton from "./SaveToLocalStorageButton";
 import "../../css/App.css";
 
@@ -21,16 +21,16 @@ const Dashboard = props => {
 				<NewRandomFlowerButton />
 			</div>
 			<div>
-				<AddRecessiveTrait traitType="color" />
+				<AddRecessiveAllele alleleType="color" />
 			</div>
 			<div>
-				<RemoveRecessiveTrait traitType="color" />
+				<RemoveRecessiveAllele alleleType="color" />
 			</div>
 			<div>
-				<AddRecessiveTrait traitType="shape" />
+				<AddRecessiveAllele alleleType="shape" />
 			</div>
 			<div>
-				<RemoveRecessiveTrait traitType="shape" />
+				<RemoveRecessiveAllele alleleType="shape" />
 			</div>
 			<div>
 				<SaveToLocalStorageButton />

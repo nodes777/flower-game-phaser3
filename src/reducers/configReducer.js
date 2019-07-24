@@ -1,8 +1,8 @@
 import exampleState from "../exampleState";
 import {
 	BEE_CAN_FLY,
-	ADD_RECESSIVE_TRAIT,
-	REMOVE_RECESSIVE_TRAIT
+	ADD_RECESSIVE_ALLELE,
+	REMOVE_RECESSIVE_ALLELE
 } from "../types/actions";
 
 export function configReducer(state = exampleState.config, action) {
@@ -14,27 +14,26 @@ export function configReducer(state = exampleState.config, action) {
 				beeCanFly: bool
 			};
 		}
-		case ADD_RECESSIVE_TRAIT: {
-			// TraitType ~= geneType, and trait ~= allele
-			// but different because the traits aren't necessarily genes in a plant
-			const { traitType, trait } = action.data;
-
+		case ADD_RECESSIVE_ALLELE: {
+			const { alleleType, allele } = action.data;
 			return {
 				...state,
 				recessive: {
 					...state.recessive,
-					[traitType]: [...state.recessive[traitType].concat([trait])]
+					[alleleType]: [
+						...state.recessive[alleleType].concat([allele])
+					]
 				}
 			};
 		}
-		case REMOVE_RECESSIVE_TRAIT: {
-			const { traitType, trait } = action.data;
+		case REMOVE_RECESSIVE_ALLELE: {
+			const { alleleType, allele } = action.data;
 			return {
 				...state,
 				recessive: {
 					...state.recessive,
-					[traitType]: state.recessive[traitType].filter(
-						(value, index) => value !== trait
+					[alleleType]: state.recessive[alleleType].filter(
+						(value, index) => value !== allele
 					)
 				}
 			};

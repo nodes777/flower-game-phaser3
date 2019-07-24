@@ -1,3 +1,22 @@
+# Changes all "Trait" references in Add/Remove reccessiveTrait to reccessiveAlleles - 7/22/2019 - master
+
+## [fece0321f19697d30d6cd1939f3691733a33c9a7](https://github.com/nodes777/flower-game-phaser3/commit/fece0321f19697d30d6cd1939f3691733a33c9a7)
+
+-   Changes all references to the term "trait" and "traitType" to "allele" and "alleleType"
+-   Adds indexAction Jest tests
+-   Improves configReducer.test.js
+
+# Adds Determinants Jest Tests - 7/22/2019 - master
+
+## [fece0321f19697d30d6cd1939f3691733a33c9a7](https://github.com/nodes777/flower-game-phaser3/commit/fece0321f19697d30d6cd1939f3691733a33c9a7)
+
+Adds:
+
+-   /determinants tests
+-   Starts configReducer.test.js
+
+---
+
 # Adds Phenotype - 7/19/2019 - addPhenotype
 
 ## [24073c192e4e2a235cbd82675483d5fa151dccb6](https://github.com/nodes777/flower-game-phaser3/commit/24073c192e4e2a235cbd82675483d5fa151dccb6)
