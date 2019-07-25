@@ -1,12 +1,23 @@
+# Adds Clear Local Storage Button - 7/25/2019 - master
+
+## [818fe683ea94b12aa7a2c8a67d395390f182786d](https://github.com/nodes777/flower-game-phaser3/commit/818fe683ea94b12aa7a2c8a67d395390f182786d)
+
+-   Adds `<ClearLocalStorageButton>` to `<Dashboard>`
+-   Adds tests for beesReducer, configReducer, and punnettReducer
+
+---
+
 # Changes all "Trait" references in Add/Remove reccessiveTrait to reccessiveAlleles - 7/22/2019 - master
 
-## [fece0321f19697d30d6cd1939f3691733a33c9a7](https://github.com/nodes777/flower-game-phaser3/commit/fece0321f19697d30d6cd1939f3691733a33c9a7)
+## [818fe683ea94b12aa7a2c8a67d395390f182786d](https://github.com/nodes777/flower-game-phaser3/commit/818fe683ea94b12aa7a2c8a67d395390f182786d)
 
 -   Changes all references to the term "trait" and "traitType" to "allele" and "alleleType"
 -   Adds indexAction Jest tests
 -   Improves configReducer.test.js
 
-# Adds Determinants Jest Tests - 7/22/2019 - master
+---
+
+# Adds Determinants Jest Tests - 7/24/2019 - master
 
 ## [fece0321f19697d30d6cd1939f3691733a33c9a7](https://github.com/nodes777/flower-game-phaser3/commit/fece0321f19697d30d6cd1939f3691733a33c9a7)
 

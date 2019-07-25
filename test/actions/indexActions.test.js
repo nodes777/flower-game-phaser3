@@ -47,14 +47,14 @@ describe("addFlower", () => {
 		parent1: {
 			genotype: {
 				color: [allTypes.colors.AliceBlue, allTypes.colors.Bisque],
-				shape: [allTypes.shapes.default, allTypes.shapes.default],
+				shape: [allTypes.shapes.Default, allTypes.shapes.Default],
 				stem: ["straightStem", "straightStem"]
 			}
 		},
 		parent2: {
 			genotype: {
 				color: [allTypes.colors.Azure, allTypes.colors.Aqua],
-				shape: [allTypes.shapes.diamond, allTypes.shapes.diamond],
+				shape: [allTypes.shapes.Diamond, allTypes.shapes.Diamond],
 				stem: ["straightStem", "straightStem"]
 			}
 		},

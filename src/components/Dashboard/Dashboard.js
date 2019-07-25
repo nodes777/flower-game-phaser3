@@ -5,6 +5,7 @@ import BeeCanFlyButton from "./BeeCanFlyButton";
 import RemoveRecessiveAllele from "./RemoveRecessiveAllele";
 import AddRecessiveAllele from "./AddRecessiveAllele";
 import SaveToLocalStorageButton from "./SaveToLocalStorageButton";
+import ClearLocalStorageButton from "./ClearLocalStorageButton";
 import "../../css/App.css";
 
 const Dashboard = props => {
@@ -34,6 +35,9 @@ const Dashboard = props => {
 			</div>
 			<div>
 				<SaveToLocalStorageButton />
+			</div>
+			<div>
+				<ClearLocalStorageButton />
 			</div>
 		</div>
 	);

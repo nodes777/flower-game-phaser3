@@ -10,8 +10,10 @@ function mapStateToProps(fullState) {
 
 class SaveToLocalStorageButton extends React.Component {
 	handleSubmit = () => {
-		console.log(this.props);
 		saveState(this.props.fullState);
+		alert(
+			"Your garden has been saved in its current and will reappear when reloading the page"
+		);
 	};
 	render() {
 		return (
