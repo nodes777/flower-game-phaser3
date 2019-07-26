@@ -26,22 +26,22 @@
 
 ## Features
 
--   Add recessive/dominant
 -   Add wiggles/ animation
--   Save to localStorage,
 -   Save to url to share somehow
 -   Name Flowers and update their ids via redux
 -   Changing the Punnett Table changes the game
 -   Add growth stages
+-   Allow running in the background
+
+## A11y
+
+-   Add regions to punnett squares, dashboard, and game canvas
 
 ## Minor
 
--   Determinants folder as Phenotype folder
 -   Rename addFlower.js to addFlowerToGame and addFlower action creator to addFlowerToStore
--   Update README
 -   Add Favico
 
 ## Bugs
 
--   Flowers can appear on top of each other
--   Orbits are back
+-   The bee can get stuck orbitting flowers

@@ -1,10 +1,23 @@
-# Adds flowersReducer test - 7/25/2019 - master
+# Updates LICENSE and adds badges- 7/26/2019 - master
+
+## [2d4bce51dce41e217f5afe3d457f4c01e036c11d](https://github.com/nodes777/flower-game-phaser3/commit/2d4bce51dce41e217f5afe3d457f4c01e036c11d)
+
+-   Adds GNU General Public License v3.0
+-   Adds code coverage badges
+-   Adds license badge
+-   A11y - increases btn-primary button contrast
+-   Resolves "recessive is undefined" bug in ADD_FLOWER in flowersReducer
+
+---
+
+# Adds flowersReducer test - 7/26/2019 - master
 
 ## [2d4bce51dce41e217f5afe3d457f4c01e036c11d](https://github.com/nodes777/flower-game-phaser3/commit/2d4bce51dce41e217f5afe3d457f4c01e036c11d)
 
 -   Adds flowersReducer.test.js
 -   improves determinePhenotype test
 -   Buddy is now CI to deploy to [http://flower-garden.com.s3-website-us-east-1.amazonaws.com/](http://flower-garden.com.s3-website-us-east-1.amazonaws.com/) on push to master github
+    -   Only deploys what's in the /dist folder
 
 ---
 
