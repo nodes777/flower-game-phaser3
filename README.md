@@ -2,8 +2,11 @@
 
 A [Phaser 3](https://phaser.io/) and [React](https://reactjs.org/) with [Redux](https://redux.js.org/) project based on the [Phaser 3 Webpack Project Template](https://github.com/photonstorm/phaser3-project-template). ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/). The game explores manipulating different genes (colors, shapes, stems) for flowers and seeing what grows.
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![coverage: lines](https://github.com/nodes777/flower-game-phaser3/tree/master/coverage/badge-lines.svg)]
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
+[![buddy pipeline](https://app.buddy.works/nodes777/flower-game-phaser3/pipelines/pipeline/201190/badge.svg?token=c7fd071bbd4bd27e04ca1a107e5f3461bbb7da639ef6fca86b0895a41ac150d7 "buddy pipeline")](https://app.buddy.works/nodes777/flower-game-phaser3/pipelines/pipeline/201190)
+![Code line coverage](/coverage/badge-lines.svg)
+<img alt="" src="https://github.com/nodes777/flower-game-phaser3/blob/master/coverage/badge-lines.svg">
+[![coverage: lines](https://github.com/nodes777/flower-game-phaser3/blob/master/coverage/badge-lines.svg)]
 [![coverage: functions](https://github.com/nodes777/flower-game-phaser3/tree/master/coverage/badge-functions.svg)]
 [![coverage: statements](https://github.com/nodes777/flower-game-phaser3/tree/master/coverage/badge-statements.svg)]
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)

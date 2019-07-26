@@ -1,6 +1,6 @@
 # Updates LICENSE and adds badges- 7/26/2019 - master
 
-## [2d4bce51dce41e217f5afe3d457f4c01e036c11d](https://github.com/nodes777/flower-game-phaser3/commit/2d4bce51dce41e217f5afe3d457f4c01e036c11d)
+## [4735985774f0608cb93fe067394df44fe967453a](https://github.com/nodes777/flower-game-phaser3/commit/4735985774f0608cb93fe067394df44fe967453a)
 
 -   Adds GNU General Public License v3.0
 -   Adds code coverage badges

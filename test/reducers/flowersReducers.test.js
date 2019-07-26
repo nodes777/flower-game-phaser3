@@ -63,7 +63,8 @@ describe("flowersReducer", () => {
 	describe("case: CHANGE_FLOWER", () => {
 		const action = {
 			type: CHANGE_FLOWER,
-			data: {}
+			data: {},
+			recessive: defaultRecessive
 		};
 
 		const result = flowersReducer(state, action);
@@ -77,9 +78,9 @@ describe("flowersReducer", () => {
 			data: {
 				parent1: state.byId.flower1,
 				parent2: state.byId.flower2,
-				posInfo: posInfo,
-				recessive: defaultRecessive
-			}
+				posInfo: posInfo
+			},
+			recessive: defaultRecessive
 		};
 
 		const result = flowersReducer(state, action);

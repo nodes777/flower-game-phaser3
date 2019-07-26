@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --config webpack/base.js --open",
     "test": "jest --runInBand",
     "test:coverage": "npm test -- --coverage",
-    "test:badges": "npm run test:coverage  && jest-coverage-badges"
+    "test:badges": "npm run test:coverage && jest-coverage-badges"
   },
   "repository": {
     "type": "git",
