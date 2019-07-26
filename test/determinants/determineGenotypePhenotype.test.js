@@ -28,7 +28,7 @@ describe("determineGenotype", () => {
 });
 
 describe("determinePhenotype", () => {
-	const parent1Geno = {
+	const genotype = {
 		color: [allTypes.colors.AliceBlue, allTypes.colors.Bisque],
 		shape: [allTypes.shapes.default, allTypes.shapes.default],
 		stem: ["straightStem", "straightStem"]
@@ -36,11 +36,19 @@ describe("determinePhenotype", () => {
 
 	const recessive = { colors: [], shapes: [], stems: [] };
 
-	const result = determinePhenotype(parent1Geno, recessive);
+	const result = determinePhenotype(genotype, recessive);
 	it("returns an object", () => {
 		expect(typeof result).toBe("object");
 	});
 	it("returns an object with the same properties", () => {
-		expect(Object.keys(result)).toEqual(Object.keys(parent1Geno));
+		expect(Object.keys(result)).toEqual(Object.keys(genotype));
+	});
+	it("returns an object with a possible phenotype", () => {
+		const possibleColors = [...genotype.color];
+		const possibleShapes = [...genotype.shape];
+		const possibleStems = [...genotype.stem];
+		expect(possibleColors).toContain(result.color);
+		expect(possibleShapes).toContain(result.shape);
+		expect(possibleStems).toContain(result.stem);
 	});
 });

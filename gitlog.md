@@ -1,3 +1,13 @@
+# Adds flowersReducer test - 7/25/2019 - master
+
+## [2d4bce51dce41e217f5afe3d457f4c01e036c11d](https://github.com/nodes777/flower-game-phaser3/commit/2d4bce51dce41e217f5afe3d457f4c01e036c11d)
+
+-   Adds flowersReducer.test.js
+-   improves determinePhenotype test
+-   Buddy is now CI to deploy to [http://flower-garden.com.s3-website-us-east-1.amazonaws.com/](http://flower-garden.com.s3-website-us-east-1.amazonaws.com/) on push to master github
+
+---
+
 # Adds Clear Local Storage Button - 7/25/2019 - master
 
 ## [818fe683ea94b12aa7a2c8a67d395390f182786d](https://github.com/nodes777/flower-game-phaser3/commit/818fe683ea94b12aa7a2c8a67d395390f182786d)

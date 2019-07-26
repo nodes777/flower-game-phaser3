@@ -21,7 +21,7 @@ export function flowersReducer(state = exampleState.flowers, action) {
 				...state
 			};
 		case ADD_FLOWER:
-			const { parent1, parent2, posInfo } = action.data;
+			const { parent1, parent2, posInfo, recessive } = action.data;
 			// Better way to generate ids?
 			const newId = `flower${state.allIds.length + 1}`;
 			const newGenotype = determineGenotype(
@@ -39,10 +39,7 @@ export function flowersReducer(state = exampleState.flowers, action) {
 							x: posInfo.newPos.x,
 							y: posInfo.newPos.y
 						},
-						phenotype: determinePhenotype(
-							newGenotype,
-							action.recessive
-						)
+						phenotype: determinePhenotype(newGenotype, recessive)
 					}
 				},
 				allIds: [...state.allIds.concat([newId])],
