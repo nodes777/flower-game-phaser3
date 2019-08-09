@@ -60,12 +60,14 @@ const exampleState = {
             flower1: {
                 genotype: parent1Geno,
                 position: { x: parent1XPos, y: parent1YPos },
-                phenotype: parent1Pheno
+                phenotype: parent1Pheno,
+                name: "flower1"
             },
             flower2: {
                 genotype: parent2Geno,
                 position: { x: parent2XPos, y: parent2YPos },
-                phenotype: parent2Pheno
+                phenotype: parent2Pheno,
+                name: "flower2"
             }
         },
         allIds: ["flower1", "flower2"],

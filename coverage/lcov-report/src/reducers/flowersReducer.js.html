@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">88.89% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>8/9</span>
+        <span class='fraction'>11/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/4</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">88.89% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>8/9</span>
+        <span class='fraction'>11/11</span>
       </div>
     </div>
     <p class="quiet">
@@ -98,7 +98,24 @@
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -111,7 +128,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -122,6 +143,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -147,7 +169,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import exampleState from "../exampleState";
@@ -160,9 +194,13 @@ import {
 	determineYPos,
 	verifyPositions
 } from "../determinants/determinePosition";
-import { CHANGE_FLOWER, ADD_FLOWER } from "../types/actions";
+import {
+	CHANGE_FLOWER,
+	ADD_FLOWER,
+	CHANGE_FLOWER_NAME
+} from "../types/actions";
 &nbsp;
-export function flowersReducer(state = <span class="branch-0 cbranch-no" title="branch not covered" >exampleState.flowers,</span> action) {
+export function flowersReducer(state = exampleState.flowers, action) {
 	switch (action.type) {
 		case CHANGE_FLOWER:
 			const { flowerId } = action.data;
@@ -173,7 +211,8 @@ export function flowersReducer(state = <span class="branch-0 cbranch-no" title="
 				...state
 			};
 		case ADD_FLOWER:
-			const { parent1, parent2, posInfo, recessive } = action.data;
+			const { parent1, parent2, posInfo } = action.data;
+			const recessive = action.recessive;
 			// Better way to generate ids?
 			const newId = `flower${state.allIds.length + 1}`;
 			const newGenotype = determineGenotype(
@@ -191,15 +230,27 @@ export function flowersReducer(state = <span class="branch-0 cbranch-no" title="
 							x: posInfo.newPos.x,
 							y: posInfo.newPos.y
 						},
-						phenotype: determinePhenotype(newGenotype, recessive)
+						phenotype: determinePhenotype(newGenotype, recessive),
+						name: newId
 					}
 				},
 				allIds: [...state.allIds.concat([newId])],
 				allPositions: [...state.allPositions.concat(posInfo.newPos)]
 			};
+		case CHANGE_FLOWER_NAME:
+			return {
+				...state,
+				byId: {
+					...state.byId,
+					[action.flowerId]: {
+						...state.byId[action.flowerId],
+						name: action.newName
+					}
+				}
+			};
 &nbsp;
-<span class="branch-2 cbranch-no" title="branch not covered" >		default:</span>
-<span class="cstat-no" title="statement not covered" >			return state;</span>
+		default:
+			return state;
 	}
 }
 &nbsp;</pre></td></tr>
@@ -208,7 +259,7 @@ export function flowersReducer(state = <span class="branch-0 cbranch-no" title="
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jul 26 2019 11:34:59 GMT-0400 (Eastern Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Aug 09 2019 12:05:32 GMT-0400 (Eastern Daylight Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

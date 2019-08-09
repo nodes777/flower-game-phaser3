@@ -2,13 +2,15 @@
 
 ## Tests
 
--   Figure out Jest
+-   /components and /phaser
+-   Refactor beeOnFlowerCollision to have the store passed in as an argument?
 
 ## Phaser
 
 -   Multiple bees
 -   The bee's movement is a hack that slows down performance
 -   Weather/light via masks
+-   On mouse hover display name
 
 ### Art
 
@@ -23,12 +25,12 @@
 -   Make config panel pretty
 -   Create a table to display what's recessive
 -   Reuse drop down custom select structure for add recessive trait select?
+-   Order the flower table genes to show the phenotype allele first, or only phenotype
 
 ## Features
 
 -   Add wiggles/ animation
 -   Save to url to share somehow
--   Name Flowers and update their ids via redux
 -   Changing the Punnett Table changes the game
 -   Add growth stages
 -   Allow running in the background

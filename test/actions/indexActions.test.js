@@ -5,7 +5,8 @@ const {
 	DROP_POLLEN,
 	BEE_CAN_FLY,
 	ADD_RECESSIVE_ALLELE,
-	REMOVE_RECESSIVE_ALLELE
+	REMOVE_RECESSIVE_ALLELE,
+	CHANGE_FLOWER_NAME
 } = require("../../src/types/actions");
 
 const {
@@ -15,7 +16,8 @@ const {
 	dropPollen,
 	beeCanFly,
 	addRecessiveAllele,
-	removeRecessiveAllele
+	removeRecessiveAllele,
+	changeFlowerName
 } = require("../../src/actions/indexActions");
 
 const { allTypes } = require("../../src/types/allTypes");
@@ -170,5 +172,25 @@ describe("removeRecessiveAllele", () => {
 	});
 	it("returns an object with data: alleleType and allele", () => {
 		expect(result.data).toEqual(data);
+	});
+});
+
+describe("changeFlowerName", () => {
+	const data = {
+		flowerId: "flower1",
+		newName: "Jerry"
+	};
+
+	const result = changeFlowerName(data);
+
+	it("returns an object", () => {
+		expect(typeof result).toBe("object");
+	});
+	it("returns an object with type: CHANGE_FLOWER_NAME", () => {
+		expect(result.type).toBe(CHANGE_FLOWER_NAME);
+	});
+	it("returns an object with data: flowerId:flower1 and newName:Jerry", () => {
+		expect(result.flowerId).toBe("flower1");
+		expect(result.newName).toBe("Jerry");
 	});
 });

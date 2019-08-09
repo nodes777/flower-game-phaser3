@@ -5,7 +5,8 @@ import {
 	DROP_POLLEN,
 	BEE_CAN_FLY,
 	ADD_RECESSIVE_ALLELE,
-	REMOVE_RECESSIVE_ALLELE
+	REMOVE_RECESSIVE_ALLELE,
+	CHANGE_FLOWER_NAME
 } from "../types/actions";
 
 export const changeParentAllele = data => {
@@ -54,5 +55,13 @@ export const removeRecessiveAllele = data => {
 	return {
 		type: REMOVE_RECESSIVE_ALLELE,
 		data
+	};
+};
+
+export const changeFlowerName = data => {
+	return {
+		type: CHANGE_FLOWER_NAME,
+		flowerId: data.flowerId,
+		newName: data.newName
 	};
 };

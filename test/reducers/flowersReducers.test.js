@@ -1,5 +1,9 @@
 const { flowersReducer } = require("../../src/reducers/flowersReducer");
-import { CHANGE_FLOWER, ADD_FLOWER } from "../../src/types/actions";
+import {
+	CHANGE_FLOWER,
+	ADD_FLOWER,
+	CHANGE_FLOWER_NAME
+} from "../../src/types/actions";
 const { allTypes } = require("../../src/types/allTypes");
 
 /* Setup */
@@ -36,12 +40,14 @@ const state = {
 		flower1: {
 			genotype: parent1Geno,
 			position: { x: parent1XPos, y: parent1YPos },
-			phenotype: parent1Pheno
+			phenotype: parent1Pheno,
+			name: "flower1"
 		},
 		flower2: {
 			genotype: parent2Geno,
 			position: { x: parent2XPos, y: parent2YPos },
-			phenotype: parent2Pheno
+			phenotype: parent2Pheno,
+			name: "flower2"
 		}
 	},
 	allIds: ["flower1", "flower2"],
@@ -129,6 +135,26 @@ describe("flowersReducer", () => {
 			expect(possibleStems).toEqual(
 				expect.arrayContaining(result.byId.flower3.genotype.stem)
 			);
+		});
+	});
+	describe("case: CHANGE_FLOWER_NAME", () => {
+		const action = {
+			type: CHANGE_FLOWER_NAME,
+			flowerId: "flower1",
+			newName: "Jerry"
+		};
+
+		const result = flowersReducer(state, action);
+		it("Changes the flower name to Jerry", () => {
+			expect(result.byId.flower1.name).toBe("Jerry");
+		});
+		it("Doesn't change anything else about the flower", () => {
+			expect(result.byId.flower1.genotype).toBe(parent1Geno);
+			expect(result.byId.flower1.position).toStrictEqual({
+				x: parent1XPos,
+				y: parent1YPos
+			});
+			expect(result.byId.flower1.phenotype).toBe(parent1Pheno);
 		});
 	});
 });

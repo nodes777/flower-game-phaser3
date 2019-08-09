@@ -1,3 +1,14 @@
+# Allows changing of flower names - 8/9/2019 - master
+
+## [4735985774f0608cb93fe067394df44fe967453a](https://github.com/nodes777/flower-game-phaser3/commit/4735985774f0608cb93fe067394df44fe967453a)
+
+-   FlowerId's are seperate from flower names
+    -   exampleState now includes name property
+-   `<FlowerTable>` displays flower names via new `<FlowerName>` component
+    -   Names can be changed within the `<FlowerName>`
+
+---
+
 # Updates LICENSE and adds badges- 7/26/2019 - master
 
 ## [4735985774f0608cb93fe067394df44fe967453a](https://github.com/nodes777/flower-game-phaser3/commit/4735985774f0608cb93fe067394df44fe967453a)

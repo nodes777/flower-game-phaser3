@@ -8,7 +8,11 @@ import {
 	determineYPos,
 	verifyPositions
 } from "../determinants/determinePosition";
-import { CHANGE_FLOWER, ADD_FLOWER } from "../types/actions";
+import {
+	CHANGE_FLOWER,
+	ADD_FLOWER,
+	CHANGE_FLOWER_NAME
+} from "../types/actions";
 
 export function flowersReducer(state = exampleState.flowers, action) {
 	switch (action.type) {
@@ -40,11 +44,23 @@ export function flowersReducer(state = exampleState.flowers, action) {
 							x: posInfo.newPos.x,
 							y: posInfo.newPos.y
 						},
-						phenotype: determinePhenotype(newGenotype, recessive)
+						phenotype: determinePhenotype(newGenotype, recessive),
+						name: newId
 					}
 				},
 				allIds: [...state.allIds.concat([newId])],
 				allPositions: [...state.allPositions.concat(posInfo.newPos)]
+			};
+		case CHANGE_FLOWER_NAME:
+			return {
+				...state,
+				byId: {
+					...state.byId,
+					[action.flowerId]: {
+						...state.byId[action.flowerId],
+						name: action.newName
+					}
+				}
 			};
 
 		default:

@@ -17,7 +17,6 @@ import indexMiddleware from "./middleware/indexMiddleware";
 import exampleState from "./exampleState";
 
 export const store = createStore(rootReducer, loadState(), indexMiddleware);
-console.log(store.getState());
 
 const config = {
   type: Phaser.AUTO,

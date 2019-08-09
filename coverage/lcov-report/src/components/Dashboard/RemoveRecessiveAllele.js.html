@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/12</span>
+        <span class='fraction'>6/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">40% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>2/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/12</span>
+        <span class='fraction'>6/12</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -121,7 +121,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -149,13 +149,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -189,8 +189,8 @@ import { connect } from "react-redux";
 import { removeRecessiveAllele } from "../../actions/indexActions";
 import PropTypes from "prop-types";
 &nbsp;
-function <span class="fstat-no" title="function not covered" >mapStateToProps(</span>{ config }) {
-<span class="cstat-no" title="statement not covered" >	return {</span>
+function mapStateToProps({ config }) {
+	return {
 		config
 	};
 }
@@ -217,14 +217,14 @@ class RemoveRecessiveAllele extends React.Component {
 <span class="cstat-no" title="statement not covered" >		this.setState({ value: e.target.value });</span>
 	};
 &nbsp;
-<span class="fstat-no" title="function not covered" >	re</span>nder() {
-		const { config, alleleType } = <span class="cstat-no" title="statement not covered" >this.props;</span>
-		const recessiveAlleles = <span class="cstat-no" title="statement not covered" >config.recessive[alleleType + "s"];</span>
+	render() {
+		const { config, alleleType } = this.props;
+		const recessiveAlleles = config.recessive[alleleType + "s"];
 &nbsp;
-		const firstOption = <span class="cstat-no" title="statement not covered" >`Select a ${alleleType}`;</span>
-		const hasNoRecessiveAlleles = <span class="cstat-no" title="statement not covered" >recessiveAlleles.length &lt; 1;</span>
+		const firstOption = `Select a ${alleleType}`;
+		const hasNoRecessiveAlleles = recessiveAlleles.length &lt; 1;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return (</span>
+		return (
 			&lt;form onSubmit={this.handleSubmit}&gt;
 				&lt;select
 					aria-label={`${alleleType} to make recessive`}
@@ -235,7 +235,7 @@ class RemoveRecessiveAllele extends React.Component {
 					&lt;option&gt;
 						{hasNoRecessiveAlleles
 							? `There are no recessive ${alleleType}s`
-							: firstOption}
+							: <span class="branch-1 cbranch-no" title="branch not covered" >firstOption}</span>
 					&lt;/option&gt;
 					{recessiveAlleles.map(<span class="fstat-no" title="function not covered" >(a</span>llele, i) =&gt; {
 <span class="cstat-no" title="statement not covered" >						return &lt;option key={allele + i}&gt;{allele}&lt;/option&gt;;</span>
@@ -259,7 +259,7 @@ export default connect(mapStateToProps)(RemoveRecessiveAllele);
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jul 26 2019 11:34:59 GMT-0400 (Eastern Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Aug 09 2019 12:05:32 GMT-0400 (Eastern Daylight Time)
 </div>
 </div>
 <script src="..\..\..\prettify.js"></script>

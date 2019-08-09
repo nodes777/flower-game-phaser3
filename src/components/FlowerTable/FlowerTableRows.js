@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import { capitalizeFirstLetter } from "../../utils/visualFormatting";
 
 import Allele from "../Allele";
+import FlowerName from "./FlowerName";
 
-export default class FlowerTableRows extends React.PureComponent {
+export default class FlowerTableRows extends React.Component {
 	static propTypes = {
 		genes: PropTypes.array,
 		id: PropTypes.string,
@@ -16,7 +17,14 @@ export default class FlowerTableRows extends React.PureComponent {
 		const { genes, id, flowers, recessive } = this.props;
 		return (
 			<tr>
-				<td>{capitalizeFirstLetter(id)}</td>
+				<td>
+					<FlowerName
+						flowerName={capitalizeFirstLetter(
+							flowers.byId[id].name
+						)}
+						flowerId={id}
+					/>
+				</td>
 				{genes.map(gene => {
 					const gene1Name = flowers.byId[id].genotype[gene][0];
 					const gene2Name = flowers.byId[id].genotype[gene][1];

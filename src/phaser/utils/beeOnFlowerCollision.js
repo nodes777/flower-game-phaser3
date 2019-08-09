@@ -9,22 +9,23 @@ import {
 import { screenSize } from "../../utils/screenSize";
 
 export function checkForPollen(beeId, flowerId) {
-	const beeHasPollen = store.getState().bees.byId[beeId].pollen !== null;
+	const storeState = store.getState();
+	const beeHasPollen = storeState.bees.byId[beeId].pollen !== null;
 	// if no pollen, pick it up
 	if (!beeHasPollen) {
-		const pollen = store.getState().flowers.byId[flowerId].genotype;
+		const pollen = storeState.flowers.byId[flowerId].genotype;
 		// pollen.id = flowerId;
 		store.dispatch(pickupPollen(beeId, pollen, flowerId));
 	}
 
 	if (beeHasPollen) {
 		// pollinate, from bee pollen
-		const bee = store.getState().bees.byId[beeId];
+		const bee = storeState.bees.byId[beeId];
 		const pollen = bee.pollen;
 		const pollenId = bee.pollenId;
 		// get currently collided flower
-		const flower2 = store.getState().flowers.byId[flowerId];
-		const allPositions = store.getState().flowers.allPositions;
+		const flower2 = storeState.flowers.byId[flowerId];
+		const allPositions = storeState.flowers.allPositions;
 
 		const posInfo = determinePosition(
 			flower2.position,
@@ -48,7 +49,6 @@ export function checkForPollen(beeId, flowerId) {
 				},
 				posInfo: posInfo
 			};
-			console.log(info);
 			store.dispatch(addFlower(info));
 			store.dispatch(dropPollen(beeId));
 		} else {
