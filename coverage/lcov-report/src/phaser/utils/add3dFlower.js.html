@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/phaser/utils/checkStore.js</title>
+    <title>Code coverage report for src/phaser/utils/add3dFlower.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="..\..\..\prettify.css" />
     <link rel="stylesheet" href="..\..\..\base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/phaser/utils</a> checkStore.js
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/phaser/utils</a> add3dFlower.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/12</span>
+        <span class='fraction'>0/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>0/1</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/12</span>
+        <span class='fraction'>0/7</span>
       </div>
     </div>
     <p class="quiet">
@@ -75,28 +75,12 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -104,34 +88,65 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { store } from "../../index.js";
-import { addNewFlowers } from "./addNewFlowers";
-let currState;
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { determineColor } from "../../determinants/determineColor";
+import { determineFlowerShape } from "../../determinants/determineFlowerShape";
+import { determineStem } from "../../determinants/determineStem.js";
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >checkStore(</span>) {
-	let prevState = <span class="cstat-no" title="statement not covered" >currState;</span>
-<span class="cstat-no" title="statement not covered" >	currState = store.getState();</span>
-	// compare if state has changed
-<span class="cstat-no" title="statement not covered" >	if (currState != prevState) {</span>
-		// check if the state has been initialized
-<span class="cstat-no" title="statement not covered" >		if (prevState !== undefined) {</span>
-			//check for new flower by looking at length of flower.allIds
-			let numFlowersPrev = <span class="cstat-no" title="statement not covered" >prevState.flowers.allIds.length;</span>
-			let numFlowersCurr = <span class="cstat-no" title="statement not covered" >currState.flowers.allIds.length;</span>
-<span class="cstat-no" title="statement not covered" >			if (numFlowersCurr !== numFlowersPrev) {</span>
-				const diff = <span class="cstat-no" title="statement not covered" >numFlowersCurr - numFlowersPrev;</span>
-<span class="cstat-no" title="statement not covered" >				console.log(diff + " new flower(s)");</span>
-<span class="cstat-no" title="statement not covered" >				addNewFlowers(numFlowersPrev, currState, this);</span>
-			}
+export function <span class="fstat-no" title="function not covered" >add3dFlower(</span>currFlower, currFlowerId, game) {
+	// set position and shape
+	let newFlowerSprite = <span class="cstat-no" title="statement not covered" >game.physics.add.sprite(</span>
+		currFlower.position.x,
+		currFlower.position.y,
+		//determineFlowerShape(currFlower.genotype),
+		"flower3d",
+		4
+	);
 &nbsp;
-			// check if bee should be flying
-<span class="cstat-no" title="statement not covered" >			this.beeCanFly = currState.config.beeCanFly;</span>
-		}
-	}
-}
+	// add stem
+<span class="cstat-no" title="statement not covered" >	newFlowerSprite.stem = game.add.image(</span>
+		newFlowerSprite.x,
+		newFlowerSprite.y + 16,
+		//determineStem(currFlower.genotype)
+		"straightStem3d",
+		4
+	);
+	// set color
+<span class="cstat-no" title="statement not covered" >	newFlowerSprite.setTint(determineColor(currFlower.genotype));</span>
+	// hide debug info
+<span class="cstat-no" title="statement not covered" >	newFlowerSprite.debugShowBody = false;</span>
+	// create id
+<span class="cstat-no" title="statement not covered" >	newFlowerSprite.id = currFlowerId;</span>
+	// keep on top of stem
+<span class="cstat-no" title="statement not covered" >	newFlowerSprite.depth = 1;</span>
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >getStoreState(</span>) {
-<span class="cstat-no" title="statement not covered" >	return store.getState();</span>
+	// add the flower to the array of onscreen flowers for bee to fly to
+<span class="cstat-no" title="statement not covered" >	game.flowersOnScreen.push(newFlowerSprite);</span>
 }
 &nbsp;</pre></td></tr>
 </table></pre>

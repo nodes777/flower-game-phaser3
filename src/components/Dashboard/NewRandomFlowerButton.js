@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addFlower } from "../../actions/indexActions";
+import { addFlowerToStore } from "../../actions/indexActions";
 import { getRandomColor } from "../../determinants/determineColor";
 import { getRandomShape } from "../../determinants/determineFlowerShape";
 import { getRandomStem } from "../../determinants/determineStem";
@@ -45,7 +45,7 @@ class NewRandomFlowerButton extends React.Component {
 				}
 			}
 		};
-		dispatch(addFlower(info));
+		dispatch(addFlowerToStore(info));
 	};
 	render() {
 		return (

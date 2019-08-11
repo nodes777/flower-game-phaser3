@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Diploid from "./Diploid";
 import PropTypes from "prop-types";
 
@@ -14,7 +14,7 @@ class PunnettTableGene extends Component {
 	render() {
 		const { gene } = this.props;
 		return (
-			<Fragment>
+			<div role="region" aria-label={`Punnett Table for ${gene}`}>
 				<h1>{capitalizeFirstLetter(gene)}</h1>
 				<table>
 					<tbody>
@@ -107,7 +107,7 @@ class PunnettTableGene extends Component {
 						</tr>
 					</tbody>
 				</table>
-			</Fragment>
+			</div>
 		);
 	}
 }

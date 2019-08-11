@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/phaser/scene.js</title>
+    <title>Code coverage report for src/phaser/utils/addFlowerToGame.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="..\..\prettify.css" />
-    <link rel="stylesheet" href="..\..\base.css" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(..\..\sort-arrow-sprite.png);
+            background-image: url(..\..\..\sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="..\..\index.html">All files</a> / <a href="index.html">src/phaser</a> scene.js
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/phaser/utils</a> addFlowerToGame.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>0/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>0/1</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>0/9</span>
       </div>
     </div>
     <p class="quiet">
@@ -66,7 +66,24 @@
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -74,38 +91,45 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Phaser from "phaser";
-import { preload } from "./preload";
-import { create } from "./create";
-import { update } from "./update";
-class playGame extends Phaser.Scene {
-<span class="fstat-no" title="function not covered" >  co</span>nstructor() {
-<span class="cstat-no" title="statement not covered" >    super("PlayGame");</span>
-  }
-<span class="fstat-no" title="function not covered" >  pr</span>eload() {
-<span class="cstat-no" title="statement not covered" >    return preload.call(this);</span>
-  }
-<span class="fstat-no" title="function not covered" >  cr</span>eate() {
-<span class="cstat-no" title="statement not covered" >    return create.call(this);</span>
-  }
-<span class="fstat-no" title="function not covered" >  up</span>date() {
-<span class="cstat-no" title="statement not covered" >    return update.call(this);</span>
-  }
-}
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { getHexColor } from "../../determinants/determineColor";
+// import { determineFlowerShape } from "../determinants/determineFlowerShape";
+// import { determineStem } from "../determinants/determineStem.js";
+import { store } from "../../index";
 &nbsp;
-export default playGame;
+export function <span class="fstat-no" title="function not covered" >addFlowerToGame(</span>currFlower, currFlowerId, game) {
+	const phenotype = <span class="cstat-no" title="statement not covered" >store.getState().flowers.byId[currFlowerId].phenotype;</span>
+<span class="cstat-no" title="statement not covered" >	console.log(phenotype);</span>
+	// set position and shape
+	let newFlowerSprite = <span class="cstat-no" title="statement not covered" >game.physics.add.sprite(</span>
+		currFlower.position.x,
+		currFlower.position.y,
+		phenotype.shape
+	);
+	// set color
+<span class="cstat-no" title="statement not covered" >	newFlowerSprite.setTint(getHexColor(phenotype.color));</span>
+	// hide debug info
+<span class="cstat-no" title="statement not covered" >	newFlowerSprite.debugShowBody = false;</span>
+	// create id
+<span class="cstat-no" title="statement not covered" >	newFlowerSprite.id = currFlowerId;</span>
+	// keep on top of stem
+<span class="cstat-no" title="statement not covered" >	newFlowerSprite.depth = 1;</span>
+	// add stem
+<span class="cstat-no" title="statement not covered" >	game.add.image(newFlowerSprite.x, newFlowerSprite.y + 12, phenotype.stem);</span>
+&nbsp;
+	// add the flower to the array of onscreen flowers for bee to fly to
+<span class="cstat-no" title="statement not covered" >	game.flowersOnScreen.push(newFlowerSprite);</span>
+}
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
@@ -115,7 +139,7 @@ export default playGame;
   generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 11 2019 09:44:09 GMT-0400 (Eastern Daylight Time)
 </div>
 </div>
-<script src="..\..\prettify.js"></script>
+<script src="..\..\..\prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -123,7 +147,7 @@ window.onload = function () {
         }
 };
 </script>
-<script src="..\..\sorter.js"></script>
-<script src="..\..\block-navigation.js"></script>
+<script src="..\..\..\sorter.js"></script>
+<script src="..\..\..\block-navigation.js"></script>
 </body>
 </html>

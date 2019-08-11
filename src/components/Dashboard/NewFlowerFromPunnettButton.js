@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addFlower } from "../../actions/indexActions";
+import { addFlowerToStore } from "../../actions/indexActions";
 import {
 	determineRandomXPos,
 	determineRandomYPos
@@ -49,7 +49,7 @@ class NewFlowerFromPunnettButton extends React.Component {
 				}
 			}
 		};
-		dispatch(addFlower(info));
+		dispatch(addFlowerToStore(info));
 	};
 	render() {
 		const { punnett } = this.props;

@@ -1,5 +1,5 @@
 import { store } from "../../index.js";
-import { addNewFlowers } from "../../utils/addNewFlowers";
+import { addNewFlowers } from "./addNewFlowers";
 let currState;
 
 export function checkStore() {

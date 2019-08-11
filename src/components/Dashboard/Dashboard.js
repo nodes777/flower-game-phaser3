@@ -10,7 +10,11 @@ import "../../css/App.css";
 
 const Dashboard = props => {
 	return (
-		<div className="dashboard">
+		<div
+			role="region"
+			aria-label="Dashboard for game configuration"
+			className="dashboard"
+		>
 			<h1>Dashboard</h1>
 			<div>
 				<BeeCanFlyButton />

@@ -29,19 +29,16 @@
 
 ## Features
 
--   Add wiggles/ animation
--   Save to url to share somehow
--   Changing the Punnett Table changes the game
 -   Add growth stages
+-   Add wiggles/ animation (Get art direction sorted first)
+-   Save to url to share somehow
+-   Changing the Punnett Table changes the game flowers
 -   Allow running in the background
 
 ## A11y
 
--   Add regions to punnett squares, dashboard, and game canvas
-
 ## Minor
 
--   Rename addFlower.js to addFlowerToGame and addFlower action creator to addFlowerToStore
 -   Add Favico
 
 ## Bugs

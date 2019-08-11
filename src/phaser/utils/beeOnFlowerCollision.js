@@ -3,7 +3,7 @@ import { determinePosition } from "../../determinants/determinePosition";
 import {
 	pickupPollen,
 	dropPollen,
-	addFlower
+	addFlowerToStore
 } from "../../actions/indexActions";
 
 import { screenSize } from "../../utils/screenSize";
@@ -49,7 +49,7 @@ export function checkForPollen(beeId, flowerId) {
 				},
 				posInfo: posInfo
 			};
-			store.dispatch(addFlower(info));
+			store.dispatch(addFlowerToStore(info));
 			store.dispatch(dropPollen(beeId));
 		} else {
 			// flower is full

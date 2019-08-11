@@ -1,6 +1,6 @@
 import {
 	CHANGE_FLOWER,
-	ADD_FLOWER,
+	ADD_FLOWER_TO_STORE,
 	PICKUP_POLLEN,
 	DROP_POLLEN,
 	BEE_CAN_FLY,
@@ -16,9 +16,9 @@ export const changeParentAllele = data => {
 	};
 };
 
-export const addFlower = data => {
+export const addFlowerToStore = data => {
 	return {
-		type: ADD_FLOWER,
+		type: ADD_FLOWER_TO_STORE,
 		data
 	};
 };

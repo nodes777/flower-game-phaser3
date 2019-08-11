@@ -22,7 +22,10 @@ class FlowerTable extends Component {
 		const { flowers, display, config } = this.props;
 		const genes = Object.keys(flowers.byId.flower1.genotype);
 		return (
-			<div>
+			<div
+				role="region"
+				aria-label="Table of all flowers present in the game, with their genotype"
+			>
 				{display ? (
 					<table>
 						<tbody>

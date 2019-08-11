@@ -1,9 +1,9 @@
-import { getHexColor } from "../determinants/determineColor";
+import { getHexColor } from "../../determinants/determineColor";
 // import { determineFlowerShape } from "../determinants/determineFlowerShape";
 // import { determineStem } from "../determinants/determineStem.js";
-import { store } from "../index";
+import { store } from "../../index";
 
-export function addFlower(currFlower, currFlowerId, game) {
+export function addFlowerToGame(currFlower, currFlowerId, game) {
 	const phenotype = store.getState().flowers.byId[currFlowerId].phenotype;
 	console.log(phenotype);
 	// set position and shape

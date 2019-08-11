@@ -1,7 +1,7 @@
 const { flowersReducer } = require("../../src/reducers/flowersReducer");
 import {
 	CHANGE_FLOWER,
-	ADD_FLOWER,
+	ADD_FLOWER_TO_STORE,
 	CHANGE_FLOWER_NAME
 } from "../../src/types/actions";
 const { allTypes } = require("../../src/types/allTypes");
@@ -78,9 +78,9 @@ describe("flowersReducer", () => {
 			expect(result).toEqual(state);
 		});
 	});
-	describe("case: ADD_FLOWER", () => {
+	describe("case: ADD_FLOWER_TO_STORE", () => {
 		const action = {
-			type: ADD_FLOWER,
+			type: ADD_FLOWER_TO_STORE,
 			data: {
 				parent1: state.byId.flower1,
 				parent2: state.byId.flower2,

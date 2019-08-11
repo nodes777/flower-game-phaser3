@@ -1,6 +1,6 @@
 const {
 	CHANGE_FLOWER,
-	ADD_FLOWER,
+	ADD_FLOWER_TO_STORE,
 	PICKUP_POLLEN,
 	DROP_POLLEN,
 	BEE_CAN_FLY,
@@ -11,7 +11,7 @@ const {
 
 const {
 	changeParentAllele,
-	addFlower,
+	addFlowerToStore,
 	pickupPollen,
 	dropPollen,
 	beeCanFly,
@@ -44,7 +44,7 @@ describe("changeParentAllele", () => {
 	});
 });
 
-describe("addFlower", () => {
+describe("addFlowerToStore", () => {
 	const data = {
 		parent1: {
 			genotype: {
@@ -67,12 +67,12 @@ describe("addFlower", () => {
 			}
 		}
 	};
-	const result = addFlower(data);
+	const result = addFlowerToStore(data);
 	it("returns an object", () => {
 		expect(typeof result).toBe("object");
 	});
-	it("returns an object with type: ADD_FLOWER", () => {
-		expect(result.type).toBe(ADD_FLOWER);
+	it("returns an object with type: ADD_FLOWER_TO_STORE", () => {
+		expect(result.type).toBe(ADD_FLOWER_TO_STORE);
 	});
 	it("returns an object with data matching the input data", () => {
 		expect(result.data).toEqual(data);

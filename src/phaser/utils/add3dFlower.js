@@ -1,6 +1,6 @@
-import { determineColor } from "../determinants/determineColor";
-import { determineFlowerShape } from "../determinants/determineFlowerShape";
-import { determineStem } from "../determinants/determineStem.js";
+import { determineColor } from "../../determinants/determineColor";
+import { determineFlowerShape } from "../../determinants/determineFlowerShape";
+import { determineStem } from "../../determinants/determineStem.js";
 
 export function add3dFlower(currFlower, currFlowerId, game) {
 	// set position and shape

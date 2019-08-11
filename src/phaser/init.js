@@ -1,7 +1,7 @@
 import { store } from "../index.js";
 
-import { addFlower } from "../utils/addFlower";
-import { add3dFlower } from "../utils/add3dFlower";
+import { addFlowerToGame } from "./utils/addFlowerToGame";
+import { add3dFlower } from "./utils/add3dFlower";
 
 import { add3dControls } from "./utils/add3dControls";
 import { addBeeFrameRotation } from "./utils/addBeeFrameRotation";
@@ -13,7 +13,7 @@ export function init(game) {
 		/* Get flowers from store */
 		const storeFlowers = store.getState().flowers;
 		/* First Flower */
-		addFlower(storeFlowers.byId.flower1, "flower1", game);
+		addFlowerToGame(storeFlowers.byId.flower1, "flower1", game);
 
 		/* Bee */
 		game.bee = game.physics.add.sprite(200, 150, "bee");
@@ -25,7 +25,7 @@ export function init(game) {
 		//game.bee.debugShowVelocity = false;
 
 		/* Second Flower */
-		addFlower(storeFlowers.byId.flower2, "flower2", game);
+		addFlowerToGame(storeFlowers.byId.flower2, "flower2", game);
 
 		// set the flower to go to
 		game.flowerToFlyTo = game.flowersOnScreen[0];

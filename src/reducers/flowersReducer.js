@@ -10,7 +10,7 @@ import {
 } from "../determinants/determinePosition";
 import {
 	CHANGE_FLOWER,
-	ADD_FLOWER,
+	ADD_FLOWER_TO_STORE,
 	CHANGE_FLOWER_NAME
 } from "../types/actions";
 
@@ -24,7 +24,7 @@ export function flowersReducer(state = exampleState.flowers, action) {
 			return {
 				...state
 			};
-		case ADD_FLOWER:
+		case ADD_FLOWER_TO_STORE:
 			const { parent1, parent2, posInfo } = action.data;
 			const recessive = action.recessive;
 			// Better way to generate ids?

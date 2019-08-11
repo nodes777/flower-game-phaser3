@@ -1,6 +1,18 @@
+# Renamed addFlower s to be more specific - 8/9/2019 - master
+
+## [51b6e54bacd67354b1a4a9b0fb2b4d4b0c70a06b](https://github.com/nodes777/flower-game-phaser3/commit/51b6e54bacd67354b1a4a9b0fb2b4d4b0c70a06b)
+
+-   Minor updates to README
+-   Adds roles of regions and labels for a11y
+-   Renames `ADD_FLOWER` action and `addFlower` action creator to `ADD_FLOWER_TO_STORE` and `addFlowerToStore`
+    -   Remember the recessivizer middleware. That changed too
+-   Renamed `addFlower` in phaser to `addFlowerToGame` to eliminate confusion ^^
+
+---
+
 # Allows changing of flower names - 8/9/2019 - master
 
-## [4735985774f0608cb93fe067394df44fe967453a](https://github.com/nodes777/flower-game-phaser3/commit/4735985774f0608cb93fe067394df44fe967453a)
+## [51b6e54bacd67354b1a4a9b0fb2b4d4b0c70a06b](https://github.com/nodes777/flower-game-phaser3/commit/51b6e54bacd67354b1a4a9b0fb2b4d4b0c70a06b)
 
 -   FlowerId's are seperate from flower names
     -   exampleState now includes name property
