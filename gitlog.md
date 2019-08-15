@@ -1,6 +1,14 @@
+# Adds flower name display on hover - 8/14/2019 - master
+
+## [38c542be0747a94f9b59ab6f581a14ee746a9a44](https://github.com/nodes777/flower-game-phaser3/commit/38c542be0747a94f9b59ab6f581a14ee746a9a44)
+
+-   Displays flower name on hover via new config property, but major performance issues. Need to debounce the hover in/out actions
+
+---
+
 # Renamed addFlower s to be more specific - 8/9/2019 - master
 
-## [51b6e54bacd67354b1a4a9b0fb2b4d4b0c70a06b](https://github.com/nodes777/flower-game-phaser3/commit/51b6e54bacd67354b1a4a9b0fb2b4d4b0c70a06b)
+## [38c542be0747a94f9b59ab6f581a14ee746a9a44](https://github.com/nodes777/flower-game-phaser3/commit/38c542be0747a94f9b59ab6f581a14ee746a9a44)
 
 -   Minor updates to README
 -   Adds roles of regions and labels for a11y

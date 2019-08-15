@@ -6,7 +6,9 @@ import {
 	BEE_CAN_FLY,
 	ADD_RECESSIVE_ALLELE,
 	REMOVE_RECESSIVE_ALLELE,
-	CHANGE_FLOWER_NAME
+	CHANGE_FLOWER_NAME,
+	SHOW_TOOLTIP,
+	HIDE_TOOLTIP
 } from "../types/actions";
 
 export const changeParentAllele = data => {
@@ -63,5 +65,22 @@ export const changeFlowerName = data => {
 		type: CHANGE_FLOWER_NAME,
 		flowerId: data.flowerId,
 		newName: data.newName
+	};
+};
+
+export const showTooltip = data => {
+	return {
+		type: SHOW_TOOLTIP,
+		visible: true,
+		content: data.name,
+		posX: data.posX,
+		posY: data.posY
+	};
+};
+export const hideTooltip = data => {
+	return {
+		type: HIDE_TOOLTIP,
+		visible: false,
+		content: "Nothing"
 	};
 };

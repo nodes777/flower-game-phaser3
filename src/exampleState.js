@@ -86,7 +86,8 @@ const exampleState = {
     },
     config: {
         beeCanFly: false,
-        recessive: defaultRecessive
+        recessive: defaultRecessive,
+        tooltip: { visible: false, content: "Nothing", posX: 500, posY: 100 }
     }
 };
 

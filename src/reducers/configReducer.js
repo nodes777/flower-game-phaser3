@@ -2,7 +2,9 @@ import exampleState from "../exampleState";
 import {
 	BEE_CAN_FLY,
 	ADD_RECESSIVE_ALLELE,
-	REMOVE_RECESSIVE_ALLELE
+	REMOVE_RECESSIVE_ALLELE,
+	SHOW_TOOLTIP,
+	HIDE_TOOLTIP
 } from "../types/actions";
 
 export function configReducer(state = exampleState.config, action) {
@@ -35,6 +37,28 @@ export function configReducer(state = exampleState.config, action) {
 					[alleleType]: state.recessive[alleleType].filter(
 						(value, index) => value !== allele
 					)
+				}
+			};
+		}
+		case SHOW_TOOLTIP: {
+			const { visible, content, posX, posY } = action;
+			return {
+				...state,
+				tooltip: {
+					visible: visible,
+					content: content,
+					posX: posX,
+					posY: posY
+				}
+			};
+		}
+		case HIDE_TOOLTIP: {
+			const { visible, content } = action;
+			return {
+				...state,
+				tooltip: {
+					visible: visible,
+					content: content
 				}
 			};
 		}
