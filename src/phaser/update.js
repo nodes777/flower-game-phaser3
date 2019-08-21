@@ -9,6 +9,7 @@ export function update() {
 			1000,
 			200
 		);
+
 		//  Acceleration Based Movement
 		// Reset the acceleration
 		// this.bee.setAcceleration(0, 0);

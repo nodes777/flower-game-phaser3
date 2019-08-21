@@ -1,7 +1,5 @@
 import { getHexColor } from "../../determinants/determineColor";
 
-import { store } from "../../index";
-
 import { mouseHoverOn, mouseHoverOut } from "./mouseHover";
 
 export function addFlowerToGame(currFlower, currFlowerId, game) {

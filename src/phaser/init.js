@@ -33,7 +33,7 @@ export function init(game) {
 		// 3d spitestack
 		game.flowersOnScreen = [];
 		/* First Flower */
-		add3dFlower(store.getState().flowers.byId.flower1, "flower1", game);
+		add3dFlower(storeFlowers.byId.flower1, "flower1", game);
 
 		/* Bee */
 		game.bee = game.physics.add.sprite(200, 150, "bee3d", 4); // frame 4 faces north
@@ -49,7 +49,7 @@ export function init(game) {
 		//game.bee.debugShowVelocity = false;
 
 		/* Second Flower */
-		add3dFlower(store.getState().flowers.byId.flower2, "flower2", game);
+		add3dFlower(storeFlowers.byId.flower2, "flower2", game);
 
 		// set the flower to go to
 		game.flowerToFlyTo = game.flowersOnScreen[0];
