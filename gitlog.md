@@ -1,6 +1,15 @@
+# Performance updates to show flower name - 8/21/2019 - master
+
+## [cbb5e0b0f982b7379abfd3d015d48041c31cb1c8](https://github.com/nodes777/flower-game-phaser3/commit/cbb5e0b0f982b7379abfd3d015d48041c31cb1c8)
+
+-   Improvement on performance when displaying flower names. Still not great.
+-   Sending for SO question on performance
+
+---
+
 # Adds flower name display on hover - 8/14/2019 - master
 
-## [38c542be0747a94f9b59ab6f581a14ee746a9a44](https://github.com/nodes777/flower-game-phaser3/commit/38c542be0747a94f9b59ab6f581a14ee746a9a44)
+## [cbb5e0b0f982b7379abfd3d015d48041c31cb1c8](https://github.com/nodes777/flower-game-phaser3/commit/cbb5e0b0f982b7379abfd3d015d48041c31cb1c8)
 
 -   Displays flower name on hover via new config property, but major performance issues. Need to debounce the hover in/out actions
 

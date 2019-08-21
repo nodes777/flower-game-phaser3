@@ -4,7 +4,7 @@ A [Phaser 3](https://phaser.io/) and [React](https://reactjs.org/) with [Redux](
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 ![lines coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Funtitled-noopow1jds3m.runkit.sh%2F%3Ftype%3Dlines)
-![lines coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Funtitled-noopow1jds3m.runkit.sh%2F%3Ftype%3Dstatements)
+![statements coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Funtitled-noopow1jds3m.runkit.sh%2F%3Ftype%3Dstatements)
 [![buddy pipeline](https://app.buddy.works/nodes777/flower-game-phaser3/pipelines/pipeline/201190/badge.svg?token=c7fd071bbd4bd27e04ca1a107e5f3461bbb7da639ef6fca86b0895a41ac150d7 "buddy pipeline")](https://app.buddy.works/nodes777/flower-game-phaser3/pipelines/pipeline/201190)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 

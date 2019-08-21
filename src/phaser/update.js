@@ -27,6 +27,10 @@ export function update() {
 		// rotate bee towards flower
 		beeRotate.call(this, this.flowerToFlyTo);
 	}
+	// if (this.input.mouse) {
+	// 	console.log(this.input.mouse.target);
+	// 	//this.input.mouse.onMouseOver()
+	// }
 }
 // functions basically the same as accelerateToObject
 // function accelerateToObject(obj1, obj2, speed) {

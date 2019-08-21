@@ -13,8 +13,7 @@ class Tooltip extends React.Component {
       position: "relative",
       display: "inline-block",
       zIndex: "98",
-      color: "#555",
-      cursor: "help"
+      color: "#555"
     },
     content: {
       background: "#000",
