@@ -4,7 +4,11 @@ import { create } from "./create";
 import { update } from "./update";
 class playGame extends Phaser.Scene {
   constructor() {
-    super("PlayGame");
+    const sceneConfig = {
+      key: "IsoInteractionExample",
+      mapAdd: { isoPlugin: "iso" }
+    };
+    super(sceneConfig);
   }
   preload() {
     return preload.call(this);

@@ -1,21 +1,45 @@
-import bee from "../assets/bee.png";
-import defaultFlower from "../assets/default-flower.png";
-import diamondFlower from "../assets/diamond-flower.png";
-import roundFlower from "../assets/round-flower.png";
-import squareFlower from "../assets/square-flower.png";
-
-import straightStem from "../assets/straight-stem.png";
-
 import { shapes } from "../types/flowerShapes";
 
+import grassTileData from "../assets/spritestack/grassTile.json";
+import IsoPlugin from "phaser3-plugin-isometric";
 export function preload() {
-	this.load.image(shapes.Default, defaultFlower);
-	this.load.image("bee", bee);
-	this.load.image(shapes.Diamond, diamondFlower);
-	this.load.image(shapes.Round, roundFlower);
-	this.load.image(shapes.Square, squareFlower);
+	this.load.scenePlugin({
+		key: "IsoPlugin",
+		url: IsoPlugin,
+		sceneKey: "iso"
+	});
 
-	this.load.image("straightStem", straightStem);
+	// load 3d assets
+	this.load.spritesheet("grassTile", "src/assets/spritestack/grassTile.png", {
+		frameWidth: grassTileData.width, // from json
+		frameHeight: grassTileData.height, // from json
+		startFrame: 0 // only using this frame, this could be a this.load.image
+	});
+
+	this.load.spritesheet(
+		"flower3d",
+		"src/assets/spritestack/default-flower.png",
+		{
+			frameWidth: 10, // from json
+			frameHeight: 20 // from properties
+			//startFrame: 4, // 4 is the forward facing sprite
+			//endFrame: 9 // 9 is the last angle with semi forward
+		}
+	);
+	this.load.spritesheet(
+		"straightStem3d",
+		"src/assets/spritestack/straight-stem.png",
+		{
+			frameWidth: 4,
+			frameHeight: 35
+		}
+	);
+	this.load.spritesheet("bee3d", "src/assets/spritestack/bee-3d.png", {
+		frameWidth: 54, // length divided by 16 frames
+		frameHeight: 62,
+		startFrame: 0 // 9 is facing right
+	});
+
 	// display progress bar
 	const progressBar = this.add.graphics();
 	const progressBox = this.add.graphics();
@@ -78,34 +102,4 @@ export function preload() {
 		percentText.destroy();
 		assetText.destroy();
 	});
-
-	// load 3d assets
-	this.spritestack = false;
-	if (this.spritestack) {
-		this.load.spritesheet(
-			"flower3d",
-			"src/assets/spritestack/default-flower.png",
-			{
-				frameWidth: 10, // from json
-				frameHeight: 20, // from properties
-				startFrame: 4, // 4 is the forward facing sprite
-				endFrame: 9 // 9 is the last angle with semi forward
-			}
-		);
-		this.load.spritesheet(
-			"straightStem3d",
-			"src/assets/spritestack/straight-stem.png",
-			{
-				frameWidth: 4,
-				frameHeight: 35,
-				startFrame: 4,
-				endFrame: 9
-			}
-		);
-		this.load.spritesheet("bee3d", "src/assets/spritestack/bee-3d.png", {
-			frameWidth: 54, // length divided by 16 frames
-			frameHeight: 62,
-			startFrame: 0 // 9 is facing right
-		});
-	}
 }

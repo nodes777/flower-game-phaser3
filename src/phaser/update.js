@@ -23,10 +23,10 @@ export function update() {
 	}
 	if (this.spritestack) {
 		// change frames for sprite stack rotation
-		beeFrameRotate.call(this, this.flowerToFlyTo);
+		//beeFrameRotate.call(this, this.flowerToFlyTo);
 	} else {
 		// rotate bee towards flower
-		beeRotate.call(this, this.flowerToFlyTo);
+		//beeRotate.call(this, this.flowerToFlyTo);
 	}
 	// if (this.input.mouse) {
 	// 	console.log(this.input.mouse.target);

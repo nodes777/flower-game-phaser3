@@ -20,10 +20,10 @@ export const store = createStore(rootReducer, loadState(), indexMiddleware);
 
 const config = {
   type: Phaser.AUTO,
-  parent: "phaser",
+  parent: "phaser", // id to attach to
   width: screenSize.width,
   height: screenSize.height,
-  backgroundColor: "#488214",
+  backgroundColor: "#000000", //"#488214"
   pixelArt: true, // art still looks funky
   physics: {
     default: "arcade",
