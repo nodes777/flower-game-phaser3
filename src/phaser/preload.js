@@ -1,6 +1,9 @@
 import { shapes } from "../types/flowerShapes";
 
 import grassTileData from "../assets/spritestack/grassTile.json";
+import flowerHeadData from "../assets/spritestack/flowerHead.json";
+import stemData from "../assets/spritestack/stem.json";
+
 import IsoPlugin from "phaser3-plugin-isometric";
 export function preload() {
 	this.load.scenePlugin({
@@ -16,24 +19,16 @@ export function preload() {
 		startFrame: 0 // only using this frame, this could be a this.load.image
 	});
 
-	this.load.spritesheet(
-		"flower3d",
-		"src/assets/spritestack/default-flower.png",
-		{
-			frameWidth: 10, // from json
-			frameHeight: 20 // from properties
-			//startFrame: 4, // 4 is the forward facing sprite
-			//endFrame: 9 // 9 is the last angle with semi forward
-		}
-	);
-	this.load.spritesheet(
-		"straightStem3d",
-		"src/assets/spritestack/straight-stem.png",
-		{
-			frameWidth: 4,
-			frameHeight: 35
-		}
-	);
+	this.load.spritesheet("flower3d", "src/assets/spritestack/flowerHead.png", {
+		frameWidth: flowerHeadData.width, // from json
+		frameHeight: flowerHeadData.height // from properties
+		//startFrame: 0 // 4 is the forward facing sprite
+		//endFrame: 9 // 9 is the last angle with semi forward
+	});
+	this.load.spritesheet("straightStem3d", "src/assets/spritestack/stem.png", {
+		frameWidth: stemData.width, // from json
+		frameHeight: stemData.height
+	});
 	this.load.spritesheet("bee3d", "src/assets/spritestack/bee-3d.png", {
 		frameWidth: 54, // length divided by 16 frames
 		frameHeight: 62,

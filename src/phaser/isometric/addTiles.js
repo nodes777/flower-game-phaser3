@@ -13,11 +13,19 @@ export const addTiles = game => {
 				this.setTint(0x86bfda);
 				this.isoZ += 5;
 				console.log(this);
+				if (this.flowerSprite) {
+					this.flowerSprite.isoZ += 5;
+					this.flowerSprite.stem.isoZ += 5;
+				}
 			});
 
 			tile.on("pointerout", function() {
 				this.clearTint();
 				this.isoZ -= 5;
+				if (this.flowerSprite) {
+					this.flowerSprite.isoZ -= 5;
+					this.flowerSprite.stem.isoZ -= 5;
+				}
 			});
 		}
 	}
