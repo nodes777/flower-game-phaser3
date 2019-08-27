@@ -1,18 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addFlowerToStore } from "../../actions/indexActions";
-import {
-	determineRandomXPos,
-	determineRandomYPos
-} from "../../determinants/determinePosition";
+import { determineRandomPos } from "../../determinants/determinePosition";
 
 import { screenSize } from "../../utils/screenSize";
 
 import PropTypes from "prop-types";
 
-function mapStateToProps({ punnett }) {
+function mapStateToProps({ punnett, tiles }) {
 	return {
-		punnett
+		punnett,
+		tiles
 	};
 }
 
@@ -21,9 +19,12 @@ class NewFlowerFromPunnettButton extends React.Component {
 		punnett: PropTypes.object
 	};
 	handleSubmit = () => {
-		const { dispatch, punnett } = this.props;
+		const { dispatch, punnett, tiles } = this.props;
 		const parent1 = punnett.parent1;
 		const parent2 = punnett.parent2;
+		const tileInfo = determineRandomPos(tiles.availableTiles);
+		const posX = tileInfo.x;
+		const posY = tileInfo.y;
 
 		const info = {
 			parent1: {
@@ -43,10 +44,8 @@ class NewFlowerFromPunnettButton extends React.Component {
 				position: { x: 0, y: 0 }
 			},
 			posInfo: {
-				newPos: {
-					x: determineRandomXPos(screenSize),
-					y: determineRandomYPos(screenSize)
-				}
+				newPos: { x: posX, y: posY },
+				tileIndex: tileInfo.tileIndex
 			}
 		};
 		dispatch(addFlowerToStore(info));

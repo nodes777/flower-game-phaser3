@@ -45,7 +45,8 @@ export function flowersReducer(state = exampleState.flowers, action) {
 							y: posInfo.newPos.y
 						},
 						phenotype: determinePhenotype(newGenotype, recessive),
-						name: newId
+						name: newId,
+						tileIndex: posInfo.tileIndex
 					}
 				},
 				allIds: [...state.allIds.concat([newId])],

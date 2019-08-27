@@ -1,17 +1,17 @@
 import { store } from "../index.js";
 
 import { add3dFlower } from "./isometric/add3dFlower";
-import { addTiles } from "./isometric/addTiles";
+import { buildGarden } from "./isometric/buildGarden";
 //import { add3dControls } from "./isometric/add3dControls";
 //import { addBeeFrameRotation } from "./isometric/addBeeFrameRotation";
 export function init(game) {
 	// create tile group
 	game.isoTiles = game.add.group();
-	// set camera placement
+	// set default camera placement
 	game.iso.projector.origin.setTo(0.5, 0.3);
 
 	// add Tiles
-	addTiles(game);
+	buildGarden(game);
 
 	game.flowersOnScreen = [];
 	/* First Flower */

@@ -15,3 +15,5 @@ export const CHANGE_FLOWER_NAME = "CHANGE_FLOWER_NAME";
 export const SHOW_TOOLTIP = "SHOW_TOOLTIP";
 export const HIDE_TOOLTIP = "HIDE_TOOLTIP";
 
+export const ADD_TILES_TO_STORE = "ADD_TILES_TO_STORE";
+export const TILE_FILLED = "TILE_FILLED";

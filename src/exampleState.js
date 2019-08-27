@@ -19,10 +19,10 @@ const shape2 = getRandomShape();
 const shape3 = getRandomShape();
 const shape4 = getRandomShape();
 
-const parent1XPos = determineRandomXPos(screenSize);
-const parent1YPos = determineRandomYPos(screenSize);
-const parent2XPos = determineRandomXPos(screenSize);
-const parent2YPos = determineRandomYPos(screenSize);
+// const parent1XPos = determineRandomPos(screenSize);
+// const parent1YPos = determineRandomYPos(screenSize);
+// const parent2XPos = determineRandomXPos(screenSize);
+// const parent2YPos = determineRandomYPos(screenSize);
 
 const parent1Geno = {
     color: [color1, color2],
@@ -46,35 +46,36 @@ const exampleState = {
     punnett: {
         parent1: {
             genotype: parent1Geno,
-            position: { x: parent1XPos, y: parent1YPos },
-            phenotype: parent1Pheno
+            position: {},
+            phenotype: parent1Pheno,
+            tileIndex: 0
         },
         parent2: {
             genotype: parent2Geno,
-            position: { x: parent2XPos, y: parent2YPos },
-            phenotype: parent2Pheno
+            position: {},
+            phenotype: parent2Pheno,
+            tileIndex: 1
         }
     },
     flowers: {
         byId: {
             flower1: {
                 genotype: parent1Geno,
-                position: { x: parent1XPos, y: parent1YPos },
+                position: {},
                 phenotype: parent1Pheno,
-                name: "flower1"
+                name: "flower1",
+                tileIndex: 0 // this doesn't mark the tile as filled
             },
             flower2: {
                 genotype: parent2Geno,
-                position: { x: parent2XPos, y: parent2YPos },
+                position: {},
                 phenotype: parent2Pheno,
-                name: "flower2"
+                name: "flower2",
+                tileIndex: 1
             }
         },
         allIds: ["flower1", "flower2"],
-        allPositions: [
-            { x: parent1XPos, y: parent1YPos },
-            { x: parent2XPos, y: parent2YPos }
-        ]
+        allPositions: [{}, {}]
     },
     bees: {
         byId: {
@@ -88,7 +89,8 @@ const exampleState = {
         beeCanFly: false,
         recessive: defaultRecessive,
         tooltip: { visible: false, content: "Nothing", posX: 500, posY: 100 }
-    }
+    },
+    tiles: {}
 };
 
 export default exampleState;

@@ -4,6 +4,9 @@ import grassTileData from "../assets/spritestack/grassTile.json";
 import flowerHeadData from "../assets/spritestack/flowerHead.json";
 import stemData from "../assets/spritestack/stem.json";
 
+import { add3dFlower } from "./isometric/add3dFlower";
+import { buildGarden } from "./isometric/buildGarden";
+
 import IsoPlugin from "phaser3-plugin-isometric";
 export function preload() {
 	this.load.scenePlugin({

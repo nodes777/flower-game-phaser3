@@ -40,3 +40,4 @@ This is a flower garden genetics simulation. You can generate new flowers random
 -   [Integrating Phaser 3 and React](https://medium.com/@Tnodes/integrating-react-and-phaser-3-tutorial-eb96717d4a9d)
 -   [Setting up Jest with React and Phaser](https://medium.com/@Tnodes/setting-up-jest-with-react-and-phaser-422b174ec87e)
 -   [Dynamic Badges with Shields.io and Runkit](https://medium.com/@Tnodes/dynamic-badges-with-shields-io-and-runkit-9e80283f1b47)
+-   [Isometric View in Phaser 3](https://medium.com/@Tnodes/creating-an-isometric-view-in-phaser-3-fada95927835)

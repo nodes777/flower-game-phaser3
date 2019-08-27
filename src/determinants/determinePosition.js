@@ -1,50 +1,61 @@
-export const determineRandomXPos = screenSize => {
-	return Math.floor(Math.random() * screenSize.width + 1);
-};
-export const determineRandomYPos = screenSize => {
-	return Math.floor(Math.random() * screenSize.height + 1);
+import { store } from "../index.js";
+import { markTileAsFilled } from "../actions/indexActions.js";
+export const determineRandomPos = availableTiles => {
+	console.log(availableTiles);
+	let tileIndex = Math.floor(Math.random() * availableTiles.length - 1);
+
+	let tile = availableTiles[tileIndex];
+
+	store.dispatch(markTileAsFilled(tile.tileIndex));
+	return tile;
 };
 
-export const determinePosition = (
-	parent2Position,
-	allPositions,
-	screenSize
-) => {
-	let possibleNewPositions = [
-		{ x: parent2Position.x + 20, y: parent2Position.y + 20 },
-		{ x: parent2Position.x + 20, y: parent2Position.y - 20 },
-		{ x: parent2Position.x - 20, y: parent2Position.y + 20 },
-		{ x: parent2Position.x - 20, y: parent2Position.y - 20 }
-	];
-
+export const determinePosition = () => {
+	//store.getState().tiles
 	let posInfo = { availableNewPositions: [] };
-
-	for (let i = 0; i <= possibleNewPositions.length - 1; i++) {
-		let isTaken = allPositions.some(oldPosition => {
-			return (
-				JSON.stringify(oldPosition) ===
-				JSON.stringify(possibleNewPositions[i])
-			);
-		});
-
-		let isWithinBounds =
-			possibleNewPositions[i].x > 0 &&
-			possibleNewPositions[i].y > 0 &&
-			possibleNewPositions[i].x < screenSize.width &&
-			possibleNewPositions[i].y < screenSize.height;
-
-		if (!isTaken && isWithinBounds) {
-			posInfo.availableNewPositions.push(possibleNewPositions[i]);
-		}
-	}
-	var randPos =
-		posInfo.availableNewPositions[
-			Math.floor(Math.random() * posInfo.availableNewPositions.length)
-		];
-	posInfo.hasRoom = posInfo.availableNewPositions.length > 0;
-	posInfo.newPos = randPos;
 	return posInfo;
 };
+
+// export const determinePosition = (
+// 	parent2Position,
+// 	allPositions,
+// 	screenSize
+// ) => {
+// 	let possibleNewPositions = [
+// 		{ x: parent2Position.x + 20, y: parent2Position.y + 20 },
+// 		{ x: parent2Position.x + 20, y: parent2Position.y - 20 },
+// 		{ x: parent2Position.x - 20, y: parent2Position.y + 20 },
+// 		{ x: parent2Position.x - 20, y: parent2Position.y - 20 }
+// 	];
+
+// 	let posInfo = { availableNewPositions: [] };
+
+// 	for (let i = 0; i <= possibleNewPositions.length - 1; i++) {
+// 		let isTaken = allPositions.some(oldPosition => {
+// 			return (
+// 				JSON.stringify(oldPosition) ===
+// 				JSON.stringify(possibleNewPositions[i])
+// 			);
+// 		});
+
+// 		let isWithinBounds =
+// 			possibleNewPositions[i].x > 0 &&
+// 			possibleNewPositions[i].y > 0 &&
+// 			possibleNewPositions[i].x < screenSize.width &&
+// 			possibleNewPositions[i].y < screenSize.height;
+
+// 		if (!isTaken && isWithinBounds) {
+// 			posInfo.availableNewPositions.push(possibleNewPositions[i]);
+// 		}
+// 	}
+// 	var randPos =
+// 		posInfo.availableNewPositions[
+// 			Math.floor(Math.random() * posInfo.availableNewPositions.length)
+// 		];
+// 	posInfo.hasRoom = posInfo.availableNewPositions.length > 0;
+// 	posInfo.newPos = randPos;
+// 	return posInfo;
+// };
 
 // export const determineXPos = parent2Position => {
 // 	const plusOrMinus = Math.random() < 0.5 ? -1 : 1;
@@ -57,4 +68,12 @@ export const determinePosition = (
 // 	let newYPosition = parent2Position.y + plusOrMinus * 20;
 // 	console.log(`newYPosition ${newYPosition}`);
 // 	return newYPosition;
+// };
+
+// export const determineRandomXPos = screenSize => {
+// 	const tiles = store.getState().tiles
+// 	return Math.floor(Math.random() * screenSize.width + 1);
+// };
+// export const determineRandomYPos = screenSize => {
+// 	return Math.floor(Math.random() * screenSize.height + 1);
 // };

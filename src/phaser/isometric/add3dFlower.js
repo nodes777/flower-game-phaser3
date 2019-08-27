@@ -3,13 +3,16 @@ import { determineStem } from "../../determinants/determineStem.js";
 import { getHexColor } from "../../determinants/determineColor";
 
 export function add3dFlower(currFlower, currFlowerId, game) {
+	console.log(currFlower);
 	const phenotype = currFlower.phenotype;
 
 	// determine position
-	const tile = game.isoTiles.children.entries[22];
-	const posX = tile._isoPosition.x;
-	const posY = tile._isoPosition.y;
-
+	// const tile = game.isoTiles.children.entries[22];
+	// const posX = tile._isoPosition.x;
+	// const posY = tile._isoPosition.y;
+	const posX = currFlower.position.x;
+	const posY = currFlower.position.y;
+	const tileIndex = currFlower.tileIndex;
 	// set position and shape
 	let newFlowerSprite = game.add.isoSprite(
 		posX,
@@ -40,7 +43,7 @@ export function add3dFlower(currFlower, currFlowerId, game) {
 	console.log(newFlowerSprite);
 
 	//add flower reference for the tile
-	tile.flowerSprite = newFlowerSprite;
+	game.isoTiles.children.entries[tileIndex].flowerSprite = newFlowerSprite;
 
 	// add the flower to the array of onscreen flowers for bee to fly to
 	game.flowersOnScreen.push(newFlowerSprite);

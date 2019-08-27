@@ -1,6 +1,19 @@
+# Adds position determination to isometric view - 8/27/2019 - isoView
+
+## [1c36451494010ac22c6a7ef76708db5b93fa43a2](https://github.com/nodes777/flower-game-phaser3/commit/1c36451494010ac22c6a7ef76708db5b93fa43a2)
+
+-   Isometric view in place with `phaser3-plugin-isometric`
+-   [Creating an Isometric View in Phaser 3](https://medium.com/@Tnodes/creating-an-isometric-view-in-phaser-3-fada95927835)
+-   Tiles are now part of the store
+    -   array of allTiles and available tiles
+    -   actions, action creators, and reducer in place
+-
+
+---
+
 # Performance updates to show flower name - 8/21/2019 - master
 
-## [cbb5e0b0f982b7379abfd3d015d48041c31cb1c8](https://github.com/nodes777/flower-game-phaser3/commit/cbb5e0b0f982b7379abfd3d015d48041c31cb1c8)
+## [1c36451494010ac22c6a7ef76708db5b93fa43a2](https://github.com/nodes777/flower-game-phaser3/commit/1c36451494010ac22c6a7ef76708db5b93fa43a2)
 
 -   Improvement on performance when displaying flower names. Still not great.
 -   Sending for SO question on performance

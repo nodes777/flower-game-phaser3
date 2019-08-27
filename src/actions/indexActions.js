@@ -8,7 +8,9 @@ import {
 	REMOVE_RECESSIVE_ALLELE,
 	CHANGE_FLOWER_NAME,
 	SHOW_TOOLTIP,
-	HIDE_TOOLTIP
+	HIDE_TOOLTIP,
+	ADD_TILES_TO_STORE,
+	TILE_FILLED
 } from "../types/actions";
 
 export const changeParentAllele = data => {
@@ -19,9 +21,10 @@ export const changeParentAllele = data => {
 };
 
 export const addFlowerToStore = data => {
+	const { parent1, parent2, posInfo } = data;
 	return {
 		type: ADD_FLOWER_TO_STORE,
-		data
+		data: { parent1, parent2, posInfo }
 	};
 };
 
@@ -77,10 +80,25 @@ export const showTooltip = data => {
 		posY: data.posY
 	};
 };
+
 export const hideTooltip = data => {
 	return {
 		type: HIDE_TOOLTIP,
 		visible: false,
 		content: "Nothing"
+	};
+};
+
+export const addTilesToStore = tilesArr => {
+	return {
+		type: ADD_TILES_TO_STORE,
+		tilesArr
+	};
+};
+
+export const markTileAsFilled = tileIndex => {
+	return {
+		type: TILE_FILLED,
+		tileIndex
 	};
 };

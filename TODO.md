@@ -1,5 +1,7 @@
 # TO DO
 
+-   match new random flower and new flower from punnett
+
 ## Tests
 
 -   /components and /phaser
@@ -14,7 +16,8 @@
 
 ### Art
 
--   SpriteStack?
+-   Add flowerhead shapes
+-   Add new stems
 
 ## Redux
 
@@ -29,6 +32,7 @@
 
 ## Features
 
+-   Determine size of garden
 -   PreDetermine shape for garden to grow in?
     -   Break into tiles
     -   Fill in tiles as flowers are added
