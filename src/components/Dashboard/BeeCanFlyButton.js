@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { beeCanFly } from "../../actions/indexActions";
+import { beeCanFly } from "../../actions/configActions";
 
 import "../../css/btn.css";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { changeFlowerName } from "../../actions/indexActions";
+import { changeFlowerName } from "../../actions/flowerActions";
 import PropTypes from "prop-types";
 
 class FlowerName extends React.Component {

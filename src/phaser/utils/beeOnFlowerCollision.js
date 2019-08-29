@@ -1,10 +1,7 @@
 import { store } from "../../index";
 import { determinePosition } from "../../determinants/determinePosition";
-import {
-	pickupPollen,
-	dropPollen,
-	addFlowerToStore
-} from "../../actions/indexActions";
+import { pickupPollen, dropPollen } from "../../actions/beeActions";
+import { addFlowerToStore } from "../../actions/flowerActions";
 
 import { screenSize } from "../../utils/screenSize";
 

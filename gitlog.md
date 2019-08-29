@@ -1,6 +1,15 @@
+# Separates the actions into their own files - 8/29/2019 - isoView
+
+## [50221dea1d923e8002246cd145c99b0c1912138e](https://github.com/nodes777/flower-game-phaser3/commit/50221dea1d923e8002246cd145c99b0c1912138e)
+
+-   Seperates the indexActions file into flowerActions, tileActions, beeActions, configActions, and punnettActions files
+-   Recreates the references to that file in the components/ other files that the actions and actionCreators.
+
+---
+
 # Sets initial position for flowers - 8/29/2019 - isoView
 
-## [bf9b7ee5a891c3b7f5901e77630db14f4496b128](https://github.com/nodes777/flower-game-phaser3/commit/bf9b7ee5a891c3b7f5901e77630db14f4496b128)
+## [50221dea1d923e8002246cd145c99b0c1912138e](https://github.com/nodes777/flower-game-phaser3/commit/50221dea1d923e8002246cd145c99b0c1912138e)
 
 -   Creates a `setFirstFlowerPosition` action creator
     -   The tiles are build and the store is created with the intial two flowers, with no defined tileIndex or position

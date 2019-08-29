@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { removeRecessiveAllele } from "../../actions/indexActions";
+import { removeRecessiveAllele } from "../../actions/configActions";
 import PropTypes from "prop-types";
 
 function mapStateToProps({ config }) {

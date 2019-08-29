@@ -1,5 +1,5 @@
 import { store } from "../index.js";
-import { markTileAsFilled } from "../actions/indexActions.js";
+import { markTileAsFilled } from "../actions/tileActions.js";
 export const determineRandomPos = availableTiles => {
 	console.log(availableTiles);
 	let tileIndex = Math.floor(Math.random() * availableTiles.length - 1);

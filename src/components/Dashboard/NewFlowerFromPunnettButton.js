@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addFlowerToStore } from "../../actions/indexActions";
+import { addFlowerToStore } from "../../actions/flowerActions";
 import { determineRandomPos } from "../../determinants/determinePosition";
 
 import { screenSize } from "../../utils/screenSize";

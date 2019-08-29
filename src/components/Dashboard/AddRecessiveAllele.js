@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addRecessiveAllele } from "../../actions/indexActions";
+import { addRecessiveAllele } from "../../actions/configActions";
 import PropTypes from "prop-types";
 
 function mapStateToProps({ config, punnett }) {

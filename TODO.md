@@ -1,6 +1,7 @@
 # TO DO
 
 -   Figure out initial flower position - currently random
+-   Set available tiles to be a formula
 -   Fly Bee in 3D
 
 ## Tests
@@ -21,8 +22,6 @@
 -   Add new stems
 
 ## Redux
-
--   Split the actions
 
 ## React
 

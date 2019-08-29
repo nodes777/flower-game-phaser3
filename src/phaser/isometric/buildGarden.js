@@ -1,5 +1,5 @@
 import { addTiles } from "./addTiles";
-import { setFirstFlowerPosition } from "../../actions/indexActions";
+import { setFirstFlowerPosition } from "../../actions/flowerActions";
 import { store } from "../../index";
 import { determineRandomPos } from "../../determinants/determinePosition";
 const sizes = [256, 512, 800, 1024];
