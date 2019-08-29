@@ -4,24 +4,25 @@ import { addFlowerToStore } from "../../actions/indexActions";
 import { getRandomColor } from "../../determinants/determineColor";
 import { getRandomShape } from "../../determinants/determineFlowerShape";
 import { getRandomStem } from "../../determinants/determineStem";
-import {
-	determineRandomXPos,
-	determineRandomYPos
-} from "../../determinants/determinePosition";
+import { determineRandomPos } from "../../determinants/determinePosition";
 
 import { screenSize } from "../../utils/screenSize";
 
 import "../../css/btn.css";
 
-function mapStateToProps({ flowers }) {
+function mapStateToProps({ flowers, tiles }) {
 	return {
-		flowers
+		flowers,
+		tiles
 	};
 }
 
 class NewRandomFlowerButton extends React.Component {
 	handleSubmit = () => {
-		const { dispatch } = this.props;
+		const { dispatch, tiles } = this.props;
+		const tileInfo = determineRandomPos(tiles.availableTiles);
+		const posX = tileInfo.x;
+		const posY = tileInfo.y;
 
 		const info = {
 			parent1: {
@@ -39,10 +40,8 @@ class NewRandomFlowerButton extends React.Component {
 				}
 			},
 			posInfo: {
-				newPos: {
-					x: determineRandomXPos(screenSize),
-					y: determineRandomYPos(screenSize)
-				}
+				newPos: { x: posX, y: posY },
+				tileIndex: tileInfo.tileIndex
 			}
 		};
 		dispatch(addFlowerToStore(info));

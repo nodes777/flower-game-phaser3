@@ -1,6 +1,17 @@
+# Sets initial position for flowers - 8/29/2019 - isoView
+
+## [bf9b7ee5a891c3b7f5901e77630db14f4496b128](https://github.com/nodes777/flower-game-phaser3/commit/bf9b7ee5a891c3b7f5901e77630db14f4496b128)
+
+-   Creates a `setFirstFlowerPosition` action creator
+    -   The tiles are build and the store is created with the intial two flowers, with no defined tileIndex or position
+    -   Then the action is dispatched to change these two flowers position
+    -   Currently the initial position is random
+
+---
+
 # Adds position determination to isometric view - 8/27/2019 - isoView
 
-## [1c36451494010ac22c6a7ef76708db5b93fa43a2](https://github.com/nodes777/flower-game-phaser3/commit/1c36451494010ac22c6a7ef76708db5b93fa43a2)
+## [bf9b7ee5a891c3b7f5901e77630db14f4496b128](https://github.com/nodes777/flower-game-phaser3/commit/bf9b7ee5a891c3b7f5901e77630db14f4496b128)
 
 -   Isometric view in place with `phaser3-plugin-isometric`
 -   [Creating an Isometric View in Phaser 3](https://medium.com/@Tnodes/creating-an-isometric-view-in-phaser-3-fada95927835)

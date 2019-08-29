@@ -1,6 +1,7 @@
 # TO DO
 
--   match new random flower and new flower from punnett
+-   Figure out initial flower position - currently random
+-   Fly Bee in 3D
 
 ## Tests
 

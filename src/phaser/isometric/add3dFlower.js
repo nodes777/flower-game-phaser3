@@ -13,11 +13,13 @@ export function add3dFlower(currFlower, currFlowerId, game) {
 	const posX = currFlower.position.x;
 	const posY = currFlower.position.y;
 	const tileIndex = currFlower.tileIndex;
+	console.log(posX, posY);
+	console.log(tileIndex);
 	// set position and shape
 	let newFlowerSprite = game.add.isoSprite(
-		posX,
-		posY,
-		2,
+		posX, // x
+		posY, // y
+		2, // z
 		"flower3d" //flowerShape
 	);
 	// setFrame because ^ isoSprite doesn't set frame correctly

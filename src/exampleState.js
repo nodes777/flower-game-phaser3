@@ -48,13 +48,13 @@ const exampleState = {
             genotype: parent1Geno,
             position: {},
             phenotype: parent1Pheno,
-            tileIndex: 0
+            tileIndex: null
         },
         parent2: {
             genotype: parent2Geno,
             position: {},
             phenotype: parent2Pheno,
-            tileIndex: 1
+            tileIndex: null
         }
     },
     flowers: {
@@ -64,14 +64,14 @@ const exampleState = {
                 position: {},
                 phenotype: parent1Pheno,
                 name: "flower1",
-                tileIndex: 0 // this doesn't mark the tile as filled
+                tileIndex: null // this doesn't mark the tile as filled
             },
             flower2: {
                 genotype: parent2Geno,
                 position: {},
                 phenotype: parent2Pheno,
                 name: "flower2",
-                tileIndex: 1
+                tileIndex: null
             }
         },
         allIds: ["flower1", "flower2"],

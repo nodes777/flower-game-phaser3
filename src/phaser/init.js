@@ -32,7 +32,7 @@ export function init(game) {
 	//game.bee.debugShowVelocity = false;
 
 	/* Second Flower */
-	//add3dFlower(storeFlowers.byId.flower2, "flower2", game);
+	add3dFlower(storeFlowers.byId.flower2, "flower2", game);
 
 	// set the flower to go to
 	game.flowerToFlyTo = game.flowersOnScreen[0];

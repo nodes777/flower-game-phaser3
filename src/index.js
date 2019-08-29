@@ -14,7 +14,7 @@ import { screenSize } from "./utils/screenSize";
 import { loadState } from "./utils/localStorage";
 import rootReducer from "./reducers/indexReducer";
 import indexMiddleware from "./middleware/indexMiddleware";
-import exampleState from "./exampleState";
+//import exampleState from "./exampleState";
 
 export const store = createStore(rootReducer, loadState(), indexMiddleware);
 

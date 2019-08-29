@@ -10,7 +10,8 @@ import {
 	SHOW_TOOLTIP,
 	HIDE_TOOLTIP,
 	ADD_TILES_TO_STORE,
-	TILE_FILLED
+	TILE_FILLED,
+	SET_FIRST_FLOWER_POSITION
 } from "../types/actions";
 
 export const changeParentAllele = data => {
@@ -100,5 +101,13 @@ export const markTileAsFilled = tileIndex => {
 	return {
 		type: TILE_FILLED,
 		tileIndex
+	};
+};
+
+export const setFirstFlowerPosition = (flowerId, initPos) => {
+	return {
+		type: SET_FIRST_FLOWER_POSITION,
+		flowerId,
+		initPos
 	};
 };

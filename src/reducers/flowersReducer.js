@@ -11,18 +11,28 @@ import {
 import {
 	CHANGE_FLOWER,
 	ADD_FLOWER_TO_STORE,
-	CHANGE_FLOWER_NAME
+	CHANGE_FLOWER_NAME,
+	SET_FIRST_FLOWER_POSITION
 } from "../types/actions";
 
 export function flowersReducer(state = exampleState.flowers, action) {
 	switch (action.type) {
-		case CHANGE_FLOWER:
-			const { flowerId } = action.data;
-			console.log(
-				"CHANGE_FLOWER in flowersReducer, NOTHING HAPPENS HERE"
-			);
+		case SET_FIRST_FLOWER_POSITION:
+			const { flowerId, initPos } = action;
+
 			return {
-				...state
+				...state,
+				byId: {
+					...state.byId,
+					[flowerId]: {
+						...state.byId[flowerId],
+						position: {
+							x: initPos.x,
+							y: initPos.y
+						},
+						tileIndex: initPos.tileIndex
+					}
+				}
 			};
 		case ADD_FLOWER_TO_STORE:
 			const { parent1, parent2, posInfo } = action.data;
