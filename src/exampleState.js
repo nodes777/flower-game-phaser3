@@ -90,7 +90,7 @@ const exampleState = {
         recessive: defaultRecessive,
         tooltip: { visible: false, content: "Nothing", posX: 500, posY: 100 }
     },
-    tiles: {}
+    tiles: { allTiles: [], availableTiles: [], numberOfTiles: null }
 };
 
 export default exampleState;

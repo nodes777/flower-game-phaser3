@@ -1,6 +1,14 @@
+# Determines center tile - 8/30/2019 - isoView
+
+## [e6457044f8c7c89dd46f725c3eb1e818449b22ec](https://github.com/nodes777/flower-game-phaser3/commit/e6457044f8c7c89dd46f725c3eb1e818449b22ec)
+
+-   Determines center tile in determinePosition.js from buildGarden.js
+
+---
+
 # Separates the actions into their own files - 8/29/2019 - isoView
 
-## [50221dea1d923e8002246cd145c99b0c1912138e](https://github.com/nodes777/flower-game-phaser3/commit/50221dea1d923e8002246cd145c99b0c1912138e)
+## [e6457044f8c7c89dd46f725c3eb1e818449b22ec](https://github.com/nodes777/flower-game-phaser3/commit/e6457044f8c7c89dd46f725c3eb1e818449b22ec)
 
 -   Seperates the indexActions file into flowerActions, tileActions, beeActions, configActions, and punnettActions files
 -   Recreates the references to that file in the components/ other files that the actions and actionCreators.

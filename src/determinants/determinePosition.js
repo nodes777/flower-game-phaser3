@@ -16,6 +16,35 @@ export const determinePosition = () => {
 	return posInfo;
 };
 
+export const determineCenterTile = (tiles, size, tileHeight) => {
+	const totalTiles = tiles.numberOfTiles;
+	// divide total in half
+	const halfOfTotalNumOfTiles = Math.floor(totalTiles / 2);
+	// and add half the size divided by the tileHeight
+	const columns = size / tileHeight;
+	const j = Math.floor(columns / 2);
+
+	// i = the index of the block whose coordinates you'd like to calculate
+	// columns = the total width of your drawing, divided by its pixel tileHeight
+	// tileHeight = the width of one of your drawing's blocks in canvas pixels
+	// const x = Math.floor(210 % columns) * tileHeight;
+	// const y = Math.floor(210 / columns) * tileHeight;
+	// console.log("size " + size);
+	// console.log("columns " + columns);
+	// console.log("totalTiles " + totalTiles);
+	// console.log("halfOfTotalNumOfTiles " + halfOfTotalNumOfTiles);
+	// console.log("size/columns " + size / columns);
+	//console.log(totalTiles);
+
+	const middleIndex = halfOfTotalNumOfTiles + j;
+	const centerTile = tiles.allTiles[middleIndex];
+
+	// console.log("middleIndex: " + middleIndex);
+	// console.log(centerTile);
+
+	return centerTile;
+};
+
 // export const determinePosition = (
 // 	parent2Position,
 // 	allPositions,

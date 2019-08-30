@@ -1,4 +1,8 @@
-import { ADD_TILES_TO_STORE, TILE_FILLED } from "../types/actions";
+import {
+	ADD_TILES_TO_STORE,
+	TILE_FILLED,
+	SET_AVAILABLE_TILES
+} from "../types/actions";
 
 export const addTilesToStore = tilesArr => {
 	return {
@@ -11,5 +15,12 @@ export const markTileAsFilled = tileIndex => {
 	return {
 		type: TILE_FILLED,
 		tileIndex
+	};
+};
+
+export const setAvailableTiles = tilesArr => {
+	return {
+		type: SET_AVAILABLE_TILES,
+		tilesArr
 	};
 };

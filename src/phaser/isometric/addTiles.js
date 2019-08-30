@@ -2,13 +2,14 @@ import { store } from "../../index.js";
 import { addTilesToStore } from "../../actions/tileActions.js";
 import grassTileData from "../../assets/spritestack/grassTile.json";
 
+export const tileHeight = grassTileData.height - 2;
 export const addTiles = (game, size) => {
 	let tile;
 	let tilesArr = [];
-	const height = grassTileData.height - 2;
+
 	let index = 0;
-	for (let xx = 0; xx < size; xx += height) {
-		for (let yy = 0; yy < size; yy += height) {
+	for (let xx = 0; xx < size; xx += tileHeight) {
+		for (let yy = 0; yy < size; yy += tileHeight) {
 			tile = game.add.isoSprite(xx, yy, 0, "grassTile", game.isoTiles);
 			tile.setInteractive();
 
@@ -21,7 +22,7 @@ export const addTiles = (game, size) => {
 			tile.on("pointerover", function() {
 				this.setTint(0x86bfda);
 				this.isoZ += 5;
-				// console.log(this);
+
 				if (this.flowerSprite) {
 					this.flowerSprite.isoZ += 5;
 					this.flowerSprite.stem.isoZ += 5;
