@@ -21,6 +21,6 @@ export const markTileAsFilled = tileIndex => {
 export const setAvailableTiles = tilesArr => {
 	return {
 		type: SET_AVAILABLE_TILES,
-		tilesArr
+		newTilesArr: tilesArr
 	};
 };

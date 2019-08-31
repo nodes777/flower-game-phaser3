@@ -1,7 +1,9 @@
 # TO DO
 
+-   Batch fillAvailableTiles calls to store as one single call
 -   Set available tiles to be a formula
 -   Fly Bee in 3D
+-   Add back in save to local storage, check for existing data on load
 
 ## Tests
 

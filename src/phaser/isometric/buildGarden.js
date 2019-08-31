@@ -5,11 +5,17 @@ import {
 	determineRandomPos,
 	determineCenterTile
 } from "../../determinants/determinePosition";
+
+import { determineShapeOfGarden } from "../../determinants/determineShapeOfGarden";
 import { tileHeight } from "./addTiles";
+import { setAvailableTiles } from "../../actions/tileActions";
+import { CHECKER_BOARD } from "../../types/gardenShapes.js";
+import { fillAvailableTiles } from "../utils/fillAvailableTiles.js";
+
 const sizes = [240, 400, 800, 1040];
 
 export const buildGarden = game => {
-	const size = sizes[2];
+	const size = sizes[1];
 	addTiles(game, size);
 	// if size if big, shift camera up
 	if (size > 700) {
@@ -32,4 +38,13 @@ export const buildGarden = game => {
 
 	store.dispatch(setFirstFlowerPosition("flower1", centerTile));
 	store.dispatch(setFirstFlowerPosition("flower2", lastTile));
+
+	// // set the available tiles in a shape
+	// this is not an action - the next step is the action
+	const newAvailableTiles = determineShapeOfGarden("ROW", availableTiles);
+
+	store.dispatch(setAvailableTiles(newAvailableTiles));
+
+	// // fill available tiles
+	fillAvailableTiles(newAvailableTiles, game);
 };

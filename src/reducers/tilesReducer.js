@@ -1,6 +1,10 @@
 import exampleState from "../exampleState";
 
-import { ADD_TILES_TO_STORE, TILE_FILLED } from "../types/actions";
+import {
+	ADD_TILES_TO_STORE,
+	TILE_FILLED,
+	SET_AVAILABLE_TILES
+} from "../types/actions";
 
 export function tilesReducer(state = exampleState.tiles, action) {
 	switch (action.type) {
@@ -12,14 +16,18 @@ export function tilesReducer(state = exampleState.tiles, action) {
 				allTiles: [...tilesArr],
 				availableTiles: [...tilesArr]
 			};
+
 		case TILE_FILLED:
 			const { tileIndex } = action;
 
 			const oldTile = state.allTiles[tileIndex];
-			oldTile.filled = true;
 
 			const availableTileIndex = state.availableTiles.indexOf(oldTile);
 
+			oldTile.filled = true;
+			console.log(oldTile);
+
+			console.log(availableTileIndex);
 			return {
 				...state,
 				allTiles: [
@@ -27,10 +35,19 @@ export function tilesReducer(state = exampleState.tiles, action) {
 					oldTile,
 					...state.allTiles.slice(tileIndex + 1)
 				],
+				// BUG
 				availableTiles: [
 					...state.availableTiles.slice(0, availableTileIndex),
 					...state.availableTiles.slice(availableTileIndex + 1)
 				]
+			};
+
+		case SET_AVAILABLE_TILES:
+			const { newTilesArr } = action;
+			console.log(newTilesArr);
+			return {
+				...state,
+				availableTiles: newTilesArr
 			};
 		default:
 			return state;

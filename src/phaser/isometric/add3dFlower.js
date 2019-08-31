@@ -38,7 +38,7 @@ export function add3dFlower(currFlower, currFlowerId, game) {
 	newFlowerSprite.id = currFlowerId;
 	// keep on top of stem
 	newFlowerSprite.depth = 1;
-	console.log(newFlowerSprite);
+	//console.log(newFlowerSprite);
 
 	//add flower reference for the tile
 	game.isoTiles.children.entries[tileIndex].flowerSprite = newFlowerSprite;

@@ -1,6 +1,16 @@
+# Provides fill tiles - 8/31/2019 - isoView
+
+## [0bf219873504e82074ef79da39ac762a36ded01d](https://github.com/nodes777/flower-game-phaser3/commit/0bf219873504e82074ef79da39ac762a36ded01d)
+
+-   Creates a determineShapeOfGarden function, which filters based on a type passed in.
+    -   the availableTiles are set based on this
+-   fillAvailableTiles, fills the tiles, but big performance dip on larger gardens.
+
+---
+
 # Determines center tile - 8/30/2019 - isoView
 
-## [e6457044f8c7c89dd46f725c3eb1e818449b22ec](https://github.com/nodes777/flower-game-phaser3/commit/e6457044f8c7c89dd46f725c3eb1e818449b22ec)
+## [0bf219873504e82074ef79da39ac762a36ded01d](https://github.com/nodes777/flower-game-phaser3/commit/0bf219873504e82074ef79da39ac762a36ded01d)
 
 -   Determines center tile in determinePosition.js from buildGarden.js
 

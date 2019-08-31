@@ -2,6 +2,10 @@ import { store } from "../index.js";
 import { markTileAsFilled } from "../actions/tileActions.js";
 export const determineRandomPos = availableTiles => {
 	console.log(availableTiles);
+	if (availableTiles.length - 1 <= 0) {
+		alert("There are no more availableTiles");
+		return;
+	}
 	let tileIndex = Math.floor(Math.random() * availableTiles.length - 1);
 
 	let tile = availableTiles[tileIndex];

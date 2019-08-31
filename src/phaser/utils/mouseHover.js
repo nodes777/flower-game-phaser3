@@ -1,5 +1,5 @@
 import { store } from "../../index";
-import { showTooltip, hideTooltip } from "../../actions/indexActions";
+import { showTooltip, hideTooltip } from "../../actions/configActions";
 
 export function mouseHoverOn(event, gameObjects, game, canFire) {
 	const name = store.getState().flowers.byId[gameObjects[0].id].name;
