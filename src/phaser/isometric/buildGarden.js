@@ -15,7 +15,7 @@ import { fillAvailableTiles } from "../utils/fillAvailableTiles.js";
 const sizes = [240, 400, 800, 1040];
 
 export const buildGarden = game => {
-	const size = sizes[1];
+	const size = sizes[3];
 	addTiles(game, size);
 	// if size if big, shift camera up
 	if (size > 700) {

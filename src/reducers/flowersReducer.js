@@ -12,7 +12,8 @@ import {
 	CHANGE_FLOWER,
 	ADD_FLOWER_TO_STORE,
 	CHANGE_FLOWER_NAME,
-	SET_FIRST_FLOWER_POSITION
+	SET_FIRST_FLOWER_POSITION,
+	ADD_BATCH_OF_FLOWERS_TO_STORE
 } from "../types/actions";
 
 export function flowersReducer(state = exampleState.flowers, action) {
@@ -72,6 +73,16 @@ export function flowersReducer(state = exampleState.flowers, action) {
 						name: action.newName
 					}
 				}
+			};
+		case ADD_BATCH_OF_FLOWERS_TO_STORE:
+			const { newFlowersObj, newIds } = action;
+			return {
+				...state,
+				byId: {
+					...state.byId,
+					...newFlowersObj
+				},
+				allIds: [...state.allIds.concat([...newIds])]
 			};
 
 		default:

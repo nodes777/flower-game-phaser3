@@ -1,6 +1,17 @@
+# adds addBatchOfFlowersToStore - 9/1/2019 - isoView
+
+## [a6984c35eadc32742c97ec5f496e506a66055acb](https://github.com/nodes777/flower-game-phaser3/commit/a6984c35eadc32742c97ec5f496e506a66055acb)
+
+-   New action ADD_BATCH_OF_FLOWERS_TO_STORE which batches call to addFlowersToStore
+-   `addBatchOfFlowersToStore(flowersToBeAdded, newIds)`, takes an object byId of flowers and an array of the newIds
+-   Huge performance gains!
+-   Next TODO: batch the markTilesAsFilled
+
+---
+
 # Provides fill tiles - 8/31/2019 - isoView
 
-## [0bf219873504e82074ef79da39ac762a36ded01d](https://github.com/nodes777/flower-game-phaser3/commit/0bf219873504e82074ef79da39ac762a36ded01d)
+## [a6984c35eadc32742c97ec5f496e506a66055acb](https://github.com/nodes777/flower-game-phaser3/commit/a6984c35eadc32742c97ec5f496e506a66055acb)
 
 -   Creates a determineShapeOfGarden function, which filters based on a type passed in.
     -   the availableTiles are set based on this

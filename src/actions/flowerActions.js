@@ -1,7 +1,8 @@
 import {
 	ADD_FLOWER_TO_STORE,
 	CHANGE_FLOWER_NAME,
-	SET_FIRST_FLOWER_POSITION
+	SET_FIRST_FLOWER_POSITION,
+	ADD_BATCH_OF_FLOWERS_TO_STORE
 } from "../types/actions";
 
 export const addFlowerToStore = data => {
@@ -25,5 +26,13 @@ export const setFirstFlowerPosition = (flowerId, initPos) => {
 		type: SET_FIRST_FLOWER_POSITION,
 		flowerId,
 		initPos
+	};
+};
+
+export const addBatchOfFlowersToStore = (newFlowersObj, newIds) => {
+	return {
+		type: ADD_BATCH_OF_FLOWERS_TO_STORE,
+		newFlowersObj,
+		newIds
 	};
 };
