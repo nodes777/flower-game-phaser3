@@ -5,8 +5,8 @@ import { update } from "./update";
 class playGame extends Phaser.Scene {
   constructor() {
     const sceneConfig = {
-      key: "IsoInteractionExample",
-      mapAdd: { isoPlugin: "iso" }
+      key: "IsoCollisionExample",
+      mapAdd: { isoPlugin: "iso", isoPhysics: "isoPhysics" }
     };
     super(sceneConfig);
   }

@@ -2,17 +2,25 @@ import { beeRotate } from "./utils/rotation";
 import { beeFrameRotate } from "./utils/rotation";
 export function update() {
 	if (this.beeCanFly) {
-		//Too Stiff
-		this.bee.angle = this.physics.moveToObject(
+		this.isoPhysics.moveToXYZ(
 			this.bee,
-			this.flowerToFlyTo,
-			1000,
-			200
+			this.flowerToFlyTo._isoPosition.x,
+			this.flowerToFlyTo._isoPosition.y,
+			30,
+			400
 		);
+
+		//Too Stiff
+		// this.bee.angle = this.physics.moveToObject(
+		// 	this.bee,
+		// 	this.flowerToFlyTo,
+		// 	1000,
+		// 	200
+		// );
 
 		//  Acceleration Based Movement
 		// Reset the acceleration
-		// this.bee.setAcceleration(0, 0);
+		//this.bee.setAcceleration(0, 0);
 		// this.physics.accelerateToObject(
 		// 	this.bee,
 		// 	this.flowerToFlyTo,

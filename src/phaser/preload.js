@@ -7,12 +7,18 @@ import stemData from "../assets/spritestack/stem.json";
 import { add3dFlower } from "./isometric/add3dFlower";
 import { buildGarden } from "./isometric/buildGarden";
 
-import IsoPlugin from "phaser3-plugin-isometric";
+import IsoPlugin, { IsoPhysics } from "phaser3-plugin-isometric";
 export function preload() {
 	this.load.scenePlugin({
 		key: "IsoPlugin",
 		url: IsoPlugin,
 		sceneKey: "iso"
+	});
+
+	this.load.scenePlugin({
+		key: "IsoPhysics",
+		url: IsoPhysics,
+		sceneKey: "isoPhysics"
 	});
 
 	// load 3d assets

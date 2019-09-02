@@ -19,6 +19,10 @@ export function create() {
 		callbackScope: this,
 		loop: true
 	});
+	console.log(this.physics);
+	console.log(this.isoPhysics);
+	console.log(this.flowerToFlyTo);
+	console.log(collider);
 
 	this.beeCanFly = getStoreState().config.beeCanFly;
 

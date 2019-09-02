@@ -8,7 +8,6 @@ const recessivizer = store => next => action => {
 		next(returnValue);
 		return returnValue;
 	} else {
-		console.log(action);
 		return next(action);
 	}
 };

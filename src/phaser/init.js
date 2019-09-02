@@ -19,8 +19,15 @@ export function init(game) {
 	add3dFlower(storeFlowers.byId.flower1, "flower1", game);
 
 	/* Bee */
-	game.bee = game.physics.add.sprite(200, 150, "bee3d", 4); // frame 4 faces north
-	game.bee.setOrigin(0.5, 0.5).setDrag(50, 50);
+	game.bee = game.add.isoSprite(
+		200,
+		150, // y
+		30, // z
+		"bee3d" //flowerShape
+	);
+	game.bee.setFrame(4);
+	game.isoPhysics.world.enable(game.bee);
+	game.bee.setOrigin(0.5, 0.5); //.setDrag(50, 50);
 	game.bee.id = "bee1";
 	game.bee.depth = 999;
 	game.bee.angleForFrame = 0;

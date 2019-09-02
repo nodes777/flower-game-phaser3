@@ -25,9 +25,7 @@ export function tilesReducer(state = exampleState.tiles, action) {
 			const availableTileIndex = state.availableTiles.indexOf(oldTile);
 
 			oldTile.filled = true;
-			console.log(oldTile);
 
-			console.log(availableTileIndex);
 			return {
 				...state,
 				allTiles: [

@@ -41,10 +41,10 @@ export const buildGarden = game => {
 
 	// // set the available tiles in a shape
 	// this is not an action - the next step is the action
-	const newAvailableTiles = determineShapeOfGarden("ROW", availableTiles);
+	// const newAvailableTiles = determineShapeOfGarden("ROW", availableTiles);
 
-	store.dispatch(setAvailableTiles(newAvailableTiles));
+	// store.dispatch(setAvailableTiles(newAvailableTiles));
 
-	// // fill available tiles
-	fillAvailableTiles(newAvailableTiles, game);
+	// // // fill available tiles
+	// fillAvailableTiles(newAvailableTiles, game);
 };

@@ -5,11 +5,14 @@ export const createCollider = (game, collided) => {
 		lineStyle: { width: 2, color: 0x00ff00 },
 		fillStyle: { color: 0xff00ff }
 	});
+	console.log(game.bee);
+	console.log(game.flowerToFlyTo);
 
 	let collider = game.physics.add.overlap(
 		game.bee,
 		game.flowerToFlyTo,
 		function(beeOnFlower) {
+			console.log("COLLIDED");
 			game.bee.setAcceleration(0, 0);
 			// if you havent registered as collided with game flower yet then
 			if (!collided) {

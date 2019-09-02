@@ -21,6 +21,9 @@ export function add3dFlower(currFlower, currFlowerId, game) {
 	// setFrame because ^ isoSprite doesn't set frame correctly
 	newFlowerSprite.setFrame(0);
 
+	// Enable the physics body on this
+	game.isoPhysics.world.enable(newFlowerSprite);
+
 	// add stem
 	newFlowerSprite.stem = game.add.isoSprite(
 		newFlowerSprite._isoPosition.x,
@@ -32,8 +35,10 @@ export function add3dFlower(currFlower, currFlowerId, game) {
 	newFlowerSprite.stem.setFrame(0);
 	// set color
 	newFlowerSprite.setTint(getHexColor(phenotype.color));
+	console.log(newFlowerSprite);
+
 	// hide debug info
-	newFlowerSprite.debugShowBody = false;
+	//newFlowerSprite.debugShowBody = false;
 	// create id
 	newFlowerSprite.id = currFlowerId;
 	// keep on top of stem

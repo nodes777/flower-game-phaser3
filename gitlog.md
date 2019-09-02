@@ -1,6 +1,14 @@
+# collision detection for bee and flower doesnt work - 9/2/2019 - isoView
+
+## [e63165921cb4b8789db2bc6193470724e10b20fa](https://github.com/nodes777/flower-game-phaser3/commit/e63165921cb4b8789db2bc6193470724e10b20fa)
+
+-   Can't get the isoSprites to fire an overlap collision....
+
+---
+
 # adds addBatchOfFlowersToStore - 9/1/2019 - isoView
 
-## [a6984c35eadc32742c97ec5f496e506a66055acb](https://github.com/nodes777/flower-game-phaser3/commit/a6984c35eadc32742c97ec5f496e506a66055acb)
+## [e63165921cb4b8789db2bc6193470724e10b20fa](https://github.com/nodes777/flower-game-phaser3/commit/e63165921cb4b8789db2bc6193470724e10b20fa)
 
 -   New action ADD_BATCH_OF_FLOWERS_TO_STORE which batches call to addFlowersToStore
 -   `addBatchOfFlowersToStore(flowersToBeAdded, newIds)`, takes an object byId of flowers and an array of the newIds
