@@ -1,16 +1,12 @@
 import { checkStore, getStoreState } from "./utils/checkStore";
 import { checkForPollen } from "./utils/beeOnFlowerCollision";
 import { init } from "./init";
-import { createCollider } from "./utils/createCollider";
 export function create() {
 	// creates initial flowers
 	init(this);
 
 	// collider flag for avoiding running the collision function over and over while the bee is colliding
-	let collided = false;
-
-	// collider for collision with bee and flower
-	let collider = createCollider(this, collided);
+	this.collided = false;
 
 	// Check the store every .5 secs
 	this.time.addEvent({
@@ -19,10 +15,6 @@ export function create() {
 		callbackScope: this,
 		loop: true
 	});
-	console.log(this.physics);
-	console.log(this.isoPhysics);
-	console.log(this.flowerToFlyTo);
-	console.log(collider);
 
 	this.beeCanFly = getStoreState().config.beeCanFly;
 

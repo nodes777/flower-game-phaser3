@@ -1,6 +1,26 @@
+# Bee on Flower collision detection works - 9/4/2019 - isoView
+
+## [fcf90e306e9c600bf628a69f09effdecd5bbd9ba](https://github.com/nodes777/flower-game-phaser3/commit/fcf90e306e9c600bf628a69f09effdecd5bbd9ba)
+
+-   Marks the center and last tile as filled in buildGarden.js
+-   Removes addFlowerToGame.js and createCollider.js as they're no longer being used
+-   Collision between bee and flower is handled via `this.isoPhysics.world.overlap()` in update.js
+    -   The collider object no longer exists, all checks are done in update.js so make sure this is optimized
+
+TODO:
+
+-   Factor out the overlap callback in update.js
+-   Rename the beeOnFlowerCollision file or the checkStore function
+-   Rename this.collided in init.js to be more specific
+-   Clean up the /phaser folder structure
+-   Mark tiles as filled when a flower is added to the store.
+-   Figure out a better way for new flower positions to be determined. Even randomly might be better.
+
+---
+
 # collision detection for bee and flower doesnt work - 9/2/2019 - isoView
 
-## [e63165921cb4b8789db2bc6193470724e10b20fa](https://github.com/nodes777/flower-game-phaser3/commit/e63165921cb4b8789db2bc6193470724e10b20fa)
+## [fcf90e306e9c600bf628a69f09effdecd5bbd9ba](https://github.com/nodes777/flower-game-phaser3/commit/fcf90e306e9c600bf628a69f09effdecd5bbd9ba)
 
 -   Can't get the isoSprites to fire an overlap collision....
 

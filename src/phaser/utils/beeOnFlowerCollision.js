@@ -2,7 +2,7 @@ import { store } from "../../index";
 import { determinePosition } from "../../determinants/determinePosition";
 import { pickupPollen, dropPollen } from "../../actions/beeActions";
 import { addFlowerToStore } from "../../actions/flowerActions";
-
+import { markTileAsFilled } from "../../actions/tileActions";
 import { screenSize } from "../../utils/screenSize";
 
 export function checkForPollen(beeId, flowerId) {
@@ -22,16 +22,19 @@ export function checkForPollen(beeId, flowerId) {
 		const pollenId = bee.pollenId;
 		// get currently collided flower
 		const flower2 = storeState.flowers.byId[flowerId];
-		const allPositions = storeState.flowers.allPositions;
+		const allTileIndex = flower2.tileIndex;
 
-		const posInfo = determinePosition(
-			flower2.position,
-			allPositions,
-			screenSize
-		);
+		// find nearest available tile index
+		let availableTile = storeState.tiles.availableTiles[allTileIndex];
+
+		let counter = allTileIndex - 1;
+		while (availableTile === undefined) {
+			availableTile = storeState.tiles.availableTiles[counter];
+			counter--;
+		}
+
 		// if there's room
-
-		if (posInfo.hasRoom) {
+		if (storeState.tiles.availableTiles.length > 0) {
 			// create object with parental info
 			const info = {
 				parent1: {
@@ -44,9 +47,13 @@ export function checkForPollen(beeId, flowerId) {
 					genotype: flower2.genotype,
 					position: flower2.position
 				},
-				posInfo: posInfo
+				posInfo: {
+					newPos: { x: availableTile.x, y: availableTile.y },
+					tileIndex: availableTile.tileIndex
+				}
 			};
 			store.dispatch(addFlowerToStore(info));
+			store.dispatch(markTileAsFilled(availableTile.tileIndex));
 			store.dispatch(dropPollen(beeId));
 		} else {
 			// flower is full

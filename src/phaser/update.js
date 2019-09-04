@@ -1,13 +1,54 @@
 import { beeRotate } from "./utils/rotation";
 import { beeFrameRotate } from "./utils/rotation";
+
+import { checkForPollen } from "./utils/beeOnFlowerCollision";
+
 export function update() {
 	if (this.beeCanFly) {
-		this.isoPhysics.moveToXYZ(
+		//this.isoPhysics.moveToObject(this.bee, this.flowerToFlyTo, 400);
+		if (!this.collided) {
+			this.isoPhysics.moveToXYZ(
+				this.bee,
+				this.flowerToFlyTo._isoPosition.x,
+				this.flowerToFlyTo._isoPosition.y,
+				30,
+				400
+			);
+		}
+		this.isoPhysics.world.overlap(
 			this.bee,
-			this.flowerToFlyTo._isoPosition.x,
-			this.flowerToFlyTo._isoPosition.y,
-			30,
-			400
+			this.flowerToFlyTo,
+			function(bee, flowerToFlyTo) {
+				console.log("COLLIDED");
+
+				// stop the bee
+				bee.body.acceleration.set(0);
+				bee.body.velocity.set(0);
+				// if the bee hasnt registered as collided with game flower yet then
+				if (!this.collided) {
+					this.collided = true;
+					this.time.addEvent({
+						delay: 1000,
+						callback: function() {
+							// check if bee has pollen
+							checkForPollen(bee.id, flowerToFlyTo.id);
+
+							// set the new target randomly
+							this.flowerToFlyTo = this.flowersOnScreen[
+								Math.floor(
+									Math.random() * this.flowersOnScreen.length
+								)
+							];
+
+							// allow collision again
+							this.collided = false;
+						},
+						callbackScope: this
+					});
+				}
+			},
+			null,
+			this
 		);
 
 		//Too Stiff

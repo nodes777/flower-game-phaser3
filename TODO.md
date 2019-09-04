@@ -2,7 +2,7 @@
 
 -   Batch fillAvailableTiles calls to store as one single call
 -   Set available tiles to be a formula
--   Fly Bee in 3D
+-   Fly Bee in 3D - determine where next plant goes
 -   Add back in save to local storage, check for existing data on load
 
 ## Tests

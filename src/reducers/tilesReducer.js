@@ -33,7 +33,6 @@ export function tilesReducer(state = exampleState.tiles, action) {
 					oldTile,
 					...state.allTiles.slice(tileIndex + 1)
 				],
-				// BUG
 				availableTiles: [
 					...state.availableTiles.slice(0, availableTileIndex),
 					...state.availableTiles.slice(availableTileIndex + 1)

@@ -31,6 +31,7 @@ export function init(game) {
 	game.bee.id = "bee1";
 	game.bee.depth = 999;
 	game.bee.angleForFrame = 0;
+
 	// set rotation frame swaps
 	//addBeeRotation(game.bee, game);
 
@@ -43,6 +44,7 @@ export function init(game) {
 
 	// set the flower to go to
 	game.flowerToFlyTo = game.flowersOnScreen[0];
+	//game.isoPhysics.world.enable(game.flowerToFlyTo);
 
 	// 3d controls
 	//add3dControls(game);
