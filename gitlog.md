@@ -1,6 +1,22 @@
+# Factors out overlap callback - 9/8/2019 - isoView
+
+## [4d589768eed44dedf4a9c56c7473eef6c42314f9](https://github.com/nodes777/flower-game-phaser3/commit/4d589768eed44dedf4a9c56c7473eef6c42314f9)
+
+-   Factors out overlap callback
+-   Renames beeOnFlowerCollision.js to checkForPollen.js
+-   Renames `this.collided` in create.js to `this.bee1Collided`
+
+TODO:
+
+-   Clean up the /phaser folder structure
+-   Mark tiles as filled when a flower is added to the store.
+-   Figure out a better way for new flower positions to be determined. Even randomly might be better.
+
+---
+
 # Bee on Flower collision detection works - 9/4/2019 - isoView
 
-## [fcf90e306e9c600bf628a69f09effdecd5bbd9ba](https://github.com/nodes777/flower-game-phaser3/commit/fcf90e306e9c600bf628a69f09effdecd5bbd9ba)
+## [4d589768eed44dedf4a9c56c7473eef6c42314f9](https://github.com/nodes777/flower-game-phaser3/commit/4d589768eed44dedf4a9c56c7473eef6c42314f9)
 
 -   Marks the center and last tile as filled in buildGarden.js
 -   Removes addFlowerToGame.js and createCollider.js as they're no longer being used
