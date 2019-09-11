@@ -3,6 +3,7 @@ import { shapes } from "../types/flowerShapes";
 import grassTileData from "../assets/spritestack/grassTile.json";
 import flowerHeadData from "../assets/spritestack/flowerHead.json";
 import stemData from "../assets/spritestack/stem.json";
+import beeData from "../assets/spritestack/bee.json";
 
 import { add3dFlower } from "./isometric/add3dFlower";
 import { buildGarden } from "./isometric/buildGarden";
@@ -38,9 +39,9 @@ export function preload() {
 		frameWidth: stemData.width, // from json
 		frameHeight: stemData.height
 	});
-	this.load.spritesheet("bee3d", "src/assets/spritestack/bee-3d.png", {
-		frameWidth: 54, // length divided by 16 frames
-		frameHeight: 62,
+	this.load.spritesheet("bee3d", "src/assets/spritestack/bee.png", {
+		frameWidth: beeData.width, // length divided by 16 frames
+		frameHeight: beeData.height,
 		startFrame: 0 // 9 is facing right
 	});
 

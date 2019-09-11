@@ -21,7 +21,6 @@ export function update() {
 			null,
 			this
 		);
-
 		//Too Stiff
 		// this.bee.angle = this.physics.moveToObject(
 		// 	this.bee,
