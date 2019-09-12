@@ -1,6 +1,22 @@
+# Gets bee rotation almost right - 9/12/2019 - master
+
+## [x](https://github.com/nodes777/flower-game-phaser3/commit/x)
+
+-   Changes rotation.js to figure out which Bee frame should be shown
+
+TODO:
+
+-   Rarely bee flies in reverse - this could be because of the 337.5 to 0 range is undefined.
+    -   Change if/else values to be tilted slightly to match a general direction and not a less than amount.
+-   Clean up the /phaser folder structure
+-   Mark tiles as filled when a flower is added to the store.
+-   Figure out a better way for new flower positions to be determined. Even randomly might be better.
+
+---
+
 # Factors out overlap callback - 9/8/2019 - isoView
 
-## [4d589768eed44dedf4a9c56c7473eef6c42314f9](https://github.com/nodes777/flower-game-phaser3/commit/4d589768eed44dedf4a9c56c7473eef6c42314f9)
+## [06681275db89d08ec8e81bbf803582bfe022c6db](https://github.com/nodes777/flower-game-phaser3/commit/06681275db89d08ec8e81bbf803582bfe022c6db)
 
 -   Factors out overlap callback
 -   Renames beeOnFlowerCollision.js to checkForPollen.js

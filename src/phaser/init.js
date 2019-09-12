@@ -20,7 +20,7 @@ export function init(game) {
 
 	/* Bee */
 	game.bee = game.add.isoSprite(
-		200,
+		0,
 		150, // y
 		30, // z
 		"bee3d" //flowerShape
@@ -30,7 +30,7 @@ export function init(game) {
 	game.bee.setOrigin(0.5, 0.5); //.setDrag(50, 50);
 	game.bee.id = "bee1";
 	game.bee.depth = 999;
-	game.bee.angleForFrame = 0;
+	game.bee.angleForFrameDeg = 0;
 
 	// set rotation frame swaps
 	//addBeeRotation(game.bee, game);

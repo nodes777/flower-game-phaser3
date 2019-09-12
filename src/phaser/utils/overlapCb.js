@@ -8,7 +8,9 @@ export const overlapCb = function(bee, flowerToFlyTo) {
 	// stops the bee when it's on flower
 	const diffX = Math.abs(bee._isoPosition.x - flowerToFlyTo._isoPosition.x);
 	const diffY = Math.abs(bee._isoPosition.y - flowerToFlyTo._isoPosition.y);
-	if (diffX < 1 && diffY < 1) {
+	// when this difference is too small, the overlap function fires and the bee never stops going,
+	// it overshoots the flower
+	if (diffX < 5 && diffY < 5) {
 		bee.body.acceleration.set(0);
 		bee.body.velocity.set(0);
 	}

@@ -42,7 +42,7 @@ export function preload() {
 	this.load.spritesheet("bee3d", "src/assets/spritestack/bee.png", {
 		frameWidth: beeData.width, // length divided by 16 frames
 		frameHeight: beeData.height,
-		startFrame: 0 // 9 is facing right
+		startFrame: 0 //0 is facing east, 4 is facing north
 	});
 
 	// display progress bar

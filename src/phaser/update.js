@@ -6,14 +6,18 @@ export function update() {
 	if (this.beeCanFly) {
 		//this.isoPhysics.moveToObject(this.bee, this.flowerToFlyTo, 400);
 		if (!this.bee1Collided) {
-			this.isoPhysics.moveToXYZ(
+			const theta = this.isoPhysics.moveToXYZ(
 				this.bee,
 				this.flowerToFlyTo._isoPosition.x,
 				this.flowerToFlyTo._isoPosition.y,
 				30,
 				400
 			);
+			console.log(`Theta: ${theta}`);
+			// Rotate bee frame to face flower
+			beeFrameRotate(this.flowerToFlyTo, this, theta);
 		}
+
 		this.isoPhysics.world.overlap(
 			this.bee,
 			this.flowerToFlyTo,
