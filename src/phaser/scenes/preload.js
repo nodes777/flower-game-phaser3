@@ -1,9 +1,11 @@
 import { shapes } from "../../types/flowerShapes";
 
 import grassTileData from "../../assets/spritestack/grassTile.json";
-import flowerHeadData from "../../assets/spritestack/flowerHead.json";
+import defaultFlowerData from "../../assets/spritestack/defaultFlower.json";
 import stemData from "../../assets/spritestack/stem.json";
 import beeData from "../../assets/spritestack/bee.json";
+import squareFlowerData from "../../assets/spritestack/squareFlower.json";
+import roundFlowerData from "../../assets/spritestack/roundFlower.json";
 
 import { add3dFlower } from "../add3dFlower";
 import { buildGarden } from "../init/buildGarden";
@@ -29,12 +31,34 @@ export function preload() {
 		startFrame: 0 // only using this frame, this could be a this.load.image
 	});
 
-	this.load.spritesheet("flower3d", "src/assets/spritestack/flowerHead.png", {
-		frameWidth: flowerHeadData.width, // from json
-		frameHeight: flowerHeadData.height // from properties
-		//startFrame: 0 // 4 is the forward facing sprite
-		//endFrame: 9 // 9 is the last angle with semi forward
-	});
+	this.load.spritesheet(
+		"defaultFlower",
+		"src/assets/spritestack/defaultFlower.png",
+		{
+			frameWidth: defaultFlowerData.width, // from json
+			frameHeight: defaultFlowerData.height // from properties
+			//startFrame: 0 // 4 is the forward facing sprite
+			//endFrame: 9 // 9 is the last angle with semi forward
+		}
+	);
+	this.load.spritesheet(
+		"squareFlower",
+		"src/assets/spritestack/squareFlower.png",
+		{
+			frameWidth: squareFlowerData.width, // length divided by 16 frames
+			frameHeight: squareFlowerData.height,
+			startFrame: 0 //0 is facing east, 4 is facing north
+		}
+	);
+	this.load.spritesheet(
+		"roundFlower",
+		"src/assets/spritestack/roundFlower.png",
+		{
+			frameWidth: roundFlowerData.width, // length divided by 16 frames
+			frameHeight: roundFlowerData.height,
+			startFrame: 0 //0 is facing east, 4 is facing north
+		}
+	);
 	this.load.spritesheet("straightStem3d", "src/assets/spritestack/stem.png", {
 		frameWidth: stemData.width, // from json
 		frameHeight: stemData.height

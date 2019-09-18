@@ -1,10 +1,24 @@
+# Adds round flower - 9/18/2019 - master
+
+## [84025721aacf89f75b3e4922e2784befe2104c09](https://github.com/nodes777/flower-game-phaser3/commit/84025721aacf89f75b3e4922e2784befe2104c09)
+
+-   Adds round flower shape
+-   Removes unused assets in /spritestack
+-   TODO: move /assets/spritestack up to /assets
+    -   No need for /spritestack, its all spritestack now
+
+---
+
 # Removes markTileAsFilled action and action creator - 9/18/2019 - master
 
-## [0cf65632853b3b53abffd105242471363e88cd08](https://github.com/nodes777/flower-game-phaser3/commit/0cf65632853b3b53abffd105242471363e88cd08)
+## [84025721aacf89f75b3e4922e2784befe2104c09](https://github.com/nodes777/flower-game-phaser3/commit/84025721aacf89f75b3e4922e2784befe2104c09)
 
 -   Removes the `markTileAsFilled` and `TILE_FILLED` action and action creator
+
     -   Now all changes of availableTiles and allTiles is handled when `ADD_FLOWER_TO_STORE` and `SET_FIRST_FLOWER_POSITION` are passed to the `tilesReducer`
     -   When are flower is added is the only condition in which a tile must be filled, so no need for a seperate action and action creator for that
+
+-   Also factors out `polinate` into its own file from `checkForPollen`
 
 ---
 

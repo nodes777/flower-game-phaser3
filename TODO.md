@@ -1,8 +1,9 @@
 # TO DO
 
--   Batch fillAvailableTiles calls to store as one single call
+-   BUG: first tile isn't being filled correctly
+-   Add in the other flower shapes
+-   Rotation animation when new flower appears
 -   Set available tiles to be a formula
--   Fly Bee in 3D - determine where next plant goes
 -   Add back in save to local storage, check for existing data on load
 
 ## Tests
@@ -15,7 +16,6 @@
 -   The bee's movement is a hack that slows down performance
 -   Weather/light via masks
 -   On mouse hover display name (perf issues)
--   Refactor beeOnFlowerCollision to have the store passed in as an argument?
 
 ### Art
 

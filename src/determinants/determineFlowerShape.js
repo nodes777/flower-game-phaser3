@@ -1,9 +1,26 @@
 import { shapes } from "../types/flowerShapes";
-export const determineFlowerShape = genotype => {
-	if (genotype.shape === undefined) {
+export const determineFlowerShape = phenotype => {
+	if (phenotype.shape === undefined) {
 		return shapes.Default;
 	}
-	return genotype.shape[Math.round(Math.random())];
+	console.log(phenotype.shape);
+	switch (phenotype.shape) {
+		case "default": {
+			return `${shapes.Default}Flower`;
+		}
+		case "diamond": {
+			//dont have a diamond shape yet
+			return `${shapes.Default}Flower`;
+		}
+		case "square": {
+			return `${shapes.Square}Flower`;
+		}
+		case "round": {
+			return `${shapes.Round}Flower`;
+		}
+		default:
+			return `${shapes.Default}Flower`;
+	}
 };
 
 const shapesKeys = Object.keys(shapes);
