@@ -1,6 +1,20 @@
+# Adds beeFrameOffset, random tiles for new flowers - 9/18/2019 - master
+
+## [5444e4d5220abbdcfdc887523af27dcd118c9b6f](https://github.com/nodes777/flower-game-phaser3/commit/5444e4d5220abbdcfdc887523af27dcd118c9b6f)
+
+-   Adds angleOffsetForFrame for bee frame rotation
+    -   Makes it slightly better at angling the bee
+-   Changes new flowers appearing to be a random available tile
+
+TODO:
+
+-   Mark tiles as filled when a flower is added to the store.
+
+---
+
 # Sorts Phaser Folder - 9/18/2019 - master
 
-## [x](https://github.com/nodes777/flower-game-phaser3/commit/x)
+## [5444e4d5220abbdcfdc887523af27dcd118c9b6f](https://github.com/nodes777/flower-game-phaser3/commit/5444e4d5220abbdcfdc887523af27dcd118c9b6f)
 
 -   Sorts the phaser folder into /gameloop /init and /scenes
     -   add3dFlower.js is in /phaser
@@ -9,7 +23,6 @@ TODO:
 
 -   Rarely bee flies in reverse - this could be because of the 337.5 to 0 range is undefined.
     -   Change if/else values to be tilted slightly to match a general direction and not a less than amount.
--   Clean up the /phaser folder structure
 -   Mark tiles as filled when a flower is added to the store.
 -   Figure out a better way for new flower positions to be determined. Even randomly might be better.
 
