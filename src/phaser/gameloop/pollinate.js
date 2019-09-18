@@ -1,6 +1,5 @@
 import { store } from "../../index";
 import { addFlowerToStore } from "../../actions/flowerActions";
-import { markTileAsFilled } from "../../actions/tileActions";
 import { determinePosition } from "../../determinants/determinePosition";
 
 import { dropPollen } from "../../actions/beeActions";
@@ -49,7 +48,6 @@ export const pollinate = (storeState, beeId, flowerId) => {
 			}
 		};
 		store.dispatch(addFlowerToStore(info));
-		store.dispatch(markTileAsFilled(availableTile.tileIndex));
 		store.dispatch(dropPollen(beeId));
 	} else {
 		// flower is full

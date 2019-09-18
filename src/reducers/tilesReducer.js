@@ -2,8 +2,9 @@ import exampleState from "../exampleState";
 
 import {
 	ADD_TILES_TO_STORE,
-	TILE_FILLED,
-	SET_AVAILABLE_TILES
+	ADD_FLOWER_TO_STORE,
+	SET_AVAILABLE_TILES,
+	SET_FIRST_FLOWER_POSITION
 } from "../types/actions";
 
 export function tilesReducer(state = exampleState.tiles, action) {
@@ -17,8 +18,10 @@ export function tilesReducer(state = exampleState.tiles, action) {
 				availableTiles: [...tilesArr]
 			};
 
-		case TILE_FILLED:
-			const { tileIndex } = action;
+		// Formerly TILE_FILLED
+		case ADD_FLOWER_TO_STORE:
+			const { data } = action;
+			const tileIndex = data.posInfo.tileIndex;
 
 			const oldTile = state.allTiles[tileIndex];
 
@@ -41,11 +44,34 @@ export function tilesReducer(state = exampleState.tiles, action) {
 
 		case SET_AVAILABLE_TILES:
 			const { newTilesArr } = action;
-			console.log(newTilesArr);
+			// console.log(newTilesArr);
 			return {
 				...state,
 				availableTiles: newTilesArr
 			};
+
+		case SET_FIRST_FLOWER_POSITION:
+			const { initPos } = action;
+			// cant reuse these variable names when they're const
+			const tIndex = initPos.tileIndex;
+			const oTile = state.allTiles[tIndex];
+			const aTileIndex = state.availableTiles.indexOf(oldTile);
+
+			oTile.filled = true;
+
+			return {
+				...state,
+				allTiles: [
+					...state.allTiles.slice(0, tIndex),
+					oTile,
+					...state.allTiles.slice(tIndex + 1)
+				],
+				availableTiles: [
+					...state.availableTiles.slice(0, availableTileIndex),
+					...state.availableTiles.slice(availableTileIndex + 1)
+				]
+			};
+
 		default:
 			return state;
 	}

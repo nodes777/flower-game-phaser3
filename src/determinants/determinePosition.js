@@ -1,5 +1,4 @@
 import { store } from "../index.js";
-import { markTileAsFilled } from "../actions/tileActions.js";
 export const determineRandomPos = availableTiles => {
 	console.log(availableTiles);
 	if (availableTiles.length - 1 <= 0) {
@@ -10,7 +9,6 @@ export const determineRandomPos = availableTiles => {
 
 	let tile = availableTiles[tileIndex];
 
-	store.dispatch(markTileAsFilled(tile.tileIndex));
 	return tile;
 };
 

@@ -8,7 +8,7 @@ import {
 
 import { determineShapeOfGarden } from "../../determinants/determineShapeOfGarden";
 import { tileHeight } from "./addTiles";
-import { setAvailableTiles, markTileAsFilled } from "../../actions/tileActions";
+import { setAvailableTiles } from "../../actions/tileActions";
 import { CHECKER_BOARD } from "../../types/gardenShapes.js";
 import { fillAvailableTiles } from "./fillAvailableTiles.js";
 
@@ -38,8 +38,8 @@ export const buildGarden = game => {
 
 	store.dispatch(setFirstFlowerPosition("flower1", centerTile));
 	store.dispatch(setFirstFlowerPosition("flower2", lastTile));
-	store.dispatch(markTileAsFilled(centerTile.tileIndex));
-	store.dispatch(markTileAsFilled(lastTile.tileIndex));
+	// store.dispatch(markTileAsFilled(centerTile.tileIndex));
+	// store.dispatch(markTileAsFilled(lastTile.tileIndex));
 	// // set the available tiles in a shape
 	// this is not an action - the next step is the action
 	// const newAvailableTiles = determineShapeOfGarden("ROW", availableTiles);

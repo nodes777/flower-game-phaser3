@@ -11,13 +11,6 @@ export const addTilesToStore = tilesArr => {
 	};
 };
 
-export const markTileAsFilled = tileIndex => {
-	return {
-		type: TILE_FILLED,
-		tileIndex
-	};
-};
-
 export const setAvailableTiles = tilesArr => {
 	return {
 		type: SET_AVAILABLE_TILES,

@@ -1,6 +1,16 @@
+# Removes markTileAsFilled action and action creator - 9/18/2019 - master
+
+## [0cf65632853b3b53abffd105242471363e88cd08](https://github.com/nodes777/flower-game-phaser3/commit/0cf65632853b3b53abffd105242471363e88cd08)
+
+-   Removes the `markTileAsFilled` and `TILE_FILLED` action and action creator
+    -   Now all changes of availableTiles and allTiles is handled when `ADD_FLOWER_TO_STORE` and `SET_FIRST_FLOWER_POSITION` are passed to the `tilesReducer`
+    -   When are flower is added is the only condition in which a tile must be filled, so no need for a seperate action and action creator for that
+
+---
+
 # Adds beeFrameOffset, random tiles for new flowers - 9/18/2019 - master
 
-## [5444e4d5220abbdcfdc887523af27dcd118c9b6f](https://github.com/nodes777/flower-game-phaser3/commit/5444e4d5220abbdcfdc887523af27dcd118c9b6f)
+## [0cf65632853b3b53abffd105242471363e88cd08](https://github.com/nodes777/flower-game-phaser3/commit/0cf65632853b3b53abffd105242471363e88cd08)
 
 -   Adds angleOffsetForFrame for bee frame rotation
     -   Makes it slightly better at angling the bee
