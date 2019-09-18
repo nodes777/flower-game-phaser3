@@ -1,7 +1,6 @@
-import { beeRotate } from "./utils/rotation";
-import { beeFrameRotate } from "./utils/rotation";
+import { beeFrameRotate } from "../gameloop/rotation";
 
-import { overlapCb } from "./utils/overlapCb";
+import { overlapCb } from "../gameloop/overlapCb";
 export function update() {
 	if (this.beeCanFly) {
 		//this.isoPhysics.moveToObject(this.bee, this.flowerToFlyTo, 400);
@@ -13,7 +12,7 @@ export function update() {
 				30,
 				400
 			);
-			console.log(`Theta: ${theta}`);
+			// console.log(`Theta: ${theta}`);
 			// Rotate bee frame to face flower
 			beeFrameRotate(this.flowerToFlyTo, this, theta);
 		}

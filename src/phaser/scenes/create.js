@@ -1,6 +1,6 @@
-import { checkStore, getStoreState } from "./utils/checkStore";
-import { checkForPollen } from "./utils/checkForPollen";
-import { init } from "./init";
+import { checkStore, getStoreState } from "../gameloop/checkStore";
+import { checkForPollen } from "../gameloop/checkForPollen";
+import { init } from "../init/init";
 export function create() {
 	// creates initial flowers
 	init(this);

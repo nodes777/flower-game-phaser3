@@ -2,10 +2,10 @@ import Phaser from "phaser";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App.jsx";
-import { preload } from "./phaser/preload";
-import { create } from "./phaser/create";
-import { update } from "./phaser/update";
-import playGame from "./phaser/scene";
+import { preload } from "./phaser/scenes/preload";
+import { create } from "./phaser/scenes/create";
+import { update } from "./phaser/scenes/update";
+import playGame from "./phaser/scenes/scene";
 import "./css/index.css";
 
 import { createStore } from "redux";

@@ -1,4 +1,4 @@
-import { add3dFlower } from "../isometric/add3dFlower";
+import { add3dFlower } from "../add3dFlower";
 export function addNewFlowers(numFlowersPrev, currState, game) {
 	// for each of the new flowers in state, add them to the game
 	for (let i = numFlowersPrev; i < currState.flowers.allIds.length; i++) {

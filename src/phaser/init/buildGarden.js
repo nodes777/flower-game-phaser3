@@ -10,7 +10,7 @@ import { determineShapeOfGarden } from "../../determinants/determineShapeOfGarde
 import { tileHeight } from "./addTiles";
 import { setAvailableTiles, markTileAsFilled } from "../../actions/tileActions";
 import { CHECKER_BOARD } from "../../types/gardenShapes.js";
-import { fillAvailableTiles } from "../utils/fillAvailableTiles.js";
+import { fillAvailableTiles } from "./fillAvailableTiles.js";
 
 const sizes = [240, 400, 800, 1040];
 

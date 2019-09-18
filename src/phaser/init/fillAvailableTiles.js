@@ -1,6 +1,6 @@
 import { store } from "../../index.js";
 import { addBatchOfFlowersToStore } from "../../actions/flowerActions";
-import { add3dFlower } from "../isometric/add3dFlower";
+import { add3dFlower } from "../add3dFlower";
 import { markTileAsFilled } from "../../actions/tileActions";
 import {
 	determineGenotype,

@@ -1,12 +1,12 @@
-import { shapes } from "../types/flowerShapes";
+import { shapes } from "../../types/flowerShapes";
 
-import grassTileData from "../assets/spritestack/grassTile.json";
-import flowerHeadData from "../assets/spritestack/flowerHead.json";
-import stemData from "../assets/spritestack/stem.json";
-import beeData from "../assets/spritestack/bee.json";
+import grassTileData from "../../assets/spritestack/grassTile.json";
+import flowerHeadData from "../../assets/spritestack/flowerHead.json";
+import stemData from "../../assets/spritestack/stem.json";
+import beeData from "../../assets/spritestack/bee.json";
 
-import { add3dFlower } from "./isometric/add3dFlower";
-import { buildGarden } from "./isometric/buildGarden";
+import { add3dFlower } from "../add3dFlower";
+import { buildGarden } from "../init/buildGarden";
 
 import IsoPlugin, { IsoPhysics } from "phaser3-plugin-isometric";
 export function preload() {

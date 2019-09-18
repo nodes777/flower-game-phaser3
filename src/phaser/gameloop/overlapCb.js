@@ -1,7 +1,7 @@
 import { checkForPollen } from "./checkForPollen";
 
 export const overlapCb = function(bee, flowerToFlyTo) {
-	console.log("COLLIDED");
+	//console.log("COLLIDED");
 
 	// console.log(bee);
 	// console.log(flowerToFlyTo);

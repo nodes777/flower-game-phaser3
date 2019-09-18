@@ -1,7 +1,7 @@
-import { store } from "../index.js";
+import { store } from "../../index.js";
 
-import { add3dFlower } from "./isometric/add3dFlower";
-import { buildGarden } from "./isometric/buildGarden";
+import { add3dFlower } from "../add3dFlower";
+import { buildGarden } from "./buildGarden";
 //import { add3dControls } from "./isometric/add3dControls";
 //import { addBeeFrameRotation } from "./isometric/addBeeFrameRotation";
 export function init(game) {

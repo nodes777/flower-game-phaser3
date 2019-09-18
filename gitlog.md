@@ -1,6 +1,23 @@
-# Gets bee rotation almost right - 9/12/2019 - master
+# Sorts Phaser Folder - 9/18/2019 - master
 
 ## [x](https://github.com/nodes777/flower-game-phaser3/commit/x)
+
+-   Sorts the phaser folder into /gameloop /init and /scenes
+    -   add3dFlower.js is in /phaser
+
+TODO:
+
+-   Rarely bee flies in reverse - this could be because of the 337.5 to 0 range is undefined.
+    -   Change if/else values to be tilted slightly to match a general direction and not a less than amount.
+-   Clean up the /phaser folder structure
+-   Mark tiles as filled when a flower is added to the store.
+-   Figure out a better way for new flower positions to be determined. Even randomly might be better.
+
+---
+
+# Gets bee rotation almost right - 9/12/2019 - master
+
+## [5bae0cac049004694a62454b7c45e97fe0d7bdd2](https://github.com/nodes777/flower-game-phaser3/commit/5bae0cac049004694a62454b7c45e97fe0d7bdd2)
 
 -   Changes rotation.js to figure out which Bee frame should be shown
 
