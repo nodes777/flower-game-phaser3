@@ -32,6 +32,9 @@ export default Allele;
 Allele.propTypes = {
 	alleleName: PropTypes.oneOf([
 		...Object.keys(allTypes.shapes).map(shape => shape.toLowerCase()),
+		...Object.keys(allTypes.shapes).map(shape =>
+			capitalizeFirstLetter(shape)
+		),
 		...Object.keys(allTypes.colors),
 		...Object.keys(allTypes.stems)
 	]),

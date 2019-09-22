@@ -1,6 +1,6 @@
 export const shapes = {
 	Square: "square",
-	Diamond: "diamond",
+	Triangle: "triangle",
 	Default: "default",
 	Round: "round"
 };

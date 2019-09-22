@@ -1,11 +1,12 @@
 import { shapes } from "../../types/flowerShapes";
 
-import grassTileData from "../../assets/spritestack/grassTile.json";
-import defaultFlowerData from "../../assets/spritestack/defaultFlower.json";
-import stemData from "../../assets/spritestack/stem.json";
-import beeData from "../../assets/spritestack/bee.json";
-import squareFlowerData from "../../assets/spritestack/squareFlower.json";
-import roundFlowerData from "../../assets/spritestack/roundFlower.json";
+import grassTileData from "../../assets/grassTile.json";
+import defaultFlowerData from "../../assets/defaultFlower.json";
+import stemData from "../../assets/stem.json";
+import beeData from "../../assets/bee.json";
+import squareFlowerData from "../../assets/squareFlower.json";
+import roundFlowerData from "../../assets/roundFlower.json";
+import triangleFlowerData from "../../assets/triangleFlower.json";
 
 import { add3dFlower } from "../add3dFlower";
 import { buildGarden } from "../init/buildGarden";
@@ -25,45 +26,42 @@ export function preload() {
 	});
 
 	// load 3d assets
-	this.load.spritesheet("grassTile", "src/assets/spritestack/grassTile.png", {
+	this.load.spritesheet("grassTile", "src/assets/grassTile.png", {
 		frameWidth: grassTileData.width, // from json
 		frameHeight: grassTileData.height, // from json
 		startFrame: 0 // only using this frame, this could be a this.load.image
 	});
 
-	this.load.spritesheet(
-		"defaultFlower",
-		"src/assets/spritestack/defaultFlower.png",
-		{
-			frameWidth: defaultFlowerData.width, // from json
-			frameHeight: defaultFlowerData.height // from properties
-			//startFrame: 0 // 4 is the forward facing sprite
-			//endFrame: 9 // 9 is the last angle with semi forward
-		}
-	);
-	this.load.spritesheet(
-		"squareFlower",
-		"src/assets/spritestack/squareFlower.png",
-		{
-			frameWidth: squareFlowerData.width, // length divided by 16 frames
-			frameHeight: squareFlowerData.height,
-			startFrame: 0 //0 is facing east, 4 is facing north
-		}
-	);
-	this.load.spritesheet(
-		"roundFlower",
-		"src/assets/spritestack/roundFlower.png",
-		{
-			frameWidth: roundFlowerData.width, // length divided by 16 frames
-			frameHeight: roundFlowerData.height,
-			startFrame: 0 //0 is facing east, 4 is facing north
-		}
-	);
-	this.load.spritesheet("straightStem3d", "src/assets/spritestack/stem.png", {
+	// Flowers
+	this.load.spritesheet("defaultFlower", "src/assets/defaultFlower.png", {
+		frameWidth: defaultFlowerData.width, // from json
+		frameHeight: defaultFlowerData.height // from properties
+		//startFrame: 0 // 4 is the forward facing sprite
+		//endFrame: 9 // 9 is the last angle with semi forward
+	});
+	this.load.spritesheet("squareFlower", "src/assets/squareFlower.png", {
+		frameWidth: squareFlowerData.width, // length divided by 16 frames
+		frameHeight: squareFlowerData.height,
+		startFrame: 0 //0 is facing east, 4 is facing north
+	});
+	this.load.spritesheet("roundFlower", "src/assets/roundFlower.png", {
+		frameWidth: roundFlowerData.width, // length divided by 16 frames
+		frameHeight: roundFlowerData.height,
+		startFrame: 0 //0 is facing east, 4 is facing north
+	});
+
+	this.load.spritesheet("triangleFlower", "src/assets/triangleFlower.png", {
+		frameWidth: triangleFlowerData.width, // length divided by 16 frames
+		frameHeight: triangleFlowerData.height,
+		startFrame: 0 //0 is facing east, 4 is facing north
+	});
+
+	// Stems
+	this.load.spritesheet("straightStem3d", "src/assets/stem.png", {
 		frameWidth: stemData.width, // from json
 		frameHeight: stemData.height
 	});
-	this.load.spritesheet("bee3d", "src/assets/spritestack/bee.png", {
+	this.load.spritesheet("bee3d", "src/assets/bee.png", {
 		frameWidth: beeData.width, // length divided by 16 frames
 		frameHeight: beeData.height,
 		startFrame: 0 //0 is facing east, 4 is facing north

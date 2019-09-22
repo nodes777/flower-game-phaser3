@@ -49,6 +49,15 @@ export function add3dFlower(currFlower, currFlowerId, game) {
 	//add flower reference for the tile
 	game.isoTiles.children.entries[tileIndex].flowerSprite = newFlowerSprite;
 
+	//Animation
+	const config = {
+		key: "spin",
+		frames: game.anims.generateFrameNumbers(flowerShape),
+		frameRate: 6,
+		yoyo: true,
+		repeat: -1
+	};
+
 	// add the flower to the array of onscreen flowers for bee to fly to
 	game.flowersOnScreen.push(newFlowerSprite);
 }

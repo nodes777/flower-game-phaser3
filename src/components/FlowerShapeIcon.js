@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import defaultShape from "../assets/default-flower.png";
-import diamondShape from "../assets/diamond-flower.png";
-import roundShape from "../assets/round-flower.png";
-import squareShape from "../assets/square-flower.png";
+import defaultShape from "../assets/defaultFlowerIcon.png";
+import triangleShape from "../assets/triangleFlowerIcon.png";
+import roundShape from "../assets/roundFlowerIcon.png";
+import squareShape from "../assets/squareFlowerIcon.png";
 const FlowerShapeIcon = props => {
 	const { shape } = props;
 	const iconStyle = { verticalAlign: "bottom" };
@@ -16,9 +16,9 @@ const FlowerShapeIcon = props => {
 						return (
 							<img alt="" style={iconStyle} src={defaultShape} />
 						);
-					case "diamond":
+					case "triangle":
 						return (
-							<img alt="" style={iconStyle} src={diamondShape} />
+							<img alt="" style={iconStyle} src={triangleShape} />
 						);
 					case "round":
 						return (

@@ -40,7 +40,7 @@ export const _handleOptionsEvents = function(color, index, event) {
 				this.setState(() => ({
 					focusedOption: document.activeElement.id
 				}));
-				console.log(this.state.focusedOption);
+				//console.log(this.state.focusedOption);
 			}
 			if (event.key === "Escape") {
 				this.setState(

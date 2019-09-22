@@ -1,6 +1,6 @@
 import { store } from "../../index.js";
 import { addTilesToStore } from "../../actions/tileActions.js";
-import grassTileData from "../../assets/spritestack/grassTile.json";
+import grassTileData from "../../assets/grassTile.json";
 
 export const tileHeight = grassTileData.height - 2;
 export const addTiles = (game, size) => {

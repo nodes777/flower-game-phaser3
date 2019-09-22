@@ -1,6 +1,18 @@
+# Adds triangle flower - 9/22/2019 - master
+
+## [710fadfe2f71f8933009b2f62b17507cc0b8dd0c](https://github.com/nodes777/flower-game-phaser3/commit/710fadfe2f71f8933009b2f62b17507cc0b8dd0c)
+
+-   Add triangle flower asset
+-   Minor bug fix for Prop.type expectations for alleleNames in listbox
+-   Moves assets/spritestack into assets
+-   Major bug fix in tile reducer
+    -   `availableTiles` weren't being set correctly and growing exponentially
+
+---
+
 # Adds round flower - 9/18/2019 - master
 
-## [84025721aacf89f75b3e4922e2784befe2104c09](https://github.com/nodes777/flower-game-phaser3/commit/84025721aacf89f75b3e4922e2784befe2104c09)
+## [710fadfe2f71f8933009b2f62b17507cc0b8dd0c](https://github.com/nodes777/flower-game-phaser3/commit/710fadfe2f71f8933009b2f62b17507cc0b8dd0c)
 
 -   Adds round flower shape
 -   Removes unused assets in /spritestack

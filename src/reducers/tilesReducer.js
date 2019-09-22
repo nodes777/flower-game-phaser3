@@ -42,20 +42,13 @@ export function tilesReducer(state = exampleState.tiles, action) {
 				]
 			};
 
-		case SET_AVAILABLE_TILES:
-			const { newTilesArr } = action;
-			// console.log(newTilesArr);
-			return {
-				...state,
-				availableTiles: newTilesArr
-			};
-
 		case SET_FIRST_FLOWER_POSITION:
 			const { initPos } = action;
 			// cant reuse these variable names when they're const
 			const tIndex = initPos.tileIndex;
-			const oTile = state.allTiles[tIndex];
-			const aTileIndex = state.availableTiles.indexOf(oldTile);
+			let oTile = state.allTiles[tIndex];
+
+			const aTileIndex = state.availableTiles.indexOf(oTile);
 
 			oTile.filled = true;
 
@@ -67,9 +60,17 @@ export function tilesReducer(state = exampleState.tiles, action) {
 					...state.allTiles.slice(tIndex + 1)
 				],
 				availableTiles: [
-					...state.availableTiles.slice(0, availableTileIndex),
-					...state.availableTiles.slice(availableTileIndex + 1)
+					...state.availableTiles.slice(0, aTileIndex),
+					...state.availableTiles.slice(aTileIndex + 1)
 				]
+			};
+
+		case SET_AVAILABLE_TILES:
+			const { newTilesArr } = action;
+			// console.log(newTilesArr);
+			return {
+				...state,
+				availableTiles: newTilesArr
 			};
 
 		default:
