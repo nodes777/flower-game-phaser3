@@ -1,5 +1,13 @@
 import { shapes } from "../../types/flowerShapes";
 
+import grassTileImg from "../../assets/grassTile.png";
+import defaultFlowerImg from "../../assets/defaultFlower.png";
+import stemImg from "../../assets/stem.png";
+import beeImg from "../../assets/bee.png";
+import squareFlowerImg from "../../assets/squareFlower.png";
+import roundFlowerImg from "../../assets/roundFlower.png";
+import triangleFlowerImg from "../../assets/triangleFlower.png";
+
 import grassTileData from "../../assets/grassTile.json";
 import defaultFlowerData from "../../assets/defaultFlower.json";
 import stemData from "../../assets/stem.json";

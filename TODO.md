@@ -1,5 +1,6 @@
 # TO DO
 
+-   Npm build doesn't bundle spritesheets
 -   Rotation animation when new flower appears
 -   Set available tiles to be a formula
 -   Add back in save to local storage, check for existing data on load

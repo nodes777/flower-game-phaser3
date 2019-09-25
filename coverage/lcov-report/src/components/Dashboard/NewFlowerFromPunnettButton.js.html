@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">38.46% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/10</span>
+        <span class='fraction'>5/13</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,16 +35,16 @@
         <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">38.46% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/10</span>
+        <span class='fraction'>5/13</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -120,8 +120,7 @@
 <a name='L72'></a><a href='#L72'>72</a>
 <a name='L73'></a><a href='#L73'>73</a>
 <a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -131,10 +130,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -147,10 +144,11 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,10 +173,10 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -198,19 +196,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
 import { connect } from "react-redux";
-import { addFlowerToStore } from "../../actions/indexActions";
-import {
-	determineRandomXPos,
-	determineRandomYPos
-} from "../../determinants/determinePosition";
+import { addFlowerToStore } from "../../actions/flowerActions";
+import { determineRandomPos } from "../../determinants/determinePosition";
 &nbsp;
 import { screenSize } from "../../utils/screenSize";
 &nbsp;
 import PropTypes from "prop-types";
 &nbsp;
-function mapStateToProps({ punnett }) {
+function mapStateToProps({ punnett, tiles }) {
 	return {
-		punnett
+		punnett,
+		tiles
 	};
 }
 &nbsp;
@@ -219,9 +215,12 @@ class NewFlowerFromPunnettButton extends React.Component {
 		punnett: PropTypes.object
 	};
 	handleSubmit = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-		const { dispatch, punnett } = <span class="cstat-no" title="statement not covered" >this.props;</span>
+		const { dispatch, punnett, tiles } = <span class="cstat-no" title="statement not covered" >this.props;</span>
 		const parent1 = <span class="cstat-no" title="statement not covered" >punnett.parent1;</span>
 		const parent2 = <span class="cstat-no" title="statement not covered" >punnett.parent2;</span>
+		const tileInfo = <span class="cstat-no" title="statement not covered" >determineRandomPos(tiles.availableTiles);</span>
+		const posX = <span class="cstat-no" title="statement not covered" >tileInfo.x;</span>
+		const posY = <span class="cstat-no" title="statement not covered" >tileInfo.y;</span>
 &nbsp;
 		const info = <span class="cstat-no" title="statement not covered" >{</span>
 			parent1: {
@@ -241,10 +240,8 @@ class NewFlowerFromPunnettButton extends React.Component {
 				position: { x: 0, y: 0 }
 			},
 			posInfo: {
-				newPos: {
-					x: determineRandomXPos(screenSize),
-					y: determineRandomYPos(screenSize)
-				}
+				newPos: { x: posX, y: posY },
+				tileIndex: tileInfo.tileIndex
 			}
 		};
 <span class="cstat-no" title="statement not covered" >		dispatch(addFlowerToStore(info));</span>
@@ -277,7 +274,7 @@ export default connect(mapStateToProps)(NewFlowerFromPunnettButton);
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 11 2019 09:44:09 GMT-0400 (Eastern Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Sep 25 2019 11:37:44 GMT-0400 (Eastern Daylight Time)
 </div>
 </div>
 <script src="..\..\..\prettify.js"></script>

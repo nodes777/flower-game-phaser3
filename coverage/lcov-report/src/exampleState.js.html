@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>18/18</span>
+        <span class='fraction'>14/14</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>18/18</span>
+        <span class='fraction'>14/14</span>
       </div>
     </div>
     <p class="quiet">
@@ -139,7 +139,10 @@
 <a name='L91'></a><a href='#L91'>91</a>
 <a name='L92'></a><a href='#L92'>92</a>
 <a name='L93'></a><a href='#L93'>93</a>
-<a name='L94'></a><a href='#L94'>94</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -150,40 +153,43 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -253,10 +259,10 @@ const shape2 = getRandomShape();
 const shape3 = getRandomShape();
 const shape4 = getRandomShape();
 &nbsp;
-const parent1XPos = determineRandomXPos(screenSize);
-const parent1YPos = determineRandomYPos(screenSize);
-const parent2XPos = determineRandomXPos(screenSize);
-const parent2YPos = determineRandomYPos(screenSize);
+// const parent1XPos = determineRandomPos(screenSize);
+// const parent1YPos = determineRandomYPos(screenSize);
+// const parent2XPos = determineRandomXPos(screenSize);
+// const parent2YPos = determineRandomYPos(screenSize);
 &nbsp;
 const parent1Geno = {
     color: [color1, color2],
@@ -280,35 +286,36 @@ const exampleState = {
     punnett: {
         parent1: {
             genotype: parent1Geno,
-            position: { x: parent1XPos, y: parent1YPos },
-            phenotype: parent1Pheno
+            position: {},
+            phenotype: parent1Pheno,
+            tileIndex: null
         },
         parent2: {
             genotype: parent2Geno,
-            position: { x: parent2XPos, y: parent2YPos },
-            phenotype: parent2Pheno
+            position: {},
+            phenotype: parent2Pheno,
+            tileIndex: null
         }
     },
     flowers: {
         byId: {
             flower1: {
                 genotype: parent1Geno,
-                position: { x: parent1XPos, y: parent1YPos },
+                position: {},
                 phenotype: parent1Pheno,
-                name: "flower1"
+                name: "flower1",
+                tileIndex: null // this doesn't mark the tile as filled
             },
             flower2: {
                 genotype: parent2Geno,
-                position: { x: parent2XPos, y: parent2YPos },
+                position: {},
                 phenotype: parent2Pheno,
-                name: "flower2"
+                name: "flower2",
+                tileIndex: null
             }
         },
         allIds: ["flower1", "flower2"],
-        allPositions: [
-            { x: parent1XPos, y: parent1YPos },
-            { x: parent2XPos, y: parent2YPos }
-        ]
+        allPositions: [{}, {}]
     },
     bees: {
         byId: {
@@ -320,8 +327,10 @@ const exampleState = {
     },
     config: {
         beeCanFly: false,
-        recessive: defaultRecessive
-    }
+        recessive: defaultRecessive,
+        tooltip: { visible: false, content: "Nothing", posX: 500, posY: 100 }
+    },
+    tiles: { allTiles: [], availableTiles: [], numberOfTiles: null }
 };
 &nbsp;
 export default exampleState;
@@ -331,7 +340,7 @@ export default exampleState;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 11 2019 09:44:09 GMT-0400 (Eastern Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Sep 25 2019 11:37:44 GMT-0400 (Eastern Daylight Time)
 </div>
 </div>
 <script src="..\prettify.js"></script>
