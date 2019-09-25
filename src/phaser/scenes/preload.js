@@ -1,5 +1,6 @@
 import { shapes } from "../../types/flowerShapes";
 
+// Need this for npm build to add to /dist
 import grassTileImg from "../../assets/grassTile.png";
 import defaultFlowerImg from "../../assets/defaultFlower.png";
 import stemImg from "../../assets/stem.png";
@@ -34,42 +35,42 @@ export function preload() {
 	});
 
 	// load 3d assets
-	this.load.spritesheet("grassTile", "src/assets/grassTile.png", {
+	this.load.spritesheet("grassTile", grassTileImg, {
 		frameWidth: grassTileData.width, // from json
 		frameHeight: grassTileData.height, // from json
 		startFrame: 0 // only using this frame, this could be a this.load.image
 	});
 
 	// Flowers
-	this.load.spritesheet("defaultFlower", "src/assets/defaultFlower.png", {
+	this.load.spritesheet("defaultFlower", defaultFlowerImg, {
 		frameWidth: defaultFlowerData.width, // from json
 		frameHeight: defaultFlowerData.height // from properties
 		//startFrame: 0 // 4 is the forward facing sprite
 		//endFrame: 9 // 9 is the last angle with semi forward
 	});
-	this.load.spritesheet("squareFlower", "src/assets/squareFlower.png", {
+	this.load.spritesheet("squareFlower", squareFlowerImg, {
 		frameWidth: squareFlowerData.width, // length divided by 16 frames
 		frameHeight: squareFlowerData.height,
 		startFrame: 0 //0 is facing east, 4 is facing north
 	});
-	this.load.spritesheet("roundFlower", "src/assets/roundFlower.png", {
+	this.load.spritesheet("roundFlower", roundFlowerImg, {
 		frameWidth: roundFlowerData.width, // length divided by 16 frames
 		frameHeight: roundFlowerData.height,
 		startFrame: 0 //0 is facing east, 4 is facing north
 	});
 
-	this.load.spritesheet("triangleFlower", "src/assets/triangleFlower.png", {
+	this.load.spritesheet("triangleFlower", triangleFlowerImg, {
 		frameWidth: triangleFlowerData.width, // length divided by 16 frames
 		frameHeight: triangleFlowerData.height,
 		startFrame: 0 //0 is facing east, 4 is facing north
 	});
 
 	// Stems
-	this.load.spritesheet("straightStem3d", "src/assets/stem.png", {
+	this.load.spritesheet("straightStem3d", stemImg, {
 		frameWidth: stemData.width, // from json
 		frameHeight: stemData.height
 	});
-	this.load.spritesheet("bee3d", "src/assets/bee.png", {
+	this.load.spritesheet("bee3d", beeImg, {
 		frameWidth: beeData.width, // length divided by 16 frames
 		frameHeight: beeData.height,
 		startFrame: 0 //0 is facing east, 4 is facing north
