@@ -1,7 +1,5 @@
 # TO DO
 
--   BUG: first tile isn't being filled correctly
--   Add in the other flower shapes
 -   Rotation animation when new flower appears
 -   Set available tiles to be a formula
 -   Add back in save to local storage, check for existing data on load

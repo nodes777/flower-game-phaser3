@@ -86,7 +86,7 @@ const exampleState = {
         allBeeIds: ["bee1"]
     },
     config: {
-        beeCanFly: true,
+        beeCanFly: false,
         recessive: defaultRecessive,
         tooltip: { visible: false, content: "Nothing", posX: 500, posY: 100 }
     },

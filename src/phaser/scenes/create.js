@@ -1,7 +1,12 @@
 import { checkStore, getStoreState } from "../gameloop/checkStore";
 import { checkForPollen } from "../gameloop/checkForPollen";
 import { init } from "../init/init";
+
+import { createAnims } from "../utils/createAnims";
+
 export function create() {
+	createAnims(this);
+
 	// creates initial flowers
 	init(this);
 

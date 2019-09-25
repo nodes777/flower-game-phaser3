@@ -10,17 +10,18 @@ export function add3dFlower(currFlower, currFlowerId, game) {
 	const posX = currFlower.position.x;
 	const posY = currFlower.position.y;
 	const tileIndex = currFlower.tileIndex;
-	const flowerShape = determineFlowerShape(phenotype);
+	let flowerShape = determineFlowerShape(phenotype);
+	console.log(flowerShape);
 
 	// set position and shape
 	let newFlowerSprite = game.add.isoSprite(
 		posX, // x
 		posY, // y
 		2, // z
-		flowerShape //flowerShape
+		flowerShape
 	);
 	// setFrame because ^ isoSprite doesn't set frame correctly
-	newFlowerSprite.setFrame(0);
+	//newFlowerSprite.setFrame(0);
 
 	// Enable the physics body on this
 	game.isoPhysics.world.enable(newFlowerSprite);
@@ -33,13 +34,12 @@ export function add3dFlower(currFlower, currFlowerId, game) {
 		"straightStem3d" // stem Shape
 	);
 
-	newFlowerSprite.stem.setFrame(0);
 	// set color
 	newFlowerSprite.setTint(getHexColor(phenotype.color));
 	console.log(newFlowerSprite);
 
 	// hide debug info
-	//newFlowerSprite.debugShowBody = false;
+	// newFlowerSprite.debugShowBody = false;
 	// create id
 	newFlowerSprite.id = currFlowerId;
 	// keep on top of stem
@@ -49,14 +49,11 @@ export function add3dFlower(currFlower, currFlowerId, game) {
 	//add flower reference for the tile
 	game.isoTiles.children.entries[tileIndex].flowerSprite = newFlowerSprite;
 
-	//Animation
-	const config = {
-		key: "spin",
-		frames: game.anims.generateFrameNumbers(flowerShape),
-		frameRate: 6,
-		yoyo: true,
-		repeat: -1
-	};
+	// Animation
+	newFlowerSprite.anims.load(`${flowerShape}Spin`);
+	console.log("newFlowerSprite animation properties:");
+	console.log(newFlowerSprite.anims);
+	newFlowerSprite.anims.play(`${flowerShape}Spin`);
 
 	// add the flower to the array of onscreen flowers for bee to fly to
 	game.flowersOnScreen.push(newFlowerSprite);

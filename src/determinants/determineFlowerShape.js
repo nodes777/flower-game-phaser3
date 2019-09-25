@@ -1,4 +1,5 @@
 import { shapes } from "../types/flowerShapes";
+
 export const determineFlowerShape = phenotype => {
 	if (phenotype.shape === undefined) {
 		return shapes.Default;
@@ -8,9 +9,8 @@ export const determineFlowerShape = phenotype => {
 		case "default": {
 			return `${shapes.Default}Flower`;
 		}
-		case "diamond": {
-			//dont have a diamond shape yet
-			return `${shapes.Default}Flower`;
+		case "triangle": {
+			return `${shapes.Triangle}Flower`;
 		}
 		case "square": {
 			return `${shapes.Square}Flower`;
