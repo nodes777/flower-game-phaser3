@@ -42,6 +42,16 @@ export function init(game) {
 	/* Second Flower */
 	add3dFlower(storeFlowers.byId.flower2, "flower2", game);
 
+	if (storeFlowers.allIds.length > 2) {
+		for (let i = 2; i < storeFlowers.allIds.length; i++) {
+			add3dFlower(
+				storeFlowers.byId[storeFlowers.allIds[i]],
+				storeFlowers.allIds[i],
+				game
+			);
+		}
+	}
+
 	// set the flower to go to
 	game.flowerToFlyTo = game.flowersOnScreen[0];
 	//game.isoPhysics.world.enable(game.flowerToFlyTo);

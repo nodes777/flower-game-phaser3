@@ -11,7 +11,9 @@ function mapStateToProps(fullState) {
 class ClearLocalStorageButton extends React.Component {
 	handleSubmit = () => {
 		clearState(this.props.fullState);
-		alert("Your garden has been cleared from local storage");
+		alert(
+			"Your garden has been cleared from local storage and will not appear upon reloading of the page"
+		);
 	};
 	render() {
 		return (

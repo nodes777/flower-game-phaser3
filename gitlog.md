@@ -1,6 +1,33 @@
+# Adds back in save/load from localStorage - 9/25/2019 - master
+
+## [0524546ba684c5be4bf69a30a07a9e2de11090f3](https://github.com/nodes777/flower-game-phaser3/commit/0524546ba684c5be4bf69a30a07a9e2de11090f3)
+
+-   Adds back in saving/loading from storage
+    -   Simple update check in init.js
+-   Fixes minor bug where diamond shape would be passed in when getting a new flower from punnett
+
+---
+
+# Adds spritesheets as images so they can be bundled - 9/25/2019 - master
+
+## [0524546ba684c5be4bf69a30a07a9e2de11090f3](https://github.com/nodes777/flower-game-phaser3/commit/0524546ba684c5be4bf69a30a07a9e2de11090f3)
+
+-   Spritesheets are now imported as images so they can be bundled and included in `npm run build`
+-   Creates an anims folder in /phaser/utils to seperate animations out
+-   Resolves bug where the only flower shapes shown would be the first one
+    -   This was due to the animations set up
+-   [BUG: still can't get animations to work](https://phaser.discourse.group/t/isometric-animations-not-playing/3803)
+
+Possible workarounds:
+
+-   Raise the z up to position
+-   Opacity fade in
+
+---
+
 # Adds triangle flower - 9/22/2019 - master
 
-## [710fadfe2f71f8933009b2f62b17507cc0b8dd0c](https://github.com/nodes777/flower-game-phaser3/commit/710fadfe2f71f8933009b2f62b17507cc0b8dd0c)
+## [99a48bd9677debe62f947aa018cb9aa802bee25d](https://github.com/nodes777/flower-game-phaser3/commit/99a48bd9677debe62f947aa018cb9aa802bee25d)
 
 -   Add triangle flower asset
 -   Minor bug fix for Prop.type expectations for alleleNames in listbox

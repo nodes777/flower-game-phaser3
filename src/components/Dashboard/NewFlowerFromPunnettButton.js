@@ -30,7 +30,7 @@ class NewFlowerFromPunnettButton extends React.Component {
 			parent1: {
 				genotype: {
 					color: parent1.genotype.color,
-					shape: ["square", "round"],
+					shape: parent1.genotype.shape,
 					stem: parent1.genotype.stem
 				},
 				position: { x: 0, y: 0 }
@@ -38,7 +38,7 @@ class NewFlowerFromPunnettButton extends React.Component {
 			parent2: {
 				genotype: {
 					color: parent2.genotype.color,
-					shape: ["square", "diamond"],
+					shape: parent2.genotype.shape,
 					stem: parent2.genotype.stem
 				},
 				position: { x: 0, y: 0 }

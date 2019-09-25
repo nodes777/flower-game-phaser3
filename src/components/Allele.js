@@ -10,6 +10,7 @@ const Allele = props => {
 	const fontStyle = {
 		fontStyle: isRecessive ? "italic" : null
 	};
+
 	return (
 		<span>
 			<span style={fontStyle}>{capitalizeFirstLetter(alleleName)}</span>
