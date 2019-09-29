@@ -4,6 +4,6 @@ export function addNewFlowers(numFlowersPrev, currState, game) {
 	for (let i = numFlowersPrev; i < currState.flowers.allIds.length; i++) {
 		let currFlowerId = currState.flowers.allIds[i];
 		let currFlower = currState.flowers.byId[currFlowerId];
-		add3dFlower(currFlower, currFlowerId, game);
+		add3dFlower(currFlower, currFlowerId, game, false);
 	}
 }

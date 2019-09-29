@@ -2,6 +2,13 @@ import { beeFrameRotate } from "../gameloop/rotation";
 
 import { overlapCb } from "../gameloop/overlapCb";
 export function update() {
+	this.flowersGrowing.forEach(flowerData => {
+		if (flowerData.flowerSprite._isoPosition.z >= flowerData.posZFlower) {
+			flowerData.flowerSprite.body.velocity.set(0);
+			flowerData.stemSprite.body.velocity.set(0);
+		}
+	});
+
 	if (this.beeCanFly) {
 		//this.isoPhysics.moveToObject(this.bee, this.flowerToFlyTo, 400);
 		if (!this.bee1Collided) {

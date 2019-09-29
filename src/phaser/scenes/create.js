@@ -22,6 +22,8 @@ export function create() {
 	});
 
 	this.beeCanFly = getStoreState().config.beeCanFly;
+	// keep track of which flowers are "growing"/ moving upward
+	this.flowersGrowing = [];
 
 	// hack to reset bee's accelleration every 1/10 sec so that orbits appear less frequently
 	// this.time.addEvent({
