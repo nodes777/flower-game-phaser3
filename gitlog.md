@@ -1,6 +1,27 @@
+# Hack for flower rotation animation - 10/4/2019 - master
+
+## [69a59f0f14d43037bbb4bd593fe62a9b44b5123a](https://github.com/nodes777/flower-game-phaser3/commit/69a59f0f14d43037bbb4bd593fe62a9b44b5123a)
+
+-   Hacky flower spin animation implementation. Could not get anything to work with the animation manager
+
+    -   Always showed the first frame of the flower
+        `// // Animation // loading the animation sets the frame to 0 and never plays the animation // whyyyyyyy // console.log(`\${flowerShape}Spin`); // newFlowerSprite.anims.load(`\${flowerShape}Spin`); // console.log("newFlowerSprite animation properties:"); // console.log(newFlowerSprite.anims); // newFlowerSprite.anims.play(`\${flowerShape}Spin`); // console.log(newFlowerSprite.anims);`
+
+-   ToDo:
+
+    -   Delete or replace createAnims.js
+    -   Refactor animation in add3dFlower
+    -   Remove the growing throw grass tiles functionality
+
+-   BUG:
+    -   Flower sprite is always on top even when stem is facing backwards
+        -   Could just set depth to be lower on back facing sprites
+
+---
+
 # Adds back in save/load from localStorage - 9/25/2019 - master
 
-## [0524546ba684c5be4bf69a30a07a9e2de11090f3](https://github.com/nodes777/flower-game-phaser3/commit/0524546ba684c5be4bf69a30a07a9e2de11090f3)
+## [69a59f0f14d43037bbb4bd593fe62a9b44b5123a](https://github.com/nodes777/flower-game-phaser3/commit/69a59f0f14d43037bbb4bd593fe62a9b44b5123a)
 
 -   Adds back in saving/loading from storage
     -   Simple update check in init.js

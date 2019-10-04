@@ -44,25 +44,24 @@ export function preload() {
 	// Flowers
 	this.load.spritesheet("defaultFlower", defaultFlowerImg, {
 		frameWidth: defaultFlowerData.width, // from json
-		frameHeight: defaultFlowerData.height // from properties
-		//startFrame: 0 // 4 is the forward facing sprite
-		//endFrame: 9 // 9 is the last angle with semi forward
+		frameHeight: defaultFlowerData.height,
+		startFrame: 4 // 4 is the forward facing sprite
 	});
 	this.load.spritesheet("squareFlower", squareFlowerImg, {
-		frameWidth: squareFlowerData.width, // length divided by 16 frames
+		frameWidth: squareFlowerData.width,
 		frameHeight: squareFlowerData.height,
-		startFrame: 0 //0 is facing east, 4 is facing north
+		startFrame: 4 //4 is facing east, 4 is facing north
 	});
 	this.load.spritesheet("roundFlower", roundFlowerImg, {
-		frameWidth: roundFlowerData.width, // length divided by 16 frames
+		frameWidth: roundFlowerData.width,
 		frameHeight: roundFlowerData.height,
-		startFrame: 0 //0 is facing east, 4 is facing north
+		startFrame: 4 //4 is facing east, 4 is facing north
 	});
 
 	this.load.spritesheet("triangleFlower", triangleFlowerImg, {
-		frameWidth: triangleFlowerData.width, // length divided by 16 frames
+		frameWidth: triangleFlowerData.width,
 		frameHeight: triangleFlowerData.height,
-		startFrame: 0 //0 is facing east, 4 is facing north
+		startFrame: 4 //4 is facing east, 4 is facing north
 	});
 
 	// Stems
@@ -70,10 +69,11 @@ export function preload() {
 		frameWidth: stemData.width, // from json
 		frameHeight: stemData.height
 	});
+	// Bee
 	this.load.spritesheet("bee3d", beeImg, {
-		frameWidth: beeData.width, // length divided by 16 frames
+		frameWidth: beeData.width,
 		frameHeight: beeData.height,
-		startFrame: 0 //0 is facing east, 4 is facing north
+		startFrame: 0
 	});
 
 	// display progress bar
