@@ -1,6 +1,23 @@
+# Refactors flower spin animations - 10/5/2019 - master
+
+## [30c609bfd63eb2ffa650b106e2b573582db73d24](https://github.com/nodes777/flower-game-phaser3/commit/30c609bfd63eb2ffa650b106e2b573582db73d24)
+
+-   Deletes createAnims.js for animateFlowerGrowth.js
+-   Moves all image assets (expept bee) up by 10 in Sprite Stack
+
+    -   Create thicker grass tiles
+    -   Stems were made longer to avoid a shadow bug where grass would appear on top of flower shadows
+        -   This could be tweaked, stem could be a bit shorter
+
+-   BUG:
+    -   Flower sprite is always on top even when stem is facing backwards
+        -   Changing the depth creates a flashing sprite, doesn't look good
+
+---
+
 # Hack for flower rotation animation - 10/4/2019 - master
 
-## [69a59f0f14d43037bbb4bd593fe62a9b44b5123a](https://github.com/nodes777/flower-game-phaser3/commit/69a59f0f14d43037bbb4bd593fe62a9b44b5123a)
+## [30c609bfd63eb2ffa650b106e2b573582db73d24](https://github.com/nodes777/flower-game-phaser3/commit/30c609bfd63eb2ffa650b106e2b573582db73d24)
 
 -   Hacky flower spin animation implementation. Could not get anything to work with the animation manager
 

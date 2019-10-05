@@ -2,16 +2,30 @@ import { store } from "../../index.js";
 import { addTilesToStore } from "../../actions/tileActions.js";
 import grassTileData from "../../assets/grassTile.json";
 
-export const tileHeight = grassTileData.height - 2;
+// Depending on the grass tile, you might need different margins
+const flatTight = 2;
+const tallTight = 38;
+const tallFar = 20;
+const zTallMargin = -10;
+
+export const tileHeight = grassTileData.height - tallTight;
 export const addTiles = (game, size) => {
+	const raiseByHeight = 10;
 	let tile;
 	let tilesArr = [];
 
 	let index = 0;
 	for (let xx = 0; xx < size; xx += tileHeight) {
 		for (let yy = 0; yy < size; yy += tileHeight) {
-			tile = game.add.isoSprite(xx, yy, 0, "grassTile", game.isoTiles);
+			tile = game.add.isoSprite(
+				xx,
+				yy,
+				zTallMargin,
+				"grassTile",
+				game.isoTiles
+			);
 			tile.setInteractive();
+			tile.depth = 0;
 
 			// text position reference
 			let isoX = xx - yy;
@@ -21,20 +35,20 @@ export const addTiles = (game, size) => {
 
 			tile.on("pointerover", function() {
 				this.setTint(0x86bfda);
-				this.isoZ += 5;
+				this.isoZ += raiseByHeight;
 
 				if (this.flowerSprite) {
-					this.flowerSprite.isoZ += 5;
-					this.flowerSprite.stem.isoZ += 5;
+					this.flowerSprite.isoZ += raiseByHeight;
+					this.flowerSprite.stem.isoZ += raiseByHeight;
 				}
 			});
 
 			tile.on("pointerout", function() {
 				this.clearTint();
-				this.isoZ -= 5;
+				this.isoZ -= raiseByHeight;
 				if (this.flowerSprite) {
-					this.flowerSprite.isoZ -= 5;
-					this.flowerSprite.stem.isoZ -= 5;
+					this.flowerSprite.isoZ -= raiseByHeight;
+					this.flowerSprite.stem.isoZ -= raiseByHeight;
 				}
 			});
 
