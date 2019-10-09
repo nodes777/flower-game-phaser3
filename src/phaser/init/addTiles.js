@@ -25,7 +25,6 @@ export const addTiles = (game, size) => {
 				game.isoTiles
 			);
 			tile.setInteractive();
-			tile.depth = 0;
 
 			// text position reference
 			let isoX = xx - yy;
@@ -62,7 +61,27 @@ export const addTiles = (game, size) => {
 			};
 			tilesArr.push(tileData);
 			index++;
+
+			// game.floatingTilesTween = game.tweens.add({
+			// 	targets: tile,
+			// 	isoZ: 10,
+			// 	ease: "Sine.easeInOut",
+			// 	duration: 3000,
+			// 	delay: index * 50,
+			// 	repeat: -1,
+			// 	yoyo: true
+			// });
 		}
 	}
+	// game.floatingTilesTween = game.tweens.add({
+	// 	targets: [game.isoTiles.children.entries],
+	// 	isoZ: 10,
+	// 	ease: "Sine.easeInOut",
+	// 	duration: 3000,
+	// 	delay: 50,
+	// 	repeat: -1,
+	// 	yoyo: true
+	// });
+
 	store.dispatch(addTilesToStore(tilesArr));
 };

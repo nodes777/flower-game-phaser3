@@ -12,7 +12,7 @@ import { setAvailableTiles } from "../../actions/tileActions";
 import { CHECKER_BOARD } from "../../types/gardenShapes.js";
 import { fillAvailableTiles } from "./fillAvailableTiles.js";
 
-const sizes = [240, 400, 800, 1040];
+const sizes = [240, 450, 800, 1040];
 
 export const buildGarden = game => {
 	const size = sizes[1];
@@ -27,6 +27,7 @@ export const buildGarden = game => {
 	// find center point
 	const tiles = store.getState().tiles;
 	const centerTile = determineCenterTile(tiles, size, tileHeight);
+	const firstTile = tiles.allTiles[0];
 	const lastTile = tiles.allTiles[tiles.numberOfTiles - 1];
 
 	// set first two flowers positions

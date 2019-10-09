@@ -55,7 +55,4 @@ export function init(game) {
 	// set the flower to go to
 	game.flowerToFlyTo = game.flowersOnScreen[0];
 	//game.isoPhysics.world.enable(game.flowerToFlyTo);
-
-	// 3d controls
-	//add3dControls(game);
 }

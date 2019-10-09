@@ -12,7 +12,7 @@ export function animateFlowerGrowth(game, sprite) {
 					sprite.setFrame(i);
 					sprite.stem.setFrame(i);
 				}
-
+				// for stem on top of flower issue
 				// if (i > 4 && i < 12) {
 				// 	sprite.depth = 0;
 				// 	sprite.stem.depth = 1;
@@ -20,6 +20,14 @@ export function animateFlowerGrowth(game, sprite) {
 				// 	sprite.depth = 2;
 				// }
 			}
+		});
+		game.tweens.add({
+			targets: [sprite, sprite.stem],
+			scaleX: 1,
+			scaleY: 1,
+			ease: "Sine.easeOutIn",
+			duration: 1000,
+			yoyo: false
 		});
 	}
 }

@@ -1,6 +1,7 @@
 import { shapes } from "../../types/flowerShapes";
 
 // Need this for npm build to add to /dist
+import backgroundImg from "../../assets/spacefield.png";
 import grassTileImg from "../../assets/grassTile.png";
 import defaultFlowerImg from "../../assets/defaultFlower.png";
 import stemImg from "../../assets/stem.png";
@@ -33,6 +34,8 @@ export function preload() {
 		url: IsoPhysics,
 		sceneKey: "isoPhysics"
 	});
+	// background
+	this.load.image("background", backgroundImg);
 
 	// load 3d assets
 	this.load.spritesheet("grassTile", grassTileImg, {

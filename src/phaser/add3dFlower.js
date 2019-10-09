@@ -36,17 +36,19 @@ export function add3dFlower(
 		posZStem,
 		"straightStem3d" // stem Shape
 	);
+
 	game.isoPhysics.world.enable(newFlowerSprite.stem);
 	// set color
 	newFlowerSprite.setTint(getHexColor(phenotype.color));
 
-	// hide debug info -  debug info doesnt show on IsoSprites
+	// hide debug info -  debug info doesnt work on IsoSprites
 	// newFlowerSprite.debugShowBody = false;
 
 	// create id
 	newFlowerSprite.id = currFlowerId;
 	// keep on top of stem
-	newFlowerSprite.depth = 1;
+	newFlowerSprite.setDepth(999);
+	newFlowerSprite.stem.setDepth(998);
 	//console.log(newFlowerSprite);
 
 	//add flower reference for the tile
@@ -56,7 +58,26 @@ export function add3dFlower(
 	game.flowersOnScreen.push(newFlowerSprite);
 	//console.log(newFlowerSprite);
 	if (!fromInitialization) {
+		// will grow in tween
+		newFlowerSprite.setScale(0.1);
+		newFlowerSprite.stem.setScale(0.1);
 		// Animation hack
 		animateFlowerGrowth(game, newFlowerSprite);
 	}
+	// game.floatingTilesTween = game.tweens.add({
+	// 	targets: [
+	// 		game.isoTiles.children.entries,
+	// 		newFlowerSprite,
+	// 		newFlowerSprite.stem
+	// 	],
+	// 	isoZ: 10,
+	// 	ease: "Sine.easeInOut",
+	// 	duration: 3000,
+	// 	delay: 50,
+	// 	repeat: -1,
+	// 	yoyo: true
+	// });
+	// game.floatingTilesTween.updateTo("targets", [newFlowerSprite]);
+	// console.log(game.isoTiles);
+	// console.log(game.floatingTilesTween);
 }

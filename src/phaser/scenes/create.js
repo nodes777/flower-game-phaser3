@@ -3,9 +3,14 @@ import { checkForPollen } from "../gameloop/checkForPollen";
 import { init } from "../init/init";
 
 export function create() {
-	//createAnims(this);
+	// width and height from image properties
+	this.background = this.add.tileSprite(0, 0, 1280, 800, "background");
+	this.background
+		.setScale(2.6)
+		.setOrigin(0)
+		.setDepth(-13); // first tile's depth is -12.5
 
-	// creates initial flowers
+	// builds garden and creates initial flowers
 	init(this);
 
 	// collider flag for avoiding running the collision function over and over while the bee is colliding

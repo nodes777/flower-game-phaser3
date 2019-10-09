@@ -1,6 +1,23 @@
-# Refactors flower spin animations - 10/5/2019 - master
+# Adds scrolling space background, growing flowers tween - 10/7/2019 - master
 
-## [30c609bfd63eb2ffa650b106e2b573582db73d24](https://github.com/nodes777/flower-game-phaser3/commit/30c609bfd63eb2ffa650b106e2b573582db73d24)
+## [533fc5b76e6a548339df13e3ad4f1c76881e8de6](https://github.com/nodes777/flower-game-phaser3/commit/533fc5b76e6a548339df13e3ad4f1c76881e8de6)
+
+-   Adds a tileSprite background that scrolls topdown
+-   Had an issue where the first tile would always render behind the background
+    -   That tile's depth was set to -12.5 and couldn't be changed (tile_depth=0 or setDepth didnt change depth)
+    -   Fix was to set background depth to -13
+-   Adds a scaling tween to flower growth. Looks good!
+
+-   TO DO:
+    -   Scroll X but need a better tiled image or to flip the image by 90 degrees?
+    -   Hovering tiles?
+    -   Punnett to change game display too
+
+---
+
+# Refactors flower spin animations, creates thicker grass tiles - 10/5/2019 - master
+
+## [533fc5b76e6a548339df13e3ad4f1c76881e8de6](https://github.com/nodes777/flower-game-phaser3/commit/533fc5b76e6a548339df13e3ad4f1c76881e8de6)
 
 -   Deletes createAnims.js for animateFlowerGrowth.js
 -   Moves all image assets (expept bee) up by 10 in Sprite Stack
@@ -8,6 +25,10 @@
     -   Create thicker grass tiles
     -   Stems were made longer to avoid a shadow bug where grass would appear on top of flower shadows
         -   This could be tweaked, stem could be a bit shorter
+
+-   ToDo:
+
+    -   Space background?
 
 -   BUG:
     -   Flower sprite is always on top even when stem is facing backwards
