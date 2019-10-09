@@ -1,4 +1,5 @@
 import { determineColor } from "./determineColor";
+import { store } from "../index";
 
 export const determineGenotype = (parent1Geno, parent2Geno) => {
 	let newGenotype = {};

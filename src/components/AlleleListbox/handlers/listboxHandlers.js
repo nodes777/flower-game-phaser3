@@ -1,4 +1,5 @@
 import { changeParentAllele } from "../../../actions/punnettActions";
+import { store } from "../../../index";
 
 export const _handleOptionsEvents = function(color, index, event) {
 	switch (event.type) {
@@ -63,7 +64,8 @@ export const _handleSubmit = function() {
 		parentId: parentId,
 		alleleType: alleleType,
 		allelePosition: allelePosition,
-		allele: this.state.currentAllele
+		allele: this.state.currentAllele,
+		recessiveTraits: store.getState().config.recessive
 	};
 
 	dispatch(changeParentAllele(info));

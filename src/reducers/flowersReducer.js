@@ -9,7 +9,7 @@ import {
 	verifyPositions
 } from "../determinants/determinePosition";
 import {
-	CHANGE_FLOWER,
+	CHANGE_PUNNETT_FLOWER,
 	ADD_FLOWER_TO_STORE,
 	CHANGE_FLOWER_NAME,
 	SET_FIRST_FLOWER_POSITION,
@@ -83,6 +83,44 @@ export function flowersReducer(state = exampleState.flowers, action) {
 					...newFlowersObj
 				},
 				allIds: [...state.allIds.concat([...newIds])]
+			};
+		case CHANGE_PUNNETT_FLOWER:
+			const {
+				parentId,
+				alleleType,
+				allelePosition,
+				allele,
+				recessiveTraits
+			} = action.data;
+
+			const punnettFlowerId = `flower${parentId.slice(-1)}`;
+
+			const newPunnettGenotype = {
+				...state.byId[punnettFlowerId].genotype,
+				[alleleType]: state.byId[punnettFlowerId].genotype[
+					alleleType
+				].map((item, index) => {
+					if (index === allelePosition) {
+						return allele;
+					} else {
+						return item;
+					}
+				})
+			};
+
+			return {
+				...state,
+				byId: {
+					...state.byId,
+					[punnettFlowerId]: {
+						...state.byId[punnettFlowerId],
+						genotype: newPunnettGenotype,
+						phenotype: determinePhenotype(
+							newPunnettGenotype,
+							recessiveTraits
+						)
+					}
+				}
 			};
 
 		default:

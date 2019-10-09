@@ -18,6 +18,11 @@ export function checkStore() {
 				addNewFlowers(numFlowersPrev, currState, this);
 			}
 
+			// check if punnett is still the same, if not, destroy and recreate
+			if (prevState.punnett !== currState.punnett) {
+				console.log("CHANGE IN PUNNETT");
+			}
+
 			// check if bee should be flying
 			this.beeCanFly = currState.config.beeCanFly;
 		}

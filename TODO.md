@@ -1,6 +1,5 @@
 # TO DO
 
--   Rotation animation when new flower appears
 -   Set available tiles to be a formula
 
 ## Tests
@@ -11,12 +10,10 @@
 
 -   Multiple bees
 -   The bee's movement is a hack that slows down performance
--   Weather/light via masks
 -   On mouse hover display name (perf issues)
 
 ### Art
 
--   Add flowerhead shapes
 -   Add new stems
 
 ## Redux
@@ -31,12 +28,8 @@
 ## Features
 
 -   Determine size of garden
--   PreDetermine shape for garden to grow in?
-    -   Break into tiles
-    -   Fill in tiles as flowers are added
-    -   Fractals or math formulas to determine garden shape
+-   Fractals or math formulas to determine garden shape
 -   Add growth stages
--   Add wiggles/ animation (Get art direction sorted first)
 -   Save to url to share somehow
 -   Changing the Punnett Table changes the game flowers
 -   Allow running in the background

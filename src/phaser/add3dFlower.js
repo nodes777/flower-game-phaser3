@@ -2,6 +2,7 @@ import { determineFlowerShape } from "../determinants/determineFlowerShape";
 import { determineStem } from "../determinants/determineStem.js";
 import { getHexColor } from "../determinants/determineColor";
 import { animateFlowerGrowth } from "./utils/animateFlowerGrowth";
+
 export function add3dFlower(
 	currFlower,
 	currFlowerId,
@@ -53,6 +54,8 @@ export function add3dFlower(
 
 	//add flower reference for the tile
 	game.isoTiles.children.entries[tileIndex].flowerSprite = newFlowerSprite;
+	// add tile reference for flower
+	newFlowerSprite.tile = game.isoTiles.children.entries[tileIndex];
 
 	// add the flower to the array of onscreen flowers for bee to fly to
 	game.flowersOnScreen.push(newFlowerSprite);
@@ -64,6 +67,7 @@ export function add3dFlower(
 		// Animation hack
 		animateFlowerGrowth(game, newFlowerSprite);
 	}
+
 	// game.floatingTilesTween = game.tweens.add({
 	// 	targets: [
 	// 		game.isoTiles.children.entries,

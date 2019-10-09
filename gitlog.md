@@ -1,6 +1,20 @@
-# Adds scrolling space background, growing flowers tween - 10/7/2019 - master
+# Punnett updates also update the flowers store- 10/9/2019 - master
 
-## [533fc5b76e6a548339df13e3ad4f1c76881e8de6](https://github.com/nodes777/flower-game-phaser3/commit/533fc5b76e6a548339df13e3ad4f1c76881e8de6)
+## [eb685fd8bfd55af9d5f927c1a53e1f113f975174](https://github.com/nodes777/flower-game-phaser3/commit/eb685fd8bfd55af9d5f927c1a53e1f113f975174)
+
+-   Updates the flowersReducer to accept the `CHANGE_PUNNETT_FLOWER`action, and update the first or second flower
+-   This is to set up for allowing phaser to delete and recreate the first two flowers with the new phenotype
+
+-   TO DO:
+    -   Delete allPositions info in store
+    -   At this point is it really necesary to have the punnett store at all?
+        -   Just use the first two flowers in the flower store?
+
+---
+
+# Adds scrolling space background, growing flowers tween - 10/9/2019 - master
+
+## [eb685fd8bfd55af9d5f927c1a53e1f113f975174](https://github.com/nodes777/flower-game-phaser3/commit/eb685fd8bfd55af9d5f927c1a53e1f113f975174)
 
 -   Adds a tileSprite background that scrolls topdown
 -   Had an issue where the first tile would always render behind the background

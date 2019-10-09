@@ -25,7 +25,7 @@ export function animateFlowerGrowth(game, sprite) {
 			targets: [sprite, sprite.stem],
 			scaleX: 1,
 			scaleY: 1,
-			ease: "Sine.easeOutIn",
+			ease: "Linear",
 			duration: 1000,
 			yoyo: false
 		});
