@@ -1,6 +1,6 @@
 # Flower Game
 
-A [Phaser 3](https://phaser.io/) and [React](https://reactjs.org/) with [Redux](https://redux.js.org/) project based on the [Phaser 3 Webpack Project Template](https://github.com/photonstorm/phaser3-project-template). ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/). The game explores manipulating different genes (colors, shapes, stems) for flowers and seeing what grows.
+A [Phaser 3](https://phaser.io/) and [React](https://reactjs.org/) with [Redux](https://redux.js.org/) project based on the [Phaser 3 Webpack Project Template](https://github.com/photonstorm/phaser3-project-template). Isometric support with [phaser3-plugin-isometric from sebashwa](https://github.com/sebashwa/phaser3-plugin-isometric). ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/). The simulation explores manipulating different genes (colors, shapes, stems) for flowers and seeing what grows.
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 ![lines coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Funtitled-noopow1jds3m.runkit.sh%2F%3Ftype%3Dlines)
