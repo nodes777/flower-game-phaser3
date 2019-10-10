@@ -1,6 +1,22 @@
+# Adds in the allStack - 10/10/2019 - master
+
+## [d658ecfbde957889eff9fa9bae2086536052bc7c](https://github.com/nodes777/flower-game-phaser3/commit/d658ecfbde957889eff9fa9bae2086536052bc7c)
+
+-   Adds the allStack.zip to assets
+
+-   To Do:
+    -   Refactor add3dFlower, Do I need to pass in id?
+    -   Refactor checkstore for this functionality
+    -   Delete allPositions info in store
+    -   At this point is it really necesary to have the punnett store at all?
+        -   Just use the first two flowers in the flower store?
+    -   Do something with flower naming - show name on hover?
+
+---
+
 # Deletes old punnett flower and replaces with new - 10/10/2019 - master
 
-## [6c9f0d7e397feb3e8aeab9ce6a9bf5bcab7411f2](https://github.com/nodes777/flower-game-phaser3/commit/6c9f0d7e397feb3e8aeab9ce6a9bf5bcab7411f2)
+## [d658ecfbde957889eff9fa9bae2086536052bc7c](https://github.com/nodes777/flower-game-phaser3/commit/d658ecfbde957889eff9fa9bae2086536052bc7c)
 
 -   Deletes flower sprites and replaces them on change in Punnett
 -   Had to create a customDestroy to destroy isoSprites
