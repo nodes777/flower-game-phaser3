@@ -37,7 +37,7 @@ export const buildGarden = game => {
 	const availableTiles2 = store.getState().tiles.availableTiles;
 	//const initTile2 = determineRandomPos(availableTiles2);
 
-	store.dispatch(setFirstFlowerPosition("flower1", centerTile));
+	store.dispatch(setFirstFlowerPosition("flower1", firstTile));
 	store.dispatch(setFirstFlowerPosition("flower2", lastTile));
 	// store.dispatch(markTileAsFilled(centerTile.tileIndex));
 	// store.dispatch(markTileAsFilled(lastTile.tileIndex));

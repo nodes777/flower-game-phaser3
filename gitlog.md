@@ -1,6 +1,24 @@
+# Deletes old punnett flower and replaces with new - 10/10/2019 - master
+
+## [6c9f0d7e397feb3e8aeab9ce6a9bf5bcab7411f2](https://github.com/nodes777/flower-game-phaser3/commit/6c9f0d7e397feb3e8aeab9ce6a9bf5bcab7411f2)
+
+-   Deletes flower sprites and replaces them on change in Punnett
+-   Had to create a customDestroy to destroy isoSprites
+
+-   To Do:
+    -   Refactor add3dFlower, Do I need to pass in id?
+    -   Refactor checkstore for this functionality
+    -   Delete allPositions info in store
+    -   At this point is it really necesary to have the punnett store at all?
+        -   Just use the first two flowers in the flower store?
+    -   Do something with flower naming - show name on hover?
+    -   Add in allStack.zip
+
+---
+
 # Punnett updates also update the flowers store- 10/9/2019 - master
 
-## [eb685fd8bfd55af9d5f927c1a53e1f113f975174](https://github.com/nodes777/flower-game-phaser3/commit/eb685fd8bfd55af9d5f927c1a53e1f113f975174)
+## [6c9f0d7e397feb3e8aeab9ce6a9bf5bcab7411f2](https://github.com/nodes777/flower-game-phaser3/commit/6c9f0d7e397feb3e8aeab9ce6a9bf5bcab7411f2)
 
 -   Updates the flowersReducer to accept the `CHANGE_PUNNETT_FLOWER`action, and update the first or second flower
 -   This is to set up for allowing phaser to delete and recreate the first two flowers with the new phenotype

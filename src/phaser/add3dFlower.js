@@ -7,7 +7,8 @@ export function add3dFlower(
 	currFlower,
 	currFlowerId,
 	game,
-	fromInitialization = true
+	fromInitialization = true,
+	flowersOnScreenPos = 2
 ) {
 	// console.log(currFlower);
 	const phenotype = currFlower.phenotype;
@@ -58,7 +59,12 @@ export function add3dFlower(
 	newFlowerSprite.tile = game.isoTiles.children.entries[tileIndex];
 
 	// add the flower to the array of onscreen flowers for bee to fly to
-	game.flowersOnScreen.push(newFlowerSprite);
+	if (flowersOnScreenPos > 1) {
+		game.flowersOnScreen.push(newFlowerSprite);
+	} else {
+		game.flowersOnScreen[flowersOnScreenPos] = newFlowerSprite;
+	}
+
 	//console.log(newFlowerSprite);
 	if (!fromInitialization) {
 		// will grow in tween
