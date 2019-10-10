@@ -2,7 +2,7 @@
 
 ## [d658ecfbde957889eff9fa9bae2086536052bc7c](https://github.com/nodes777/flower-game-phaser3/commit/d658ecfbde957889eff9fa9bae2086536052bc7c)
 
--   Adds the allStack.zip to assets
+-   Adds the allStack.zip to assets, for SpriteStack Editting
 
 -   To Do:
     -   Refactor add3dFlower, Do I need to pass in id?
@@ -11,6 +11,10 @@
     -   At this point is it really necesary to have the punnett store at all?
         -   Just use the first two flowers in the flower store?
     -   Do something with flower naming - show name on hover?
+    -   Size determination for garden size
+    -   Change bee movement to be accelleration based
+    -   Fix bee moving backwards bug
+    -   Fix bee flying off into space bug
 
 ---
 
