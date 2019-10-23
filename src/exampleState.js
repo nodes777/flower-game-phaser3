@@ -83,7 +83,12 @@ const exampleState = {
     config: {
         beeCanFly: false,
         recessive: defaultRecessive,
-        tooltip: { visible: false, content: "Nothing", posX: 500, posY: 100 }
+        tooltip: {
+            visible: false,
+            content: `${JSON.stringify(parent1Geno)}`,
+            posX: 500,
+            posY: 100
+        }
     },
     tiles: { allTiles: [], availableTiles: [], numberOfTiles: null }
 };

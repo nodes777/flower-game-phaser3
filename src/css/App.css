@@ -5,7 +5,7 @@
 	flex-direction: row;
 	/*	align-items: center;*/
 	justify-content: center;
-	font-size: calc(10px + 2vmin);
+	/*font-size: calc(10px + 2vmin);*/
 	color: white;
 	text-align: center;
 }
@@ -20,4 +20,32 @@
 	margin: 15px;
 	flex-grow: 3;
 	outline: solid 2px;
+}
+
+/*.tooltip {
+	display: flex;
+	justify-content: flex-start;
+	z-index: 98;
+	border: solid;
+} */
+
+.topContainerMain {
+	position: absolute;
+	z-index: 98;
+	bottom: 20px;
+	width: 100%;
+}
+.topContainerInner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.innerSideWings {
+	flex: 0 1 auto;
+	border: solid;
+	background: white;
+	min-width: 25%;
+	max-width: 25%;
+	display: flex;
+	justify-content: center;
 }
