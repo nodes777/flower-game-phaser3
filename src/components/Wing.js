@@ -15,10 +15,13 @@ class Wing extends Component {
 		return (
 			<Fragment>
 				{side === "left" ? (
-					<div className="innerSideWings">{this.props.content}</div>
+					<Fragment>
+						<div className="innerSideWings leftWing">
+							<div>{this.props.content}</div>
+						</div>
+					</Fragment>
 				) : (
-					<div className="innerSideWings">
-						{" "}
+					<div className="innerSideWings rightWing">
 						<BeeCanFlyButton />
 					</div>
 				)}

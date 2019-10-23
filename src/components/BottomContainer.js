@@ -4,13 +4,15 @@ import Punnett from "./Punnett";
 import FlowerTable from "./FlowerTable/FlowerTable";
 import Dashboard from "./Dashboard/Dashboard";
 
+import "../css/App.css";
+
 class BottomContainer extends Component {
 	render() {
 		return (
 			<Fragment>
-				<div className="App">
+				<div className="App bottomContainer">
 					<Punnett />
-					<Dashboard />
+					{/*<Dashboard />*/}
 				</div>
 				<div className="App">
 					<FlowerTable display={true} />
