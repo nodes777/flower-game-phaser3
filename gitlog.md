@@ -1,13 +1,13 @@
 # Adds in the allStack - 10/10/2019 - master
 
-## [d658ecfbde957889eff9fa9bae2086536052bc7c](https://github.com/nodes777/flower-game-phaser3/commit/d658ecfbde957889eff9fa9bae2086536052bc7c)
+## [ebbd09e75de44345de31d0a6cadf838a4a216e09](https://github.com/nodes777/flower-game-phaser3/commit/ebbd09e75de44345de31d0a6cadf838a4a216e09)
 
 -   Adds the allStack.zip to assets, for SpriteStack Editting
 
 -   To Do:
     -   Refactor add3dFlower, Do I need to pass in id?
     -   Refactor checkstore for this functionality
-    -   Delete allPositions info in store
+    -   Delete allPositions info in store - it's used in flowersReducer
     -   At this point is it really necesary to have the punnett store at all?
         -   Just use the first two flowers in the flower store?
     -   Do something with flower naming - show name on hover?

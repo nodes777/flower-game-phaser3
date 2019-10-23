@@ -4,7 +4,6 @@ export const determineFlowerShape = phenotype => {
 	if (phenotype.shape === undefined) {
 		return shapes.Default;
 	}
-	console.log(phenotype.shape);
 	switch (phenotype.shape) {
 		case "default": {
 			return `${shapes.Default}Flower`;

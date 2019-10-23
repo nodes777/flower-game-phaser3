@@ -19,11 +19,6 @@ const shape2 = getRandomShape();
 const shape3 = getRandomShape();
 const shape4 = getRandomShape();
 
-// const parent1XPos = determineRandomPos(screenSize);
-// const parent1YPos = determineRandomYPos(screenSize);
-// const parent2XPos = determineRandomXPos(screenSize);
-// const parent2YPos = determineRandomYPos(screenSize);
-
 const parent1Geno = {
     color: [color1, color2],
     shape: [shape1, shape2],
