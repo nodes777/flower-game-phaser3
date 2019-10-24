@@ -1,3 +1,7 @@
+#phaser {
+	background-color: #181a1c;
+}
+
 .App {
 	background-color: #181a1c;
 	/*min-height: 40vh;*/
@@ -29,70 +33,3 @@
 	border: solid;
 } */
 
-.topContainerMain {
-	position: absolute;
-	z-index: 98;
-	bottom: 0%;
-	width: 100%;
-}
-.topContainerInner {
-	display: flex;
-	justify-content: space-between;
-}
-
-.innerSideWings {
-	flex: 0 1 auto;
-	border: solid;
-	border-color: white;
-	background: white;
-	min-width: 25%;
-	max-width: 25%;
-	display: flex;
-}
-
-.leftWing {
-	border-radius: 0px 15px 0px 0px;
-}
-
-.rightWing {
-	border-radius: 15px 0px 0px 0px;
-}
-
-.bottomContainer {
-	z-index: 2;
-}
-
-.leftWing:after {
-	content: "";
-	position: relative;
-	top: -3%;
-	left: -63%;
-	width: 130%;
-	height: 110%;
-	background-color: white;
-	z-index: -1;
-	border-top-right-radius: 15px;
-	-ms-transform: skewX(10deg);
-	-webkit-transform: skewX(10deg);
-	transform: scaleX(2) skewX(30deg);
-	-ms-transform-origin: 100% 100%;
-	-webkit-transform-origin: 100% 100%;
-	transform-origin: 100% 100%;
-	flex-shrink: 0;
-}
-
-.postWing {
-	position: absolute;
-	top: 0%;
-	transform: translate(25%) skewX(30deg) scaleY(1.1);
-	width: 25%;
-	height: 100%;
-	background-color: white;
-	z-index: -1;
-	border-top-right-radius: 15px;
-
-	transform: ;
-
-	transform-origin: 100% 100%;
-	flex-shrink: 0;
-}

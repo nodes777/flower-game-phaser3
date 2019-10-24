@@ -26,10 +26,11 @@ class BeeCanFlyButton extends React.Component {
 	state = {
 		checked: this.props.config.beeCanFly
 	};
+
 	render() {
 		return (
 			<button
-				className="btn btn-primary"
+				className="btn bee-btn"
 				onClick={this.handleSubmit}
 				aria-label={
 					this.state.checked
@@ -38,9 +39,9 @@ class BeeCanFlyButton extends React.Component {
 				}
 			>
 				{this.state.checked ? (
-					<span aria-hidden={true}>&#10074;&#10074; Pause Bee</span>
+					<span aria-hidden={true}>&#10074;&#10074; Bee</span>
 				) : (
-					<span aria-hidden={true}>&#9654; Fly Bee</span>
+					<span aria-hidden={true}>&#9654; Bee</span>
 				)}
 			</button>
 		);

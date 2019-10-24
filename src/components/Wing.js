@@ -2,8 +2,10 @@ import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import BeeCanFlyButton from "./Dashboard/BeeCanFlyButton";
+import SaveToLocalStorageButton from "./Dashboard/SaveToLocalStorageButton";
+import ClearLocalStorageButton from "./Dashboard/ClearLocalStorageButton";
 
-import "../css/App.css";
+import "../css/wings.css";
 
 class Wing extends Component {
 	static propTypes = {
@@ -17,12 +19,16 @@ class Wing extends Component {
 				{side === "left" ? (
 					<Fragment>
 						<div className="innerSideWings leftWing">
-							<div>{this.props.content}</div>
+							<div className="wingContent">
+								<div>{this.props.content}</div>
+							</div>
 						</div>
 					</Fragment>
 				) : (
 					<div className="innerSideWings rightWing">
-						<BeeCanFlyButton />
+						<div className="wingContent rightWingContent">
+							<BeeCanFlyButton />
+						</div>
 					</div>
 				)}
 			</Fragment>

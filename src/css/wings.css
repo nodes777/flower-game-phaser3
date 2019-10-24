@@ -1,0 +1,118 @@
+.topContainerMain {
+	position: absolute;
+	z-index: 98;
+	bottom: 0%;
+	width: 100%;
+}
+.topContainerInner {
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.innerSideWings {
+	flex: 0 1 auto;
+
+	background: white;
+	min-width: 25%;
+	max-width: 25%;
+	display: flex;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 1) 70%,
+		rgba(24, 26, 28, 1) 94%,
+		rgba(24, 26, 28, 1) 100%
+	);
+
+	/*background: rgba(0, 0, 0, 0);*/
+}
+.leftWing {
+	border-top-right-radius: 15px;
+	transform: skewX(30deg);
+	transform-origin: 100% 100%;
+}
+
+.rightWing {
+	border-top-left-radius: 15px;
+	transform: skewX(-30deg);
+	transform-origin: 100% 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.leftWing .wingContent {
+	padding-bottom: 7%;
+	padding-left: 14%;
+	transform: skewX(-30deg);
+}
+
+.rightWing .wingContent {
+	padding-bottom: 7%;
+	padding-right: 7%;
+	transform: skewX(30deg);
+}
+
+.bottomContainer {
+	z-index: 2;
+}
+
+/*
+.leftWing:after {
+	content: "";
+	position: relative;
+	top: -3%;
+	left: -63%;
+	width: 130%;
+	height: 110%;
+	background-color: white;
+	z-index: -1;
+	border-top-right-radius: 15px;
+	-ms-transform: skewX(10deg);
+	-webkit-transform: skewX(10deg);
+	transform: scaleX(2) skewX(30deg);
+	-ms-transform-origin: 100% 100%;
+	-webkit-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	flex-shrink: 0;
+
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 1) 70%,
+		rgba(24, 26, 28, 1) 94%,
+		rgba(24, 26, 28, 1) 100%
+	);
+}
+
+.rightWing:after {
+	content: "";
+	position: relative;
+	top: -3%;
+	left: 63%;
+	width: 130%;
+	height: 110%;
+	background-color: white;
+	z-index: -1;
+	border-top-left-radius: 15px;
+	-ms-transform: skewX(-10deg);
+	-webkit-transform: skewX(-10deg);
+	transform: scaleX(2) skewX(-30deg);
+	-ms-transform-origin: 100% 100%;
+	-webkit-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	flex-shrink: 0;
+
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 1) 55%,
+		rgba(24, 26, 28, 1) 88%,
+		rgba(24, 26, 28, 1) 100%
+	);
+}
+
+.rightWingContent {
+	display: flex;
+}
+*/
