@@ -14,8 +14,12 @@ class PunnettTableGene extends Component {
 	render() {
 		const { gene } = this.props;
 		return (
-			<div role="region" aria-label={`Punnett Table for ${gene}`}>
-				<h1>{capitalizeFirstLetter(gene)}</h1>
+			<div
+				className="punnett"
+				role="region"
+				aria-label={`Punnett Table for ${gene}`}
+			>
+				<h1 className="punnettTitle">{capitalizeFirstLetter(gene)}</h1>
 				<table>
 					<tbody>
 						<tr>

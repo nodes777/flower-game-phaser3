@@ -53,10 +53,6 @@
 	transform: skewX(30deg);
 }
 
-.bottomContainer {
-	z-index: 2;
-}
-
 /*
 .leftWing:after {
 	content: "";
