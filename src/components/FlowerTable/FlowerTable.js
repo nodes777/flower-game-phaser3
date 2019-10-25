@@ -21,7 +21,7 @@ class FlowerTable extends Component {
 			<div
 				role="region"
 				aria-label="Table of all flowers present in the game, with their genotype"
-				className={`bottomInnerContainer ${"slideInFromLeft"}`}
+				className="bottomInnerContainer"
 			>
 				<table>
 					<tbody>

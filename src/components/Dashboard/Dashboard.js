@@ -13,7 +13,7 @@ const Dashboard = props => {
 		<div
 			role="region"
 			aria-label="Dashboard for game configuration"
-			className="dashboard"
+			className="bottomInnerContainer"
 		>
 			<h1>Dashboard</h1>
 			<div>

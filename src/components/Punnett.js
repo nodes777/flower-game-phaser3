@@ -7,7 +7,7 @@ import FlowerTable from "./FlowerTable/FlowerTable";
 class App extends Component {
 	render() {
 		return (
-			<div className={`bottomInnerContainer ${"slideInFromLeft"}`}>
+			<div className="bottomInnerContainer">
 				<PunnettTableGene gene={"color"} />
 				<PunnettTableGene gene={"shape"} />
 			</div>

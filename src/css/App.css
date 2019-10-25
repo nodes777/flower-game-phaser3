@@ -48,24 +48,57 @@
 	min-height: 500px;
 }
 
-.item-enter {
-	transform: translateX(-150%);
+.arrowButtons {
+	z-index: 4;
 }
 
-.item-enter-active {
+/* Left */
+.item-enter-left {
+	position: absolute;
+	z-index: 3;
+	transform: translateX(-200%);
+}
+
+.item-enter-left-active {
+	position: absolute;
+	z-index: 3;
 	transform: translateX(0);
 	transition: transform 500ms ease-in;
 }
-.item-exit {
-	z-index: 2;
+
+.item-exit-left {
 	transform: translateX(0);
-	position: absolute;
 }
-.item-exit-active {
-	z-index: 2;
+
+.item-exit-left-active {
+	transform: translateX(-200%);
+	transition: transform 500ms ease-in;
+}
+
+/* Right */
+.item-enter-right {
 	position: absolute;
-	transform: translateX(150%);
-	transition: transform 300ms ease-out;
+	z-index: 3;
+	transform: translateX(200%);
+}
+
+.item-enter-right-active {
+	position: absolute;
+	z-index: 3;
+	transform: translateX(0);
+	transition: transform 500ms ease-in;
+}
+
+.item-exit-right {
+	/*	position: absolute;
+	z-index: 3;*/
+	transform: translateX(0);
+}
+.item-exit-right-active {
+	/*	position: absolute;
+	z-index: 3;*/
+	transform: translateX(250%);
+	transition: transform 300ms ease-in;
 }
 
 /*.tooltip {
