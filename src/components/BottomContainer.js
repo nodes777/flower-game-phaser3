@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import Punnett from "./Punnett";
 import FlowerTable from "./FlowerTable/FlowerTable";
+import Punnett from "./Punnett";
 import Dashboard from "./Dashboard/Dashboard";
 
 import "../css/App.css";
@@ -13,19 +14,14 @@ class BottomContainer extends Component {
 	};
 
 	viewGoLeft = () => {
-		console.log("left");
 		this.setState({ view: this.state.view - 1 });
-		console.log(this.state);
-		console.log(this.viewsArr[this.state.view]);
 	};
+
 	viewGoRight = () => {
-		console.log("right");
 		this.setState({ view: this.state.view + 1 });
-		console.log(this.state);
-		console.log(this.viewsArr[this.state.view]);
 	};
+
 	render() {
-		console.log(this.state);
 		return (
 			<div className="App bottomContainer">
 				<button
@@ -34,18 +30,51 @@ class BottomContainer extends Component {
 				>
 					Left
 				</button>
-				{(() => {
-					switch (this.state.view) {
-						case 0:
-							return <FlowerTable />;
-						case 1:
-							return <Punnett />;
-						case 2:
-							return <Dashboard />;
-						default:
-							return null;
-					}
-				})()}
+				<TransitionGroup>
+					{(() => {
+						switch (this.state.view) {
+							case 0:
+								return (
+									<CSSTransition
+										key={0}
+										in={0 === this.state.view}
+										timeout={500}
+										unmountOnExit
+										classNames="item"
+									>
+										<FlowerTable />
+									</CSSTransition>
+								);
+							case 1:
+								return (
+									<CSSTransition
+										key={1}
+										in={1 === this.state.view}
+										timeout={500}
+										unmountOnExit
+										classNames="item"
+									>
+										<Punnett />
+									</CSSTransition>
+								);
+							case 2:
+								return (
+									<CSSTransition
+										key={2}
+										in={2 === this.state.view}
+										timeout={500}
+										unmountOnExit
+										classNames="item"
+									>
+										<Dashboard />
+									</CSSTransition>
+								);
+							default:
+								return null;
+						}
+					})()}
+				</TransitionGroup>
+
 				<button
 					disabled={this.state.view >= 2}
 					onClick={this.viewGoRight}
@@ -57,3 +86,16 @@ class BottomContainer extends Component {
 	}
 }
 export default BottomContainer;
+
+// {(() => {
+// 					switch (this.state.view) {
+// 						case 0:
+// 							return <FlowerTable />;
+// 						case 1:
+// 							return <Punnett />;
+// 						case 2:
+// 							return <Dashboard />;
+// 						default:
+// 							return null;
+// 					}
+// 				})()}

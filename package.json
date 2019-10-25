@@ -57,6 +57,7 @@
     "phaser": "^3.17.0",
     "phaser3-plugin-isometric": "0.0.7",
     "react-redux": "^7.0.2",
+    "react-transition-group": "^4.3.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "style-loader": "^1.0.0"
