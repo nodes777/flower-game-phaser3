@@ -41,8 +41,7 @@ class BottomContainer extends Component {
 									<CSSTransition
 										key={0}
 										in={0 === this.state.view}
-										timeout={1000}
-										unmountOnExit
+										timeout={500}
 										classNames={{
 											enter: "item-enter-left",
 											enterActive:
@@ -59,8 +58,7 @@ class BottomContainer extends Component {
 									<CSSTransition
 										key={1}
 										in={1 === this.state.view}
-										timeout={1000}
-										unmountOnExit
+										timeout={500}
 										classNames={{
 											enter: `${
 												this.state.prevView == 0
@@ -72,8 +70,16 @@ class BottomContainer extends Component {
 													? "item-enter-right-active"
 													: "item-enter-left-active"
 											}`,
-											exit: "",
-											exitActive: ""
+											exit: `${
+												this.state.view == 2
+													? "item-exit-right"
+													: "item-exit-left"
+											}`,
+											exitActive: `${
+												this.state.view == 2
+													? "item-enter-right-active"
+													: "item-enter-left-active"
+											}`
 										}}
 									>
 										<Punnett />
@@ -84,8 +90,7 @@ class BottomContainer extends Component {
 									<CSSTransition
 										key={2}
 										in={2 === this.state.view}
-										timeout={1000}
-										unmountOnExit
+										timeout={500}
 										classNames={{
 											enter: "item-enter-right",
 											enterActive:

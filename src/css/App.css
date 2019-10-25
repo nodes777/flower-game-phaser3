@@ -79,7 +79,7 @@
 .item-enter-right {
 	position: absolute;
 	z-index: 3;
-	transform: translateX(200%);
+	transform: translateX(300%);
 }
 
 .item-enter-right-active {
@@ -97,7 +97,7 @@
 .item-exit-right-active {
 	/*	position: absolute;
 	z-index: 3;*/
-	transform: translateX(250%);
+	transform: translateX(300%);
 	transition: transform 300ms ease-in;
 }
 
