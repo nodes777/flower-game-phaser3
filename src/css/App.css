@@ -52,6 +52,71 @@
 	z-index: 4;
 }
 
+/* Flower Table Transitions */
+.flower-table-enter-left {
+	position: absolute;
+	z-index: 3;
+	transform: translateX(-200%);
+}
+
+.flower-table-enter-left-active {
+	position: absolute;
+	z-index: 3;
+	transform: translateX(-100%);
+	transition: transform 500ms ease-in;
+}
+
+.flower-table-exit-left {
+	transform: translateX(0);
+}
+
+.flower-table-exit-left-active {
+	transform: translateX(-200%);
+	transition: transform 500ms ease-in;
+}
+
+/* Punnett transitions */
+.punnett-enter-left {
+	position: absolute;
+	z-index: 3;
+	transform: translateX(-200%);
+}
+
+.punnett-enter-left-active {
+	position: absolute;
+	z-index: 3;
+	transform: translateX(0);
+	transition: transform 500ms ease-in;
+}
+
+.punnett-enter-right {
+	position: absolute;
+	z-index: 3;
+	transform: translateX(300%);
+}
+
+.punnett-enter-right-active {
+	position: absolute;
+	z-index: 3;
+	transform: translateX(0);
+	transition: transform 500ms ease-in;
+}
+
+.punnett-exit {
+	transform: translateX(0);
+}
+
+.punnett-exit-left-active {
+	transform: translateX(-200%);
+	transition: transform 500ms ease-in;
+}
+
+.punnett-exit-right-active {
+	transform: translateX(200%);
+	transition: transform 500ms ease-in;
+}
+/* Dashboard Transitions */
+
 /* Left */
 .item-enter-left {
 	position: absolute;
