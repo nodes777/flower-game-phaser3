@@ -6,7 +6,7 @@ import Punnett from "./Punnett";
 import Dashboard from "./Dashboard/Dashboard";
 
 import "../css/App.css";
-
+import "../css/containerTransitions.css";
 class BottomContainer extends Component {
 	// viewsArr = ["flowertable", "punnett", "dashboard"];
 	state = {
@@ -15,18 +15,20 @@ class BottomContainer extends Component {
 	};
 
 	viewGoLeft = () => {
-		this.setState({
-			view: this.state.view - 1,
-			prevView: this.state.view,
-			punnettExit: "punnett-exit-right-active"
+		this.setState({ punnettExit: "punnett-exit-right-active" }, () => {
+			this.setState({
+				view: this.state.view - 1,
+				prevView: this.state.view
+			});
 		});
 	};
 
 	viewGoRight = () => {
-		this.setState({
-			view: this.state.view + 1,
-			prevView: this.state.view,
-			punnettExit: "punnett-exit-left-active"
+		this.setState({ punnettExit: "punnett-exit-left-active" }, () => {
+			this.setState({
+				view: this.state.view + 1,
+				prevView: this.state.view
+			});
 		});
 	};
 
@@ -51,24 +53,17 @@ class BottomContainer extends Component {
 										in={0 === this.state.view}
 										timeout={500}
 										classNames={{
-											enter: "flower-table-enter-left",
+											enter: "item-enter-left",
 											enterActive:
-												"flower-table-enter-left-active",
-											exit: "flower-table-exit-left",
-											exitActive:
-												"flower-table-exit-left-active"
+												"item-enter-left-active",
+											exit: "item-exit-left",
+											exitActive: "item-exit-left-active"
 										}}
 									>
 										<FlowerTable />
 									</CSSTransition>
 								);
 							case 1:
-								console.log(this.state.nextView);
-								console.log(
-									this.state.nextView == 0
-										? "punnett-exit-right-active"
-										: "punnett-exit-left-active"
-								);
 								return (
 									<CSSTransition
 										key={1}
