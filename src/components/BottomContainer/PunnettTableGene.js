@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import Diploid from "./Diploid";
 import PropTypes from "prop-types";
 
-import AlleleListboxContainer from "./AlleleListbox/AlleleListboxContainer";
-import "../css/table.css";
+import { capitalizeFirstLetter } from "../../utils/visualFormatting";
 
-import { capitalizeFirstLetter } from "../utils/visualFormatting";
+import AlleleListboxContainer from "../AlleleListbox/AlleleListboxContainer";
+import Diploid from "../Diploid";
+
+import "../../css/table.css";
 
 class PunnettTableGene extends Component {
 	static propTypes = {

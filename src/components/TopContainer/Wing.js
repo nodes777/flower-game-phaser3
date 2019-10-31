@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import BeeCanFlyButton from "./Dashboard/BeeCanFlyButton";
-import SaveToLocalStorageButton from "./Dashboard/SaveToLocalStorageButton";
-import ClearLocalStorageButton from "./Dashboard/ClearLocalStorageButton";
+import BeeCanFlyButton from "../Dashboard/BeeCanFlyButton";
+// import SaveToLocalStorageButton from "../Dashboard/SaveToLocalStorageButton";
+// import ClearLocalStorageButton from "../Dashboard/ClearLocalStorageButton";
+import Tooltip from "./Tooltip";
 
-import "../css/wings.css";
+import "../../css/wings.css";
 
 class Wing extends Component {
 	static propTypes = {
@@ -20,7 +21,7 @@ class Wing extends Component {
 					<Fragment>
 						<div className="innerSideWings leftWing">
 							<div className="wingContent">
-								<div>{this.props.content}</div>
+								<Tooltip />
 							</div>
 						</div>
 					</Fragment>

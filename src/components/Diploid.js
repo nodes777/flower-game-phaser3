@@ -1,7 +1,10 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import TableAllele from "./TableAllele";
+
+import TableAllele from "./BottomContainer/TableAllele";
+
 import "../css/listbox.css";
+
 export class Diploid extends React.Component {
 	static propTypes = {
 		p1Id: PropTypes.string,

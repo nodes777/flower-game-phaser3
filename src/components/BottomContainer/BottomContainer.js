@@ -1,12 +1,13 @@
 import React, { Component, Fragment } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import FlowerTable from "./FlowerTable/FlowerTable";
+import FlowerTable from "../FlowerTable/FlowerTable";
 import Punnett from "./Punnett";
-import Dashboard from "./Dashboard/Dashboard";
+import Dashboard from "../Dashboard/Dashboard";
 
-import "../css/App.css";
-import "../css/containerTransitions.css";
+import "../../css/App.css";
+import "../../css/containerTransitions.css";
+
 class BottomContainer extends Component {
 	// viewsArr = ["flowertable", "punnett", "dashboard"];
 	state = {
@@ -33,7 +34,6 @@ class BottomContainer extends Component {
 	};
 
 	render() {
-		console.log(this.state);
 		return (
 			<div className="App bottomContainer">
 				<button
@@ -117,7 +117,7 @@ class BottomContainer extends Component {
 					disabled={this.state.view >= 2}
 					onClick={this.viewGoRight}
 				>
-					right
+					Right
 				</button>
 			</div>
 		);

@@ -2,17 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import Wing from "./Wing";
 
-import "../css/App.css";
-
-function mapStateToProps(state) {
-	return {};
-}
+import "../../css/App.css";
 
 export class TopContainer extends React.Component {
-	// static propTypes = {
-	// 	name: React.PropTypes.string
-	// };
-
 	constructor(props) {
 		super(props);
 	}
@@ -29,4 +21,4 @@ export class TopContainer extends React.Component {
 	}
 }
 
-export default connect(mapStateToProps)(TopContainer);
+export default TopContainer;
