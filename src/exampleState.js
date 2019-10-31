@@ -84,7 +84,7 @@ const exampleState = {
         beeCanFly: false,
         recessive: defaultRecessive,
         tooltip: {
-            content: `${JSON.stringify(parent1Geno)}`
+            content: `flower1 ${JSON.stringify(parent1Geno)}`
         }
     },
     tiles: { allTiles: [], availableTiles: [], numberOfTiles: null }
