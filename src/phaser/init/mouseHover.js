@@ -1,12 +1,11 @@
 import { store } from "../../index";
 import { showTooltip, hideTooltip } from "../../actions/configActions";
 
-export function mouseHoverOn(event, gameObjects, game, canFire) {
-	const name = store.getState().flowers.byId[gameObjects[0].id].name;
-	const posX = event.event.clientX;
-	const posY = event.event.clientY;
-	const data = { posX, posY, name };
-	store.dispatch(showTooltip(data));
+export function mouseHoverOn(id) {
+	// use flower id to get all info from the store
+	const flowerData = store.getState().flowers.byId[id];
+	// dispatch an update to the tooltip config
+	store.dispatch(showTooltip(flowerData));
 }
 
 export function mouseHoverOut(event, gameObjects, game, canFire) {

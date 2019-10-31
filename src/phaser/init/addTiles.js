@@ -2,6 +2,8 @@ import { store } from "../../index.js";
 import { addTilesToStore } from "../../actions/tileActions.js";
 import grassTileData from "../../assets/grassTile.json";
 
+import { mouseHoverOn } from "./mouseHover";
+
 // Depending on the grass tile, you might need different margins
 const flatTight = 2;
 const tallTight = 38;
@@ -39,6 +41,7 @@ export const addTiles = (game, size) => {
 				if (this.flowerSprite) {
 					this.flowerSprite.isoZ += raiseByHeight;
 					this.flowerSprite.stem.isoZ += raiseByHeight;
+					mouseHoverOn(this.flowerSprite.id);
 				}
 			});
 

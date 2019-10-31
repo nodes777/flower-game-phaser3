@@ -30,10 +30,10 @@ export const removeRecessiveAllele = data => {
 export const showTooltip = data => {
 	return {
 		type: SHOW_TOOLTIP,
-		visible: true,
-		content: data.name,
-		posX: data.posX,
-		posY: data.posY
+		name: data.name,
+		genotype: data.genotype,
+		phenotype: data.phenotype,
+		content: data.name
 	};
 };
 

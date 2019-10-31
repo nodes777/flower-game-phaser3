@@ -41,24 +41,11 @@ export function configReducer(state = exampleState.config, action) {
 			};
 		}
 		case SHOW_TOOLTIP: {
-			const { visible, content, posX, posY } = action;
+			const { name, genotype, phenotype } = action;
 			return {
 				...state,
 				tooltip: {
-					visible: visible,
-					content: content,
-					posX: posX,
-					posY: posY
-				}
-			};
-		}
-		case HIDE_TOOLTIP: {
-			const { visible, content } = action;
-			return {
-				...state,
-				tooltip: {
-					visible: visible,
-					content: content
+					content: `${name} ${JSON.stringify(genotype)}`
 				}
 			};
 		}
