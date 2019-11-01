@@ -53,9 +53,9 @@ class PunnettTableGene extends Component {
 							<th
 								rowSpan="2"
 								scope="rowgroup"
-								className="table-header"
+								className="table-header "
 							>
-								Flower 2
+								<div className="rotate90">Flower 2</div>
 							</th>
 							<th scope="row">
 								<AlleleListboxContainer

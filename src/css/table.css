@@ -4,10 +4,14 @@ td {
 	border: 1px solid black;
 }
 
+h1 {
+	font-size: 1em;
+}
+
 .table-header {
 	text-align: center;
 }
 
-h1 {
-	font-size: 1em;
+.rotate90 {
+	transform: rotate(-90deg);
 }

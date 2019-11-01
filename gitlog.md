@@ -1,3 +1,23 @@
+# Merges in betterMenus branch - 11/1/2019 - master
+
+## [0a7460d55b5a2a914ab7c2886e766b751634b6b3](https://github.com/nodes777/flower-game-phaser3/commit/0a7460d55b5a2a914ab7c2886e766b751634b6b3)
+
+Creates a sliding panel `BottomContainer` and `Wings` in `TopContainer`
+
+### BottomContainer
+
+-   Holds `Punnett` `Dashboard` and `FlowerTable`
+-   Switches view based on state in `BottomContainer`
+-   Uses `react-transition-group` for transitions
+
+### TopContainer
+
+-   Two `Wing` components
+-   Left `Wing` displays `Tooltip` which takes the Stores config property and displays the name and genotype of the currently hovered over flower
+-   Right `Wing` displays `FlyBeeButton`
+
+---
+
 # Adds in the allStack - 10/10/2019 - master
 
 ## [ebbd09e75de44345de31d0a6cadf838a4a216e09](https://github.com/nodes777/flower-game-phaser3/commit/ebbd09e75de44345de31d0a6cadf838a4a216e09)
