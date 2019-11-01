@@ -33,6 +33,9 @@ class FlowerName extends React.Component {
 	handleCancelChange = () => {
 		this.setState({ changingName: !this.state.changingName });
 	};
+	autoSelect = e => {
+		e.target.select();
+	};
 
 	render() {
 		const { flowerName } = this.props;
@@ -47,6 +50,7 @@ class FlowerName extends React.Component {
 							value={this.state.value}
 							onChange={this.handleChange}
 							onBlur={this.handleCancelChange}
+							onFocus={this.autoSelect}
 							aria-label="Enter New Flower Name"
 						/>
 					</form>

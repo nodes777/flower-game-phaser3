@@ -1,6 +1,7 @@
 import { beeFrameRotate } from "../gameloop/rotation";
 
 import { overlapCb } from "../gameloop/overlapCb";
+
 export function update() {
 	this.background.tilePositionY -= 0.1;
 	if (this.beeCanFly) {

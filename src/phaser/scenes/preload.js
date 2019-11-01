@@ -18,9 +18,6 @@ import squareFlowerData from "../../assets/squareFlower.json";
 import roundFlowerData from "../../assets/roundFlower.json";
 import triangleFlowerData from "../../assets/triangleFlower.json";
 
-import { add3dFlower } from "../add3dFlower";
-import { buildGarden } from "../init/buildGarden";
-
 import IsoPlugin, { IsoPhysics } from "phaser3-plugin-isometric";
 export function preload() {
 	this.load.scenePlugin({

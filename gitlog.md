@@ -1,3 +1,26 @@
+# Fixes bee flying off screen - 11/1/2019 - master
+
+## [0a7460d55b5a2a914ab7c2886e766b751634b6b3](https://github.com/nodes777/flower-game-phaser3/commit/0a7460d55b5a2a914ab7c2886e766b751634b6b3)
+
+-   [Trello](https://trello.com/b/IRxPAKtE/space-garden)
+-   Rotates Flower 2 text in punnett
+-   Fixes bee flying off screen
+-   Small refactor for `recreatePunnettFlowers.js` in /gameloop
+-   Flower Naming auto selects all on focus
+
+*   To Do:
+    -   Refactor add3dFlower, Do I need to pass in id?
+    -   Refactor checkstore for this functionality
+    -   Delete allPositions info in store - it's used in flowersReducer
+    -   At this point is it really necesary to have the punnett store at all?
+        -   Just use the first two flowers in the flower store?
+    -   Size determination for garden size
+    -   Change bee movement to be accelleration based
+    -   Fix bee moving backwards bug
+    -   Add Building Garden to Loading screen - Potentially impossible
+
+---
+
 # Merges in betterMenus branch - 11/1/2019 - master
 
 ## [0a7460d55b5a2a914ab7c2886e766b751634b6b3](https://github.com/nodes777/flower-game-phaser3/commit/0a7460d55b5a2a914ab7c2886e766b751634b6b3)
