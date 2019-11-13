@@ -8,10 +8,18 @@ h1 {
 	font-size: 1em;
 }
 
+.punnett table {
+	width: 100%;
+}
+
 .table-header {
 	text-align: center;
 }
 
 .rotate90 {
 	transform: rotate(-90deg);
+}
+
+.flower-name-table {
+	font-size: calc(10px + 2vmin);
 }

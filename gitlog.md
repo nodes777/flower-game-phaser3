@@ -1,14 +1,12 @@
-# Fixes bee flying off screen - 11/1/2019 - master
+# Allows resizing of punnett table widths - 11/13/2019 - master
 
-## [0a7460d55b5a2a914ab7c2886e766b751634b6b3](https://github.com/nodes777/flower-game-phaser3/commit/0a7460d55b5a2a914ab7c2886e766b751634b6b3)
+## [330419c4e7bdcec27ca17f861d4c20f27281401f](https://github.com/nodes777/flower-game-phaser3/commit/330419c4e7bdcec27ca17f861d4c20f27281401f)
+
+-   Better resizing of punnett table for different screen sizes.
 
 -   [Trello](https://trello.com/b/IRxPAKtE/space-garden)
--   Rotates Flower 2 text in punnett
--   Fixes bee flying off screen
--   Small refactor for `recreatePunnettFlowers.js` in /gameloop
--   Flower Naming auto selects all on focus
 
-*   To Do:
+-   To Do:
     -   Refactor add3dFlower, Do I need to pass in id?
     -   Refactor checkstore for this functionality
     -   Delete allPositions info in store - it's used in flowersReducer
@@ -18,6 +16,20 @@
     -   Change bee movement to be accelleration based
     -   Fix bee moving backwards bug
     -   Add Building Garden to Loading screen - Potentially impossible
+    -   Tables are not centered or not the same width on larger screen sizes
+    -   Clean up dashboard view
+
+---
+
+# Fixes bee flying off screen - 11/1/2019 - master
+
+## [330419c4e7bdcec27ca17f861d4c20f27281401f](https://github.com/nodes777/flower-game-phaser3/commit/330419c4e7bdcec27ca17f861d4c20f27281401f)
+
+-   [Trello](https://trello.com/b/IRxPAKtE/space-garden)
+-   Rotates Flower 2 text in punnett
+-   Fixes bee flying off screen
+-   Small refactor for `recreatePunnettFlowers.js` in /gameloop
+-   Flower Naming auto selects all on focus
 
 ---
 

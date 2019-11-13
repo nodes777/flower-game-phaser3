@@ -23,7 +23,7 @@ class FlowerTable extends Component {
 				aria-label="Table of all flowers present in the game, with their genotype"
 				className="bottomInnerContainer"
 			>
-				<table>
+				<table className="flower-name-table">
 					<tbody>
 						<tr>
 							<FlowerTableHeader genes={genes} />

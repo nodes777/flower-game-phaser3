@@ -44,7 +44,6 @@
 	flex-direction: column;
 	justify-content: center;
 	margin: 15px;
-	flex-grow: 1;
 	min-height: 500px;
 }
 
