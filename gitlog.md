@@ -1,6 +1,6 @@
 # Allows resizing of punnett table widths - 11/13/2019 - master
 
-## [330419c4e7bdcec27ca17f861d4c20f27281401f](https://github.com/nodes777/flower-game-phaser3/commit/330419c4e7bdcec27ca17f861d4c20f27281401f)
+## [014e4053291432a494875208b83aacf4713b6d87](https://github.com/nodes777/flower-game-phaser3/commit/014e4053291432a494875208b83aacf4713b6d87)
 
 -   Better resizing of punnett table for different screen sizes.
 
@@ -8,7 +8,8 @@
 
 -   To Do:
     -   Refactor add3dFlower, Do I need to pass in id?
-    -   Refactor checkstore for this functionality
+        -   Refactor checkstore for this functionality
+        -   The id is not in the flowers objecti in the store. Adding it there would create two places where the id exists
     -   Delete allPositions info in store - it's used in flowersReducer
     -   At this point is it really necesary to have the punnett store at all?
         -   Just use the first two flowers in the flower store?
@@ -16,7 +17,6 @@
     -   Change bee movement to be accelleration based
     -   Fix bee moving backwards bug
     -   Add Building Garden to Loading screen - Potentially impossible
-    -   Tables are not centered or not the same width on larger screen sizes
     -   Clean up dashboard view
 
 ---
