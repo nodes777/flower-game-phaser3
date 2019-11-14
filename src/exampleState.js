@@ -38,20 +38,6 @@ const parent1Pheno = determinePhenotype(parent1Geno, defaultRecessive);
 const parent2Pheno = determinePhenotype(parent2Geno, defaultRecessive);
 
 const exampleState = {
-    punnett: {
-        parent1: {
-            genotype: parent1Geno,
-            position: {},
-            phenotype: parent1Pheno,
-            tileIndex: null
-        },
-        parent2: {
-            genotype: parent2Geno,
-            position: {},
-            phenotype: parent2Pheno,
-            tileIndex: null
-        }
-    },
     flowers: {
         byId: {
             flower1: {

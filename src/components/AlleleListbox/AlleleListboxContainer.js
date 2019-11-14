@@ -30,6 +30,7 @@ class AlleleListboxContainer extends Component {
 		this.handleSubmit = _handleSubmit.bind(this);
 		this.handleOpenOptions = handleOpenOptions.bind(this);
 	}
+
 	state = {
 		currentAllele: this.props.punnett[this.props.parentId].genotype[
 			this.props.alleleType
@@ -83,10 +84,9 @@ class AlleleListboxContainer extends Component {
 	}
 }
 
-function mapStateToProps({ flowers, punnett }) {
+function mapStateToProps({ flowers }) {
 	return {
-		flowers,
-		punnett
+		punnett: flowers.byId
 	};
 }
 

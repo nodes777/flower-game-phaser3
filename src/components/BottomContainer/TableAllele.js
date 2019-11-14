@@ -34,9 +34,9 @@ export class TableAllele extends React.Component {
 	}
 }
 
-function mapStateToProps({ punnett, config }) {
+function mapStateToProps({ flowers, config }) {
 	return {
-		punnett,
+		punnett: flowers.byId,
 		config
 	};
 }

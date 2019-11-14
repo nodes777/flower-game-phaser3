@@ -36,14 +36,14 @@ class PunnettTableGene extends Component {
 						<tr>
 							<th scope="col">
 								<AlleleListboxContainer
-									parentId="parent1"
+									parentId="flower1"
 									alleleType={gene}
 									allelePosition={0}
 								/>
 							</th>
 							<th scope="col">
 								<AlleleListboxContainer
-									parentId="parent1"
+									parentId="flower1"
 									alleleType={gene}
 									allelePosition={1}
 								/>
@@ -59,15 +59,15 @@ class PunnettTableGene extends Component {
 							</th>
 							<th scope="row">
 								<AlleleListboxContainer
-									parentId="parent2"
+									parentId="flower2"
 									alleleType={gene}
 									allelePosition={0}
 								/>
 							</th>
 							<td>
 								<Diploid
-									p1Id="parent1"
-									p2Id="parent2"
+									p1Id="flower1"
+									p2Id="flower2"
 									alleleType={gene}
 									a1Pos={0}
 									a2Pos={0}
@@ -75,8 +75,8 @@ class PunnettTableGene extends Component {
 							</td>
 							<td>
 								<Diploid
-									p1Id="parent1"
-									p2Id="parent2"
+									p1Id="flower1"
+									p2Id="flower2"
 									alleleType={gene}
 									a1Pos={1}
 									a2Pos={0}
@@ -86,15 +86,15 @@ class PunnettTableGene extends Component {
 						<tr>
 							<th scope="row">
 								<AlleleListboxContainer
-									parentId="parent2"
+									parentId="flower2"
 									alleleType={gene}
 									allelePosition={1}
 								/>
 							</th>
 							<td>
 								<Diploid
-									p1Id="parent1"
-									p2Id="parent2"
+									p1Id="flower1"
+									p2Id="flower2"
 									alleleType={gene}
 									a1Pos={0}
 									a2Pos={1}
@@ -102,8 +102,8 @@ class PunnettTableGene extends Component {
 							</td>
 							<td>
 								<Diploid
-									p1Id="parent1"
-									p2Id="parent2"
+									p1Id="flower1"
+									p2Id="flower2"
 									alleleType={gene}
 									a1Pos={1}
 									a2Pos={1}

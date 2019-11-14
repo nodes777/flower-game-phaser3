@@ -107,6 +107,7 @@ export function flowersReducer(state = exampleState.flowers, action) {
 					}
 				})
 			};
+			console.log("flowersReducer CHANGE_PUNNETT_FLOWER");
 
 			return {
 				...state,

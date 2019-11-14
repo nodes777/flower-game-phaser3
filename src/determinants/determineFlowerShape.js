@@ -4,7 +4,7 @@ export const determineFlowerShape = phenotype => {
 	if (phenotype.shape === undefined) {
 		return shapes.Default;
 	}
-	switch (phenotype.shape) {
+	switch (phenotype.shape.toLowerCase()) {
 		case "default": {
 			return `${shapes.Default}Flower`;
 		}
@@ -17,8 +17,10 @@ export const determineFlowerShape = phenotype => {
 		case "round": {
 			return `${shapes.Round}Flower`;
 		}
-		default:
+		default: {
+			console.error("flower shape isn't a specified type");
 			return `${shapes.Default}Flower`;
+		}
 	}
 };
 

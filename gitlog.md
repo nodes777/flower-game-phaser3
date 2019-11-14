@@ -1,3 +1,21 @@
+# Removes Punnett part of the store - 11/14/2019 - master
+
+## [014e4053291432a494875208b83aacf4713b6d87](https://github.com/nodes777/flower-game-phaser3/commit/014e4053291432a494875208b83aacf4713b6d87)
+
+[Trello](https://trello.com/b/IRxPAKtE/space-garden)
+
+-   Removes the Punnett aspect of the store. Punnett was the same data as the first two flowers in the store. This created a data redundency. It's been replaced by referencing the same data in flowers.byId.flower1 and flower2 in TableAllele and changing the passed in prop of `parent1` to `flower1` PunnettTable.
+-   Fixes FlowerShapeIcon not showing in punnett table when changing flower shape. This was because the props passed in are capitalized, when the flowerShapes are all lowercase. The tricky part is that the colors are upper and lower case.
+
+-   To Do:
+    -   Delete allPositions info in store - it's used in flowersReducer
+    -   Size determination for garden size
+    -   Change bee movement to be accelleration based
+    -   Fix bee moving backwards bug
+    -   Clean up dashboard view
+
+---
+
 # Allows resizing of punnett table widths - 11/13/2019 - master
 
 ## [014e4053291432a494875208b83aacf4713b6d87](https://github.com/nodes777/flower-game-phaser3/commit/014e4053291432a494875208b83aacf4713b6d87)

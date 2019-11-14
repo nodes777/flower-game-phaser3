@@ -10,7 +10,6 @@ export function add3dFlower(
 	fromInitialization = true,
 	flowersOnScreenPos = 2
 ) {
-	console.log(currFlower);
 	const phenotype = currFlower.phenotype;
 
 	// determine position

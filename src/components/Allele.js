@@ -19,7 +19,9 @@ const Allele = props => {
 					case "color":
 						return <ColorSquare color={alleleName} />;
 					case "shape":
-						return <FlowerShapeIcon shape={alleleName} />;
+						return (
+							<FlowerShapeIcon shape={alleleName.toLowerCase()} />
+						);
 					default:
 						return null;
 				}
