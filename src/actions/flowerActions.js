@@ -2,7 +2,8 @@ import {
 	ADD_FLOWER_TO_STORE,
 	CHANGE_FLOWER_NAME,
 	SET_FIRST_FLOWER_POSITION,
-	ADD_BATCH_OF_FLOWERS_TO_STORE
+	ADD_BATCH_OF_FLOWERS_TO_STORE,
+	CHANGE_PUNNETT_FLOWER
 } from "../types/actions";
 
 export const addFlowerToStore = data => {
@@ -34,5 +35,12 @@ export const addBatchOfFlowersToStore = (newFlowersObj, newIds) => {
 		type: ADD_BATCH_OF_FLOWERS_TO_STORE,
 		newFlowersObj,
 		newIds
+	};
+};
+
+export const changeParentAllele = data => {
+	return {
+		type: CHANGE_PUNNETT_FLOWER,
+		data
 	};
 };

@@ -1,4 +1,4 @@
-import { changeParentAllele } from "../../../actions/punnettActions";
+import { changeParentAllele } from "../../../actions/flowerActions";
 import { store } from "../../../index";
 
 export const _handleOptionsEvents = function(color, index, event) {
