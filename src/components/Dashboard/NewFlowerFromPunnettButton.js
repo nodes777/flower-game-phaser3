@@ -7,21 +7,21 @@ import { screenSize } from "../../utils/screenSize";
 
 import PropTypes from "prop-types";
 
-function mapStateToProps({ punnett, tiles }) {
+function mapStateToProps({ flowers, tiles }) {
 	return {
-		punnett,
+		flowers,
 		tiles
 	};
 }
 
 class NewFlowerFromPunnettButton extends React.Component {
 	static propTypes = {
-		punnett: PropTypes.object
+		flowers: PropTypes.object
 	};
 	handleSubmit = () => {
-		const { dispatch, punnett, tiles } = this.props;
-		const parent1 = punnett.parent1;
-		const parent2 = punnett.parent2;
+		const { dispatch, flowers, tiles } = this.props;
+		const parent1 = flowers.byId.flower1;
+		const parent2 = flowers.byId.flower2;
 		const tileInfo = determineRandomPos(tiles.availableTiles);
 		const posX = tileInfo.x;
 		const posY = tileInfo.y;
@@ -51,9 +51,9 @@ class NewFlowerFromPunnettButton extends React.Component {
 		dispatch(addFlowerToStore(info));
 	};
 	render() {
-		const { punnett } = this.props;
-		const parent1 = punnett.parent1;
-		const parent2 = punnett.parent2;
+		const { flowers } = this.props;
+		const parent1 = flowers.byId.flower1;
+		const parent2 = flowers.byId.flower2;
 		return (
 			<button
 				className="btn btn-primary"

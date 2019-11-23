@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import { addRecessiveAllele } from "../../actions/configActions";
 import PropTypes from "prop-types";
 
-function mapStateToProps({ config, punnett }) {
+function mapStateToProps({ config, flowers }) {
 	return {
 		config,
-		punnett
+		flowers
 	};
 }
 
@@ -33,11 +33,11 @@ class AddRecessiveAllele extends React.Component {
 	};
 
 	render() {
-		const { config, punnett, alleleType } = this.props;
+		const { config, flowers, alleleType } = this.props;
 		const recessiveAlleles = config.recessive[alleleType + "s"];
-		const bothParentsAlleles = punnett.parent1.genotype[alleleType].concat(
-			punnett.parent2.genotype[alleleType]
-		);
+		const bothParentsAlleles = flowers.byId.flower1.genotype[
+			alleleType
+		].concat(flowers.byId.flower2.genotype[alleleType]);
 		const availableAlleles = bothParentsAlleles.filter(
 			value => !recessiveAlleles.includes(value)
 		);
