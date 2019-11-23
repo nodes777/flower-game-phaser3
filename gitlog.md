@@ -1,6 +1,14 @@
+# Fixes bug for going to the right on Config Dashboard- 11/23/2019 - master
+
+## [b2faa0fc22ced74a743557586f4a8b3242cbe0e1](https://github.com/nodes777/flower-game-phaser3/commit/b2faa0fc22ced74a743557586f4a8b3242cbe0e1)
+
+-   Fixes bug that still relied on Punnett part of the store in `<NewFlowerFromPunnett/>` and `<AddRecessiveAlelle/>`
+
+---
+
 # Removes Punnett part of the store - 11/14/2019 - master
 
-## [014e4053291432a494875208b83aacf4713b6d87](https://github.com/nodes777/flower-game-phaser3/commit/014e4053291432a494875208b83aacf4713b6d87)
+## [f6987e1d50b96674c5d226b8538b7056a45eaf64](https://github.com/nodes777/flower-game-phaser3/commit/f6987e1d50b96674c5d226b8538b7056a45eaf64)
 
 [Trello](https://trello.com/b/IRxPAKtE/space-garden)
 
