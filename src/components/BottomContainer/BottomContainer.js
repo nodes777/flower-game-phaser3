@@ -130,7 +130,7 @@ class BottomContainer extends Component {
 								case 0:
 									return "Punnett";
 								case 1:
-									return "Dashboard";
+									return "Options";
 								case 2:
 									return "";
 							}

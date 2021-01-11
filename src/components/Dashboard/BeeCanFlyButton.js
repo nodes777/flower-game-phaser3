@@ -6,7 +6,7 @@ import "../../css/btn.css";
 
 function mapStateToProps({ config }) {
 	return {
-		config
+		config,
 	};
 }
 
@@ -16,7 +16,7 @@ class BeeCanFlyButton extends React.Component {
 
 		this.setState(
 			() => ({
-				checked: !this.state.checked
+				checked: !this.state.checked,
 			}),
 			() => {
 				dispatch(beeCanFly(this.state.checked));
@@ -24,7 +24,7 @@ class BeeCanFlyButton extends React.Component {
 		);
 	};
 	state = {
-		checked: this.props.config.beeCanFly
+		checked: this.props.config.beeCanFly,
 	};
 
 	render() {
@@ -37,6 +37,7 @@ class BeeCanFlyButton extends React.Component {
 						? "Bee is flying, Pause Bee"
 						: "Bee is not flying, Play Bee"
 				}
+				title={"Start the gene simulation, with the Bee picking random parents"}
 			>
 				{this.state.checked ? (
 					<span aria-hidden={true}>&#10074;&#10074; Bee</span>

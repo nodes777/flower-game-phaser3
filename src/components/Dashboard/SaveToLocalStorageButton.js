@@ -12,7 +12,7 @@ class SaveToLocalStorageButton extends React.Component {
 	handleSubmit = () => {
 		saveState(this.props.fullState);
 		alert(
-			"Your garden has been saved in its current and will reappear when reloading the page"
+			"Your garden has been saved in its current state and will reappear when reloading the page"
 		);
 	};
 	render() {

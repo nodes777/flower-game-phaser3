@@ -8,7 +8,7 @@ import SaveToLocalStorageButton from "./SaveToLocalStorageButton";
 import ClearLocalStorageButton from "./ClearLocalStorageButton";
 import "../../css/App.css";
 
-const Dashboard = props => {
+const Dashboard = (props) => {
 	return (
 		<div
 			role="region"
@@ -16,9 +16,9 @@ const Dashboard = props => {
 			className="bottomInnerContainer"
 		>
 			<h1>Dashboard</h1>
-			<div>
+			{/* <div>
 				<BeeCanFlyButton />
-			</div>
+			</div> */}
 			<div>
 				<NewFlowerFromPunnettButton />
 			</div>

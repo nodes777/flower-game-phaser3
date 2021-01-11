@@ -10,13 +10,13 @@ import PropTypes from "prop-types";
 function mapStateToProps({ flowers, tiles }) {
 	return {
 		flowers,
-		tiles
+		tiles,
 	};
 }
 
 class NewFlowerFromPunnettButton extends React.Component {
 	static propTypes = {
-		flowers: PropTypes.object
+		flowers: PropTypes.object,
 	};
 	handleSubmit = () => {
 		const { dispatch, flowers, tiles } = this.props;
@@ -31,22 +31,22 @@ class NewFlowerFromPunnettButton extends React.Component {
 				genotype: {
 					color: parent1.genotype.color,
 					shape: parent1.genotype.shape,
-					stem: parent1.genotype.stem
+					stem: parent1.genotype.stem,
 				},
-				position: { x: 0, y: 0 }
+				position: { x: 0, y: 0 },
 			},
 			parent2: {
 				genotype: {
 					color: parent2.genotype.color,
 					shape: parent2.genotype.shape,
-					stem: parent2.genotype.stem
+					stem: parent2.genotype.stem,
 				},
-				position: { x: 0, y: 0 }
+				position: { x: 0, y: 0 },
 			},
 			posInfo: {
 				newPos: { x: posX, y: posY },
-				tileIndex: tileInfo.tileIndex
-			}
+				tileIndex: tileInfo.tileIndex,
+			},
 		};
 		dispatch(addFlowerToStore(info));
 	};
@@ -58,6 +58,7 @@ class NewFlowerFromPunnettButton extends React.Component {
 			<button
 				className="btn btn-primary"
 				onClick={this.handleSubmit}
+				title={"Generate a new flower from the currrent Punnett Square config"}
 				disabled={
 					parent1.genotype.color[0] === undefined ||
 					parent1.genotype.color[1] === undefined ||

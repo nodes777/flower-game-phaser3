@@ -13,7 +13,7 @@ import "../../css/btn.css";
 function mapStateToProps({ flowers, tiles }) {
 	return {
 		flowers,
-		tiles
+		tiles,
 	};
 }
 
@@ -29,26 +29,30 @@ class NewRandomFlowerButton extends React.Component {
 				genotype: {
 					color: [getRandomColor(), getRandomColor()],
 					shape: [getRandomShape(), getRandomShape()],
-					stem: [getRandomStem(), getRandomStem()]
-				}
+					stem: [getRandomStem(), getRandomStem()],
+				},
 			},
 			parent2: {
 				genotype: {
 					color: [getRandomColor(), getRandomColor()],
 					shape: [getRandomShape(), getRandomShape()],
-					stem: [getRandomStem(), getRandomStem()]
-				}
+					stem: [getRandomStem(), getRandomStem()],
+				},
 			},
 			posInfo: {
 				newPos: { x: posX, y: posY },
-				tileIndex: tileInfo.tileIndex
-			}
+				tileIndex: tileInfo.tileIndex,
+			},
 		};
 		dispatch(addFlowerToStore(info));
 	};
 	render() {
 		return (
-			<button className="btn btn-primary" onClick={this.handleSubmit}>
+			<button
+				className="btn btn-primary"
+				onClick={this.handleSubmit}
+				title={"Generate a new flower with a random genotype"}
+			>
 				New Random Flower
 			</button>
 		);
