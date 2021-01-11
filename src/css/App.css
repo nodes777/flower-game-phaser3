@@ -49,8 +49,34 @@
 
 .arrowButtons {
 	z-index: 4;
+	background-color: #383c41;
+	transition: all 0.8s;
+	width: 4%;
+	padding: 0%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #383c41;
+
+	display: flex;
+	justify-content: center;
 }
 
+.arrowButtons .leftArrow {
+	writing-mode: vertical-rl;
+	font-size: 1.5em;
+	color: white;
+	transform: rotate(180deg);
+	margin-top: 25vh;
+	padding: 0;
+}
+
+.arrowButtons .rightArrow {
+	writing-mode: vertical-rl;
+	font-size: 1.5em;
+	color: white;
+	margin-top: 25vh;
+	padding: 0;
+}
 /*.tooltip {
 	display: flex;
 	justify-content: flex-start;

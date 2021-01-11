@@ -12,14 +12,14 @@ class BottomContainer extends Component {
 	// viewsArr = ["flowertable", "punnett", "dashboard"];
 	state = {
 		view: 1,
-		prevView: null
+		prevView: null,
 	};
 
 	viewGoLeft = () => {
 		this.setState({ punnettExit: "punnett-exit-right-active" }, () => {
 			this.setState({
 				view: this.state.view - 1,
-				prevView: this.state.view
+				prevView: this.state.view,
 			});
 		});
 	};
@@ -28,7 +28,7 @@ class BottomContainer extends Component {
 		this.setState({ punnettExit: "punnett-exit-left-active" }, () => {
 			this.setState({
 				view: this.state.view + 1,
-				prevView: this.state.view
+				prevView: this.state.view,
 			});
 		});
 	};
@@ -41,7 +41,18 @@ class BottomContainer extends Component {
 					disabled={!this.state.view >= 1}
 					onClick={this.viewGoLeft}
 				>
-					Left
+					<div className="leftArrow">
+						{(() => {
+							switch (this.state.view) {
+								case 0:
+									return "";
+								case 1:
+									return "Flower Table";
+								case 2:
+									return "Punnett";
+							}
+						})()}
+					</div>
 				</button>
 				<TransitionGroup>
 					{(() => {
@@ -54,10 +65,9 @@ class BottomContainer extends Component {
 										timeout={500}
 										classNames={{
 											enter: "item-enter-left",
-											enterActive:
-												"item-enter-left-active",
+											enterActive: "item-enter-left-active",
 											exit: "item-exit-left",
-											exitActive: "item-exit-left-active"
+											exitActive: "item-exit-left-active",
 										}}
 									>
 										<FlowerTable />
@@ -81,9 +91,7 @@ class BottomContainer extends Component {
 													: "punnett-enter-left-active"
 											}`,
 											exit: `punnett-exit`,
-											exitActive: `${
-												this.state.punnettExit
-											}`
+											exitActive: `${this.state.punnettExit}`,
 										}}
 									>
 										<Punnett />
@@ -97,10 +105,9 @@ class BottomContainer extends Component {
 										timeout={500}
 										classNames={{
 											enter: "item-enter-right",
-											enterActive:
-												"item-enter-right-active",
+											enterActive: "item-enter-right-active",
 											exit: "item-exit-right",
-											exitActive: "item-exit-right-active"
+											exitActive: "item-exit-right-active",
 										}}
 									>
 										<Dashboard />
@@ -117,7 +124,18 @@ class BottomContainer extends Component {
 					disabled={this.state.view >= 2}
 					onClick={this.viewGoRight}
 				>
-					Right
+					<div className="rightArrow">
+						{(() => {
+							switch (this.state.view) {
+								case 0:
+									return "Punnett";
+								case 1:
+									return "Dashboard";
+								case 2:
+									return "";
+							}
+						})()}
+					</div>
 				</button>
 			</div>
 		);
