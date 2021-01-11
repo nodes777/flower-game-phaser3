@@ -53,6 +53,11 @@
 	transform: skewX(30deg);
 }
 
+.leftWing p {
+	margin: 0;
+	font-size: calc(10px + 1.1vmin);
+}
+
 /*
 .leftWing:after {
 	content: "";

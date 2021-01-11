@@ -4,7 +4,7 @@ import {
 	ADD_RECESSIVE_ALLELE,
 	REMOVE_RECESSIVE_ALLELE,
 	SHOW_TOOLTIP,
-	HIDE_TOOLTIP
+	HIDE_TOOLTIP,
 } from "../types/actions";
 
 export function configReducer(state = exampleState.config, action) {
@@ -13,7 +13,7 @@ export function configReducer(state = exampleState.config, action) {
 			const { bool } = action;
 			return {
 				...state,
-				beeCanFly: bool
+				beeCanFly: bool,
 			};
 		}
 		case ADD_RECESSIVE_ALLELE: {
@@ -22,10 +22,8 @@ export function configReducer(state = exampleState.config, action) {
 				...state,
 				recessive: {
 					...state.recessive,
-					[alleleType]: [
-						...state.recessive[alleleType].concat([allele])
-					]
-				}
+					[alleleType]: [...state.recessive[alleleType].concat([allele])],
+				},
 			};
 		}
 		case REMOVE_RECESSIVE_ALLELE: {
@@ -36,8 +34,8 @@ export function configReducer(state = exampleState.config, action) {
 					...state.recessive,
 					[alleleType]: state.recessive[alleleType].filter(
 						(value, index) => value !== allele
-					)
-				}
+					),
+				},
 			};
 		}
 		case SHOW_TOOLTIP: {
@@ -45,8 +43,8 @@ export function configReducer(state = exampleState.config, action) {
 			return {
 				...state,
 				tooltip: {
-					content: `${name} ${JSON.stringify(genotype)}`
-				}
+					content: { name, genotype, phenotype },
+				},
 			};
 		}
 

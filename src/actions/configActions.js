@@ -3,44 +3,44 @@ import {
 	ADD_RECESSIVE_ALLELE,
 	REMOVE_RECESSIVE_ALLELE,
 	SHOW_TOOLTIP,
-	HIDE_TOOLTIP
+	HIDE_TOOLTIP,
 } from "../types/actions";
 
-export const beeCanFly = bool => {
+export const beeCanFly = (bool) => {
 	return {
 		type: BEE_CAN_FLY,
-		bool
+		bool,
 	};
 };
 
-export const addRecessiveAllele = data => {
+export const addRecessiveAllele = (data) => {
 	return {
 		type: ADD_RECESSIVE_ALLELE,
-		data
+		data,
 	};
 };
 
-export const removeRecessiveAllele = data => {
+export const removeRecessiveAllele = (data) => {
 	return {
 		type: REMOVE_RECESSIVE_ALLELE,
-		data
+		data,
 	};
 };
 
-export const showTooltip = data => {
+export const showTooltip = (data) => {
 	return {
 		type: SHOW_TOOLTIP,
 		name: data.name,
 		genotype: data.genotype,
 		phenotype: data.phenotype,
-		content: data.name
+		content: data.name,
 	};
 };
 
-export const hideTooltip = data => {
+export const hideTooltip = (data) => {
 	return {
 		type: HIDE_TOOLTIP,
 		visible: false,
-		content: "Nothing"
+		content: "Nothing",
 	};
 };
