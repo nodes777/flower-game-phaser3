@@ -52,6 +52,7 @@ class NewRandomFlowerButton extends React.Component {
 				className="btn btn-primary"
 				onClick={this.handleSubmit}
 				title={"Generate a new flower with a random genotype"}
+				className="dash-btn"
 			>
 				New Random Flower
 			</button>

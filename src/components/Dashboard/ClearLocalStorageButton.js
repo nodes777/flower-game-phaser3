@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { clearState } from "../../utils/localStorage";
 
-import "../../css/btn.css";
+import "../../css/dashboard.css";
 
 function mapStateToProps(fullState) {
 	return { fullState };
@@ -17,7 +17,12 @@ class ClearLocalStorageButton extends React.Component {
 	};
 	render() {
 		return (
-			<button className="btn btn-primary" onClick={this.handleSubmit}>
+			<button
+				className="btn btn-primary"
+				onClick={this.handleSubmit}
+				className="dash-btn"
+				title="Remove the saved state from local storage"
+			>
 				Clear Local Storage
 			</button>
 		);

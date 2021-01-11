@@ -2,32 +2,33 @@ import React from "react";
 import { connect } from "react-redux";
 import { removeRecessiveAllele } from "../../actions/configActions";
 import PropTypes from "prop-types";
+import "../../css/dashboard.css";
 
 function mapStateToProps({ config }) {
 	return {
-		config
+		config,
 	};
 }
 
 class RemoveRecessiveAllele extends React.Component {
 	static propTypes = {
-		alleleType: PropTypes.string
+		alleleType: PropTypes.string,
 	};
 	state = { value: "" };
 
-	handleSubmit = e => {
+	handleSubmit = (e) => {
 		e.preventDefault();
 		const { dispatch } = this.props;
 		this.setState({ value: "" });
 		dispatch(
 			removeRecessiveAllele({
 				alleleType: this.props.alleleType + "s",
-				allele: this.state.value
+				allele: this.state.value,
 			})
 		);
 	};
 
-	handleChange = e => {
+	handleChange = (e) => {
 		this.setState({ value: e.target.value });
 	};
 
@@ -39,16 +40,17 @@ class RemoveRecessiveAllele extends React.Component {
 		const hasNoRecessiveAlleles = recessiveAlleles.length < 1;
 
 		return (
-			<form onSubmit={this.handleSubmit}>
+			<form onSubmit={this.handleSubmit} className="recessive-select-form">
 				<select
 					aria-label={`${alleleType} to make recessive`}
 					value={this.state.value}
 					onChange={this.handleChange}
 					disabled={hasNoRecessiveAlleles}
+					className="select-allele"
 				>
 					<option>
 						{hasNoRecessiveAlleles
-							? `There are no recessive ${alleleType}s`
+							? `No recessive ${alleleType}s`
 							: firstOption}
 					</option>
 					{recessiveAlleles.map((allele, i) => {
@@ -58,8 +60,13 @@ class RemoveRecessiveAllele extends React.Component {
 
 				<input
 					type="submit"
-					disabled={hasNoRecessiveAlleles}
+					disabled={
+						hasNoRecessiveAlleles ||
+						this.state.value === "" ||
+						this.state.value === `Select a ${alleleType}`
+					}
 					value={`Remove recessive ${alleleType}`}
+					className="dash-btn"
 				/>
 			</form>
 		);

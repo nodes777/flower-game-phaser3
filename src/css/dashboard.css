@@ -1,0 +1,42 @@
+.recessive-select-form {
+	display: flex;
+}
+
+.recessive-select-form > .select-allele {
+	margin: 2%;
+	border: 2px solid black;
+	border-radius: 2px;
+	padding: 5px;
+	width: auto;
+	cursor: pointer;
+	font-size: 1.1em;
+}
+
+.dash-btn {
+	padding: 3%;
+	margin: 2%;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #388529;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+	font-size: 1.1em;
+}
+
+/* :disabled .dash-btn {
+	background-color: #587252;
+} */
+
+input:disabled,
+input[disabled],
+button:disabled,
+button[disabled],
+.dash-btn[disabled] {
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+}

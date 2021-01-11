@@ -21,20 +21,16 @@ const Dashboard = (props) => {
 			</div> */}
 			<div>
 				<NewFlowerFromPunnettButton />
-			</div>
-			<div>
+
 				<NewRandomFlowerButton />
 			</div>
 			<div>
 				<AddRecessiveAllele alleleType="color" />
-			</div>
-			<div>
+
 				<RemoveRecessiveAllele alleleType="color" />
-			</div>
-			<div>
+
 				<AddRecessiveAllele alleleType="shape" />
-			</div>
-			<div>
+
 				<RemoveRecessiveAllele alleleType="shape" />
 			</div>
 			<div>

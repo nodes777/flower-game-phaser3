@@ -59,6 +59,7 @@ class NewFlowerFromPunnettButton extends React.Component {
 				className="btn btn-primary"
 				onClick={this.handleSubmit}
 				title={"Generate a new flower from the currrent Punnett Square config"}
+				className="dash-btn"
 				disabled={
 					parent1.genotype.color[0] === undefined ||
 					parent1.genotype.color[1] === undefined ||
