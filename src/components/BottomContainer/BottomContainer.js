@@ -1,5 +1,9 @@
 import React, { Component, Fragment } from "react";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import {
+	TransitionGroup,
+	CSSTransition,
+	SwitchTransition,
+} from "react-transition-group";
 
 import FlowerTable from "../FlowerTable/FlowerTable";
 import Punnett from "./Punnett";
@@ -54,7 +58,7 @@ class BottomContainer extends Component {
 						})()}
 					</div>
 				</button>
-				<TransitionGroup>
+				<SwitchTransition mode={"out-in"}>
 					{(() => {
 						switch (this.state.view) {
 							case 0:
@@ -62,7 +66,7 @@ class BottomContainer extends Component {
 									<CSSTransition
 										key={0}
 										in={0 === this.state.view}
-										timeout={500}
+										timeout={300}
 										classNames={{
 											enter: "item-enter-left",
 											enterActive: "item-enter-left-active",
@@ -78,7 +82,7 @@ class BottomContainer extends Component {
 									<CSSTransition
 										key={1}
 										in={1 === this.state.view}
-										timeout={500}
+										timeout={300}
 										classNames={{
 											enter: `${
 												this.state.prevView == 0
@@ -102,7 +106,7 @@ class BottomContainer extends Component {
 									<CSSTransition
 										key={2}
 										in={2 === this.state.view}
-										timeout={500}
+										timeout={300}
 										classNames={{
 											enter: "item-enter-right",
 											enterActive: "item-enter-right-active",
@@ -117,7 +121,7 @@ class BottomContainer extends Component {
 								return null;
 						}
 					})()}
-				</TransitionGroup>
+				</SwitchTransition>
 
 				<button
 					className="arrowButtons"

@@ -1,28 +1,24 @@
 /* Punnett transitions */
 .punnett-enter-left {
-	position: absolute;
 	z-index: 3;
 	transform: translateX(-200%);
 }
 
 .punnett-enter-left-active {
-	position: absolute;
 	z-index: 3;
 	transform: translateX(0);
-	transition: transform 500ms ease-in;
+	transition: transform 300ms ease-in;
 }
 
 .punnett-enter-right {
-	position: absolute;
 	z-index: 3;
 	transform: translateX(200%);
 }
 
 .punnett-enter-right-active {
-	position: absolute;
 	z-index: 3;
 	transform: translateX(0);
-	transition: transform 500ms ease-in;
+	transition: transform 300ms ease-in;
 }
 
 .punnett-exit {
@@ -31,28 +27,26 @@
 
 .punnett-exit-left-active {
 	transform: translateX(-200%);
-	transition: transform 500ms ease-in;
+	transition: transform 300ms ease-in;
 }
 
 .punnett-exit-right-active {
 	transform: translateX(200%);
-	transition: transform 500ms ease-in;
+	transition: transform 300ms ease-in;
 }
 
 /* Flower Table and Dashboard Transitions */
 
 /* Left */
 .item-enter-left {
-	position: absolute;
 	z-index: 3;
 	transform: translateX(-200%);
 }
 
 .item-enter-left-active {
-	position: absolute;
 	z-index: 3;
 	transform: translateX(0);
-	transition: transform 500ms ease-in;
+	transition: transform 300ms ease-in;
 }
 
 .item-exit-left {
@@ -61,21 +55,19 @@
 
 .item-exit-left-active {
 	transform: translateX(-200%);
-	transition: transform 500ms ease-in;
+	transition: transform 300ms ease-in;
 }
 
 /* Right */
 .item-enter-right {
-	position: absolute;
 	z-index: 3;
 	transform: translateX(300%);
 }
 
 .item-enter-right-active {
-	position: absolute;
 	z-index: 3;
 	transform: translateX(0);
-	transition: transform 500ms ease-in;
+	transition: transform 300ms ease-in;
 }
 
 .item-exit-right {
