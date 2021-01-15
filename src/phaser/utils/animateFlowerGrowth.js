@@ -4,7 +4,7 @@ export function animateFlowerGrowth(game, sprite) {
 	for (let i = 1; i <= 16; i++) {
 		game.time.addEvent({
 			delay: speed * i,
-			callback: function() {
+			callback: function () {
 				if (i === 16) {
 					sprite.setFrame(0);
 					sprite.stem.setFrame(0);
@@ -19,15 +19,15 @@ export function animateFlowerGrowth(game, sprite) {
 				// } else if (i >= 12) {
 				// 	sprite.depth = 2;
 				// }
-			}
+			},
 		});
 		game.tweens.add({
 			targets: [sprite, sprite.stem],
 			scaleX: 1,
 			scaleY: 1,
-			ease: "Linear",
+			ease: "Back.easeInOut",
 			duration: 1000,
-			yoyo: false
+			yoyo: false,
 		});
 	}
 }
