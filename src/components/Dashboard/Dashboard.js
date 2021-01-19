@@ -12,10 +12,10 @@ const Dashboard = (props) => {
 	return (
 		<div
 			role="region"
-			aria-label="Dashboard for game configuration"
+			aria-label="Options for game configuration"
 			className="bottomInnerContainer"
 		>
-			<h1>Dashboard</h1>
+			<h1>Options</h1>
 			{/* <div>
 				<BeeCanFlyButton />
 			</div> */}
