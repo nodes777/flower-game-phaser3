@@ -1,19 +1,19 @@
 import exampleState from "../exampleState";
 import {
 	determineGenotype,
-	determinePhenotype
+	determinePhenotype,
 } from "../determinants/determineGenotypePhenotype";
 import {
 	determineXPos,
 	determineYPos,
-	verifyPositions
+	verifyPositions,
 } from "../determinants/determinePosition";
 import {
 	CHANGE_PUNNETT_FLOWER,
 	ADD_FLOWER_TO_STORE,
 	CHANGE_FLOWER_NAME,
 	SET_FIRST_FLOWER_POSITION,
-	ADD_BATCH_OF_FLOWERS_TO_STORE
+	ADD_BATCH_OF_FLOWERS_TO_STORE,
 } from "../types/actions";
 
 export function flowersReducer(state = exampleState.flowers, action) {
@@ -29,21 +29,23 @@ export function flowersReducer(state = exampleState.flowers, action) {
 						...state.byId[flowerId],
 						position: {
 							x: initPos.x,
-							y: initPos.y
+							y: initPos.y,
 						},
-						tileIndex: initPos.tileIndex
-					}
-				}
+						tileIndex: initPos.tileIndex,
+					},
+				},
 			};
 		case ADD_FLOWER_TO_STORE:
 			const { parent1, parent2, posInfo } = action.data;
+			console.log("parent 1 geno");
+			console.log(parent1.genotype);
+			console.log("parent 2 geno");
+			console.log(parent2.genotype);
 			const recessive = action.recessive;
 			// Better way to generate ids?
 			const newId = `flower${state.allIds.length + 1}`;
-			const newGenotype = determineGenotype(
-				parent1.genotype,
-				parent2.genotype
-			);
+			const newGenotype = determineGenotype(parent1.genotype, parent2.genotype);
+			const newPhenotype = determinePhenotype(newGenotype, recessive);
 
 			return {
 				...state,
@@ -53,15 +55,15 @@ export function flowersReducer(state = exampleState.flowers, action) {
 						genotype: newGenotype,
 						position: {
 							x: posInfo.newPos.x,
-							y: posInfo.newPos.y
+							y: posInfo.newPos.y,
 						},
-						phenotype: determinePhenotype(newGenotype, recessive),
+						phenotype: newPhenotype,
 						name: newId,
-						tileIndex: posInfo.tileIndex
-					}
+						tileIndex: posInfo.tileIndex,
+					},
 				},
 				allIds: [...state.allIds.concat([newId])],
-				allPositions: [...state.allPositions.concat(posInfo.newPos)]
+				allPositions: [...state.allPositions.concat(posInfo.newPos)],
 			};
 		case CHANGE_FLOWER_NAME:
 			return {
@@ -70,9 +72,9 @@ export function flowersReducer(state = exampleState.flowers, action) {
 					...state.byId,
 					[action.flowerId]: {
 						...state.byId[action.flowerId],
-						name: action.newName
-					}
-				}
+						name: action.newName,
+					},
+				},
 			};
 		case ADD_BATCH_OF_FLOWERS_TO_STORE:
 			const { newFlowersObj, newIds } = action;
@@ -80,9 +82,9 @@ export function flowersReducer(state = exampleState.flowers, action) {
 				...state,
 				byId: {
 					...state.byId,
-					...newFlowersObj
+					...newFlowersObj,
 				},
-				allIds: [...state.allIds.concat([...newIds])]
+				allIds: [...state.allIds.concat([...newIds])],
 			};
 		case CHANGE_PUNNETT_FLOWER:
 			const {
@@ -90,22 +92,22 @@ export function flowersReducer(state = exampleState.flowers, action) {
 				alleleType,
 				allelePosition,
 				allele,
-				recessiveTraits
+				recessiveTraits,
 			} = action.data;
 
 			const punnettFlowerId = `flower${parentId.slice(-1)}`;
 
 			const newPunnettGenotype = {
 				...state.byId[punnettFlowerId].genotype,
-				[alleleType]: state.byId[punnettFlowerId].genotype[
-					alleleType
-				].map((item, index) => {
-					if (index === allelePosition) {
-						return allele;
-					} else {
-						return item;
+				[alleleType]: state.byId[punnettFlowerId].genotype[alleleType].map(
+					(item, index) => {
+						if (index === allelePosition) {
+							return allele;
+						} else {
+							return item;
+						}
 					}
-				})
+				),
 			};
 			console.log("flowersReducer CHANGE_PUNNETT_FLOWER");
 
@@ -116,12 +118,9 @@ export function flowersReducer(state = exampleState.flowers, action) {
 					[punnettFlowerId]: {
 						...state.byId[punnettFlowerId],
 						genotype: newPunnettGenotype,
-						phenotype: determinePhenotype(
-							newPunnettGenotype,
-							recessiveTraits
-						)
-					}
-				}
+						phenotype: determinePhenotype(newPunnettGenotype, recessiveTraits),
+					},
+				},
 			};
 
 		default:

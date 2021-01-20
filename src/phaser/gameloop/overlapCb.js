@@ -1,6 +1,6 @@
 import { checkForPollen } from "./checkForPollen";
 
-export const overlapCb = function(bee, flowerToFlyTo) {
+export const overlapCb = function (bee, flowerToFlyTo) {
 	//console.log("COLLIDED");
 
 	// console.log(bee);
@@ -20,19 +20,24 @@ export const overlapCb = function(bee, flowerToFlyTo) {
 		this.bee1Collided = true;
 		this.time.addEvent({
 			delay: 1000,
-			callback: function() {
+			callback: function () {
 				// check if bee has pollen
 				checkForPollen(bee.id, flowerToFlyTo.id);
 
-				// set the new target randomly
-				this.flowerToFlyTo = this.flowersOnScreen[
-					Math.floor(Math.random() * this.flowersOnScreen.length)
-				];
+				// set the new target randomly except the current flower
+				const possibleFlowersToFlyTo = this.flowersOnScreen.filter((flower) => {
+					return flower.id !== this.flowerToFlyTo.id;
+				});
+
+				this.flowerToFlyTo =
+					possibleFlowersToFlyTo[
+						Math.floor(Math.random() * possibleFlowersToFlyTo.length)
+					];
 
 				// allow collision again
 				this.bee1Collided = false;
 			},
-			callbackScope: this
+			callbackScope: this,
 		});
 	}
 };

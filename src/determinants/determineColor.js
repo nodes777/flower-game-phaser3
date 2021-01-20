@@ -2,40 +2,10 @@ import { colors } from "../types/colors";
 const colorsKeys = Object.keys(colors);
 const colorsLength = colorsKeys.length;
 
+import { determiner } from "./determiner";
+
 export function determineColor(genotypeColors, recessive) {
-	// Check to see if either color is recessive
-	const recessiveColors = recessive.colors;
-	let allele1IsRecessive = false;
-	let allele2IsRecessive = false;
-
-	// Loop through the recessiveColors array
-	for (let i = 0; i < recessiveColors.length; i++) {
-		if (genotypeColors[0] === recessiveColors[i]) {
-			allele1IsRecessive = true;
-		}
-		if (genotypeColors[1] === recessiveColors[i]) {
-			allele2IsRecessive = true;
-		}
-	}
-
-	// if neither color is recessive then 50/50 random
-	if (!allele1IsRecessive && !allele2IsRecessive) {
-		return colors[genotypeColors[Math.round(Math.random())]];
-	}
-
-	// if both are recessive, then also 50/50 random
-	else if (allele1IsRecessive && allele2IsRecessive) {
-		return colors[genotypeColors[Math.round(Math.random())]];
-	}
-
-	// if allele1 is not recessive, but allele2 is, always return allele1
-	else if (!allele1IsRecessive && allele2IsRecessive) {
-		return colors[genotypeColors[0]];
-	}
-	// if allele2 is not recessive, but allele1 is, always return allele2
-	else if (allele1IsRecessive && !allele2IsRecessive) {
-		return colors[genotypeColors[1]];
-	}
+	return determiner(genotypeColors, recessive.colors);
 }
 
 export function getHexColor(colorName) {

@@ -1,4 +1,4 @@
-import { determineFlowerShape } from "../determinants/determineFlowerShape";
+import { showFlowerShape } from "../determinants/determineFlowerShape";
 import { determineStem } from "../determinants/determineStem.js";
 import { getHexColor } from "../determinants/determineColor";
 import { animateFlowerGrowth } from "./utils/animateFlowerGrowth";
@@ -18,7 +18,7 @@ export function add3dFlower(
 	const posZFlower = 2;
 	const posZStem = 1;
 	const tileIndex = currFlower.tileIndex;
-	let flowerShape = determineFlowerShape(phenotype);
+	let flowerShape = showFlowerShape(phenotype);
 
 	// set position and shape
 	let newFlowerSprite = game.add.isoSprite(

@@ -1,6 +1,10 @@
 import { shapes } from "../types/flowerShapes";
+import { determiner } from "./determiner";
+export const determineFlowerShape = (genotypeShapes, recessive) => {
+	return determiner(genotypeShapes, recessive.shapes);
+};
 
-export const determineFlowerShape = phenotype => {
+export const showFlowerShape = (phenotype) => {
 	if (phenotype.shape === undefined) {
 		return shapes.Default;
 	}

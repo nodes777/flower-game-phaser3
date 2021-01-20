@@ -1,13 +1,17 @@
 import { determineColor } from "./determineColor";
-import { store } from "../index";
+import { determineFlowerShape } from "./determineFlowerShape";
 
 export const determineGenotype = (parent1Geno, parent2Geno) => {
 	let newGenotype = {};
-	Object.keys(parent1Geno).forEach(gene => {
-		// return one of the alleles randomly for the particular gene
-		newGenotype[gene] = [
-			parent1Geno[gene][getRandomAllele(parent1Geno[gene])]
-		].concat([parent2Geno[gene][getRandomAllele(parent2Geno[gene])]]);
+	Object.keys(parent1Geno).forEach((gene) => {
+		// get one allele randomly from each parent per trait
+		const p1a = getRandomAllele(parent1Geno[gene]);
+		const p2a = getRandomAllele(parent2Geno[gene]);
+
+		// return one of the alleles randomly for the particular trait/gene
+		newGenotype[gene] = [parent1Geno[gene][p1a]].concat([
+			parent2Geno[gene][p2a],
+		]);
 	});
 
 	return newGenotype;
@@ -15,22 +19,20 @@ export const determineGenotype = (parent1Geno, parent2Geno) => {
 
 export const determinePhenotype = (genotype, recessive) => {
 	let phenotype = {};
-	Object.keys(genotype).forEach(gene => {
+	Object.keys(genotype).forEach((gene) => {
 		switch (gene) {
 			case "color":
-				phenotype[gene] = determineColor(genotype[gene], recessive);
+				phenotype.color = determineColor(genotype[gene], recessive);
 			case "shape":
 				// return one of the alleles randomly for the particular gene
-				phenotype[gene] =
-					genotype[gene][getRandomAllele(genotype[gene])];
+				phenotype.shape = determineFlowerShape(genotype[gene], recessive);
 			case "stem":
-				phenotype[gene] =
-					genotype[gene][getRandomAllele(genotype[gene])];
+				phenotype.stem = genotype[gene][getRandomAllele(genotype[gene])];
 		}
 	});
 	return phenotype;
 };
 
-const getRandomAllele = arr => {
+const getRandomAllele = (arr) => {
 	return Math.floor(Math.random() * arr.length);
 };
