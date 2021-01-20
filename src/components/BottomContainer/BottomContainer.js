@@ -11,6 +11,7 @@ import Dashboard from "../Dashboard/Dashboard";
 
 import "../../css/App.css";
 import "../../css/containerTransitions.css";
+import AboutScreen from "./AboutScreen";
 
 class BottomContainer extends Component {
 	// viewsArr = ["flowertable", "punnett", "dashboard"];
@@ -20,7 +21,7 @@ class BottomContainer extends Component {
 	};
 
 	viewGoLeft = () => {
-		this.setState({ punnettExit: "punnett-exit-right-active" }, () => {
+		this.setState({ centerScreenExit: "item-exit-right-active" }, () => {
 			this.setState({
 				view: this.state.view - 1,
 				prevView: this.state.view,
@@ -29,7 +30,7 @@ class BottomContainer extends Component {
 	};
 
 	viewGoRight = () => {
-		this.setState({ punnettExit: "punnett-exit-left-active" }, () => {
+		this.setState({ centerScreenExit: "item-exit-left-active" }, () => {
 			this.setState({
 				view: this.state.view + 1,
 				prevView: this.state.view,
@@ -54,6 +55,8 @@ class BottomContainer extends Component {
 									return "Flower Table";
 								case 2:
 									return "Punnett";
+								case 3:
+									return "Options";
 							}
 						})()}
 					</div>
@@ -86,16 +89,16 @@ class BottomContainer extends Component {
 										classNames={{
 											enter: `${
 												this.state.prevView == 0
-													? "punnett-enter-right"
-													: "punnett-enter-left"
+													? "item-enter-right"
+													: "item-enter-left"
 											}`,
 											enterActive: `${
 												this.state.prevView == 0
-													? "punnett-enter-right-active"
-													: "punnett-enter-left-active"
+													? "item-enter-right-active"
+													: "item-enter-left-active"
 											}`,
-											exit: `punnett-exit`,
-											exitActive: `${this.state.punnettExit}`,
+											exit: `item-exit`,
+											exitActive: `${this.state.centerScreenExit}`,
 										}}
 									>
 										<Punnett />
@@ -108,13 +111,37 @@ class BottomContainer extends Component {
 										in={2 === this.state.view}
 										timeout={300}
 										classNames={{
+											enter: `${
+												this.state.prevView == 1
+													? "item-enter-right"
+													: "item-enter-left"
+											}`,
+											enterActive: `${
+												this.state.prevView == 1
+													? "item-enter-right-active"
+													: "item-enter-left-active"
+											}`,
+											exit: `item-exit`,
+											exitActive: `${this.state.centerScreenExit}`,
+										}}
+									>
+										<Dashboard />
+									</CSSTransition>
+								);
+							case 3:
+								return (
+									<CSSTransition
+										key={3}
+										in={3 === this.state.view}
+										timeout={300}
+										classNames={{
 											enter: "item-enter-right",
 											enterActive: "item-enter-right-active",
 											exit: "item-exit-right",
 											exitActive: "item-exit-right-active",
 										}}
 									>
-										<Dashboard />
+										<AboutScreen />
 									</CSSTransition>
 								);
 							default:
@@ -125,7 +152,7 @@ class BottomContainer extends Component {
 
 				<button
 					className="arrowButtons"
-					disabled={this.state.view >= 2}
+					disabled={this.state.view >= 3}
 					onClick={this.viewGoRight}
 				>
 					<div className="rightArrow">
@@ -136,6 +163,8 @@ class BottomContainer extends Component {
 								case 1:
 									return "Options";
 								case 2:
+									return "About";
+								case 3:
 									return "";
 							}
 						})()}
@@ -146,16 +175,3 @@ class BottomContainer extends Component {
 	}
 }
 export default BottomContainer;
-
-// {(() => {
-// 					switch (this.state.view) {
-// 						case 0:
-// 							return <FlowerTable />;
-// 						case 1:
-// 							return <Punnett />;
-// 						case 2:
-// 							return <Dashboard />;
-// 						default:
-// 							return null;
-// 					}
-// 				})()}
