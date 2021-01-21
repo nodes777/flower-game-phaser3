@@ -1,4 +1,4 @@
-import exampleState from "../exampleState";
+import initalState from "../initialState";
 import {
 	determineGenotype,
 	determinePhenotype,
@@ -16,7 +16,7 @@ import {
 	ADD_BATCH_OF_FLOWERS_TO_STORE,
 } from "../types/actions";
 
-export function flowersReducer(state = exampleState.flowers, action) {
+export function flowersReducer(state = initalState.flowers, action) {
 	switch (action.type) {
 		case SET_FIRST_FLOWER_POSITION:
 			const { flowerId, initPos } = action;
@@ -37,10 +37,6 @@ export function flowersReducer(state = exampleState.flowers, action) {
 			};
 		case ADD_FLOWER_TO_STORE:
 			const { parent1, parent2, posInfo } = action.data;
-			console.log("parent 1 geno");
-			console.log(parent1.genotype);
-			console.log("parent 2 geno");
-			console.log(parent2.genotype);
 			const recessive = action.recessive;
 			// Better way to generate ids?
 			const newId = `flower${state.allIds.length + 1}`;
@@ -109,7 +105,6 @@ export function flowersReducer(state = exampleState.flowers, action) {
 					}
 				),
 			};
-			console.log("flowersReducer CHANGE_PUNNETT_FLOWER");
 
 			return {
 				...state,

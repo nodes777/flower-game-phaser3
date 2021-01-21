@@ -1,12 +1,8 @@
 import { getRandomColor } from "./determinants/determineColor";
 import { getRandomShape } from "./determinants/determineFlowerShape";
-import {
-	determineRandomXPos,
-	determineRandomYPos,
-} from "./determinants/determinePosition";
+
 import { determinePhenotype } from "./determinants/determineGenotypePhenotype";
 
-import { screenSize } from "./utils/screenSize";
 import { loadState } from "./utils/localStorage";
 
 const color1 = getRandomColor();
@@ -37,7 +33,7 @@ const parent1Pheno = determinePhenotype(parent1Geno, defaultRecessive);
 
 const parent2Pheno = determinePhenotype(parent2Geno, defaultRecessive);
 
-const exampleState = {
+const intialState = {
 	flowers: {
 		byId: {
 			flower1: {
@@ -80,4 +76,4 @@ const exampleState = {
 	tiles: { allTiles: [], availableTiles: [], numberOfTiles: null },
 };
 
-export default exampleState;
+export default intialState;

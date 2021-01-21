@@ -1,13 +1,13 @@
-import exampleState from "../exampleState";
+import initialState from "../initialState";
 
 import {
 	ADD_TILES_TO_STORE,
 	ADD_FLOWER_TO_STORE,
 	SET_AVAILABLE_TILES,
-	SET_FIRST_FLOWER_POSITION
+	SET_FIRST_FLOWER_POSITION,
 } from "../types/actions";
 
-export function tilesReducer(state = exampleState.tiles, action) {
+export function tilesReducer(state = initialState.tiles, action) {
 	switch (action.type) {
 		case ADD_TILES_TO_STORE:
 			const { tilesArr } = action;
@@ -15,7 +15,7 @@ export function tilesReducer(state = exampleState.tiles, action) {
 			return {
 				numberOfTiles: tilesArr.length,
 				allTiles: [...tilesArr],
-				availableTiles: [...tilesArr]
+				availableTiles: [...tilesArr],
 			};
 
 		// Formerly TILE_FILLED
@@ -34,12 +34,12 @@ export function tilesReducer(state = exampleState.tiles, action) {
 				allTiles: [
 					...state.allTiles.slice(0, tileIndex),
 					oldTile,
-					...state.allTiles.slice(tileIndex + 1)
+					...state.allTiles.slice(tileIndex + 1),
 				],
 				availableTiles: [
 					...state.availableTiles.slice(0, availableTileIndex),
-					...state.availableTiles.slice(availableTileIndex + 1)
-				]
+					...state.availableTiles.slice(availableTileIndex + 1),
+				],
 			};
 
 		case SET_FIRST_FLOWER_POSITION:
@@ -57,12 +57,12 @@ export function tilesReducer(state = exampleState.tiles, action) {
 				allTiles: [
 					...state.allTiles.slice(0, tIndex),
 					oTile,
-					...state.allTiles.slice(tIndex + 1)
+					...state.allTiles.slice(tIndex + 1),
 				],
 				availableTiles: [
 					...state.availableTiles.slice(0, aTileIndex),
-					...state.availableTiles.slice(aTileIndex + 1)
-				]
+					...state.availableTiles.slice(aTileIndex + 1),
+				],
 			};
 
 		case SET_AVAILABLE_TILES:
@@ -70,7 +70,7 @@ export function tilesReducer(state = exampleState.tiles, action) {
 			// console.log(newTilesArr);
 			return {
 				...state,
-				availableTiles: newTilesArr
+				availableTiles: newTilesArr,
 			};
 
 		default:
