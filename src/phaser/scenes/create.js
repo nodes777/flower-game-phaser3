@@ -1,14 +1,10 @@
 import { checkStore, getStoreState } from "../gameloop/checkStore";
-import { checkForPollen } from "../gameloop/checkForPollen";
 import { init } from "../init/init";
 
 export function create() {
 	// width and height from image properties
 	this.background = this.add.tileSprite(0, 0, 1280, 800, "background");
-	this.background
-		.setScale(2.6)
-		.setOrigin(0)
-		.setDepth(-13); // first tile's depth is -12.5
+	this.background.setScale(2.6).setOrigin(0).setDepth(-13); // first tile's depth is -12.5
 
 	// builds garden and creates initial flowers
 	init(this);
@@ -21,7 +17,7 @@ export function create() {
 		delay: 500,
 		callback: checkStore,
 		callbackScope: this,
-		loop: true
+		loop: true,
 	});
 
 	this.beeCanFly = getStoreState().config.beeCanFly;

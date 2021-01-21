@@ -14,9 +14,16 @@ export function init(game) {
 	// add Tiles
 	buildGarden(game);
 
-	/* First Flower */
+	/* Create the flowers*/
 	const storeFlowers = store.getState().flowers;
-	add3dFlower(storeFlowers.byId.flower1, "flower1", game);
+
+	for (let i = 0; i < storeFlowers.allIds.length; i++) {
+		add3dFlower(
+			storeFlowers.byId[storeFlowers.allIds[i]],
+			storeFlowers.allIds[i],
+			game
+		);
+	}
 
 	/* Bee */
 	game.bee = game.add.isoSprite(
@@ -32,27 +39,10 @@ export function init(game) {
 	game.bee.depth = 999;
 	game.bee.angleForFrameDeg = 0;
 
-	// set rotation frame swaps
-	//addBeeRotation(game.bee, game);
-
 	// turn off debug info
 	//game.bee.debugShowBody = false;
 	//game.bee.debugShowVelocity = false;
 
-	/* Second Flower */
-	add3dFlower(storeFlowers.byId.flower2, "flower2", game);
-
-	if (storeFlowers.allIds.length > 2) {
-		for (let i = 2; i < storeFlowers.allIds.length; i++) {
-			add3dFlower(
-				storeFlowers.byId[storeFlowers.allIds[i]],
-				storeFlowers.allIds[i],
-				game
-			);
-		}
-	}
-
 	// set the flower to go to
 	game.flowerToFlyTo = game.flowersOnScreen[0];
-	//game.isoPhysics.world.enable(game.flowerToFlyTo);
 }
