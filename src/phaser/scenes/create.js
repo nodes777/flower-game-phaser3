@@ -11,6 +11,9 @@ export function create() {
 
 	// collider flag for avoiding running the collision function over and over while the bee is colliding
 	this.bee1Collided = false;
+	this.musicIsPlaying = false;
+
+	this.song = this.sound.add("song", { loop: true });
 
 	// Check the store every .5 secs
 	this.time.addEvent({

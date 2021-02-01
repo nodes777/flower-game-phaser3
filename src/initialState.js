@@ -72,6 +72,7 @@ const intialState = {
 				phenotype: parent1Pheno,
 			},
 		},
+		musicIsPlaying: true,
 	},
 	tiles: { allTiles: [], availableTiles: [], numberOfTiles: null },
 };

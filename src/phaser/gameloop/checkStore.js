@@ -28,6 +28,14 @@ export function checkStore() {
 				this.bee.body.acceleration.set(0);
 				this.bee.body.velocity.set(0);
 			}
+
+			// check if music should play
+			this.musicIsPlaying = currState.config.musicIsPlaying;
+			if (this.musicIsPlaying) {
+				this.song.play();
+			} else {
+				this.song.pause();
+			}
 		}
 	}
 }

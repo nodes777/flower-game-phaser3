@@ -18,18 +18,21 @@ import squareFlowerData from "../../assets/squareFlower.json";
 import roundFlowerData from "../../assets/roundFlower.json";
 import triangleFlowerData from "../../assets/triangleFlower.json";
 
+import songMp3 from "../../assets/beeGame2.mp3";
+import songOgg from "../../assets/beeGame2.ogg";
+
 import IsoPlugin, { IsoPhysics } from "phaser3-plugin-isometric";
 export function preload() {
 	this.load.scenePlugin({
 		key: "IsoPlugin",
 		url: IsoPlugin,
-		sceneKey: "iso"
+		sceneKey: "iso",
 	});
 
 	this.load.scenePlugin({
 		key: "IsoPhysics",
 		url: IsoPhysics,
-		sceneKey: "isoPhysics"
+		sceneKey: "isoPhysics",
 	});
 	// background
 	this.load.image("background", backgroundImg);
@@ -38,42 +41,42 @@ export function preload() {
 	this.load.spritesheet("grassTile", grassTileImg, {
 		frameWidth: grassTileData.width, // from json
 		frameHeight: grassTileData.height, // from json
-		startFrame: 0 // only using this frame, this could be a this.load.image
+		startFrame: 0, // only using this frame, this could be a this.load.image
 	});
 
 	// Flowers
 	this.load.spritesheet("defaultFlower", defaultFlowerImg, {
 		frameWidth: defaultFlowerData.width, // from json
 		frameHeight: defaultFlowerData.height,
-		startFrame: 4 // 4 is the forward facing sprite
+		startFrame: 4, // 4 is the forward facing sprite
 	});
 	this.load.spritesheet("squareFlower", squareFlowerImg, {
 		frameWidth: squareFlowerData.width,
 		frameHeight: squareFlowerData.height,
-		startFrame: 4 //4 is facing east, 4 is facing north
+		startFrame: 4, //4 is facing east, 4 is facing north
 	});
 	this.load.spritesheet("roundFlower", roundFlowerImg, {
 		frameWidth: roundFlowerData.width,
 		frameHeight: roundFlowerData.height,
-		startFrame: 4 //4 is facing east, 4 is facing north
+		startFrame: 4, //4 is facing east, 4 is facing north
 	});
 
 	this.load.spritesheet("triangleFlower", triangleFlowerImg, {
 		frameWidth: triangleFlowerData.width,
 		frameHeight: triangleFlowerData.height,
-		startFrame: 4 //4 is facing east, 4 is facing north
+		startFrame: 4, //4 is facing east, 4 is facing north
 	});
 
 	// Stems
 	this.load.spritesheet("straightStem3d", stemImg, {
 		frameWidth: stemData.width, // from json
-		frameHeight: stemData.height
+		frameHeight: stemData.height,
 	});
 	// Bee
 	this.load.spritesheet("bee3d", beeImg, {
 		frameWidth: beeData.width,
 		frameHeight: beeData.height,
-		startFrame: 0
+		startFrame: 0,
 	});
 
 	// display progress bar
@@ -90,8 +93,8 @@ export function preload() {
 		text: "Loading...",
 		style: {
 			font: "20px monospace",
-			fill: "#ffffff"
-		}
+			fill: "#ffffff",
+		},
 	});
 	loadingText.setOrigin(0.5, 0.5);
 
@@ -101,8 +104,8 @@ export function preload() {
 		text: "0%",
 		style: {
 			font: "18px monospace",
-			fill: "#ffffff"
-		}
+			fill: "#ffffff",
+		},
 	});
 	percentText.setOrigin(0.5, 0.5);
 
@@ -112,13 +115,16 @@ export function preload() {
 		text: "",
 		style: {
 			font: "18px monospace",
-			fill: "#ffffff"
-		}
+			fill: "#ffffff",
+		},
 	});
 	assetText.setOrigin(0.5, 0.5);
 
+	// load audio
+	this.load.audio("song", [songMp3, songOgg]);
+
 	// update progress bar
-	this.load.on("progress", function(value) {
+	this.load.on("progress", function (value) {
 		percentText.setText(parseInt(value * 100) + "%");
 		progressBar.clear();
 		progressBar.fillStyle(0xffffff, 1);
@@ -126,12 +132,12 @@ export function preload() {
 	});
 
 	// update file progress text
-	this.load.on("fileprogress", function(file) {
+	this.load.on("fileprogress", function (file) {
 		assetText.setText("Loading asset: " + file.key);
 	});
 
 	// remove progress bar when complete
-	this.load.on("complete", function() {
+	this.load.on("complete", function () {
 		progressBar.destroy();
 		progressBox.destroy();
 		loadingText.destroy();
