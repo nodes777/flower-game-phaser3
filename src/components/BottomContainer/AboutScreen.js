@@ -7,7 +7,7 @@ class AboutScreen extends Component {
 			<div className="punnett" role="region" aria-label={`About Screen`}>
 				<h1>About</h1>
 				<p>
-					This is a flower gene simulation. Pick a{" "}
+					This is a flower genetics simulation. Pick a{" "}
 					<a href={url}>punnett square</a> configuration for color and shape of
 					the two inital parents, then activate the Bee play button to start the
 					simulation. You can set a gene as recessive in the options screen. The
@@ -15,8 +15,17 @@ class AboutScreen extends Component {
 					parents), but the flowers do not have sexes.
 				</p>
 				<p>
+					Music by{" "}
+					<a href="https://soundcloud.com/marty-strauss">Marty Strauss</a>.
+				</p>
+				<p>
 					<a href="https://github.com/nodes777/flower-game-phaser3">
 						Github Repo
+					</a>
+				</p>
+				<p>
+					<a href="https://tnodes.medium.com/space-garden-a-flower-genetics-simulation-f11a51003a7a">
+						Medium Article Overview
 					</a>
 				</p>
 			</div>
