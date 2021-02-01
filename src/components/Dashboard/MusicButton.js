@@ -38,9 +38,9 @@ class MusicButton extends React.Component {
 				aria-label={this.state.checked ? "Play Music" : "Pause Music"}
 			>
 				{this.state.checked ? (
-					<span aria-hidden={true}>&#10074;&#10074; Music</span>
+					<span aria-hidden={true}>&#x1f507;</span>
 				) : (
-					<span aria-hidden={true}>&#9654; Music</span>
+					<span aria-hidden={true}> &#x1f50a;</span>
 				)}
 			</button>
 		);
