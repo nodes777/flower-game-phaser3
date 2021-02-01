@@ -14,6 +14,8 @@ export function create() {
 	this.musicIsPlaying = false;
 
 	this.song = this.sound.add("song", { loop: true });
+	this.song.play();
+	this.song.pause();
 
 	// Check the store every .5 secs
 	this.time.addEvent({

@@ -5,6 +5,8 @@ import {
 	REMOVE_RECESSIVE_ALLELE,
 	SHOW_TOOLTIP,
 	HIDE_TOOLTIP,
+	PLAY_MUSIC,
+	PAUSE_MUSIC,
 } from "../types/actions";
 
 export function configReducer(state = initialState.config, action) {
@@ -45,6 +47,18 @@ export function configReducer(state = initialState.config, action) {
 				tooltip: {
 					content: { name, genotype, phenotype },
 				},
+			};
+		}
+		case PLAY_MUSIC: {
+			return {
+				...state,
+				musicShouldPlay: true,
+			};
+		}
+		case PAUSE_MUSIC: {
+			return {
+				...state,
+				musicShouldPlay: false,
 			};
 		}
 

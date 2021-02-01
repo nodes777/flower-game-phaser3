@@ -4,6 +4,8 @@ import {
 	REMOVE_RECESSIVE_ALLELE,
 	SHOW_TOOLTIP,
 	HIDE_TOOLTIP,
+	PLAY_MUSIC,
+	PAUSE_MUSIC,
 } from "../types/actions";
 
 export const beeCanFly = (bool) => {
@@ -42,5 +44,16 @@ export const hideTooltip = (data) => {
 		type: HIDE_TOOLTIP,
 		visible: false,
 		content: "Nothing",
+	};
+};
+
+export const playMusic = () => {
+	return {
+		type: PLAY_MUSIC,
+	};
+};
+export const pauseMusic = () => {
+	return {
+		type: PAUSE_MUSIC,
 	};
 };

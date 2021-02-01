@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import BeeCanFlyButton from "../Dashboard/BeeCanFlyButton";
+import MusicButton from "../Dashboard/MusicButton";
 // import SaveToLocalStorageButton from "../Dashboard/SaveToLocalStorageButton";
 // import ClearLocalStorageButton from "../Dashboard/ClearLocalStorageButton";
 import Tooltip from "./Tooltip";
@@ -10,7 +11,7 @@ import "../../css/wings.css";
 
 class Wing extends Component {
 	static propTypes = {
-		side: PropTypes.oneOf(["left", "right"])
+		side: PropTypes.oneOf(["left", "right"]),
 	};
 	render() {
 		const { side } = this.props;
@@ -29,6 +30,7 @@ class Wing extends Component {
 					<div className="innerSideWings rightWing">
 						<div className="wingContent rightWingContent">
 							<BeeCanFlyButton />
+							<MusicButton />
 						</div>
 					</div>
 				)}

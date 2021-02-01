@@ -30,10 +30,11 @@ export function checkStore() {
 			}
 
 			// check if music should play
-			this.musicIsPlaying = currState.config.musicIsPlaying;
-			if (this.musicIsPlaying) {
-				this.song.play();
-			} else {
+
+			this.musicShouldPlay = currState.config.musicShouldPlay;
+			if (this.musicShouldPlay) {
+				this.song.resume();
+			} else if (!this.musicShouldPlay) {
 				this.song.pause();
 			}
 		}
