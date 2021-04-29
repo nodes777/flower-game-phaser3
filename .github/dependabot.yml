@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: react-redux
+    versions:
+    - 7.2.2
+    - 7.2.3
+  - dependency-name: "@babel/plugin-transform-modules-commonjs"
+    versions:
+    - 7.12.1
+    - 7.12.13
+    - 7.13.0
+  - dependency-name: "@babel/plugin-proposal-class-properties"
+    versions:
+    - 7.12.1
+    - 7.12.13
